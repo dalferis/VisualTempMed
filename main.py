@@ -8,7 +8,7 @@ def main():
     parser.add_argument('--inputfile', '-i', nargs=1, required=True, help='Input file for analyse')
     try:
         args = parser.parse_args()
-    except SystemExit as e:
+    except:
         return
     
     # Example 1
