@@ -1,10 +1,11 @@
-﻿from asyncio import events
+﻿#from asyncio import events
 #from os import eventfd
 import re
 from cassis import *
 from lxml import etree
 import json
 import logging
+import validator
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -21,15 +22,20 @@ def EVENT(cas, text):
 
         events.append({
             "eid": eid,
+            "class": e.eventType if hasattr(e, "eventType") else "OCCURRENCE",
             "begin": e.begin,
             "end": e.end,
             "text": text[e.begin:e.end],
-            "class": e.eventType if hasattr(e, "eventType") else "OCCURRENCE",
             "polarity": e.polarity,
             "tense": "NONE",
             "aspect": "NONE"
         })
     return events, event_id_map
+
+# def MAKEINSTANCE(cas, events, event_id_map):
+#     makeinstances = []
+
+#     for 
 
 def TIMEX3(cas, text):
     timexes = []
@@ -70,18 +76,43 @@ def get_docid(cas):
         return "UNKNOWN_DOCID"
     return dmd_list[0].documentId
 
+def event(root, cas, text):
+    text_el = etree.SubElement(root, "TEXT")
+    text_el.text = text[0:events[0]["begin"]]
+
+    #for i in range(len(events)-1):
+    for i, e in enumerate(cas.select("webanno.custom.EVENT"), start=1):
+        #e = events[i]
+        event_el = etree.SubElement(
+            text_el,
+            "EVENT",
+            attrib = {
+                "eid":f"e{i}",
+                "class": "OCCURRENCE" if e["class"] == "N/A" else e["class"],
+            }
+        )
+        event_el.text = text[e["begin"]:e["end"]]
+        event_el.tail = text[e["end"]:events[i+1]["begin"]]
+    e = events[-1]
+    event_el = etree.SubElement(text_el, "EVENT", eid=e["eid"], **{"class": e["class"]})
+    event_el.text = text[e["begin"]:e["end"]]
+    event_el.tail = text[e["end"]:]
+
+    return text_el
 
 def generateTimeML(cas, text, events, timexes, tlinks):
+    etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root = etree.Element("TimeML")
+    root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
 
     etree.SubElement(root, "DOCID").text = get_docid(cas)
 
-    text_el = etree.SubElement(root, "TEXT")
-    text_el.text = text
+    #text_el = etree.SubElement(root, "TEXT")
+    text_el = event(root, text, events)
 
-    for e in events:
-        ev = etree.SubElement(text_el, "EVENT", eid=e["eid"], class_=e.get("class", "OCCURRENCE"), polarity=e.get("polarity", "POS"))
-        ev.text = e["text"]
+    # for e in events:
+    #     ev = etree.SubElement(text_el, "EVENT", eid=e["eid"], class_=e.get("class", "OCCURRENCE"), polarity=e.get("polarity", "POS"))
+    #     ev.text = e["text"]
 
     for t in timexes:
         tx = etree.SubElement(text_el, "TIMEX3", tid=t["tid"], type=t["type"], value=t["value"])
@@ -100,8 +131,7 @@ def convertFile(xmlfile: str, typesystemfile: str):
     with open(xmlfile, 'rb') as f:
         cas = load_cas_from_xmi(f, typesystem=typesystem)
 
-    print("Document text:", cas.sofa_string)
-
+    # print("Document text:", cas.sofa_string)
     # with open(xmlfile + ".json", 'w', encoding='utf-8') as out_f:
     #     out_f.write(json.dumps(json.loads(cas.to_json()), indent=2))
 
@@ -113,7 +143,12 @@ def convertFile(xmlfile: str, typesystemfile: str):
     print(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
 
-    # with open(xmlfile + ".tml", 'w', encoding='utf-8') as out_f:
-    #     out_f.write(etree.tostring(tml, pretty_print=True, xml_declaration=True, encoding="UTF-8"))
+    with open(xmlfile + ".tml", 'w', encoding='utf-8') as out_f:
+        out_f.write(etree.tostring(tml, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
+    result = validator.validateFile(xmlfile + ".tml", "xml-xsd")
+    print("\n".join(result[1:]))
+    with open("validation_report.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(result[1:]))
+
 
     # print(json.dumps(json.loads(cas.to_json()), indent=2))
