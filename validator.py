@@ -53,7 +53,7 @@ def validateFile(xmlFile: str, type: str) -> list:
     elif type == 'xml-dtd':
         return validateXmlDtd(xmlContent, 'XSD/timeml_1.2.1.dtd')
     elif type == 'xml-xsd':
-        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.1.xsd')
+        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.2.xsd')
     elif type == 'xmi':
         return validateXmiFile(open(xmlFile, 'r', encoding='utf-8').read(), 'XSD/XMI.xsd')
     elif type == 'tml':

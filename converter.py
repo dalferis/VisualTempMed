@@ -1,5 +1,6 @@
 ﻿#from asyncio import events
 #from os import eventfd
+from asyncio import events
 import re
 from cassis import *
 from lxml import etree
@@ -9,33 +10,18 @@ import validator
 
 logging.basicConfig(level=logging.DEBUG)
 
-def make_id(prefix, n):
-    return f"{prefix}{n}"
-
-def EVENT(cas, text):
-    events = []
-    event_id_map = {}
-
-    for i, e in enumerate(cas.select("webanno.custom.EVENT"), start=1):
-        eid = make_id("e", i)
-        event_id_map[e.xmiID] = eid
-
-        events.append({
-            "eid": eid,
-            "class": e.eventType if hasattr(e, "eventType") else "OCCURRENCE",
-            "begin": e.begin,
-            "end": e.end,
-            "text": text[e.begin:e.end],
-            "polarity": e.polarity,
-            "tense": "NONE",
-            "aspect": "NONE"
-        })
-    return events, event_id_map
-
-# def MAKEINSTANCE(cas, events, event_id_map):
-#     makeinstances = []
-
-#     for 
+translations = {
+    "OCCURRENCE": "OCCURRENCE",
+    "ASPECTUAL": "ASPECTUAL",
+    "PERCEPTION": "PERCEPTION",
+    "I_ACTION": "I_ACTION",
+    "I_STATE": "I_STATE",
+    "STATE": "STATE",
+    "REPORTING": "REPORTING",
+    "EVIDENTIAL": "EVIDENTIAL",
+    "INTENTION": "INTENTION",
+    "NEGATION": "NEGATION"
+}
 
 def TIMEX3(cas, text):
     timexes = []
@@ -76,50 +62,34 @@ def get_docid(cas):
         return "UNKNOWN_DOCID"
     return dmd_list[0].documentId
 
-def event(root, cas, text):
+def event(root, cas):
+    text = cas.sofa_string
+    events = list(cas.select("webanno.custom.EVENT")) + [{"begin": len(text)}]
     text_el = etree.SubElement(root, "TEXT")
     text_el.text = text[0:events[0]["begin"]]
 
-    #for i in range(len(events)-1):
-    for i, e in enumerate(cas.select("webanno.custom.EVENT"), start=1):
-        #e = events[i]
+    for i, e in enumerate(events[:-2], start=1):
         event_el = etree.SubElement(
             text_el,
             "EVENT",
             attrib = {
                 "eid":f"e{i}",
-                "class": "OCCURRENCE" if e["class"] == "N/A" else e["class"],
+                "class": "OCCURRENCE" if e["eventType"] == "N/A" else e["eventType"],
             }
         )
         event_el.text = text[e["begin"]:e["end"]]
         event_el.tail = text[e["end"]:events[i+1]["begin"]]
-    e = events[-1]
-    event_el = etree.SubElement(text_el, "EVENT", eid=e["eid"], **{"class": e["class"]})
-    event_el.text = text[e["begin"]:e["end"]]
-    event_el.tail = text[e["end"]:]
 
     return text_el
 
-def generateTimeML(cas, text, events, timexes, tlinks):
+def generateTimeML(cas):
     etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root = etree.Element("TimeML")
     root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
 
     etree.SubElement(root, "DOCID").text = get_docid(cas)
 
-    #text_el = etree.SubElement(root, "TEXT")
-    text_el = event(root, text, events)
-
-    # for e in events:
-    #     ev = etree.SubElement(text_el, "EVENT", eid=e["eid"], class_=e.get("class", "OCCURRENCE"), polarity=e.get("polarity", "POS"))
-    #     ev.text = e["text"]
-
-    for t in timexes:
-        tx = etree.SubElement(text_el, "TIMEX3", tid=t["tid"], type=t["type"], value=t["value"])
-        tx.text = t["text"]
-
-    for i, l in enumerate(tlinks, start=1):
-        etree.SubElement(root, "TLINK", lid=f"l{i}", eventInstanceID=l.get("eventInstanceID"), relatedToTime=l.get("relatedToTime"), relType=l["relType"])
+    text_el = event(root, cas)
 
     return root
 
@@ -135,10 +105,10 @@ def convertFile(xmlfile: str, typesystemfile: str):
     # with open(xmlfile + ".json", 'w', encoding='utf-8') as out_f:
     #     out_f.write(json.dumps(json.loads(cas.to_json()), indent=2))
 
-    events, event_id_map = EVENT(cas, cas.sofa_string)
-    timexes, timex_id_map = TIMEX3(cas, cas.sofa_string)
-    tlinks = TLINK(cas, event_id_map, timex_id_map)
-    tml = generateTimeML(cas, cas.sofa_string, events, timexes, tlinks)
+    # events, event_id_map = EVENT(cas, cas.sofa_string)
+    # timexes, timex_id_map = TIMEX3(cas, cas.sofa_string)
+    # tlinks = TLINK(cas, event_id_map, timex_id_map)
+    tml = generateTimeML(cas)
 
     print(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
