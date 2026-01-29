@@ -142,7 +142,7 @@ def event(root, cas):
     for element in cas_elements[:-1]:
         ##### Write EVENTs #####
         if element.type.name == "webanno.custom.EVENT":
-            create_event(tml_text, element, f"e{event_count}", cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[event_count]["begin"]])
+            create_event(tml_text, element, f"e{event_count}", cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[event_count+timex3_count-1]["begin"]])
             ##### Write MAKEINSTANCEs #####
             create_makeinstance(root, element, f"ei{event_count}", f"e{event_count}")
             element_id_map[element.xmiID] = f"ei{event_count}"
@@ -152,7 +152,7 @@ def event(root, cas):
                 tlink_count += 1
             event_count += 1
         elif element.type.name == "webanno.custom.TIMEX3":
-            create_timex3(tml_text, element, f"t{timex3_count}", cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[event_count+timex3_count]["begin"]])
+            create_timex3(tml_text, element, f"t{timex3_count}", cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[event_count+timex3_count-1]["begin"]])
             element_id_map[element.xmiID] = f"t{timex3_count}"
             for tlink in element.timexLink.elements:
                 tml_tlink_attrib.append(create_tlink_attrib(tlink, f"l{tlink_count}", f"t{timex3_count}", tlink.target.xmiID))
