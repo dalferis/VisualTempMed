@@ -2,6 +2,7 @@
 #from os import eventfd
 from asyncio import events
 import re
+import attr
 from cassis import *
 from lxml import etree
 import json
@@ -113,6 +114,8 @@ def create_timex3(parent, event, tid, cas_text, cas_tail):
         }
     if event.timex3Class != "PREPOSTEXP":
         attrib["value"] = event.value
+    else:
+        attrib["value"] = "PRESENT_REF"
     tml_timex3 = etree.SubElement(parent, "TIMEX3",
         attrib = attrib
     )
