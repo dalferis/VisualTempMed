@@ -48,6 +48,16 @@ translate["EVENT"] = {
         "SIMULTANEOUS": "PRESENT"
     }
 }
+translate["TIMEX3"] = {
+    "timex3Class": {
+        "DATE": "DATE",
+        "TIME": "TIME",
+        "DURATION": "DURATION",
+        "QUANTIFIER": "DURATION",
+        "PREPOSTEXP": "DATE",
+        "SET": "SET"
+    }
+}
 translate["TLINK"] = {
     "role": {
         "BEFORE": "BEFORE",
@@ -97,12 +107,14 @@ def create_makeinstance(parent, event, eiid, eid):
     )
 
 def create_timex3(parent, event, tid, cas_text, cas_tail):
-    tml_timex3 = etree.SubElement(parent, "TIMEX3",
-        attrib = {
+    attrib = {
             "tid":tid,
-            "type":event.timex3Class,
-            "value":event.value
+            "type":translate["TIMEX3"]["timex3Class"][event.timex3Class]
         }
+    if event.timex3Class != "PREPOSTEXP":
+        attrib["value"] = event.value
+    tml_timex3 = etree.SubElement(parent, "TIMEX3",
+        attrib = attrib
     )
     tml_timex3.text = cas_text
     tml_timex3.tail = cas_tail
@@ -179,7 +191,7 @@ def event(root, cas):
             ##### Write MAKEINSTANCEs #####
             create_makeinstance(root, element, f"ei{event_count}", f"e{event_count}")
             element_id_map[element.xmiID] = f"ei{event_count}"
-            ##### Prepare TLINKs #####
+            ##### Prepare xLINKs #####
             for tlink in element.TLINK.elements:
                 tml_tlink_attrib.append(create_tlink_attrib(tlink, f"l{link_count}", f"ei{event_count}", tlink.target.xmiID))
                 link_count += 1
