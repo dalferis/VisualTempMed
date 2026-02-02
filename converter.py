@@ -87,18 +87,16 @@ def get_docid(cas):
 
 def create_event(event, cas_text, cas_tail):
     new_event =  {
-            "tag": "EVENT",
-            "cas_id": event.xmiID,
-            "attrib": {
-                "eid": "",
-                "class": translate["EVENT"]["eventType"][event["eventType"]],
-            },
-            "text": cas_text,
-            "tail": cas_tail
-        }
-    new_makeinstance = {
+        "tag": "EVENT",
+        "cas_id": event.xmiID,
+        "attrib": {
+            "eid": "",
+            "class": translate["EVENT"]["eventType"][event["eventType"]],
+        },
+        "text": cas_text,
+        "tail": cas_tail,
+        "instance": {
             "tag": "MAKEINSTANCE",
-            "cas_event_id": event.xmiID,
             "attrib": {
                 "eiid": "",
                 "eventID": "",
@@ -109,17 +107,18 @@ def create_event(event, cas_text, cas_tail):
                 #"cardinality": "",
                 #"modality": ""
             }
-        }
-    new_links = []
+        },
+        "tlinks": [],
+        "alinks": []
+    }
     for link in event.TLINK.elements:
         new_link = {
-                "tag": "TLINK",
-                "cas_id": link.target.xmiID,
-                "cas_source_id": event.xmiID,
-                "attrib": {
-                    "lid": ""
-                }
+            "tag": "TLINK",
+            "cas_target_id": link.target.xmiID,
+            "attrib": {
+                "lid": ""
             }
+        }
         if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
             new_link["attrib"]["timeID"] = ""
         elif link.type.name == "webanno.custom.EVENTTLINKLink":
@@ -129,16 +128,15 @@ def create_event(event, cas_text, cas_tail):
             new_link["attrib"]["relatedToTime"] = ""
         elif link.target.type.name == "webanno.custom.EVENT":
             new_link["attrib"]["relatedToEventInstance"] = ""
-        new_links.append(new_link)
+        new_event["tlinks"].append(new_link)
     for link in event.ALINK.elements:
         new_link = {
-                "tag": "ALINK",
-                "cas_id": link.target.xmiID,
-                "cas_source_id": event.xmiID,
-                "attrib": {
-                    "lid": ""
-                }
+            "tag": "ALINK",
+            "cas_target_id": link.target.xmiID,
+            "attrib": {
+                "lid": ""
             }
+        }
         if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
             new_link["attrib"]["timeID"] = ""
         elif link.type.name == "webanno.custom.EVENTTLINKLink":
@@ -148,11 +146,11 @@ def create_event(event, cas_text, cas_tail):
             new_link["attrib"]["relatedToTime"] = ""
         elif link.target.type.name == "webanno.custom.EVENT":
             new_link["attrib"]["relatedToEventInstance"] = ""
-        new_links.append(new_link)
-    return [new_event, new_makeinstance] + new_links
+        new_event["alinks"].append(new_link)
+    return [new_event]
 
 def create_timex3(event, cas_text, cas_tail):
-    element = {
+    new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": event.xmiID,
         "attrib": {
@@ -160,22 +158,21 @@ def create_timex3(event, cas_text, cas_tail):
             "type": translate["TIMEX3"]["timex3Class"][event.timex3Class]
         },
         "text": cas_text,
-        "tail": cas_tail
+        "tail": cas_tail,
+        "tlinks": []
     }
     if event.timex3Class != "PREPOSTEXP":
-        element["attrib"]["value"] = event.value
+        new_timex3["attrib"]["value"] = event.value
     else:
-        element["attrib"]["value"] = "PRESENT_REF"
-    new_links = []
+        new_timex3["attrib"]["value"] = "PRESENT_REF"
     for link in event.timexLink.elements:
         new_link = {
-                "tag": "TLINK",
-                "cas_id": link.target.xmiID,
-                "cas_source_id": event.xmiID,
-                "attrib": {
-                    "lid": ""
-                }
+            "tag": "TLINK",
+            "cas_target_id": link.target.xmiID,
+            "attrib": {
+                "lid": ""
             }
+        }
         if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
             new_link["attrib"]["timeID"] = ""
         elif link.type.name == "webanno.custom.EVENTTLINKLink":
@@ -185,184 +182,79 @@ def create_timex3(event, cas_text, cas_tail):
             new_link["attrib"]["relatedToTime"] = ""
         elif link.target.type.name == "webanno.custom.EVENT":
             new_link["attrib"]["relatedToEventInstance"] = ""
-        new_links.append(new_link)
-    return [element] + new_links
-
-# def create_tlink_attrib(tlink):
-#     attrib = {
-#         "lid": ""
-#     }
-#     if tlink.type.name == "webanno.custom.TIMEX3TimexLinkLink":
-#         attrib["timeID"] = ""
-#     elif tlink.type.name == "webanno.custom.EVENTTLINKLink":
-#         attrib["eventInstanceID"] = ""
-#     attrib["relType"] = translate["TLINK"]["role"][tlink.role]
-#     if tlink.target.type.name == "webanno.custom.TIMEX3":
-#         attrib["relatedToTime"] = ""
-#     elif tlink.target.type.name == "webanno.custom.EVENT":
-#         attrib["relatedToEventInstance"] = ""
-#     return [{
-#         "tag": "TLINK",
-#         "cas_id": tlink.target.xmiID,
-#         "attrib": attrib
-#     }]
-
-# def create_tlink(root, attrib, event_id_map):
-#     if ("relatedToTime" in attrib):
-#         if attrib["relatedToTime"] in event_id_map:
-#             attrib["relatedToTime"] = event_id_map[attrib["relatedToTime"]]
-#             etree.SubElement(root, "TLINK", attrib=attrib)
-#     elif ("relatedToEventInstance" in attrib):
-#         if attrib["relatedToEventInstance"] in event_id_map:
-#             attrib["relatedToEventInstance"] = event_id_map[attrib["relatedToEventInstance"]]
-#             etree.SubElement(root, "TLINK", attrib=attrib)
-
-# def create_alink_attrib(alink):
-#     attrib = {
-#         "lid": ""
-#     }
-#     if alink.type.name == "webanno.custom.TIMEX3TimexLinkLink":
-#         attrib["timeID"] = ""
-#     elif alink.type.name == "webanno.custom.EVENTALINKLink":
-#         attrib["eventInstanceID"] = ""
-#     attrib["relType"] = translate["ALINK"]["role"][alink.role]
-#     if alink.target.type.name == "webanno.custom.TIMEX3":
-#         attrib["relatedToTime"] = ""
-#     elif alink.target.type.name == "webanno.custom.EVENT":
-#         attrib["relatedToEventInstance"] = ""
-#     return [{
-#         "tag": "ALINK",
-#         "cas_id": alink.target.xmiID,
-#         "attrib": attrib
-#     }]
-
-# def create_alink(root, attrib, event_id_map):
-#     if ("relatedToTime" in attrib):
-#         if attrib["relatedToTime"] in event_id_map:
-#             attrib["relatedToTime"] = event_id_map[attrib["relatedToTime"]]
-#             etree.SubElement(root, "ALINK", attrib=attrib)
-#     elif ("relatedToEventInstance" in attrib):
-#         if attrib["relatedToEventInstance"] in event_id_map:
-#             attrib["relatedToEventInstance"] = event_id_map[attrib["relatedToEventInstance"]]
-#             etree.SubElement(root, "ALINK", attrib=attrib)
-
-
-def sort_elements(element):
-    if element["tag"] == "EVENT":
-        return int(element["attrib"]["eid"][1:]) + 0
-    elif element["tag"] == "TIMEX3":
-        return int(element["attrib"]["tid"][1:]) + 100000
-    elif element["tag"] == "MAKEINSTANCE":
-        return int(element["attrib"]["eiid"][2:]) + 2000000
-    elif element["tag"] == "TLINK":
-        return int(element["attrib"]["lid"][1:]) + 3000000
-    elif element["tag"] == "ALINK":
-        return int(element["attrib"]["lid"][1:]) + 4000000
+        new_timex3["tlinks"].append(new_link)
+    return [new_timex3]
 
 def assign_id(tml_elements):
     link_count = 1
     event_count = 1
-    makeinstance_count = 1
     timex3_count = 1
     id_map = {}
     for element in tml_elements:
         if element["tag"] == "EVENT":
             element["attrib"]["eid"] = f"e{event_count}"
-            id_map[element["cas_id"]] = f"e{event_count}"
+            element["instance"]["attrib"]["eiid"] = f"ei{event_count}"
+            element["instance"]["attrib"]["eventID"] = f"e{event_count}"
+            id_map[element["cas_id"]] = element["instance"]["attrib"]["eiid"]
+            for link in element["tlinks"]:
+                link["attrib"]["lid"] = f"l{link_count}"
+                link_count += 1
+            for link in element["alinks"]:
+                link["attrib"]["lid"] = f"l{link_count}"
+                link_count += 1
             event_count += 1
-        elif element["tag"] == "MAKEINSTANCE":
-            element["attrib"]["eiid"] = f"ei{makeinstance_count}"
-            makeinstance_count += 1
         elif element["tag"] == "TIMEX3":
             element["attrib"]["tid"] = f"t{timex3_count}"
-            id_map[element["cas_id"]] = f"t{timex3_count}"
+            id_map[element["cas_id"]] = element["attrib"]["tid"]
+            for link in element["tlinks"]:
+                link["attrib"]["lid"] = f"l{link_count}"
+                link_count += 1
             timex3_count += 1
-        elif element["tag"] == "TLINK":
-            element["attrib"]["lid"] = f"l{link_count}"
-            link_count += 1
-        elif element["tag"] == "ALINK":
-            element["attrib"]["lid"] = f"l{link_count}"
-            link_count += 1
     for element in tml_elements:
-        if element["tag"] == "MAKEINSTANCE":
-            element["attrib"]["eventID"] = id_map.get(element["cas_event_id"], "")
-        elif element["tag"] == "TLINK":
-            if "timeID" in element["attrib"]:
-                element["attrib"]["timeID"] = id_map.get(element["cas_source_id"], "")
-            elif "eventInstanceID" in element["attrib"]:
-                element["attrib"]["eventInstanceID"] = id_map.get(element["cas_source_id"], "")
-            if "relatedToTime" in element["attrib"]:
-                element["attrib"]["relatedToTime"] = id_map.get(element["cas_source_id"], "")
-            elif "relatedToEventInstance" in element["attrib"]:
-                element["attrib"]["relatedToEventInstance"] = id_map.get(element["cas_source_id"], "")
-        elif element["tag"] == "ALINK":
-            if "timeID" in element["attrib"]:
-                element["attrib"]["timeID"] = id_map.get(element["cas_source_id"], "")
-            elif "eventInstanceID" in element["attrib"]:
-                element["attrib"]["eventInstanceID"] = id_map.get(element["cas_source_id"], "")
-            if "relatedToTime" in element["attrib"]:
-                element["attrib"]["relatedToTime"] = id_map.get(element["cas_source_id"], "")
-            elif "relatedToEventInstance" in element["attrib"]:
-                element["attrib"]["relatedToEventInstance"] = id_map.get(element["cas_source_id"], "")
+        for link in element.get("tlinks", []) + element.get("alinks", []):
+            # Source
+            if "timeID" in link["attrib"]:
+                link["attrib"]["timeID"] = element["attrib"]["tid"]
+            elif "eventInstanceID" in link["attrib"]:
+                link["attrib"]["eventInstanceID"] = element["instance"]["attrib"]["eiid"]
+            # Target
+            if "relatedToTime" in link["attrib"]:
+                link["attrib"]["relatedToTime"] = id_map.get(link["cas_target_id"], "")
+            elif "relatedToEventInstance" in link["attrib"]:
+                link["attrib"]["relatedToEventInstance"] = id_map.get(link["cas_target_id"], "")
+            pass
 
 def write_tml(root, cas, tml_elements):
-    tml_elements.sort(key=sort_elements)
-    # cas_text = cas.sofa_string
     tml_text = etree.SubElement(root, "TEXT")
     tml_text.text = "Pepito" # cas_text[0:tml_elements[0]["begin"]]
     for element in tml_elements:
-        if element["tag"] == "EVENT" or element["tag"] == "TIMEX3":
-            event = etree.SubElement(tml_text, element["tag"], attrib=element["attrib"])
-            event.text = element["text"]
-            event.tail = element["tail"]
-        else:
-            etree.SubElement(root, element["tag"], attrib=element["attrib"])
+        event = etree.SubElement(tml_text, element["tag"], attrib=element["attrib"])
+        event.text = element["text"]
+        event.tail = element["tail"]
+        if element["tag"] == "EVENT":
+            etree.SubElement(root, element["instance"]["tag"], attrib=element["instance"]["attrib"])
+    for element in tml_elements:
+        for link in element.get("tlinks", []):
+            etree.SubElement(root, link["tag"], attrib=link["attrib"])
+        for link in element.get("alinks", []):
+            etree.SubElement(root, link["tag"], attrib=link["attrib"])
 
 def event(root, cas):
     cas_text = cas.sofa_string
     cas_elements = list(cas.select("webanno.custom.EVENT")) + list(cas.select("webanno.custom.TIMEX3")) + [{"begin": len(cas_text)}]
     cas_elements.sort(key=lambda e: e["begin"])
 
-    # tml_text = etree.SubElement(root, "TEXT")
-    # tml_text.text = cas_text[0:cas_elements[0]["begin"]]
-    # tml_tlink_attrib = []
-    # tml_alink_attrib = []
     tml_elements = []
 
-    # element_id_map = {}
-
-    # link_count = 1
-    # event_count = 1
-    # timex3_count = 1
     for i, element in enumerate(cas_elements[:-1]):
         if element.type.name == "webanno.custom.EVENT":
             tml_elements.extend(create_event(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
-            # tml_elements += create_event(element, f"e{event_count}", cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[event_count+timex3_count-1]["begin"]])
-            # tml_elements += create_makeinstance(element, f"ei{event_count}", f"e{event_count}")
-            # element_id_map[element.xmiID] = f"ei{event_count}"
-            # for tlink in element.TLINK.elements:
-            #     tml_elements.extend(create_tlink_attrib(tlink))
-                # link_count += 1
-            # for alink in element.ALINK.elements:
-            #     tml_elements.extend(create_alink_attrib(alink))
-                # link_count += 1
-            # event_count += 1
         elif element.type.name == "webanno.custom.TIMEX3":
             tml_elements.extend(create_timex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
-            # element_id_map[element.xmiID] = f"t{timex3_count}"
-            # for tlink in element.timexLink.elements:
-            #     tml_elements.extend(create_tlink_attrib(tlink))
-            #     link_count += 1
-            # timex3_count += 1
-    ##### Write elements #####
+
     assign_id(tml_elements)
     write_tml(root, cas, tml_elements)
-    # for element in tml_elements:
-    #     etree.SubElement(root, element["tag"], attrib=element["attrib"])
-    # for attrib in tml_tlink_attrib:
-    #     create_tlink(root, attrib, element_id_map)
-    # for attrib in tml_alink_attrib:
-    #     create_alink(root, attrib, element_id_map)
+
 
 def generateTimeML(cas):
     etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
