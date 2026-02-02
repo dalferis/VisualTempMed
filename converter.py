@@ -155,16 +155,28 @@ def create_timex3(event, cas_text, cas_tail):
         "cas_id": event.xmiID,
         "attrib": {
             "tid": "",
-            "type": translate["TIMEX3"]["timex3Class"][event.timex3Class]
+            "type": translate["TIMEX3"]["timex3Class"][event.timex3Class],
+            "value": event.value
         },
         "text": cas_text,
         "tail": cas_tail,
         "tlinks": []
     }
-    if event.timex3Class != "PREPOSTEXP":
-        new_timex3["attrib"]["value"] = event.value
-    else:
+
+    if event.timex3Class == "PREPOSTEXP":
         new_timex3["attrib"]["value"] = "PRESENT_REF"
+        new_link = {
+            "tag": "TLINK",
+            "cas_target_id": event.xmiID,
+            "attrib": {
+                "lid": "",
+                "eventInstanceID": "", # debe apuntar al evento anterior
+                "relType": "AFTER",
+                "relatedToTime": ""
+            }
+        }
+        new_timex3["tlinks"].append(new_link)
+
     for link in event.timexLink.elements:
         new_link = {
             "tag": "TLINK",
@@ -224,9 +236,9 @@ def assign_id(tml_elements):
                 link["attrib"]["relatedToEventInstance"] = id_map.get(link["cas_target_id"], "")
             pass
 
-def write_tml(root, cas, tml_elements):
+def write_tml(root, initial_text, tml_elements):
     tml_text = etree.SubElement(root, "TEXT")
-    tml_text.text = "Pepito" # cas_text[0:tml_elements[0]["begin"]]
+    tml_text.text = initial_text
     for element in tml_elements:
         event = etree.SubElement(tml_text, element["tag"], attrib=element["attrib"])
         event.text = element["text"]
@@ -253,7 +265,7 @@ def event(root, cas):
             tml_elements.extend(create_timex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
 
     assign_id(tml_elements)
-    write_tml(root, cas, tml_elements)
+    write_tml(root, cas_text[0:cas_elements[0]["begin"]], tml_elements)
 
 
 def generateTimeML(cas):
