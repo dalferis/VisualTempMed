@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:pos="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/pos.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:cas="http:///uima/cas.ecore" xmlns:tweet="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/pos/tweet.ecore" xmlns:morph="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/morph.ecore" xmlns:dependency="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/dependency.ecore" xmlns:type5="http:///de/tudarmstadt/ukp/dkpro/core/api/semantics/type.ecore" xmlns:type7="http:///de/tudarmstadt/ukp/dkpro/core/api/transform/type.ecore" xmlns:type6="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type.ecore" xmlns:type2="http:///de/tudarmstadt/ukp/dkpro/core/api/metadata/type.ecore" xmlns:type3="http:///de/tudarmstadt/ukp/dkpro/core/api/ner/type.ecore" xmlns:type4="http:///de/tudarmstadt/ukp/dkpro/core/api/segmentation/type.ecore" xmlns:type="http:///de/tudarmstadt/ukp/dkpro/core/api/coref/type.ecore" xmlns:constituent="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/constituent.ecore" xmlns:chunk="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/chunk.ecore" xmlns:custom="http:///webanno/custom.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <type2:DocumentMetaData xmi:id="1" sofa="12" begin="0" end="2238" language="x-unspecified" documentTitle="SPACCC-corpus_2018-12-01_ES100002.txt" documentId="Jason" documentUri="file:/data/webanno/repository/project/19/document/799/source/Jason" collectionId="file:/data/webanno/repository/project/19/document/799/source/" documentBaseUri="file:/data/webanno/repository/project/19/document/799/source/" isLastSegment="false"/>
+
+    <custom:TIMEX3 xmi:id="4807" sofa="12" begin="421" end="437" functionInDocument="NONE" timex3Class="DATE" timexLink="6323 6326 6329" value="XXXX-XX"/>
+    <custom:TIMEX3 xmi:id="5493" sofa="12" begin="1798" end="1812" functionInDocument="NONE" timex3Class="PREPOSTEXP" timexLink="6134" value="NO_VALUE"/> <!-- "postoperatoria" --> <!-- CONTAINS -->
+    <custom:TIMEX3 xmi:id="5478" sofa="12" begin="2097" end="2103" functionInDocument="NONE" timex3Class="DURATION" timexLink="6271" value="P9Y"/>
+
+    <custom:EVENT xmi:id="4834" sofa="12" begin="17" end="27" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4853" sofa="12" begin="54" end="65" ALINK="" TLINK="6303 6306" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4870" sofa="12" begin="109" end="118" ALINK="" TLINK="6313 6316" contextualAspect="INTERMITTENT" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4887" sofa="12" begin="150" end="163" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4906" sofa="12" begin="178" end="185" ALINK="" TLINK="5570 5573" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4923" sofa="12" begin="200" end="207" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="EVIDENTIAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4942" sofa="12" begin="208" end="231" ALINK="" TLINK="5558" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5520" sofa="12" begin="263" end="268" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4959" sofa="12" begin="273" end="281" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="EVIDENTIAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4978" sofa="12" begin="282" end="291" ALINK="" TLINK="5564" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5539" sofa="12" begin="352" end="363" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4995" sofa="12" begin="388" end="396" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="EVIDENTIAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5014" sofa="12" begin="400" end="408" ALINK="" TLINK="5580" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5586" sofa="12" begin="443" end="447" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5031" sofa="12" begin="461" end="466" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5605" sofa="12" begin="472" end="481" ALINK="" TLINK="5622" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5050" sofa="12" begin="508" end="520" ALINK="" TLINK="6337 6340 6343" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5067" sofa="12" begin="551" end="559" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5103" sofa="12" begin="571" end="574" ALINK="" TLINK="6351" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5086" sofa="12" begin="576" end="584" ALINK="" TLINK="6357" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5120" sofa="12" begin="603" end="617" ALINK="" TLINK="6363" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5137" sofa="12" begin="632" end="641" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5156" sofa="12" begin="684" end="695" ALINK="" TLINK="6369" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5628" sofa="12" begin="763" end="771" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5647" sofa="12" begin="776" end="784" ALINK="" TLINK="6375" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5173" sofa="12" begin="841" end="847" ALINK="" TLINK="6381 6384" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5190" sofa="12" begin="861" end="866" ALINK="" TLINK="6391" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5664" sofa="12" begin="937" end="950" ALINK="" TLINK="6397 6400" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5207" sofa="12" begin="969" end="977" ALINK="" TLINK="5693 5696" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5224" sofa="12" begin="979" end="987" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5243" sofa="12" begin="999" end="1009" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5262" sofa="12" begin="1030" end="1040" ALINK="" TLINK="6407" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5279" sofa="12" begin="1067" end="1076" ALINK="" TLINK="6413" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5715" sofa="12" begin="1102" end="1111" ALINK="" TLINK="5738" contextualAspect="N/A" contextualModality="HEDGED" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5296" sofa="12" begin="1154" end="1165" ALINK="" TLINK="6419" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5313" sofa="12" begin="1203" end="1210" ALINK="" TLINK="5818 5821 5824" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5744" sofa="12" begin="1306" end="1312" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="EVIDENTIAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5763" sofa="12" begin="1316" end="1328" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5330" sofa="12" begin="1345" end="1352" ALINK="" TLINK="6425 6428" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5347" sofa="12" begin="1381" end="1393" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5366" sofa="12" begin="1433" end="1436" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5385" sofa="12" begin="1455" end="1464" ALINK="" TLINK="5844" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5402" sofa="12" begin="1487" end="1494" ALINK="" TLINK="6435 6438 6441 6444" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5850" sofa="12" begin="1532" end="1544" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="EVIDENTIAL" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5419" sofa="12" begin="1545" end="1553" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="NEG"/>
+    <custom:EVENT xmi:id="5438" sofa="12" begin="1593" end="1604" ALINK="" TLINK="6453" contextualAspect="N/A" contextualModality="HEDGED" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5869" sofa="12" begin="1632" end="1641" ALINK="" TLINK="6116" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5455" sofa="12" begin="1659" end="1664" ALINK="" TLINK="6122" contextualAspect="N/A" contextualModality="HEDGED" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5886" sofa="12" begin="1707" end="1718" ALINK="" TLINK="6459 6462 6465" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5903" sofa="12" begin="1749" end="1767" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5922" sofa="12" begin="1788" end="1797" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/> <!-- "evolución" -->
+    <custom:EVENT xmi:id="5941" sofa="12" begin="1831" end="1839" ALINK="" TLINK="6473" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5958" sofa="12" begin="1872" end="1879" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5977" sofa="12" begin="1883" end="1896" ALINK="" TLINK="6140" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <custom:EVENT xmi:id="5994" sofa="12" begin="1907" end="1914" ALINK="" TLINK="6237" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6011" sofa="12" begin="1945" end="1951" ALINK="" TLINK="6243 6246" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6028" sofa="12" begin="1978" end="1986" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6047" sofa="12" begin="1998" end="2008" ALINK="" TLINK="6253" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6064" sofa="12" begin="2044" end="2051" ALINK="" TLINK="6259" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6081" sofa="12" begin="2079" end="2090" ALINK="" TLINK="6265" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="6146" sofa="12" begin="2107" end="2118" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="CONTAINS" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <custom:EVENT xmi:id="6165" sofa="12" begin="2145" end="2152" ALINK="" TLINK="6277 6280 6283" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="CONTAINS" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <custom:EVENT xmi:id="6182" sofa="12" begin="2170" end="2180" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="IS-CONTAINED" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <custom:EVENT xmi:id="6201" sofa="12" begin="2205" end="2215" ALINK="" TLINK="" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="CONTAINS" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <custom:EVENT xmi:id="6220" sofa="12" begin="2220" end="2223" ALINK="" TLINK="6291" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="CONTAINS" eventType="N/A" permanence="PERMANENT" polarity="POS"/>
+    <type2:TagsetDescription xmi:id="6479" sofa="12" begin="0" end="0" layer="webanno.custom.ACTOR" name="role values" input="false"/>
+    <type2:TagsetDescription xmi:id="6492" sofa="12" begin="0" end="0" layer="webanno.custom.BODYPART" name="eventiveValue values" input="false"/>
+    <type2:TagsetDescription xmi:id="6505" sofa="12" begin="0" end="0" layer="webanno.custom.CLINENTITY" name="Discontinuous values" input="false"/>
+    <type2:TagsetDescription xmi:id="6518" sofa="12" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" name="UD Universal Dependencies (v2)" input="false"/>
+    <type2:TagsetDescription xmi:id="6531" sofa="12" begin="0" end="0" layer="webanno.custom.EVENT" name="polarity values" input="false"/>
+    <type2:TagsetDescription xmi:id="6544" sofa="12" begin="0" end="0" layer="webanno.custom.METADATA" name="language values" input="false"/>
+    <type2:TagsetDescription xmi:id="6557" sofa="12" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" name="Named Entity tags" input="false"/>
+    <type2:TagsetDescription xmi:id="6570" sofa="12" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" name="Operation" input="false"/>
+    <type2:TagsetDescription xmi:id="6583" sofa="12" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" name="UD Universal POS tags (v2)" input="false"/>
+    <type2:TagsetDescription xmi:id="6596" sofa="12" begin="0" end="0" layer="webanno.custom.RML" name="PERTAINS-TO values" input="false"/>
+    <type2:TagsetDescription xmi:id="6609" sofa="12" begin="0" end="0" layer="webanno.custom.TIMEX3" name="TLINK values" input="false"/>
+    <custom:METADATA xmi:id="6636" sofa="12" begin="0" end="0" docTime="2018-12-01" docSource="SPACCC corpus" docDOI="http://doi.org/10.5281/zenodo.2560316" docLanguage="es" docLicense="CC-BY" docSourceUrl="https://github.com/PlanTL-SANIDAD/SPACCC" docAuthor="Ander Intxaurrondo; Jose Antonio Lopez Martin; Heidy Rodriguez; Aitor Gonzalez-Agirre; Marta Villegas; Montserrat Marimon; Martin Krallinger" docUrl="https://github.com/PlanTL-SANIDAD/SPACCC" pubType="dataset" docName="ES100002" note="SPACCC corpus"/>
+    <cas:Sofa xmi:id="12" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="
+Varón de 66 años controlado en Consultas Externas por hipertrofia benigna de próstata. Presenta episodios de hematuria monosintomática autolimitada y urinocultivos negativos. En estudio ecográfico se observa ureteropielocaliectasia grado II de riñón derecho y en U.I.V. se objetiva anulación funcional de riñón derecho, motivo por el cuál, se practica nefrostomia percutánea derecha, que confirma el hallazgo urográfico. Ocho meses antes, est:udio ecográfico y U.I.V. sin hallazgos patológicos.    Entre sus antecedentes personales cabe destacar: sin alergias conocidas. HTA. Diabetes Mellitus tipo II. Miocardiopatía hipertrófica. Aneurisma carotídeo intracerebral sin secuelas.  La exploración física practicada es la siguiente: Abdomen blando y depresible, no doloroso, no megalias, Fosas renales libres indoloras. Genitales externos sin signos patológicos. Tacto rectal compatible con HBP grado I-II. Se llevan a cabo las siguientes EXPLORACIONES COMPLEMENTARIAS:  ANALISIS: Glucemia 145 mg/dl, Creatinina 1.4 mg/dl. Resto de parámetros dentro de la normalidad.  CITOLOGIA URINARIA: Compatible con carcinoma de células transicionales de bajo grado.  PIELOGRAFIA DESCENDENTE a traves de Nefrostomia: Defecto de replección a nivel de uréter sacro-ilíaco derecho de aproximadamente 20 mm de longitud, con signos de infiltración de la pared.    ESTUDIO FUNCIONAL DE RIÑON DERECHO: Aclaramiento de Creatinina inferior a 5 ml/minuto.  TAC ABDOMINO-PELVICO: Aneurisma de Aorta infrarrenal. Atrofia hidronefrótica de riñón derecho, sin visualizarse imágenes endoluminales intraureterales. Dudosas adenopatías paravesicales.  Ante estos hallazgos y la sospecha de tumor de vías de uréter derecho, el paciente es intervenido quirúrgicamente practicándose nefroureterectomía radical derecha con evolución postoperatoria satisfactoria. El dictamen histopatológico de la pieza nos informa de pielonefritis crónica y cambios de arteriosclerosis, así como lesión inflamatoria ureteral que oblitera la luz con infiltrado de linfocitos en capas musculares, erosión de urotelio y presencia de Actinomices. Tras 9 años de seguimiento, el paciente mantiene una función renal aceptable (Creatinina sérica 2.1 mg/dl ) y es controlado por HBP sintomática.  "/>
+    <custom:TIMEX3TimexLinkLink xmi:id="6323" role="CONTAINS" target="5586"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="6326" role="BEFORE" target="4906"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="6329" role="CONTAINS" target="5031"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="6134" role="CONTAINS" target="5922"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="6271" role="ENDS-ON" target="6146"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5514" role="PERTAINS" target="4887"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5681" role="PERTAINS" target="5224"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5687" role="PERTAINS" target="5243"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5709" role="PERTAINS" target="5262"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5794" role="PERTAINS" target="5313"/>
+    <custom:RMLPERTAINSTOLink xmi:id="5838" role="PERTAINS" target="5347"/>
+    <custom:RMLPERTAINSTOLink xmi:id="6297" role="PERTAINS" target="6182"/>
+    <custom:EVENTTLINKLink xmi:id="6303" role="CONTAINS" target="4870"/>
+    <custom:EVENTTLINKLink xmi:id="6306" role="CONTAINS" target="4834"/>
+    <custom:EVENTTLINKLink xmi:id="6313" role="CONTAINS" target="4906"/>
+    <custom:EVENTTLINKLink xmi:id="6316" role="OVERLAP" target="4887"/>
+    <custom:EVENTTLINKLink xmi:id="5570" role="BEFORE" target="5520"/>
+    <custom:EVENTTLINKLink xmi:id="5573" role="BEFORE" target="5539"/>
+    <custom:EVENTTLINKLink xmi:id="5558" role="CONTAINS" target="4906"/>
+    <custom:EVENTTLINKLink xmi:id="5564" role="CONTAINS" target="5520"/>
+    <custom:EVENTTLINKLink xmi:id="5580" role="BEFORE" target="5539"/>
+    <custom:EVENTTLINKLink xmi:id="5622" role="CONTAINS" target="4807"/>
+    <custom:EVENTTLINKLink xmi:id="6337" role="CONTAINS" target="4807"/>
+    <custom:EVENTTLINKLink xmi:id="6340" role="CONTAINS" target="5067"/>
+    <custom:EVENTTLINKLink xmi:id="6343" role="CONTAINS" target="5103"/>
+    <custom:EVENTTLINKLink xmi:id="6351" role="OVERLAP" target="5086"/>
+    <custom:EVENTTLINKLink xmi:id="6357" role="OVERLAP" target="5120"/>
+    <custom:EVENTTLINKLink xmi:id="6363" role="OVERLAP" target="5137"/>
+    <custom:EVENTTLINKLink xmi:id="6369" role="CONTAINS" target="5628"/>
+    <custom:EVENTTLINKLink xmi:id="6375" role="CONTAINS" target="5156"/>
+    <custom:EVENTTLINKLink xmi:id="6381" role="CONTAINS" target="5190"/>
+    <custom:EVENTTLINKLink xmi:id="6384" role="CONTAINS" target="5156"/>
+    <custom:EVENTTLINKLink xmi:id="6391" role="BEFORE" target="5664"/>
+    <custom:EVENTTLINKLink xmi:id="6397" role="CONTAINS" target="5207"/>
+    <custom:EVENTTLINKLink xmi:id="6400" role="CONTAINS" target="5262"/>
+    <custom:EVENTTLINKLink xmi:id="5693" role="CONTAINS" target="5243"/>
+    <custom:EVENTTLINKLink xmi:id="5696" role="CONTAINS" target="5224"/>
+    <custom:EVENTTLINKLink xmi:id="6407" role="BEFORE" target="5279"/>
+    <custom:EVENTTLINKLink xmi:id="6413" role="BEFORE" target="5296"/>
+    <custom:EVENTTLINKLink xmi:id="5738" role="CONTAINS" target="5279"/>
+    <custom:EVENTTLINKLink xmi:id="6419" role="BEFORE" target="5330"/>
+    <custom:EVENTTLINKLink xmi:id="5818" role="CONTAINS" target="5296"/>
+    <custom:EVENTTLINKLink xmi:id="5821" role="OVERLAP" target="5763"/>
+    <custom:EVENTTLINKLink xmi:id="5824" role="CONTAINS" target="5744"/>
+    <custom:EVENTTLINKLink xmi:id="6425" role="CONTAINS" target="5347"/>
+    <custom:EVENTTLINKLink xmi:id="6428" role="BEFORE" target="5366"/>
+    <custom:EVENTTLINKLink xmi:id="5844" role="CONTAINS" target="5366"/>
+    <custom:EVENTTLINKLink xmi:id="6435" role="CONTAINS" target="5850"/>
+    <custom:EVENTTLINKLink xmi:id="6438" role="OVERLAP" target="5438"/>
+    <custom:EVENTTLINKLink xmi:id="6441" role="CONTAINS" target="5419"/>
+    <custom:EVENTTLINKLink xmi:id="6444" role="CONTAINS" target="5366"/>
+    <custom:EVENTTLINKLink xmi:id="6453" role="CONTAINS" target="5886"/>
+    <custom:EVENTTLINKLink xmi:id="6116" role="BEFORE" target="5886"/>
+    <custom:EVENTTLINKLink xmi:id="6122" role="CONTAINS" target="5886"/>
+    <custom:EVENTTLINKLink xmi:id="6459" role="BEFORE" target="5922"/>
+    <custom:EVENTTLINKLink xmi:id="6462" role="BEFORE" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6465" role="CONTAINS" target="5903"/>
+    <custom:EVENTTLINKLink xmi:id="6473" role="BEFORE" target="6165"/>
+    <custom:EVENTTLINKLink xmi:id="6140" role="CONTAINS" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6237" role="BEFORE" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6243" role="CONTAINS" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6246" role="SIMULTANEOUS" target="6028"/>
+    <custom:EVENTTLINKLink xmi:id="6253" role="CONTAINS" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6259" role="CONTAINS" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6265" role="CONTAINS" target="5941"/>
+    <custom:EVENTTLINKLink xmi:id="6277" role="OVERLAP" target="6201"/>
+    <custom:EVENTTLINKLink xmi:id="6280" role="CONTAINS" target="6182"/>
+    <custom:EVENTTLINKLink xmi:id="6283" role="OVERLAP" target="6146"/>
+    <custom:EVENTTLINKLink xmi:id="6291" role="CONTAINS" target="6165"/>
+</xmi:XMI>

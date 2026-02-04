@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>Jason</DOCID>
+  <TEXT><EVENT eid="e1" class="OCCURRENCE">Presentamos</EVENT> el caso de un varón de 61 años <EVENT eid="e2" class="OCCURRENCE">diagnosticado</EVENT>, <EVENT eid="e3" class="OCCURRENCE">intervenido</EVENT> y <EVENT eid="e4" class="OCCURRENCE">tratado</EVENT> por un <EVENT eid="e5" class="OCCURRENCE">adenocarcinoma</EVENT> rectal desde <TIMEX3 tid="t1" type="DATE" value="XXXX-XX-XX">18 meses antes</TIMEX3>. <EVENT eid="e6" class="OCCURRENCE">Consultó</EVENT> por <EVENT eid="e7" class="OCCURRENCE">aumento</EVENT> del tamaño peneano, doloroso, junto a la aparición de unas <EVENT eid="e8" class="OCCURRENCE">lesiones</EVENT> eritematosas, excrecentes y sangrantes al roce en la piel prepucial. Simultáneamente se <EVENT eid="e9" class="PERCEPTION">apreciaba</EVENT> a la <EVENT eid="e10" class="OCCURRENCE">exploración</EVENT> <EVENT eid="e11" class="OCCURRENCE">linfedema</EVENT> hipogástrico, de la piel peneana y del escroto.&#13;
+&#13;
+Se procedió a su <EVENT eid="e12" class="OCCURRENCE">exéresis</EVENT> mediante <EVENT eid="e13" class="OCCURRENCE">circuncisión</EVENT>. El <EVENT eid="e14" class="OCCURRENCE">estudio</EVENT> anatomopatológico <EVENT eid="e15" class="PERCEPTION">informó</EVENT> de <EVENT eid="e16" class="OCCURRENCE">metástasis</EVENT> subcutáneas prepuciales secundarias a <EVENT eid="e17" class="OCCURRENCE">adenocarcinoma</EVENT> intestinal. En la <EVENT eid="e18" class="OCCURRENCE">imagen</EVENT> macromicroscópica se <EVENT eid="e19" class="PERCEPTION">apreciaba</EVENT> <EVENT eid="e20" class="OCCURRENCE">infiltración</EVENT> tumoral del epitelio de revestimiento plano escamoso dando lugar a una <EVENT eid="e21" class="OCCURRENCE">excrecencia</EVENT> carcinomatosa. Destacaba el escaso <EVENT eid="e22" class="OCCURRENCE">componente</EVENT> inflamatorio. A gran <EVENT eid="e23" class="OCCURRENCE">aumento</EVENT> se <EVENT eid="e24" class="PERCEPTION">observa</EVENT> que el <EVENT eid="e25" class="OCCURRENCE">tumor</EVENT> infiltrante es un <EVENT eid="e26" class="OCCURRENCE">adenocarcinoma</EVENT> moderadamente diferenciado, de alto grado y con elevado índice mitótico.&#13;
+&#13;
+A pesar del <EVENT eid="e27" class="OCCURRENCE">tratamiento</EVENT> oncológico recibido el paciente <EVENT eid="e28" class="OCCURRENCE">falleció</EVENT> a <TIMEX3 tid="t2" type="DURATION" value="P4M">los 4 meses</TIMEX3> del <EVENT eid="e29" class="OCCURRENCE">diagnóstico</EVENT>.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" pos="OTHER" tense="PRESENT" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" pos="OTHER" tense="PAST" aspect="NONE" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei2" relType="BEFORE" relatedToTime="t1"/>
+  <TLINK lid="l2" eventInstanceID="ei3" relType="BEFORE" relatedToTime="t1"/>
+  <TLINK lid="l3" eventInstanceID="ei4" relType="BEGINS" relatedToTime="t1"/>
+  <TLINK lid="l4" eventInstanceID="ei5" relType="INCLUDES" relatedToTime="t1"/>
+  <TLINK lid="l5" timeID="t1" relType="BEFORE" relatedToEventInstance="ei1"/>
+  <TLINK lid="l6" timeID="t1" relType="BEFORE" relatedToEventInstance="ei6"/>
+  <TLINK lid="l7" eventInstanceID="ei6" relType="SIMULTANEOUS" relatedToEventInstance="ei10"/>
+  <TLINK lid="l8" eventInstanceID="ei7" relType="INCLUDES" relatedToEventInstance="ei6"/>
+  <TLINK lid="l9" eventInstanceID="ei8" relType="INCLUDES" relatedToEventInstance="ei6"/>
+  <TLINK lid="l10" eventInstanceID="ei10" relType="BEFORE" relatedToEventInstance="ei12"/>
+  <TLINK lid="l11" eventInstanceID="ei11" relType="INCLUDES" relatedToEventInstance="ei10"/>
+  <TLINK lid="l12" eventInstanceID="ei12" relType="INCLUDES" relatedToEventInstance="ei13"/>
+  <TLINK lid="l13" eventInstanceID="ei12" relType="BEFORE" relatedToEventInstance="ei14"/>
+  <TLINK lid="l14" eventInstanceID="ei14" relType="BEFORE" relatedToEventInstance="ei18"/>
+  <TLINK lid="l15" eventInstanceID="ei16" relType="INCLUDES" relatedToEventInstance="ei14"/>
+  <TLINK lid="l16" eventInstanceID="ei17" relType="BEFORE" relatedToEventInstance="ei16"/>
+  <TLINK lid="l17" eventInstanceID="ei20" relType="INCLUDES" relatedToEventInstance="ei18"/>
+  <TLINK lid="l18" eventInstanceID="ei21" relType="INCLUDES" relatedToEventInstance="ei18"/>
+  <TLINK lid="l19" eventInstanceID="ei22" relType="INCLUDES" relatedToEventInstance="ei18"/>
+  <TLINK lid="l20" eventInstanceID="ei22" relType="INCLUDES" relatedToEventInstance="ei23"/>
+  <TLINK lid="l21" eventInstanceID="ei23" relType="BEFORE" relatedToEventInstance="ei28"/>
+  <TLINK lid="l22" eventInstanceID="ei25" relType="INCLUDES" relatedToEventInstance="ei23"/>
+  <TLINK lid="l23" eventInstanceID="ei25" relType="SIMULTANEOUS" relatedToEventInstance="ei26"/>
+  <TLINK lid="l24" eventInstanceID="ei27" relType="BEFORE" relatedToEventInstance="ei28"/>
+  <TLINK lid="l25" timeID="t2" relType="ENDS" relatedToEventInstance="ei28"/>
+  <TLINK lid="l26" timeID="t2" relType="BEGINS" relatedToEventInstance="ei29"/>
+</TimeML>
