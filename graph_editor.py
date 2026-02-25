@@ -1,13 +1,14 @@
 ﻿from re import I
 import sys
 import math
+from turtle import width
 import networkx as nx
 from PySide6.QtWidgets import (
-    QApplication, QGraphicsView, QGraphicsScene,
+    QApplication, QGraphicsView, QGraphicsScene, QGraphicsRectItem,
     QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem, QToolTip
 )
 from PySide6.QtGui import QPen, QBrush, QPainterPath, QFont
-from PySide6.QtCore import Qt, QPointF
+from PySide6.QtCore import Qt, QPointF, QLineF
 from PySide6.QtWidgets import QGraphicsItem
 
 
@@ -23,23 +24,6 @@ class GraphModel:
 
 
 class GraphScene(QGraphicsScene):
-    # def __init__(self):
-    #     super().__init__()
-    #     self.nodes = {}
-    #     self.edges = []
-
-    # def addItem(self, item):
-    #     if isinstance(item, NodeItem):
-    #         super().addItem(item)
-    #         self.nodes[item.node_id] = item
-    #     elif isinstance(item, EdgeItem):
-    #         edge = {}
-    #         edge['source'] = item.source.node_id
-    #         edge['target'] = item.target.node_id
-    #         a = [e for e in self.edges if e.source.node_id == item.source.node_id]
-    #         edge['curvature']
-    #         self.edges.append(item)
-
     def __init__(self):
         super().__init__()
         self.nodes = {}
@@ -53,45 +37,69 @@ class GraphScene(QGraphicsScene):
         return self.nodes.get(node_id, None)
 
 
-class NodeItem(QGraphicsEllipseItem):
-    def __init__(self, node_id, x, y, radius=25, text=None):
-        super().__init__(-radius, -radius, radius*2, radius*2)
-
+class NodeItem(QGraphicsRectItem):
+    def __init__(self, node_id, x, y, text=""):
         self.node_id = node_id
-        self.radius = radius
         self.edges = []
-        self.setPos(x, y)
 
-        self.setBrush(QBrush(Qt.lightGray))
-        self.setPen(QPen(Qt.black, 2))
-
-        self.setFlag(QGraphicsItem.ItemIsMovable)
-        self.setFlag(QGraphicsItem.ItemSendsGeometryChanges)
-        self.setFlag(QGraphicsItem.ItemIsSelectable)
-
-        self.label = QGraphicsTextItem(node_id, self)
+        self.label = QGraphicsTextItem(text)
+        self.label.setDefaultTextColor(Qt.blue)
         font = QFont()
         font.setPointSize(10)
         font.setBold(True)
         self.label.setFont(font)
-        self.center_label()
 
-        if text:
-            self.label2 = QGraphicsTextItem(text, self)
-            self.label2.setDefaultTextColor(Qt.blue)
+        text_rect = self.label.boundingRect()
+        padding = 12
+        width = text_rect.width() + padding
+        height = text_rect.height() + padding
 
-            rect = self.label2.boundingRect()
+        super().__init__(-width/2, -height/2, width, height
+)
+        self.setPos(x, y)
 
-            self.label2.setPos(
-                -rect.width() / 2,
-                -radius - rect.height() - 3
-            )
+        self.setBrush(QBrush(Qt.lightGray))
+        self.setPen(QPen(Qt.black, 2))
+        self.setFlag(QGraphicsItem.ItemIsMovable)
+        self.setFlag(QGraphicsItem.ItemSendsGeometryChanges)
+        self.setFlag(QGraphicsItem.ItemIsSelectable)
 
-            self.label2.setZValue(1)
+        self.label.setParentItem(self)
+        self.label.setPos(-text_rect.width()/2, -text_rect.height()/2)
 
-    def center_label(self):
-        rect = self.label.boundingRect()
-        self.label.setPos(-rect.width()/2, -rect.height()/2)
+        self.create_id_badge()
+
+    def create_id_badge(self):
+        padding = -2
+
+        self.id_text = QGraphicsTextItem(self.node_id, self)
+        self.id_text.setDefaultTextColor(Qt.white)
+
+        font = QFont()
+        font.setPointSize(6)
+        font.setBold(True)
+        self.id_text.setFont(font)
+
+        text_rect = self.id_text.boundingRect()
+
+        badge_width = text_rect.width() + padding * 2
+        badge_height = text_rect.height() + padding * 2
+
+        self.id_bg = QGraphicsRectItem(self)
+        self.id_bg.setBrush(QBrush(Qt.darkGray))
+        self.id_bg.setPen(QPen(Qt.black, 1))
+
+        node_rect = self.rect()
+
+        x = node_rect.left()
+        y = node_rect.top()
+
+        self.id_bg.setRect(x, y, badge_width, badge_height)
+
+        self.id_text.setPos(x + padding, y + padding)
+
+        self.id_bg.setZValue(2)
+        self.id_text.setZValue(3)
 
     def add_edge(self, edge):
         self.edges.append(edge)
@@ -128,26 +136,44 @@ class EdgeItem(QGraphicsPathItem):
 
         self.update_position()
 
+
+    def intersect_line_with_rect(self, center_from, center_to, rect, item_pos):
+        line = QLineF(center_from, center_to)
+        r = rect.translated(item_pos)
+
+        edges = [
+            QLineF(r.topLeft(), r.topRight()),
+            QLineF(r.topRight(), r.bottomRight()),
+            QLineF(r.bottomRight(), r.bottomLeft()),
+            QLineF(r.bottomLeft(), r.topLeft())
+        ]
+
+        for edge in edges:
+            intersection_type, point = line.intersects(edge)
+            if intersection_type == QLineF.BoundedIntersection:
+                return point
+
+        return center_from
+
     def update_position(self):
-        p1 = self.source.pos()
-        p2 = self.target.pos()
+        rect1 = self.source.rect()
+        rect2 = self.target.rect()
 
-        # Dirección
-        dx = p2.x() - p1.x()
-        dy = p2.y() - p1.y()
+        center1 = self.source.pos() + rect1.center()
+        center2 = self.target.pos() + rect2.center()
+
+        # Punto exacto en borde
+        start = self.intersect_line_with_rect(
+            center1, center2, rect1, self.source.pos()
+        )
+
+        end = self.intersect_line_with_rect(
+            center2, center1, rect2, self.target.pos()
+        )
+
+        dx = end.x() - start.x()
+        dy = end.y() - start.y()
         base_angle = math.atan2(dy, dx)
-
-        # Punto en borde del nodo origen
-        start = QPointF(
-            p1.x() + self.source.radius * math.cos(base_angle),
-            p1.y() + self.source.radius * math.sin(base_angle)
-        )
-
-        # Punto en borde del nodo destino
-        end = QPointF(
-            p2.x() - self.target.radius * math.cos(base_angle),
-            p2.y() - self.target.radius * math.sin(base_angle)
-        )
 
         path = QPainterPath()
         path.moveTo(start)
@@ -231,42 +257,3 @@ class GraphView(QGraphicsView):
             self.scale(factor, factor)
         else:
             self.scale(1 / factor, 1 / factor)
-
-
-# def main():
-#     app = QApplication(sys.argv)
-
-#     model = GraphModel()
-#     scene = QGraphicsScene()
-
-#     view = GraphView(scene)
-#     view.setWindowTitle("Visual Temporal Medical")
-#     view.resize(800, 600)
-
-#     model.add_node("A")
-#     model.add_node("B")
-
-#     nodeA = NodeItem("A", -100, 0)
-#     nodeB = NodeItem("B", 100, 0)
-
-#     scene.addItem(nodeA)
-#     scene.addItem(nodeB)
-
-#     model.add_edge("A", "B")
-#     model.add_edge("A", "B")
-#     model.add_edge("A", "B")
-
-#     e1 = EdgeItem(nodeA, nodeB, curvature=0.0)
-#     e2 = EdgeItem(nodeA, nodeB, curvature=0.2)
-#     e3 = EdgeItem(nodeA, nodeB, curvature=-0.2)
-
-#     scene.addItem(e1)
-#     scene.addItem(e2)
-#     scene.addItem(e3)
-
-#     view.show()
-#     sys.exit(app.exec())
-
-
-# if __name__ == "__main__":
-#     main()

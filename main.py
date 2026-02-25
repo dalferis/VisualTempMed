@@ -2,21 +2,7 @@ import argparse
 import validator
 import detector
 import converter
-import xml.etree.ElementTree as ET
-import sys
-import os
-from pytlex_core.data import Event, Graph, Instance, TimeX, Signal, Link
-from pytlex_core.algorithms import TLEX, TimeMLParser
-
-def prettyPrintXml(xmlfile: str):
-    try:
-        tree = ET.parse(xmlfile)
-    except:
-        print("Error parsing XML file.")
-
-    elementTree = ET.ElementTree(tree.getroot())
-    ET.indent(elementTree, space="  ", level=0)
-    print(ET.tostring(tree.getroot(), encoding="unicode"))
+import visualizer
 
 def main():
     parser = argparse.ArgumentParser(description='Visual Temporal Medical')
@@ -39,6 +25,9 @@ def main():
     parser_con_group.add_argument('--file', '-f', nargs=1, help='Input file for convert')
     parser_con_group.add_argument('--directory', '-d', nargs=1, help='Directory for convert its files')
     parser_con.add_argument('--typesystem', '-t', nargs=1, required=True, help='Typesystem file')
+
+    parser_vis = subparser.add_parser('visualize', help='Visualize')
+    parser_vis.add_argument('--file', '-f', nargs=1, required=True, help='Input file for convert')
 
     try:
         args = parser.parse_args()
@@ -80,18 +69,13 @@ def main():
         elif args.directory:
             inputDir = args.directory[0]
             print(f"Converting files in directory: {inputDir}")
-            # Conversion logic goes here
+            # for file, format in formats.items():
+            #     newContent = converter.convertFile(inputFile, args.typesystem[0])
+            #     print(newContent)
+    elif args.subcommand == "visualize":
+        visualizer.visualize(args.file[0])
 
-
-    # inputFile = 'pytlex_data\\TimeBankCorpus\\wsj_0006.tml'
-    # #inputFile = 'E3C-Corpus\\data_annotation\\Spanish\\layer1\\ES100001.xml'
-    # prettyPrintXml(inputFile)
-    # #content = TimeMLParser.read_file_data(inputFile)
-
-    # graph = Graph.Graph(filepath = inputFile)
-    # tlex = TLEX.TLEX(graph = graph)
-    # print(tlex.partitions)
-
+        
 if __name__ == "__main__":
     try:
         main()
