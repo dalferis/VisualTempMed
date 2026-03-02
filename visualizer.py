@@ -14,6 +14,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt
 import graph_editor as ge
+import control_panel as cp
 
 
 window_width = 1024
@@ -22,15 +23,14 @@ max_columns = 15
 horizontal_distance = 150
 vertical_distance = 80
 
+def getModel(graph, tlex):
+    pass
 
 def draw(graph, tlex):
     app = QApplication(sys.argv)
+
     model = ge.GraphModel()
     scene = ge.GraphScene()
-    view = ge.GraphView(scene)
-    view.setWindowTitle("Visual Temporal Medical")
-    view.resize(window_width, window_height)
-
 
     partition_graph = TLEX.Partitioner.partition_graph(graph)
 
@@ -94,10 +94,14 @@ def draw(graph, tlex):
                 color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
                 edgeitem = ge.EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
                 scene.addItem(edgeitem)
-                scene.addItem(edgeitem.label)
                 nlinks -= 1
 
-    view.show()
+    window = cp.MainWindow()
+    view = ge.GraphView(scene)
+    view.setWindowTitle("Visual Temporal Medical")
+    view.resize(window_width, window_height)
+    window.setCentralWidget(view)
+    window.show()
     sys.exit(app.exec())
 
 
@@ -107,50 +111,50 @@ def visualize(filepath):
 
     draw(graph, tlex)
 
-    print("Partitions:\n")
-    print(tlex.partitions)
+    # print("Partitions:\n")
+    # print(tlex.partitions)
 
-    print("Format = {}".format(graph))
+    # print("Format = {}".format(graph))
 
-    print("Parsed nodes:\n")
-    for node in graph.nodes.values():
-        print("{}, ".format(node.get_id_str()), end="")
-    print("\b\b\n\n")
+    # print("Parsed nodes:\n")
+    # for node in graph.nodes.values():
+    #     print("{}, ".format(node.get_id_str()), end="")
+    # print("\b\b\n\n")
 
-    print("Parsed links:\n")
-    for link in graph.links.values():
-        print("{} -> {}({}) -> {}".format(link.start_node, link.rel_type, link.link_tag, link.related_to_node))
+    # print("Parsed links:\n")
+    # for link in graph.links.values():
+    #     print("{} -> {}({}) -> {}".format(link.start_node, link.rel_type, link.link_tag, link.related_to_node))
 
-    print("Main partition nodes:\n")
-    partition_graph = TLEX.Partitioner.partition_graph(graph)
-    for node in partition_graph["main_graphs"][0].nodes.values():
-        print(node.get_id_str(), end=", ")
-    print("\b\b\n\n")
+    # print("Main partition nodes:\n")
+    # partition_graph = TLEX.Partitioner.partition_graph(graph)
+    # for node in partition_graph["main_graphs"][0].nodes.values():
+    #     print(node.get_id_str(), end=", ")
+    # print("\b\b\n\n")
 
-    print("Subordinate partition nodes:\n")
-    count = 1
-    for partition in partition_graph["subordination_graphs"]:
-        print("partition {}: ".format(count), end="")
-        count += 1
-        for node in partition.nodes.values():
-            print(node.get_id_str(), end=", ")
-        print("\b\b\n\n")
+    # print("Subordinate partition nodes:\n")
+    # count = 1
+    # for partition in partition_graph["subordination_graphs"]:
+    #     print("partition {}: ".format(count), end="")
+    #     count += 1
+    #     for node in partition.nodes.values():
+    #         print(node.get_id_str(), end=", ")
+    #     print("\b\b\n\n")
 
-    print("Indeterminacy score: {}%".format(round(tlex.indeterminacy_score*100, 2)))
-    print("Indeterminant Sections: {}".format(sorted(tlex.indeterminant_sections)))
-    print("Indeterminant Time points: ", end="")
-    for tp in sorted(tlex.indeterminant_time_points):
-        print(tp, end=", ")
-    print("\b\b")
+    # print("Indeterminacy score: {}%".format(round(tlex.indeterminacy_score*100, 2)))
+    # print("Indeterminant Sections: {}".format(sorted(tlex.indeterminant_sections)))
+    # print("Indeterminant Time points: ", end="")
+    # for tp in sorted(tlex.indeterminant_time_points):
+    #     print(tp, end=", ")
+    # print("\b\b")
 
-    print("Main Timeline: \n\t{}\n\n".format(tlex.timeline))
+    # print("Main Timeline: \n\t{}\n\n".format(tlex.timeline))
 
-    inconsistent = tlex.get_inconsistent_partitions()
-    for g in inconsistent:
-        for node in g.nodes.values():
-            print("Inconsistent node: {}".format(node.get_id_str()))
+    # inconsistent = tlex.get_inconsistent_partitions()
+    # for g in inconsistent:
+    #     for node in g.nodes.values():
+    #         print("Inconsistent node: {}".format(node.get_id_str()))
 
-    count = 0
-    for timeline in graph.subordinate_timelines():
-        print("Subordinate Timeline {}:\n\t{}".format(count, timeline))
-        count += 1
+    # count = 0
+    # for timeline in graph.subordinate_timelines():
+    #     print("Subordinate Timeline {}:\n\t{}".format(count, timeline))
+    #     count += 1

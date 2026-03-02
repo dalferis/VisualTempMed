@@ -5,7 +5,7 @@ from turtle import width
 import networkx as nx
 from PySide6.QtWidgets import (
     QApplication, QGraphicsView, QGraphicsScene, QGraphicsRectItem,
-    QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem, QToolTip
+    QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem
 )
 from PySide6.QtGui import QPen, QBrush, QPainterPath, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
@@ -50,7 +50,7 @@ class NodeItem(QGraphicsRectItem):
         self.label.setFont(font)
 
         text_rect = self.label.boundingRect()
-        padding = 12
+        padding = -2
         width = text_rect.width() + padding
         height = text_rect.height() + padding
 
@@ -72,7 +72,7 @@ class NodeItem(QGraphicsRectItem):
     def create_id_badge(self):
         padding = -2
 
-        self.id_text = QGraphicsTextItem(self.node_id, self)
+        self.id_text = QGraphicsTextItem(str(self.node_id), self)
         self.id_text.setDefaultTextColor(Qt.white)
 
         font = QFont()
@@ -91,8 +91,8 @@ class NodeItem(QGraphicsRectItem):
 
         node_rect = self.rect()
 
-        x = node_rect.left()
-        y = node_rect.top()
+        x = node_rect.left() - 4
+        y = node_rect.top() - 10
 
         self.id_bg.setRect(x, y, badge_width, badge_height)
 
@@ -110,12 +110,6 @@ class NodeItem(QGraphicsRectItem):
                 edge.update_position()
         return super().itemChange(change, value)
 
-    def hoverEnterEvent(self, event):
-        QToolTip.showText(event.screenPos(), self.text)
-
-    def hoverLeaveEvent(self, event):
-        QToolTip.hideText()
-
 
 class EdgeItem(QGraphicsPathItem):
     def __init__(self, source, target, text="", text_color=Qt.black, link_color=Qt.black, curvature=0.0):
@@ -131,11 +125,13 @@ class EdgeItem(QGraphicsPathItem):
         source.add_edge(self)
         target.add_edge(self)
 
-        self.label = QGraphicsTextItem(text)
+        self.label = QGraphicsTextItem(text, self)
         self.label.setDefaultTextColor(text_color)
 
-        self.update_position()
-
+    def itemChange(self, change, value):
+        if change == QGraphicsItem.ItemSceneHasChanged:
+            self.update_position()
+        return super().itemChange(change, value)
 
     def intersect_line_with_rect(self, center_from, center_to, rect, item_pos):
         line = QLineF(center_from, center_to)
@@ -155,6 +151,37 @@ class EdgeItem(QGraphicsPathItem):
 
         return center_from
 
+    def has_obstacle_between(self, start, end):
+        scene = self.scene()
+        if not scene:
+            return False
+
+        line = QLineF(start, end)
+
+        for item in scene.items():
+
+            if not isinstance(item, NodeItem):
+                continue
+
+            if item is self.source or item is self.target:
+                continue
+
+            rect = item.rect().translated(item.pos())
+
+            edges = [
+                QLineF(rect.topLeft(), rect.topRight()),
+                QLineF(rect.topRight(), rect.bottomRight()),
+                QLineF(rect.bottomRight(), rect.bottomLeft()),
+                QLineF(rect.bottomLeft(), rect.topLeft())
+            ]
+
+            for edge in edges:
+                intersection_type, _ = line.intersects(edge)
+                if intersection_type == QLineF.BoundedIntersection:
+                    return True
+
+        return False
+
     def update_position(self):
         rect1 = self.source.rect()
         rect2 = self.target.rect()
@@ -162,7 +189,6 @@ class EdgeItem(QGraphicsPathItem):
         center1 = self.source.pos() + rect1.center()
         center2 = self.target.pos() + rect2.center()
 
-        # Punto exacto en borde
         start = self.intersect_line_with_rect(
             center1, center2, rect1, self.source.pos()
         )
@@ -180,9 +206,16 @@ class EdgeItem(QGraphicsPathItem):
 
         ctrl = None
         if self.curvature != 0:
+            curvature = self.curvature
+        elif self.has_obstacle_between(start, end):
+            curvature = 0.25
+        else:
+            curvature = 0.0
+
+        if curvature != 0:
             ctrl = QPointF(
-                (start.x() + end.x()) / 2 - dy * self.curvature,
-                (start.y() + end.y()) / 2 + dx * self.curvature
+                (start.x() + end.x()) / 2 - dy * curvature,
+                (start.y() + end.y()) / 2 + dx * curvature
             )
             path.quadTo(ctrl, end)
             tx = end.x() - ctrl.x()
@@ -192,7 +225,7 @@ class EdgeItem(QGraphicsPathItem):
             path.lineTo(end)
             angle = base_angle
 
-        # Flecha
+        # Arrow
         arrow_size = 12
         arrow_p1 = end - QPointF(
             arrow_size * math.cos(angle - math.pi / 6),
@@ -209,41 +242,41 @@ class EdgeItem(QGraphicsPathItem):
         path.lineTo(arrow_p2)
         self.setPath(path)
 
-        # Etiqueta
-        if self.curvature != 0 and ctrl is not None:
+        # Label
+        if curvature != 0 and ctrl is not None:
             t = 0.5
 
-            # Punto real en la curva (Bézier)
+            # Real point on the curve (quadratic Bézier)
             x = (1 - t)**2 * start.x() + 2 * (1 - t) * t * ctrl.x() + t**2 * end.x()
             y = (1 - t)**2 * start.y() + 2 * (1 - t) * t * ctrl.y() + t**2 * end.y()
 
             label_pos = QPointF(x, y)
 
+            # Real tangent of the curve
             tx = 2*(1 - t)*(ctrl.x() - start.x()) + 2*t*(end.x() - ctrl.x())
             ty = 2*(1 - t)*(ctrl.y() - start.y()) + 2*t*(end.y() - ctrl.y())
 
             length = math.hypot(tx, ty)
 
             if length != 0:
-                # Vector normal
                 nx = -ty / length
                 ny = tx / length
 
                 offset = 15
                 label_pos += QPointF(nx * offset, ny * offset)
+
         else:
-            # Línea recta
+            # Beeline
             label_pos = QPointF(
                 (start.x() + end.x()) / 2,
                 (start.y() + end.y()) / 2
             )
 
-        # Centrar el texto respecto al punto calculado
+        # Center text
         rect = self.label.boundingRect()
         label_pos -= QPointF(rect.width() / 2, rect.height() / 2)
 
         self.label.setPos(label_pos)
-
 
 class GraphView(QGraphicsView):
     def __init__(self, scene):
