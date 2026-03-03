@@ -23,12 +23,7 @@ max_columns = 15
 horizontal_distance = 150
 vertical_distance = 80
 
-def getModel(graph, tlex):
-    pass
-
-def draw(graph, tlex):
-    app = QApplication(sys.argv)
-
+def getScene(graph, tlex):
     model = ge.GraphModel()
     scene = ge.GraphScene()
 
@@ -95,15 +90,14 @@ def draw(graph, tlex):
                 edgeitem = ge.EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
                 scene.addItem(edgeitem)
                 nlinks -= 1
+    return scene
 
-    window = cp.MainWindow()
-    view = ge.GraphView(scene)
-    view.setWindowTitle("Visual Temporal Medical")
-    view.resize(window_width, window_height)
-    window.setCentralWidget(view)
+def draw(graph, tlex):
+    app = QApplication(sys.argv)
+    scene = getScene(graph, tlex)
+    window = cp.MainWindow(scene)
     window.show()
     sys.exit(app.exec())
-
 
 def visualize(filepath):
     graph = Graph.Graph(filepath = filepath)

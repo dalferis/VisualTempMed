@@ -8,13 +8,13 @@ import graph_editor as ge
 
 
 class MainWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self, scene):
         super().__init__()
 
         self.setWindowTitle("Visualizador de líneas temporales en contexto médico")
         self.resize(1200, 800)
 
-        self.scene = ge.GraphScene()
+        self.scene = scene
         self.view = ge.GraphView(self.scene)
         self.setCentralWidget(self.view)
 
@@ -58,9 +58,3 @@ class MainWindow(QMainWindow):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
-
-# if __name__ == "__main__":
-#     app = QApplication(sys.argv)
-#     window = MainWindow()
-#     window.show()
-#     sys.exit(app.exec())
