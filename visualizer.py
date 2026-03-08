@@ -13,8 +13,8 @@ from PySide6.QtWidgets import (
     QGraphicsEllipseItem, QGraphicsPathItem
 )
 from PySide6.QtCore import Qt
-import graph_editor as ge
-import control_panel as cp
+import graphView as gv
+import mainWindow as mw
 
 
 window_width = 1024
@@ -24,8 +24,8 @@ horizontal_distance = 150
 vertical_distance = 80
 
 def getScene(graph, tlex):
-    model = ge.GraphModel()
-    scene = ge.GraphScene()
+    model = gv.GraphModel()
+    scene = gv.GraphScene()
 
     partition_graph = TLEX.Partitioner.partition_graph(graph)
 
@@ -42,7 +42,7 @@ def getScene(graph, tlex):
                 text = node.value
             else:
                 text = ""
-            scene.addItem(ge.NodeItem(node.get_id_str(), xpos, ypos, text=text))
+            scene.addItem(gv.NodeItem(node.get_id_str(), xpos, ypos, text=text))
             count += 1
         line += vertical_distance
 
@@ -58,7 +58,7 @@ def getScene(graph, tlex):
                 text = node.value
             else:
                 text = ""
-            scene.addItem(ge.NodeItem(node.get_id_str(), xpos, ypos, text=text))
+            scene.addItem(gv.NodeItem(node.get_id_str(), xpos, ypos, text=text))
             count += 1
         line += vertical_distance
 
@@ -87,7 +87,7 @@ def getScene(graph, tlex):
             end_node = scene.getNodeItem(link.related_to_node)
             if not start_node is None and not end_node is None:
                 color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
-                edgeitem = ge.EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
+                edgeitem = gv.EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
                 scene.addItem(edgeitem)
                 nlinks -= 1
     return scene
@@ -95,7 +95,7 @@ def getScene(graph, tlex):
 def draw(graph, tlex):
     app = QApplication(sys.argv)
     scene = getScene(graph, tlex)
-    window = cp.MainWindow(scene)
+    window = mw.MainWindow(scene)
     window.show()
     sys.exit(app.exec())
 

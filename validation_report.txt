@@ -1,1 +1,0 @@
-XML valid against XSD

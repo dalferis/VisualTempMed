@@ -11,6 +11,18 @@ from PySide6.QtGui import QPen, QBrush, QPainterPath, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
 from PySide6.QtWidgets import QGraphicsItem
 
+class GraphView(QGraphicsView):
+    def __init__(self, scene):
+        super().__init__(scene)
+        self.setRenderHint(self.renderHints())
+        self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
+
+    def wheelEvent(self, event):
+        factor = 1.15
+        if event.angleDelta().y() > 0:
+            self.scale(factor, factor)
+        else:
+            self.scale(1 / factor, 1 / factor)
 
 class GraphModel:
     def __init__(self):
@@ -54,8 +66,7 @@ class NodeItem(QGraphicsRectItem):
         width = text_rect.width() + padding
         height = text_rect.height() + padding
 
-        super().__init__(-width/2, -height/2, width, height
-)
+        super().__init__(-width/2, -height/2, width, height)
         self.setPos(x, y)
 
         self.setBrush(QBrush(Qt.lightGray))
@@ -277,16 +288,3 @@ class EdgeItem(QGraphicsPathItem):
         label_pos -= QPointF(rect.width() / 2, rect.height() / 2)
 
         self.label.setPos(label_pos)
-
-class GraphView(QGraphicsView):
-    def __init__(self, scene):
-        super().__init__(scene)
-        self.setRenderHint(self.renderHints())
-        self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
-
-    def wheelEvent(self, event):
-        factor = 1.15
-        if event.angleDelta().y() > 0:
-            self.scale(factor, factor)
-        else:
-            self.scale(1 / factor, 1 / factor)
