@@ -24,16 +24,6 @@ class GraphView(QGraphicsView):
         else:
             self.scale(1 / factor, 1 / factor)
 
-class GraphModel:
-    def __init__(self):
-        self.graph = nx.MultiDiGraph()
-
-    def addNode(self, node_id):
-        self.graph.add_node(node_id)
-
-    def addEdge(self, u, v):
-        return self.graph.add_edge(u, v)
-
 class GraphScene(QGraphicsScene):
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
@@ -56,11 +46,8 @@ class GraphScene(QGraphicsScene):
         if isinstance(item, NodeItem):
             self.nodes[item.node_id] = item
 
-    def getNodeItem(self, node_id):
-        return self.nodes.get(node_id, None)
-
     def scene(self):
-        graphModel = GraphModel()
+        graphModel = nx.MultiDiGraph()
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
 
         line = 0
@@ -69,7 +56,7 @@ class GraphScene(QGraphicsScene):
             for node in partition.nodes.values():
                 xpos = (count % self._max_columns) * self._horizontal_distance
                 ypos = line + (count // self._max_columns) * self._vertical_distance
-                graphModel.addNode(node.get_id_str())
+                graphModel.add_node(node.get_id_str())
                 if isinstance(node, Instance.Instance):
                     text = self._graph.events[node.event].stem
                 elif isinstance(node, TimeX.TimeX):
@@ -85,7 +72,7 @@ class GraphScene(QGraphicsScene):
             for node in partition.nodes.values():
                 xpos = (count % self._max_columns) * self._horizontal_distance
                 ypos = line + (count // self._max_columns) * self._vertical_distance
-                graphModel.addNode(node.get_id_str())
+                graphModel.add_node(node.get_id_str())
                 if isinstance(node, Instance.Instance):
                     text = self._graph.events[node.event].stem
                 elif isinstance(node, TimeX.TimeX):
@@ -108,9 +95,9 @@ class GraphScene(QGraphicsScene):
         for llist in linklistlist:
             nlinks = len(llist) // 2
             for link in llist:
-                graphModel.addEdge(link.start_node, link.related_to_node)
-                start_node = self.getNodeItem(link.start_node)
-                end_node = self.getNodeItem(link.related_to_node)
+                graphModel.add_edge(link.start_node, link.related_to_node)
+                start_node = self.nodes.get(link.start_node, None)
+                end_node = self.nodes.get(link.related_to_node, None)
                 if not start_node is None and not end_node is None:
                     color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
                     edgeitem = EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
