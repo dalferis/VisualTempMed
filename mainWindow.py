@@ -1,23 +1,22 @@
-import sys
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QDockWidget, QWidget, QVBoxLayout, QStackedWidget,
-    QLabel, QPushButton, QCheckBox, QSlider, QRadioButton, QButtonGroup
+    QMainWindow, QDockWidget, QWidget, QVBoxLayout, QStackedWidget,
+    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup
 )
 from PySide6.QtCore import Qt
 import graphView as gv
 import timelineView as tv
 
-
 class MainWindow(QMainWindow):
-    def __init__(self, scene):
+    def __init__(self, model):
         super().__init__()
 
         self.setWindowTitle("Visualizador de líneas temporales en contexto médico")
         self.resize(1200, 800)
 
-        self.scene = scene
-        self.graphView = gv.GraphView(self.scene)
-        self.timelineView = tv.TimelineView(self.scene)
+        self.graphView = gv.GraphView(model)
+        self.graphScene = self.graphView.scene
+        self.timelineView = tv.TimelineView(model)
+        self.timelineScene = self.timelineView.scene
 
         self.stack = QStackedWidget()
         self.stack.addWidget(self.graphView)
@@ -75,14 +74,14 @@ class MainWindow(QMainWindow):
             self.stack.setCurrentWidget(self.timelineView)
 
     def update_edge_width(self, value):
-        for item in self.scene.items():
+        for item in self.graphScene.items():
             if isinstance(item, gv.EdgeItem):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
 
     def toggle_show_ids(self, state):
-        for item in self.scene.items():
+        for item in self.graphScene.items():
             if isinstance(item, gv.NodeItem):
                 item.id_bg.setVisible(state)
                 item.id_text.setVisible(state)

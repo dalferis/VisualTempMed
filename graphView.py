@@ -1,19 +1,19 @@
-﻿from re import I
-import sys
-import math
-from turtle import width
+﻿import math
 import networkx as nx
+from pytlex_core.algorithms import TLEX
 from PySide6.QtWidgets import (
-    QApplication, QGraphicsView, QGraphicsScene, QGraphicsRectItem,
-    QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem
+    QGraphicsView, QGraphicsScene, QGraphicsRectItem,
+    QGraphicsPathItem, QGraphicsTextItem
 )
-from PySide6.QtGui import QPen, QBrush, QPainterPath, QFont
+from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
 from PySide6.QtWidgets import QGraphicsItem
+from pytlex_core.data import Graph, Instance, TimeX
 
 class GraphView(QGraphicsView):
-    def __init__(self, scene):
-        super().__init__(scene)
+    def __init__(self, model):
+        self.scene = GraphScene(model)
+        super().__init__(self.scene)
         self.setRenderHint(self.renderHints())
         self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
 
@@ -34,11 +34,22 @@ class GraphModel:
     def addEdge(self, u, v):
         return self.graph.add_edge(u, v)
 
-
 class GraphScene(QGraphicsScene):
-    def __init__(self):
+    _graph: Graph.Graph
+    _tlex: TLEX.TLEX
+
+    _window_width = 1024
+    _window_height = 1024
+    _max_columns = 15
+    _horizontal_distance = 150
+    _vertical_distance = 80
+
+    def __init__(self, dataModel):
         super().__init__()
+        self._graph = dataModel.graph()
+        self._tlex = dataModel.tlex()
         self.nodes = {}
+        self.scene()
 
     def addItem(self, item):
         super().addItem(item)
@@ -47,6 +58,64 @@ class GraphScene(QGraphicsScene):
 
     def getNodeItem(self, node_id):
         return self.nodes.get(node_id, None)
+
+    def scene(self):
+        graphModel = GraphModel()
+        partition_graph = TLEX.Partitioner.partition_graph(self._graph)
+
+        line = 0
+        for partition in partition_graph["main_graphs"]:
+            count = 0
+            for node in partition.nodes.values():
+                xpos = (count % self._max_columns) * self._horizontal_distance
+                ypos = line + (count // self._max_columns) * self._vertical_distance
+                graphModel.addNode(node.get_id_str())
+                if isinstance(node, Instance.Instance):
+                    text = self._graph.events[node.event].stem
+                elif isinstance(node, TimeX.TimeX):
+                    text = node.value
+                else:
+                    text = ""
+                self.addItem(NodeItem(node.get_id_str(), xpos, ypos, text=text))
+                count += 1
+            line += self._vertical_distance
+
+        for partition in partition_graph["subordination_graphs"]:
+            count = 0
+            for node in partition.nodes.values():
+                xpos = (count % self._max_columns) * self._horizontal_distance
+                ypos = line + (count // self._max_columns) * self._vertical_distance
+                graphModel.addNode(node.get_id_str())
+                if isinstance(node, Instance.Instance):
+                    text = self._graph.events[node.event].stem
+                elif isinstance(node, TimeX.TimeX):
+                    text = node.value
+                else:
+                    text = ""
+                self.addItem(NodeItem(node.get_id_str(), xpos, ypos, text=text))
+                count += 1
+            line += self._vertical_distance
+
+        linklist = list(self._graph.links.values()) + list(self._tlex.s_links)
+        linklist.sort(key=lambda x: (x.start_node, x.related_to_node))
+        linklistlist = [[linklist[0]]]
+        for link in linklist[1:]:
+            if link.start_node == linklistlist[-1][-1].start_node and link.related_to_node == linklistlist[-1][-1].related_to_node:
+                linklistlist[-1].append(link)
+            else:
+                linklistlist.append([link])
+
+        for llist in linklistlist:
+            nlinks = len(llist) // 2
+            for link in llist:
+                graphModel.addEdge(link.start_node, link.related_to_node)
+                start_node = self.getNodeItem(link.start_node)
+                end_node = self.getNodeItem(link.related_to_node)
+                if not start_node is None and not end_node is None:
+                    color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
+                    edgeitem = EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
+                    self.addItem(edgeitem)
+                    nlinks -= 1
 
 
 class NodeItem(QGraphicsRectItem):
@@ -120,7 +189,6 @@ class NodeItem(QGraphicsRectItem):
             for edge in self.edges:
                 edge.update_position()
         return super().itemChange(change, value)
-
 
 class EdgeItem(QGraphicsPathItem):
     def __init__(self, source, target, text="", text_color=Qt.black, link_color=Qt.black, curvature=0.0):
