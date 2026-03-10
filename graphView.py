@@ -1,14 +1,13 @@
 ﻿import math
 import networkx as nx
 from pytlex_core.algorithms import TLEX
+from pytlex_core.data import Graph, Instance, TimeX
 from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsRectItem,
-    QGraphicsPathItem, QGraphicsTextItem
+    QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem
 )
 from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
-from PySide6.QtWidgets import QGraphicsItem
-from pytlex_core.data import Graph, Instance, TimeX
 
 class GraphView(QGraphicsView):
     def __init__(self, model):
@@ -103,7 +102,6 @@ class GraphScene(QGraphicsScene):
                     edgeitem = EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
                     self.addItem(edgeitem)
                     nlinks -= 1
-
 
 class NodeItem(QGraphicsRectItem):
     def __init__(self, node_id, x, y, text=""):

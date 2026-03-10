@@ -1,9 +1,9 @@
 import sys
 from dataModel import DataModel
+import mainWindow as mw
 from pytlex_core.data import Graph
 from pytlex_core.algorithms import TLEX
 from PySide6.QtWidgets import QApplication
-import mainWindow as mw
 
 def visualize(filepath):
     graph = Graph.Graph(filepath=filepath)

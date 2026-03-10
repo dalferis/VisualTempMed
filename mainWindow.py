@@ -1,10 +1,10 @@
-from PySide6.QtWidgets import (
-    QMainWindow, QDockWidget, QWidget, QVBoxLayout, QStackedWidget,
-    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup
-)
-from PySide6.QtCore import Qt
 import graphView as gv
 import timelineView as tv
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import (
+    QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
+    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout
+)
 
 class MainWindow(QMainWindow):
     def __init__(self, model):
@@ -34,26 +34,43 @@ class MainWindow(QMainWindow):
         panel = QWidget()
         layout = QVBoxLayout(panel)
 
-        # Controls
-
-        # Radio button
-        self.display_graph = QRadioButton("Graph")
-        self.display_timeline = QRadioButton("Timeline")
-        self.display_graph.setChecked(True)
-        self.display_radio_group = QButtonGroup()
-        self.display_radio_group.addButton(self.display_graph)
-        self.display_radio_group.addButton(self.display_timeline)
-        self.display_graph.toggled.connect(self.change_view)
-        layout.addWidget(self.display_graph)
-        layout.addWidget(self.display_timeline)
-
-        # Show IDs checkbox
+        # Layout with common controls:
+        layoutCommon = QGridLayout()
+        layout.addLayout(layoutCommon)
+        # - Radio buttons for view selection
+        self.radioGraph = QRadioButton("Graph")
+        self.radioTimeline = QRadioButton("Timeline")
+        self.radioGraph.setChecked(True)
+        self.radiogroupView = QButtonGroup(self)
+        self.radiogroupView.addButton(self.radioGraph)
+        self.radiogroupView.addButton(self.radioTimeline)
+        self.radiogroupView.setId(self.radioGraph, 0)
+        self.radiogroupView.setId(self.radioTimeline, 1)
+        self.radiogroupView.idClicked.connect(self.change_view)
+        layoutCommon.addWidget(self.radioGraph, 0, 0)
+        layoutCommon.addWidget(self.radioTimeline, 0, 1)
+        # - Checkbox for showing IDs
         self.chkbxShowId = QCheckBox("Show IDs")
         self.chkbxShowId.setChecked(True)
         self.chkbxShowId.stateChanged.connect(self.toggle_show_ids)
-        layout.addWidget(self.chkbxShowId)
+        layoutCommon.addWidget(self.chkbxShowId, 1, 0)
 
-        # Edge thickness slider
+        # Layout with controls:
+        self.stackControl = QStackedWidget()
+        self.stackControl.addWidget(self.create_graph_controls())
+        self.stackControl.addWidget(self.create_timeline_controls())
+        layout.addWidget(self.stackControl)
+
+        # Properties
+        layout.addStretch()
+        dock.setWidget(panel)
+        self.addDockWidget(Qt.LeftDockWidgetArea, dock)
+
+    def create_graph_controls(self):
+        widget = QWidget()
+        # Layout with graph controls:
+        layout = QVBoxLayout(widget)
+        # - Slider for edge thickness
         layout.addWidget(QLabel("Edge thickness"))
         self.sliderEdgeThickness = QSlider(Qt.Horizontal)
         self.sliderEdgeThickness.setMinimum(1)
@@ -61,17 +78,23 @@ class MainWindow(QMainWindow):
         self.sliderEdgeThickness.setValue(2)
         layout.addWidget(self.sliderEdgeThickness)
         self.sliderEdgeThickness.valueChanged.connect(self.update_edge_width)
+        return widget
 
-        # Properties
-        layout.addStretch()
-        dock.setWidget(panel)
-        self.addDockWidget(Qt.RightDockWidgetArea, dock)
+    def create_timeline_controls(self):
+        ####### TODO: Este control solo es un ejemplo
+        widget = QWidget()
+        # Layout with timeline controls:
+        layout = QVBoxLayout(widget)
+        # - Checkbox for showing IDs
+        self.chkbxShowIdTimeline = QCheckBox("Show IDs y tal")
+        self.chkbxShowIdTimeline.setChecked(True)
+        self.chkbxShowIdTimeline.stateChanged.connect(self.toggle_show_ids)
+        layout.addWidget(self.chkbxShowIdTimeline)
+        return widget
 
-    def change_view(self, activo):
-        if activo:
-            self.stack.setCurrentWidget(self.graphView)
-        else:
-            self.stack.setCurrentWidget(self.timelineView)
+    def change_view(self, index):
+        self.stack.setCurrentIndex(index)
+        self.stackControl.setCurrentIndex(index)
 
     def update_edge_width(self, value):
         for item in self.graphScene.items():

@@ -1,14 +1,9 @@
-import sys
-import math
-from turtle import width
-import networkx as nx
 from PySide6.QtWidgets import (
     QApplication, QGraphicsView, QGraphicsScene, QGraphicsRectItem,
-    QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem
+    QGraphicsEllipseItem, QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem
 )
 from PySide6.QtGui import QPen, QBrush, QPainterPath, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
-from PySide6.QtWidgets import QGraphicsItem
 
 class TimelineView(QGraphicsView):
     def __init__(self, model):
