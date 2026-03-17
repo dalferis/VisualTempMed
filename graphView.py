@@ -63,7 +63,9 @@ class GraphScene(QGraphicsScene):
                     text = node.value
                 else:
                     text = ""
-                self.addItem(NodeItem(node.get_id_str(), xpos, ypos, text=text))
+                graphNode = NodeItem(node.get_id_str(), text=text)
+                self.addItem(graphNode)
+                graphNode.setPos(xpos, ypos)
                 count += 1
             line += self._vertical_distance
 
@@ -79,7 +81,9 @@ class GraphScene(QGraphicsScene):
                     text = node.value
                 else:
                     text = ""
-                self.addItem(NodeItem(node.get_id_str(), xpos, ypos, text=text))
+                graphNode = NodeItem(node.get_id_str(), text=text)
+                self.addItem(graphNode)
+                graphNode.setPos(xpos, ypos)
                 count += 1
             line += self._vertical_distance
 
@@ -105,7 +109,7 @@ class GraphScene(QGraphicsScene):
                     nlinks -= 1
 
 class NodeItem(QGraphicsRectItem):
-    def __init__(self, node_id, x, y, text=""):
+    def __init__(self, node_id, text=""):
         self.node_id = node_id
         self.edges = []
 
@@ -122,7 +126,6 @@ class NodeItem(QGraphicsRectItem):
         height = text_rect.height() + padding
 
         super().__init__(-width/2, -height/2, width, height)
-        self.setPos(x, y)
 
         self.setBrush(QBrush(Qt.lightGray))
         self.setPen(QPen(Qt.black, 2))
