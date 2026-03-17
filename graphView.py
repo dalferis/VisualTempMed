@@ -6,14 +6,15 @@ from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsRectItem,
     QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem
 )
-from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont
+from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont, QPainter
 from PySide6.QtCore import Qt, QPointF, QLineF
 
 class GraphView(QGraphicsView):
     def __init__(self, model):
         self.scene = GraphScene(model)
         super().__init__(self.scene)
-        self.setRenderHint(self.renderHints())
+        self.setRenderHint(QPainter.Antialiasing)
+        self.setRenderHint(QPainter.TextAntialiasing)
         self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
 
     def wheelEvent(self, event):
@@ -38,14 +39,14 @@ class GraphScene(QGraphicsScene):
         self._graph = dataModel.graph()
         self._tlex = dataModel.tlex()
         self.nodes = {}
-        self.scene()
+        self.createScene()
 
     def addItem(self, item):
         super().addItem(item)
         if isinstance(item, NodeItem):
             self.nodes[item.node_id] = item
 
-    def scene(self):
+    def createScene(self):
         graphModel = nx.MultiDiGraph()
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
 
@@ -132,9 +133,9 @@ class NodeItem(QGraphicsRectItem):
         self.label.setParentItem(self)
         self.label.setPos(-text_rect.width()/2, -text_rect.height()/2)
 
-        self.create_id_badge()
+        self.createIdBadge()
 
-    def create_id_badge(self):
+    def createIdBadge(self):
         padding = -2
 
         self.id_text = QGraphicsTextItem(str(self.node_id), self)
@@ -166,13 +167,13 @@ class NodeItem(QGraphicsRectItem):
         self.id_bg.setZValue(2)
         self.id_text.setZValue(3)
 
-    def add_edge(self, edge):
+    def addEdge(self, edge):
         self.edges.append(edge)
 
     def itemChange(self, change, value):
         if change == QGraphicsItem.ItemPositionHasChanged:
             for edge in self.edges:
-                edge.update_position()
+                edge.updatePosition()
         return super().itemChange(change, value)
 
 class EdgeItem(QGraphicsPathItem):
@@ -186,18 +187,18 @@ class EdgeItem(QGraphicsPathItem):
         self.setPen(QPen(link_color, 2))
         self.setZValue(-1)
 
-        source.add_edge(self)
-        target.add_edge(self)
+        source.addEdge(self)
+        target.addEdge(self)
 
         self.label = QGraphicsTextItem(text, self)
         self.label.setDefaultTextColor(text_color)
 
     def itemChange(self, change, value):
         if change == QGraphicsItem.ItemSceneHasChanged:
-            self.update_position()
+            self.updatePosition()
         return super().itemChange(change, value)
 
-    def intersect_line_with_rect(self, center_from, center_to, rect, item_pos):
+    def intersectLineWithRect(self, center_from, center_to, rect, item_pos):
         line = QLineF(center_from, center_to)
         r = rect.translated(item_pos)
 
@@ -215,7 +216,7 @@ class EdgeItem(QGraphicsPathItem):
 
         return center_from
 
-    def has_obstacle_between(self, start, end):
+    def hasObstacleBetween(self, start, end):
         scene = self.scene()
         if not scene:
             return False
@@ -246,18 +247,18 @@ class EdgeItem(QGraphicsPathItem):
 
         return False
 
-    def update_position(self):
+    def updatePosition(self):
         rect1 = self.source.rect()
         rect2 = self.target.rect()
 
         center1 = self.source.pos() + rect1.center()
         center2 = self.target.pos() + rect2.center()
 
-        start = self.intersect_line_with_rect(
+        start = self.intersectLineWithRect(
             center1, center2, rect1, self.source.pos()
         )
 
-        end = self.intersect_line_with_rect(
+        end = self.intersectLineWithRect(
             center2, center1, rect2, self.target.pos()
         )
 
@@ -271,7 +272,7 @@ class EdgeItem(QGraphicsPathItem):
         ctrl = None
         if self.curvature != 0:
             curvature = self.curvature
-        elif self.has_obstacle_between(start, end):
+        elif self.hasObstacleBetween(start, end):
             curvature = 0.25
         else:
             curvature = 0.0
