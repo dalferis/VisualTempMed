@@ -23,8 +23,7 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(self.timelineView)
 
         self.setCentralWidget(self.stack)
-        self.stack.setCurrentWidget(self.graphView)
-
+        self.stack.setCurrentWidget(self.timelineView)
         self.create_control_panel()
 
     def create_control_panel(self):
@@ -40,7 +39,7 @@ class MainWindow(QMainWindow):
         # - Radio buttons for view selection
         self.radioGraph = QRadioButton("Graph")
         self.radioTimeline = QRadioButton("Timeline")
-        self.radioGraph.setChecked(True)
+        self.radioTimeline.setChecked(True)
         self.radiogroupView = QButtonGroup(self)
         self.radiogroupView.addButton(self.radioGraph)
         self.radiogroupView.addButton(self.radioTimeline)
@@ -86,7 +85,7 @@ class MainWindow(QMainWindow):
         # Layout with timeline controls:
         layout = QVBoxLayout(widget)
         # - Checkbox for showing IDs
-        self.chkbxShowIdTimeline = QCheckBox("Show IDs y tal")
+        self.chkbxShowIdTimeline = QCheckBox("Show ID lanes")
         self.chkbxShowIdTimeline.setChecked(True)
         self.chkbxShowIdTimeline.stateChanged.connect(self.toggle_show_ids)
         layout.addWidget(self.chkbxShowIdTimeline)
