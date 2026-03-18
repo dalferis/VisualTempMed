@@ -31,7 +31,7 @@ class TimelineScene(QGraphicsScene):
     _maxy = 800
 
     _first_lane = 80
-    _lane_heigth = 80
+    _lane_height = 80
     _time_resolution = 50
 
     def __init__(self, dataModel):
@@ -49,8 +49,14 @@ class TimelineScene(QGraphicsScene):
 
     def createScene(self):
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
+        maxTime = 0
+        for partition in partition_graph["main_graphs"]:
+            maxTime = max(maxTime, len(partition.nodes))
+
         mainLane = TimeAxis("Main", 0, self._minx, self._miny, self._maxx, self._maxy)
+        mainLane.setScale(maxTime-1)
         self.addItem(mainLane)
+
         for partition in partition_graph["main_graphs"]:
             count = 0
             for node in partition.nodes.values():
@@ -83,13 +89,21 @@ class TimelineScene(QGraphicsScene):
         #     laneNumber += self._vertical_distance
 
 class TimeAxis(QGraphicsItem):
+    # physical dimensions (pixels)
     _first_lane = 80
-    _lane_heigth = 80
+    _lane_height = 80
     _time_resolution = 50
+    _padding = 100
 
+    # logical dimensions (time units)
     _start_time = 0
     _tick_interval = 5
+    _tick_num_intervals = 5
     _tick_height = 10
+    _duration: int
+
+    # pixels per time unit
+    _time_scale: float
 
     def __init__(self, labelText, index, minx, miny, maxx, maxy):
         super().__init__()
@@ -97,27 +111,34 @@ class TimeAxis(QGraphicsItem):
         self._miny = miny
         self._maxx = maxx
         self._maxy = maxy
-        self._end_time = self._maxx / self._time_resolution
+        self.width = self._maxx - self._minx - 2*self._padding
         self.label = QGraphicsTextItem(labelText, self)
-        self.label.setPos(0, -self.label.boundingRect().height())
-        self.setPos(minx, self._first_lane + index * self._lane_heigth)
+        self.label.setPos(0, self.label.boundingRect().height())
+        self.setPos(minx + self._padding, self._first_lane + index * self._lane_height)
         self.setZValue(-1)
 
     def addElement(self, time, element):
         element.setParentItem(self)
         x = time * self._time_resolution
-        element.setPos(x, 0)
+        element.setPos(x, -10)
 
     def boundingRect(self):
-        return QRectF(0, -10, self._maxx - self._minx, 20)
+        return QRectF(0, -10, self.width, 20)
 
     def paint(self, painter, option, widget):
         painter.setPen(QPen(Qt.black, 2))
-        painter.drawLine(0, 0, self._maxx - self._minx, 0)
+        painter.drawLine(0, 0, self.width, 0)
         painter.setPen(QPen(Qt.black, 1))
         t = self._start_time
         while t <= self._end_time:
             x = t * self._time_resolution
             painter.drawLine(x, -self._tick_height, x, self._tick_height)
-            painter.drawText(x - 10, 20, str(int(t)))
+            painter.drawText(x, 20, str(int(t)))
             t += self._tick_interval
+
+    def setScale(self, maxTime):
+        self._end_time = maxTime
+        self._tick_num_intervals = maxTime
+        self._tick_interval = max(1, maxTime // self._tick_num_intervals)
+        self._time_resolution = (self._maxx - self._minx - 2*self._padding) / maxTime
+        self.update()
