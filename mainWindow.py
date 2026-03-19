@@ -95,7 +95,7 @@ class MainWindow(QMainWindow):
         # - Checkbox for showing IDs
         self.chkbxShowIdTimeline = QCheckBox("Show ID lanes")
         self.chkbxShowIdTimeline.setChecked(True)
-        # self.chkbxShowIdTimeline.stateChanged.connect(self.toggleShowIds)
+        self.chkbxShowIdTimeline.stateChanged.connect(self.toggleShowLaneIds)
         layout.addWidget(self.chkbxShowIdTimeline)
         return widget
 
@@ -119,3 +119,8 @@ class MainWindow(QMainWindow):
             if isinstance(item, gv.NodeItem):
                 item.id_bg.setVisible(state)
                 item.id_text.setVisible(state)
+
+    def toggleShowLaneIds(self, state):
+        for item in self.timelineScene.items():
+            if isinstance(item, tv.TimeAxis):
+                item.label.setVisible(state)

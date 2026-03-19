@@ -53,11 +53,13 @@ class TimelineScene(QGraphicsScene):
         for partition in partition_graph["main_graphs"]:
             maxTime = max(maxTime, len(partition.nodes))
 
-        mainLane = TimeAxis("Main", 0, self._minx, self._miny, self._maxx, self._maxy)
-        mainLane.setScale(maxTime-1)
-        self.addItem(mainLane)
-
+        subLanes = []
+        laneCount = 0
         for partition in partition_graph["main_graphs"]:
+            lane = TimeAxis("Main #"+str(laneCount), laneCount, self._minx, self._miny, self._maxx, self._maxy)
+            subLanes.append(lane)
+            lane.setScale(maxTime-1)
+            self.addItem(lane)
             count = 0
             for node in partition.nodes.values():
                 if isinstance(node, Instance.Instance):
@@ -67,26 +69,28 @@ class TimelineScene(QGraphicsScene):
                 else:
                     text = ""
                 graphNode = gv.NodeItem(node.get_id_str(), text=text)
-                mainLane.addElement(count, graphNode)
+                lane.addElement(count, graphNode)
                 count += 1
+            laneCount += 1
 
-        # for partition in partition_graph["subordination_graphs"]:
-        #     count = 0
-        #     for node in partition.nodes.values():
-        #         xpos = (count % self._max_columns) * self._horizontal_distance
-        #         ypos = laneNumber + (count // self._max_columns) * self._vertical_distance
-        #         graphModel.add_node(node.get_id_str())
-        #         if isinstance(node, Instance.Instance):
-        #             text = self._graph.events[node.event].stem
-        #         elif isinstance(node, TimeX.TimeX):
-        #             text = node.value
-        #         else:
-        #             text = ""
-        #         node = NodeItem(node.get_id_str(), text=text)
-        #         self.addItem(node)
-        #         node.setPos(xpos, ypos)
-        #         count += 1
-        #     laneNumber += self._vertical_distance
+        mainCount = laneCount
+        for partition in partition_graph["subordination_graphs"]:
+            lane = TimeAxis("Subordinate #"+str(laneCount-mainCount), laneCount, self._minx, self._miny, self._maxx, self._maxy)
+            subLanes.append(lane)
+            lane.setScale(maxTime-1)
+            self.addItem(lane)
+            count = 0
+            for node in partition.nodes.values():
+                if isinstance(node, Instance.Instance):
+                    text = self._graph.events[node.event].stem
+                elif isinstance(node, TimeX.TimeX):
+                    text = node.value
+                else:
+                    text = ""
+                graphNode = gv.NodeItem(node.get_id_str(), text=text)
+                lane.addElement(count, graphNode)
+                count += 1
+            laneCount += 1
 
 class TimeAxis(QGraphicsItem):
     # physical dimensions (pixels)
