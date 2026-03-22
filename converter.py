@@ -64,13 +64,13 @@ translate = {
     }
 }
 
-def get_docid(cas):
+def getDocId(cas):
     dmd_list = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData")
     if not dmd_list:
         return "UNKNOWN_DOCID"
     return dmd_list[0].documentId
 
-def create_event(event, cas_text, cas_tail):
+def createEvent(event, cas_text, cas_tail):
     new_event =  {
         "tag": "EVENT",
         "cas_id": event.xmiID,
@@ -136,14 +136,15 @@ def create_event(event, cas_text, cas_tail):
         links.append(new_link)
     return [new_event] + links
 
-def create_timex3(timex3, cas_text, cas_tail):
+def createTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": timex3.xmiID,
         "attrib": {
             "tid": "",
             "type": translate["TIMEX3"]["timex3Class"][timex3.timex3Class],
-            "value": timex3.value
+            "value": timex3.value,
+            "temporalFunction": "false"
         },
         "text": cas_text,
         "tail": cas_tail,
@@ -190,7 +191,7 @@ def create_timex3(timex3, cas_text, cas_tail):
 
     return [new_timex3] + links + extra_links
 
-def assign_id(tml_elements):
+def assignId(tml_elements):
     link_count = 1
     event_count = 1
     timex3_count = 1
@@ -222,7 +223,7 @@ def assign_id(tml_elements):
             elif "relatedToEventInstance" in link["attrib"]:
                 link["attrib"]["relatedToEventInstance"] = id_map.get(link["cas_target_id"], "")
 
-def sort_tml_elements(element):
+def sortTmlElements(element):
     if element["tag"] == "EVENT" or element["tag"] == "TIMEX3":
         return 0
     elif element["tag"] == "TLINK":
@@ -231,8 +232,8 @@ def sort_tml_elements(element):
         return 2
     return 1000
 
-def write_tml(root, initial_text, tml_elements):
-    tml_elements.sort(key=sort_tml_elements)
+def writeTml(root, initial_text, tml_elements):
+    tml_elements.sort(key=sortTmlElements)
     tml_text = etree.SubElement(root, "TEXT")
     tml_text.text = initial_text
     for element in tml_elements:
@@ -249,7 +250,7 @@ def generateTimeML(cas):
     etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root = etree.Element("TimeML")
     root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
-    etree.SubElement(root, "DOCID").text = get_docid(cas)
+    etree.SubElement(root, "DOCID").text = getDocId(cas)
 
     cas_text = cas.sofa_string
     cas_elements = list(cas.select("webanno.custom.EVENT")) + list(cas.select("webanno.custom.TIMEX3")) + [{"begin": len(cas_text)}]
@@ -259,12 +260,12 @@ def generateTimeML(cas):
 
     for i, element in enumerate(cas_elements[:-1]):
         if element.type.name == "webanno.custom.EVENT":
-            tml_elements.extend(create_event(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
+            tml_elements.extend(createEvent(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
         elif element.type.name == "webanno.custom.TIMEX3":
-            tml_elements.extend(create_timex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
+            tml_elements.extend(createTimex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
 
-    assign_id(tml_elements)
-    write_tml(root, cas_text[0:cas_elements[0]["begin"]], tml_elements)
+    assignId(tml_elements)
+    writeTml(root, cas_text[0:cas_elements[0]["begin"]], tml_elements)
 
     return root
 
