@@ -19,20 +19,23 @@ logging.basicConfig(level=logging.DEBUG)
 # translate["EVENT"]["eventType"]["N/A"] returns "OCCURRENCE"
 translate = {
     "EVENT": {
+        # eventType --> class
+        # class: OCCURRENCE, ASPECTUAL, REPORTING, PERCEPTION, I_STATE, I_ACTION, STATE
         "eventType": {
             "N/A": "OCCURRENCE",
             "ASPECTUAL": "ASPECTUAL",
-            "EVIDENTIAL": "PERCEPTION"
+            "EVIDENTIAL": "REPORTING"
         },
+        # docTimeRel --> tense/aspect/pos
+        # tense: PRESENT, PAST, FUTURE, INFINITIVE, PRESPART, PASTPART, NONE
+        # aspect: PROGRESSIVE, PERFECTIVE, PERFECTIVE_PROGRESSIVE, NONE
+        # pos: VERB, NOUN, ADJECTIVE, PREP, OTHER
         "docTimeRel": {
-            "BEFORE": "PAST",
-            "AFTER": "FUTURE",
-            "CONTAINS": "PRESENT",
-            "OVERLAP": "PRESENT",
-            "INCLUDES": "PRESENT",
-            "IS-INCLUDED": "PRESENT",
-            "IS-CONTAINED": "PRESENT",
-            "SIMULTANEOUS": "PRESENT"
+            "BEFORE": {"tense":"PAST","aspect":"PERFECTIVE","pos":"OTHER"},
+            "AFTER": {"tense":"FUTURE","aspect":"PERFECTIVE","pos":"OTHER"},
+            "CONTAINS": {"tense":"PRESENT","aspect":"PROGRESSIVE","pos":"OTHER"},
+            "IS-CONTAINED": {"tense":"PRESENT","aspect":"NONE","pos":"OTHER"},
+            "OVERLAP": {"tense":"PRESENT","aspect":"NONE","pos":"OTHER"}
         }
     },
     "TIMEX3": {
@@ -64,13 +67,8 @@ translate = {
     }
 }
 
-def getDocId(cas):
-    dmd_list = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData")
-    if not dmd_list:
-        return "UNKNOWN_DOCID"
-    return dmd_list[0].documentId
-
 def createEvent(event, cas_text, cas_tail):
+    atrib = translate["EVENT"]["docTimeRel"][event["docTimeRel"]]
     new_event =  {
         "tag": "EVENT",
         "cas_id": event.xmiID,
@@ -85,9 +83,9 @@ def createEvent(event, cas_text, cas_tail):
             "attrib": {
                 "eiid": "",
                 "eventID": "",
-                "pos": "OTHER",
-                "tense": translate["EVENT"]["docTimeRel"][event["docTimeRel"]],
-                "aspect": "NONE",
+                "tense": atrib["tense"],
+                "aspect": atrib["aspect"],
+                #"pos": atrib["pos"],
                 "polarity": event["polarity"]
                 #"cardinality": "",
                 #"modality": ""
@@ -245,6 +243,12 @@ def writeTml(root, initial_text, tml_elements):
                 etree.SubElement(root, element["instance"]["tag"], attrib=element["instance"]["attrib"])
         elif element["tag"] == "TLINK" or element["tag"] == "ALINK":
             etree.SubElement(root, element["tag"], attrib=element["attrib"])
+
+def getDocId(cas):
+    dmd_list = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData")
+    if not dmd_list:
+        return "UNKNOWN_DOCID"
+    return dmd_list[0].documentId
 
 def generateTimeML(cas):
     etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
