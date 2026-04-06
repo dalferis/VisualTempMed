@@ -10,6 +10,8 @@ from lxml import etree
 import json
 import logging
 import validator
+from dateutil import parser
+from dateutil.parser import ParserError
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -36,6 +38,7 @@ translate = {
             "CONTAINS": {"tense":"PRESENT","aspect":"PROGRESSIVE","pos":"OTHER"},
             "IS-CONTAINED": {"tense":"PRESENT","aspect":"NONE","pos":"OTHER"},
             "OVERLAP": {"tense":"PRESENT","aspect":"NONE","pos":"OTHER"}
+
         }
     },
     "TIMEX3": {
@@ -67,7 +70,7 @@ translate = {
     }
 }
 
-def createEvent(event, cas_text, cas_tail):
+def translateEvent(event, cas_text, cas_tail):
     atrib = translate["EVENT"]["docTimeRel"][event["docTimeRel"]]
     new_event =  {
         "tag": "EVENT",
@@ -85,7 +88,7 @@ def createEvent(event, cas_text, cas_tail):
                 "eventID": "",
                 "tense": atrib["tense"],
                 "aspect": atrib["aspect"],
-                #"pos": atrib["pos"],
+                "pos": atrib["pos"],
                 "polarity": event["polarity"]
                 #"cardinality": "",
                 #"modality": ""
@@ -134,7 +137,7 @@ def createEvent(event, cas_text, cas_tail):
         links.append(new_link)
     return [new_event] + links
 
-def createTimex3(timex3, cas_text, cas_tail):
+def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": timex3.xmiID,
@@ -230,10 +233,51 @@ def sortTmlElements(element):
         return 2
     return 1000
 
-def writeTml(root, initial_text, tml_elements):
+def generateTimeML(cas):
+    cas_text = cas.sofa_string
+    cas_elements = list(cas.select("webanno.custom.EVENT")) + list(cas.select("webanno.custom.TIMEX3")) + [{"begin": len(cas_text)}]
+    cas_elements.sort(key=lambda e: e["begin"])
+
+    tml_elements = []
+
+    # TML namespace and schema declaration
+    etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
+    root = etree.Element("TimeML")
+    root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
+
+    # TML header information
+    cas_metadata = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData") + cas.select("webanno.custom.METADATA")
+    for meta in cas_metadata:
+        if hasattr(meta, "documentId"):
+            etree.SubElement(root, "DOCID").text = meta.documentId
+        if hasattr(meta, "docTime"):
+            dct = etree.SubElement(root, "DD")
+            try:
+                dct_parsed = parser.parse(meta.docTime)
+                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat()}).text = meta.docTime
+            except (ParserError, ValueError):
+                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE"}).text = meta.docTime
+        # if hasattr(meta, "documentTitle"):
+        #     etree.SubElement(root, "TITLE").text = meta.documentTitle
+        # if meta.documentUri:
+        #     etree.SubElement(root, "URI").text = meta.documentUri
+        # if meta.language:
+        #     etree.SubElement(root, "LANGUAGE").text = meta.language
+
+    # TML elements
+    # 1. Generate "pre-TML" elements for each CAS element, including text and tail
+    for i, element in enumerate(cas_elements[:-1]):
+        if element.type.name == "webanno.custom.EVENT":
+            tml_elements.extend(translateEvent(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
+        elif element.type.name == "webanno.custom.TIMEX3":
+            tml_elements.extend(translateTimex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
+    # 2. Assign IDs to "pre-TML" elements and update links with source and target IDs
+    assignId(tml_elements)
+    # 3. Sort "pre-TML" elements 
     tml_elements.sort(key=sortTmlElements)
+    # 4. Construct TML XML with text, events, timex3s, and links
     tml_text = etree.SubElement(root, "TEXT")
-    tml_text.text = initial_text
+    tml_text.text = cas_text[0:cas_elements[0]["begin"]]
     for element in tml_elements:
         if element["tag"] == 'EVENT' or element["tag"] == "TIMEX3":
             event = etree.SubElement(tml_text, element["tag"], attrib=element["attrib"])
@@ -243,33 +287,6 @@ def writeTml(root, initial_text, tml_elements):
                 etree.SubElement(root, element["instance"]["tag"], attrib=element["instance"]["attrib"])
         elif element["tag"] == "TLINK" or element["tag"] == "ALINK":
             etree.SubElement(root, element["tag"], attrib=element["attrib"])
-
-def getDocId(cas):
-    dmd_list = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData")
-    if not dmd_list:
-        return "UNKNOWN_DOCID"
-    return dmd_list[0].documentId
-
-def generateTimeML(cas):
-    etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
-    root = etree.Element("TimeML")
-    root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
-    etree.SubElement(root, "DOCID").text = getDocId(cas)
-
-    cas_text = cas.sofa_string
-    cas_elements = list(cas.select("webanno.custom.EVENT")) + list(cas.select("webanno.custom.TIMEX3")) + [{"begin": len(cas_text)}]
-    cas_elements.sort(key=lambda e: e["begin"])
-
-    tml_elements = []
-
-    for i, element in enumerate(cas_elements[:-1]):
-        if element.type.name == "webanno.custom.EVENT":
-            tml_elements.extend(createEvent(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
-        elif element.type.name == "webanno.custom.TIMEX3":
-            tml_elements.extend(createTimex3(element, cas_text[element["begin"]:element["end"]], cas_text[element["end"]:cas_elements[i+1]["begin"]]))
-
-    assignId(tml_elements)
-    writeTml(root, cas_text[0:cas_elements[0]["begin"]], tml_elements)
 
     return root
 
@@ -285,7 +302,7 @@ def convertFile(xmlfile: str, typesystemfile: str):
 
     tml = generateTimeML(cas)
 
-    print(etree.tostring(tml, pretty_print=True, encoding="unicode"))
+    #print(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
 
     with open(xmlfile + ".tml", 'w', encoding='utf-8') as out_f:
