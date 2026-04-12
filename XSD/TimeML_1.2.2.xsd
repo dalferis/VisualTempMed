@@ -128,7 +128,14 @@
 	</xs:simpleType>
 	<xs:element name="DOCNO" type="xs:string"/>
 	<xs:element name="DOCID" type="xs:string"/>
-	<xs:element name="DD" type="xs:string"/>
+	<xs:element name="LANGUAGE" type="xs:string"/>
+	<xs:element name="DD">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="TIMEX3" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="AN" type="xs:string"/>
 	<xs:element name="HL" type="xs:string"/>
 	<xs:element name="SO" type="xs:string"/>
@@ -150,6 +157,7 @@
 				<xs:choice minOccurs="0" maxOccurs="unbounded">
 					<xs:element ref="DOCNO" minOccurs="0"/>
 					<xs:element ref="DOCID" minOccurs="0"/>
+					<xs:element ref="LANGUAGE" minOccurs="0"/>
 					<xs:element ref="DD" minOccurs="0"/>
 					<xs:element ref="AN" minOccurs="0"/>
 					<xs:element ref="HL" minOccurs="0"/>
