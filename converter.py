@@ -149,8 +149,10 @@ def translateTimex3(timex3, cas_text, cas_tail):
     if hasattr(timex3, "timex3Class"):
         if timex3.timex3Class == "DATE":
             new_timex3["attrib"]["type"] = "DATE"
+            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "TIME":
             new_timex3["attrib"]["type"] = "TIME"
+            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "DURATION":
             new_timex3["attrib"]["type"] = "DURATION"
             new_timex3["attrib"]["temporalFunction"] = "true"
@@ -266,9 +268,9 @@ def generateTimeML(cas):
             dct = etree.SubElement(root, "DD")
             try:
                 dct_parsed = parser.parse(meta.docTime)
-                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME"}).text = meta.docTime
+                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
             except (ParserError, ValueError):
-                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME"}).text = meta.docTime
+                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
         if hasattr(meta, "language"):
             etree.SubElement(root, "LANGUAGE").text = meta.language
 
