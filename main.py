@@ -3,6 +3,9 @@ import validator
 import detector
 import converter
 import visualizer
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 def main():
     parser = argparse.ArgumentParser(description='Visual Temporal Medical')
@@ -24,7 +27,7 @@ def main():
     parser_con_group = parser_con.add_mutually_exclusive_group(required=True)
     parser_con_group.add_argument('--file', '-f', nargs=1, help='Input file for convert')
     parser_con_group.add_argument('--directory', '-d', nargs=1, help='Directory for convert its files')
-    parser_con.add_argument('--typesystem', '-t', nargs=1, required=False, default='E3C-Corpus\\TypeSystem.xml', help='Typesystem file')
+    parser_con.add_argument('--typesystem', '-t', required=False, default='E3C-Corpus\\TypeSystem.xml', help='Typesystem file')
 
     parser_vis = subparser.add_parser('visualize', help='Visualize')
     parser_vis.add_argument('--file', '-f', nargs=1, required=True, help='Input file for convert')
@@ -64,7 +67,7 @@ def main():
         if args.file:
             inputFile = args.file[0]
             print(f"Converting file: {inputFile}")
-            newContent = converter.convertFile(inputFile, args.typesystem[0] if isinstance(args.typesystem, list) else args.typesystem)
+            newContent = converter.convertFile(inputFile, args.typesystem)
             print(newContent)
         elif args.directory:
             inputDir = args.directory[0]
@@ -79,5 +82,5 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except Exception as e:
-        print(f"Error: {e}")
+    except Exception:
+        logging.exception("Error en main")

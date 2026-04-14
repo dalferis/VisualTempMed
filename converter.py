@@ -1,12 +1,9 @@
 ﻿from cassis import *
 from lxml import etree
 import json
-import logging
 import validator
 from dateutil import parser
 from dateutil.parser import ParserError
-
-logging.basicConfig(level=logging.DEBUG)
 
 def translateEvent(event, cas_text, cas_tail):
     new_event =  {
