@@ -28,8 +28,8 @@ class GraphScene(QGraphicsScene):
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
 
-    _window_width = 1024
-    _window_height = 1024
+    # _window_width = 1024
+    # _window_height = 1024
     _max_columns = 15
     _horizontal_distance = 150
     _vertical_distance = 80
@@ -46,6 +46,12 @@ class GraphScene(QGraphicsScene):
         if isinstance(item, NodeItem):
             self.nodes[item.node_id] = item
 
+    def isCreationTimeTimex3(self, timex3):
+        return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"
+
+    def isCreationTimeLink(self, link):
+        return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
+
     def createScene(self):
         graphModel = nx.MultiDiGraph()
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
@@ -53,14 +59,14 @@ class GraphScene(QGraphicsScene):
         line = 0
         for partition in partition_graph["main_graphs"]:
             count = 0
-            for node in partition.nodes.values():
+            for node in [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]:
                 xpos = (count % self._max_columns) * self._horizontal_distance
                 ypos = line + (count // self._max_columns) * self._vertical_distance
                 graphModel.add_node(node.get_id_str())
                 if isinstance(node, Instance.Instance):
                     text = self._graph.events[node.event].stem
                 elif isinstance(node, TimeX.TimeX):
-                    text = node.value
+                    text = node.phrase
                 else:
                     text = ""
                 graphNode = NodeItem(node.get_id_str(), text=text)
@@ -71,7 +77,7 @@ class GraphScene(QGraphicsScene):
 
         for partition in partition_graph["subordination_graphs"]:
             count = 0
-            for node in partition.nodes.values():
+            for node in [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]:
                 xpos = (count % self._max_columns) * self._horizontal_distance
                 ypos = line + (count // self._max_columns) * self._vertical_distance
                 graphModel.add_node(node.get_id_str())
@@ -87,7 +93,7 @@ class GraphScene(QGraphicsScene):
                 count += 1
             line += self._vertical_distance
 
-        linklist = list(self._graph.links.values()) + list(self._tlex.s_links)
+        linklist = [v for v in self._graph.links.values() if not self.isCreationTimeLink(v)] + [v for v in self._tlex.s_links if not self.isCreationTimeLink(v)]
         linklist.sort(key=lambda x: (x.start_node, x.related_to_node))
         linklistlist = [[linklist[0]]]
         for link in linklist[1:]:
