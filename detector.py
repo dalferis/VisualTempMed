@@ -1,35 +1,32 @@
 from enum import Enum
-import xml.etree.ElementTree as ET
+from lxml import etree
 
 class FileFormat(Enum):
-    TML = 1
+    XML = 1
     XMI = 2
-    THYME = 3
-    E3C_ANNO = 4
-    XML = 99
+    E3C = 3
+    TML = 4
     OTHER = 999
 
 def detectFormat(xmlfile: str) -> FileFormat:
+    is_xmi = False
     try:
-        tree = ET.parse(xmlfile)
-    except:
+        with open(xmlfile, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if '<TimeML' in line:
+                    return FileFormat.TML
+                if not is_xmi and ('xmi:XMI' in line or 'xmlns:xmi' in line):
+                    is_xmi = True
+                if is_xmi and ('webanno.custom' in line or 'de.tudarmstadt.ukp.dkpro' in line):
+                    return FileFormat.E3C
+    except OSError:
         return FileFormat.OTHER
 
-    root = tree.getroot()
-    if ('timeml' in root.tag.lower()):
-        return FileFormat.TML
-
-    if ('xmi' in root.tag.lower()):
+    if is_xmi:
         return FileFormat.XMI
 
-    return FileFormat.XML
-
-def detectFormatInFile(filepath: str) -> FileFormat:
-    return detectFormat(filepath)
-
-def detectFormatInDirectory(directory: str) -> dict:
-    import os
-    formats = {}
-    for file in os.listdir(directory):
-        formats[file] = detectFormat(os.path.join(directory, file))
-    return formats
+    try:
+        etree.parse(xmlfile)
+        return FileFormat.XML
+    except etree.XMLSyntaxError:
+        return FileFormat.OTHER
