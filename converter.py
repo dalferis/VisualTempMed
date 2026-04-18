@@ -1,6 +1,7 @@
 ﻿from cassis import *
 from lxml import etree
 import json
+import os
 import validator
 from dateutil import parser
 from dateutil.parser import ParserError
@@ -18,6 +19,18 @@ def translateEvent(event, cas_text, cas_tail):
         }
     }
     links = []
+
+    ### EVENT ATTRIBUTES ###
+    # eventType values
+    if hasattr(event, "eventType"):
+        if event["eventType"] == "N/A":
+            new_event["attrib"]["class"] = "OCCURRENCE" # default value
+        elif event["eventType"] == "ASPECTUAL":
+            new_event["attrib"]["class"] = "ASPECTUAL"  # direct
+        elif event["eventType"] == "EVIDENTIAL":
+            new_event["attrib"]["class"] = "REPORTING"  # equivalent
+
+    ### LINK TO DOCUMENT CREATION TIME
     # docTimeRel values
     if hasattr(event, "docTimeRel"):
         new_link = {
@@ -26,110 +39,102 @@ def translateEvent(event, cas_text, cas_tail):
             "cas_target_id": 0,
             "attrib": { "lid": "", "eventInstanceID": "", "relatedToTime": "", "relType": "" },
         }
-        new_event["attrib"]["class"] = "OCCURRENCE"
         if event["docTimeRel"] == "BEFORE":
-            new_link["attrib"]["relType"] = "BEFORE"
+            new_link["attrib"]["relType"] = "BEFORE"   # direct
         elif event["docTimeRel"] == "AFTER":
-            new_link["attrib"]["relType"] = "AFTER"
+            new_link["attrib"]["relType"] = "AFTER"    # direct
         elif event["docTimeRel"] == "CONTAINS":
-            new_link["attrib"]["relType"] = "INCLUDES"
+            new_link["attrib"]["relType"] = "INCLUDES" # equivalent
         elif event["docTimeRel"] == "IS-CONTAINED":
-            new_link["attrib"]["relType"] = "IS_INCLUDED"
+            new_link["attrib"]["relType"] = "IS_INCLUDED"  # equivalent
         elif event["docTimeRel"] == "OVERLAP":
-            new_link["attrib"]["relType"] = "SIMULTANEOUS"
+            new_link["attrib"]["relType"] = "SIMULTANEOUS" # approximate
         links.append(new_link)
-    # eventType values
-    if hasattr(event, "eventType"):
-        if event["eventType"] == "N/A":
-            new_event["attrib"]["class"] = "OCCURRENCE"
-        elif event["eventType"] == "ASPECTUAL":
-            new_event["attrib"]["class"] = "ASPECTUAL"
-        elif event["eventType"] == "EVIDENTIAL":
-            new_event["attrib"]["class"] = "REPORTING"
-    # degree values
-    if hasattr(event, "degree"):
-        if event["degree"] == "MOST":
-            new_event["instance"]["attrib"]["modality"] = "MOST"
-        elif event["degree"] == "LITTLE":
-            new_event["instance"]["attrib"]["modality"] = "LITTLE"
+
+    ### MAKEINSTANCE ATTRIBUTES ###
     # contextualModality values
-    # if hasattr(event, "contextualModality"):
-    #     if event["contextualModality"] == "ACTUAL":
-    #         new_event["instance"]["attrib"]["modality"] = "ACTUAL"
-    #     elif event["contextualModality"] == "HYPOTHETICAL-IF":
-    #         new_event["instance"]["attrib"]["modality"] = "IF"
-    #     elif event["contextualModality"] == "HYPOTHETICAL-OTHER":
-    #         new_event["instance"]["attrib"]["modality"] = "POSSIBLE"
-    #     elif event["contextualModality"] == "HEDGED":
-    #         new_event["instance"]["attrib"]["modality"] = "HEDGED"
-    #     elif event["contextualModality"] == "GENERIC":
-    #         new_event["instance"]["attrib"]["modality"] = "GENERIC"
+    if hasattr(event, "contextualModality"):
+        if event["contextualModality"] == "HYPOTHETICAL-IF":
+            new_event["instance"]["attrib"]["modality"] = "would" # approximate
+        elif event["contextualModality"] == "HYPOTHETICAL-OTHER":
+            new_event["instance"]["attrib"]["modality"] = "would" # approximate
+        elif event["contextualModality"] == "HEDGED":
+            new_event["instance"]["attrib"]["modality"] = "can"   # approximate
+        elif event["contextualModality"] == "GENERIC":
+            if new_event["attrib"].get("class") == "OCCURRENCE":
+                new_event["attrib"]["class"] = "STATE"            # approximate
+        # Value not converted: ACTUAL
     # contextualAspect values
     if hasattr(event, "contextualAspect"):
-        if event["contextualAspect"] == "NOVEL":
-            new_event["instance"]["attrib"]["aspect"] = "NONE"
-        elif event["contextualAspect"] == "INTERMITTENT":
-            new_event["instance"]["attrib"]["aspect"] = "PROGRESSIVE"
+        if event["contextualAspect"] == "N/A":
+            new_event["instance"]["attrib"]["aspect"] = "NONE"    # equivalent
+        # Values not converted: NOVEL, INTERMITTENT
     # permanence values
-    # if hasattr(event, "permanence"):
-    #     if event["permanence"] == "FINITE":
-    #         new_event["instance"]["attrib"]["modality"] = "FINITE"
-    #     elif event["permanence"] == "PERMANENT":
-    #         new_event["instance"]["attrib"]["modality"] = "PERMANENT"
+    if hasattr(event, "permanence"):
+        if event["permanence"] == "PERMANENT":
+            if new_event["attrib"].get("class") == "OCCURRENCE":
+                new_event["attrib"]["class"] = "STATE"            # approximate
+        # Value not converted: FINITE
     # polarity values
     if hasattr(event, "polarity"):
-        new_event["instance"]["attrib"]["polarity"] = event["polarity"]
-    # tlinks
-    for link in event.TLINK.elements:
-        new_link = {
-            "tag": "TLINK",
-            "cas_id": event.xmiID,
-            "cas_target_id": link.target.xmiID,
-            "attrib": { "lid": "" }
-        }
-        if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
-            new_link["attrib"]["timeID"] = ""
-        elif link.type.name == "webanno.custom.EVENTTLINKLink":
-            new_link["attrib"]["eventInstanceID"] = ""
-        if link.target.type.name == "webanno.custom.TIMEX3":
-            new_link["attrib"]["relatedToTime"] = ""
-        elif link.target.type.name == "webanno.custom.EVENT":
-            new_link["attrib"]["relatedToEventInstance"] = ""
-        # role values
-        if link.role == "BEFORE":
-            new_link["attrib"]["relType"] = "BEFORE"
-        elif link.role == "OVERLAP":
-            new_link["attrib"]["relType"] = "SIMULTANEOUS"
-        elif link.role == "CONTAINS":
-            new_link["attrib"]["relType"] = "INCLUDES"
-        elif link.role == "BEGINS-ON":
-            new_link["attrib"]["relType"] = "BEGUN_BY"
-        elif link.role == "ENDS-ON":
-            new_link["attrib"]["relType"] = "ENDED_BY"
-        elif link.role == "SIMULTANEOUS":
-            new_link["attrib"]["relType"] = "SIMULTANEOUS"
+        new_event["instance"]["attrib"]["polarity"] = event["polarity"]  # direct
 
-        links.append(new_link)
-    # alinks
-    for link in event.ALINK.elements:
-        new_link = {
-            "tag": "ALINK",
-            "cas_id": event.xmiID,
-            "cas_target_id": link.target.xmiID,
-            "attrib": { "lid": "" }
-        }
-        if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
-            new_link["attrib"]["timeID"] = ""
-        elif link.type.name == "webanno.custom.EVENTALINKLink":
-            new_link["attrib"]["eventInstanceID"] = ""
-        if link.target.type.name == "webanno.custom.TIMEX3":
-            new_link["attrib"]["relatedToTime"] = ""
-        elif link.target.type.name == "webanno.custom.EVENT":
-            new_link["attrib"]["relatedToEventInstance"] = ""
-        # role values
-        new_link["attrib"]["relType"] = link.role
+    ### TLINKS ###
+    if event.TLINK is not None and event.TLINK.elements is not None:
+        for link in event.TLINK.elements:
+            new_link = {
+                "tag": "TLINK",
+                "cas_id": event.xmiID,
+                "cas_target_id": link.target.xmiID,
+                "attrib": { "lid": "" }
+            }
+            # source and target attributes
+            if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
+                new_link["attrib"]["timeID"] = ""
+            elif link.type.name == "webanno.custom.EVENTTLINKLink":
+                new_link["attrib"]["eventInstanceID"] = ""
+            if link.target.type.name == "webanno.custom.TIMEX3":
+                new_link["attrib"]["relatedToTime"] = ""
+            elif link.target.type.name == "webanno.custom.EVENT":
+                new_link["attrib"]["relatedToEventInstance"] = ""
+            # role values
+            if link.role == "BEFORE":
+                new_link["attrib"]["relType"] = "BEFORE"         # direct
+            elif link.role == "OVERLAP":
+                new_link["attrib"]["relType"] = "SIMULTANEOUS"   # approximate
+            elif link.role == "CONTAINS":
+                new_link["attrib"]["relType"] = "INCLUDES"       # equivalent
+            elif link.role == "BEGINS-ON":
+                new_link["attrib"]["relType"] = "BEGINS"         # equivalent
+            elif link.role == "ENDS-ON":
+                new_link["attrib"]["relType"] = "ENDS"           # equivalent
+            elif link.role == "SIMULTANEOUS":
+                new_link["attrib"]["relType"] = "SIMULTANEOUS"   # direct
+
+            links.append(new_link)
+
+    ### ALINKS ###
+    if event.ALINK is not None and event.ALINK.elements is not None:
+        for link in event.ALINK.elements:
+            new_link = {
+                "tag": "ALINK",
+                "cas_id": event.xmiID,
+                "cas_target_id": link.target.xmiID,
+                "attrib": { "lid": "" }
+            }
+            # source and target attributes
+            if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
+                new_link["attrib"]["timeID"] = ""
+            elif link.type.name == "webanno.custom.EVENTALINKLink":
+                new_link["attrib"]["eventInstanceID"] = ""
+            if link.target.type.name == "webanno.custom.TIMEX3":
+                new_link["attrib"]["relatedToTime"] = ""
+            elif link.target.type.name == "webanno.custom.EVENT":
+                new_link["attrib"]["relatedToEventInstance"] = ""
+            # role values
+            new_link["attrib"]["relType"] = link.role     # direct
         
-        links.append(new_link)
+            links.append(new_link)
 
     return [new_event] + links
 
@@ -145,60 +150,62 @@ def translateTimex3(timex3, cas_text, cas_tail):
     # timex3Class values
     if hasattr(timex3, "timex3Class"):
         if timex3.timex3Class == "DATE":
-            new_timex3["attrib"]["type"] = "DATE"
+            new_timex3["attrib"]["type"] = "DATE"              # direct
             new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "TIME":
-            new_timex3["attrib"]["type"] = "TIME"
+            new_timex3["attrib"]["type"] = "TIME"              # direct
             new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "DURATION":
-            new_timex3["attrib"]["type"] = "DURATION"
+            new_timex3["attrib"]["type"] = "DURATION"          # direct
             new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "QUANTIFIER":
-            new_timex3["attrib"]["type"] = "SET"
+            new_timex3["attrib"]["type"] = "SET"               # approximate
             new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "SET":
-            new_timex3["attrib"]["type"] = "SET"
+            new_timex3["attrib"]["type"] = "SET"               # direct
             new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "PREPOSTEXP":
-            new_timex3["attrib"]["type"] = "DATE"
+            new_timex3["attrib"]["type"] = "DATE"              # approximate
             new_timex3["attrib"]["temporalFunction"] = "true"
     # functionInDocument values
     if hasattr(timex3, "functionInDocument"):
         if timex3.functionInDocument == "DOCTIME":
-            new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"
+            new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"  # equivalent
         elif timex3.functionInDocument == "SECTIONTIME":
-            new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"
+            new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"  # approximate
     # links
-    for link in timex3.timexLink.elements:
-        new_link = {
-            "tag": "TLINK",
-            "cas_id": timex3.xmiID,
-            "cas_target_id": link.target.xmiID,
-            "attrib": { "lid": "" }
-        }
-        if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
-            new_link["attrib"]["timeID"] = ""
-        elif link.type.name == "webanno.custom.EVENTTLINKLink":
-            new_link["attrib"]["eventInstanceID"] = ""
-        if link.target.type.name == "webanno.custom.TIMEX3":
-            new_link["attrib"]["relatedToTime"] = ""
-        elif link.target.type.name == "webanno.custom.EVENT":
-            new_link["attrib"]["relatedToEventInstance"] = ""
-        # role values
-        if link.role == "BEFORE":
-            new_link["attrib"]["relType"] = "BEFORE"
-        elif link.role == "OVERLAP":
-            new_link["attrib"]["relType"] = "SIMULTANEOUS"
-        elif link.role == "CONTAINS":
-            new_link["attrib"]["relType"] = "INCLUDES"
-        elif link.role == "BEGINS-ON":
-            new_link["attrib"]["relType"] = "BEGUN_BY"
-        elif link.role == "ENDS-ON":
-            new_link["attrib"]["relType"] = "ENDED_BY"
-        elif link.role == "SIMULTANEOUS":
-            new_link["attrib"]["relType"] = "SIMULTANEOUS"
+    if timex3.timexLink is not None and timex3.timexLink.elements is not None:
+        for link in timex3.timexLink.elements:
+            new_link = {
+                "tag": "TLINK",
+                "cas_id": timex3.xmiID,
+                "cas_target_id": link.target.xmiID,
+                "attrib": { "lid": "" }
+            }
+            # source and target attributes
+            if link.type.name == "webanno.custom.TIMEX3TimexLinkLink":
+                new_link["attrib"]["timeID"] = ""
+            elif link.type.name == "webanno.custom.EVENTTLINKLink":
+                new_link["attrib"]["eventInstanceID"] = ""
+            if link.target.type.name == "webanno.custom.TIMEX3":
+                new_link["attrib"]["relatedToTime"] = ""
+            elif link.target.type.name == "webanno.custom.EVENT":
+                new_link["attrib"]["relatedToEventInstance"] = ""
+            # role values
+            if link.role == "BEFORE":
+                new_link["attrib"]["relType"] = "BEFORE"         # direct
+            elif link.role == "OVERLAP":
+                new_link["attrib"]["relType"] = "SIMULTANEOUS"   # approximate
+            elif link.role == "SIMULTANEOUS":
+                new_link["attrib"]["relType"] = "SIMULTANEOUS"   # direct
+            elif link.role == "CONTAINS":
+                new_link["attrib"]["relType"] = "INCLUDES"       # equivalent
+            elif link.role == "ENDS-ON":
+                new_link["attrib"]["relType"] = "ENDS"           # equivalent
+            elif link.role == "BEGINS-ON":
+                new_link["attrib"]["relType"] = "BEGINS"         # equivalent
 
-        links.append(new_link)
+            links.append(new_link)
 
     return [new_timex3] + links
 
@@ -262,14 +269,12 @@ def generateTimeML(cas):
         if hasattr(meta, "documentId"):
             etree.SubElement(root, "DOCID").text = meta.documentId
         if hasattr(meta, "docTime"):
-            dct = etree.SubElement(root, "DD")
+            # dct = etree.SubElement(root, "DD")
             try:
                 dct_parsed = parser.parse(meta.docTime)
-                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
+                etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
             except (ParserError, ValueError):
-                etree.SubElement(dct, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
-        if hasattr(meta, "language"):
-            etree.SubElement(root, "LANGUAGE").text = meta.language
+                etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
 
     # TML elements
     # 1. Generate "pre-TML" elements for each CAS element, including text and tail
@@ -282,7 +287,7 @@ def generateTimeML(cas):
     assignId(tml_elements)
     # 3. Sort "pre-TML" elements 
     tml_elements.sort(key=sortTmlElements)
-    # 4. Construct TML XML with text, events, timex3s, and links
+    # 4. Construct TML XML with events, timex3s, and links
     tml_text = etree.SubElement(root, "TEXT")
     tml_text.text = cas_text[0:cas_elements[0]["begin"]]
     for element in tml_elements:
@@ -297,25 +302,40 @@ def generateTimeML(cas):
 
     return root
 
-def convertFile(xmlfile: str, typesystemfile: str):
+def convertFile(xmlfile: str, typesystemfile: str='E3C-Corpus\\TypeSystem.xml'):
+    SHOW_NUMBER_OF_LINES = 5
+
     with open(typesystemfile, 'rb') as f:
         typesystem = load_typesystem(f)
 
     with open(xmlfile, 'rb') as f:
-        cas = load_cas_from_xmi(f, typesystem=typesystem)
-
-    # with open(xmlfile + ".json", 'w', encoding='utf-8') as out_f:
-    #     out_f.write(json.dumps(json.loads(cas.to_json()), indent=2))
+        try:
+            cas = load_cas_from_xmi(f, typesystem=typesystem)
+        except etree.XMLSyntaxError as e:
+            raise ValueError(f"Malformed XMI file: {e}") from e
+        except Exception as e:
+            raise ValueError(f"Error loading XMI: {e}") from e
 
     tml = generateTimeML(cas)
-
-    #print(etree.tostring(tml, pretty_print=True, encoding="unicode"))
-
     with open(xmlfile + ".tml", 'w', encoding='utf-8') as out_f:
         out_f.write(etree.tostring(tml, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
-    result = validator.validateFile(xmlfile + ".tml", "xml-xsd")
-    print("\n".join(result[1:]))
+
+    result = validator.validateFile(xmlfile + ".tml", "tml-xsd")
+    print("\n".join(result[1:SHOW_NUMBER_OF_LINES+1]))
+
     with open("validation_report.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(result[1:]))
 
-    # print(json.dumps(json.loads(cas.to_json()), indent=2))
+def convert(xmlDirectory: str, typesystemfile: str='E3C-Corpus\\TypeSystem.xml') -> list:
+    result = []
+    for file in os.listdir(xmlDirectory):
+        xmlPath = os.path.join(xmlDirectory, file)
+        if not os.path.isfile(xmlPath):
+            continue
+        print(f"Convirtiendo {file}...")
+        try:
+            convertFile(xmlPath, typesystemfile)
+            result.append(f"{file}: OK")
+        except Exception as e:
+            result.append(f"{file}: ERROR - {e}")
+    return result
