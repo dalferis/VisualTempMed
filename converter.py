@@ -3,6 +3,7 @@ from lxml import etree
 import json
 import os
 import validator
+from detector import FileFormat, detectFormat
 from dateutil import parser
 from dateutil.parser import ParserError
 
@@ -142,7 +143,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": timex3.xmiID,
-        "attrib": { "tid": "", "type": "", "value": "X" if timex3.value.lower()=="no_value" else timex3.value },
+        "attrib": { "tid": "", "type": "", "value": "X" if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower()=="no_value" else timex3.value },
         "text": cas_text,
         "tail": cas_tail,
     }
@@ -302,40 +303,64 @@ def generateTimeML(cas):
 
     return root
 
-def convertFile(xmlfile: str, typesystemfile: str='E3C-Corpus\\TypeSystem.xml'):
-    SHOW_NUMBER_OF_LINES = 5
-
+def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
     with open(typesystemfile, 'rb') as f:
         typesystem = load_typesystem(f)
 
-    with open(xmlfile, 'rb') as f:
+    with open(e3cFile, 'rb') as f:
         try:
             cas = load_cas_from_xmi(f, typesystem=typesystem)
         except etree.XMLSyntaxError as e:
-            raise ValueError(f"Malformed XMI file: {e}") from e
+            return [False, f"Malformed XMI file: {e}"]
         except Exception as e:
-            raise ValueError(f"Error loading XMI: {e}") from e
+            return [False, f"Error loading XMI: {e}"]
 
     tml = generateTimeML(cas)
-    with open(xmlfile + ".tml", 'w', encoding='utf-8') as out_f:
+    output_path = e3cFile + ".tml"
+    with open(output_path, 'w', encoding='utf-8') as out_f:
         out_f.write(etree.tostring(tml, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
 
-    result = validator.validateFile(xmlfile + ".tml", "tml-xsd")
-    print("\n".join(result[1:SHOW_NUMBER_OF_LINES+1]))
+    validation = validator.validateFile(output_path, 'tml-xsd')
+    if validation[0]:
+        return [True, output_path]
+    else:
+        return [False] + validation[1:]
 
-    with open("validation_report.txt", "w", encoding="utf-8") as f:
-        f.write("\n".join(result[1:]))
+def convert(xmlPath: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml', report_file: str = "conversion_report.txt"):
+    NUMBER_OF_LINES_TO_PRINT = 10
 
-def convert(xmlDirectory: str, typesystemfile: str='E3C-Corpus\\TypeSystem.xml') -> list:
-    result = []
-    for file in os.listdir(xmlDirectory):
-        xmlPath = os.path.join(xmlDirectory, file)
-        if not os.path.isfile(xmlPath):
-            continue
-        print(f"Convirtiendo {file}...")
-        try:
-            convertFile(xmlPath, typesystemfile)
-            result.append(f"{file}: OK")
-        except Exception as e:
-            result.append(f"{file}: ERROR - {e}")
-    return result
+    def _reportResult(f, name, result):
+        valid = result[0]
+        lines = result[1:]
+        message = f"{name}: {'converted' if valid else f'{len(lines)} errors'}\n"
+        print(message)
+        f.write(message)
+        if not valid:
+            print("\n".join([f"   - {chr(10).join(str(e).splitlines()[:NUMBER_OF_LINES_TO_PRINT])}" for e in lines]) + "\n")
+            f.write("\n".join([f"   - {e}" for e in lines]) + "\n")
+
+    if os.path.isfile(xmlPath):
+        with open(report_file, "w", encoding="utf-8") as f:
+            try:
+                result = convertFile(xmlPath, typesystemfile)
+            except Exception as e:
+                result = [False, str(e)]
+            _reportResult(f, os.path.basename(xmlPath), result)
+    elif os.path.isdir(xmlPath):
+        with open(report_file, "w", encoding="utf-8") as f:
+            for file in os.listdir(xmlPath):
+                filePath = os.path.join(xmlPath, file)
+                if not os.path.isfile(filePath):
+                    continue
+                detected = detectFormat(filePath)
+                if detected != FileFormat.E3C:
+                    print(f"Skipping {file} (format: {detected.name})")
+                    continue
+                print(f"Converting {file}...")
+                try:
+                    result = convertFile(filePath, typesystemfile)
+                except Exception as e:
+                    result = [False, str(e)]
+                _reportResult(f, file, result)
+    else:
+        print(f"Error: '{xmlPath}' is not a valid file or directory")
