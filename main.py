@@ -1,86 +1,164 @@
-import argparse
 import validator
 import detector
 import converter
 import visualizer
 import logging
+import os
 
 logging.basicConfig(level=logging.DEBUG)
 
-def main():
-    parser = argparse.ArgumentParser(description='Visual Temporal Medical')
+VALIDATION_TYPES = ['xml', 'xmi', 'tml-dtd', 'tml-xsd']
 
-    subparser = parser.add_subparsers(dest='subcommand')
+def askDirectoryPath():
+    """Asks for a directory, offering known corpus presets."""
+    while True:
+        path = input("  Directory path: ").strip()
+        if not os.path.isdir(path):
+            print(f"  Error: directory not found '{path}'")
+            continue
+        return path
 
-    parser_val = subparser.add_parser('validate', help='Validate XML files against XSD schema')
-    parser_val_group = parser_val.add_mutually_exclusive_group(required=True)
-    parser_val_group.add_argument('--file', '-f', nargs=1, help='Input file for analyse')
-    parser_val_group.add_argument('--directory', '-d', nargs=1, help='Directory for analyse its files')
-    parser_val.add_argument('--type', '-t', nargs=1, required=True, choices=['xml', 'xml-dtd', 'xml-xsd', 'xmi', 'tml', 'e3c'], help='Type of file for validation')
 
-    parser_det = subparser.add_parser('detect', help='Detect files format')
-    parser_det_group = parser_det.add_mutually_exclusive_group(required=True)
-    parser_det_group.add_argument('--file', '-f', nargs=1, help='Input file for detect format')
-    parser_det_group.add_argument('--directory', '-d', nargs=1, help='Directory for detect format of its files')
+def browseFile(start_dir=None):
+    """Interactive directory browser. Returns the selected file path."""
+    current = os.path.abspath(start_dir or os.getcwd())
 
-    parser_con = subparser.add_parser('convert', help='Convert to another format')
-    parser_con_group = parser_con.add_mutually_exclusive_group(required=True)
-    parser_con_group.add_argument('--file', '-f', nargs=1, help='Input file for convert')
-    parser_con_group.add_argument('--directory', '-d', nargs=1, help='Directory for convert its files')
-    parser_con.add_argument('--typesystem', '-t', required=False, default='E3C-Corpus\\TypeSystem.xml', help='Typesystem file')
+    while True:
+        try:
+            raw = sorted(os.listdir(current), key=lambda e: (os.path.isfile(os.path.join(current, e)), e.lower()))
+        except PermissionError:
+            print(f"  No permission to read '{current}'")
+            current = os.path.dirname(current)
+            continue
 
-    parser_vis = subparser.add_parser('visualize', help='Visualize')
-    parser_vis.add_argument('--file', '-f', nargs=1, required=True, help='Input file for convert')
+        entries = [(os.path.isdir(os.path.join(current, e)), e) for e in raw]
 
-    try:
-        args = parser.parse_args()
-    except:
+        print(f"\n  [{current}]")
+        print("    0. ..")
+        for i, (is_dir, name) in enumerate(entries, 1):
+            tag = "[DIR]" if is_dir else "     "
+            print(f"    {i}. {tag} {name}")
+
+        choice = input(f"  Select [0-{len(entries)}]: ").strip()
+
+        if choice == '0':
+            parent = os.path.dirname(current)
+            if parent != current:
+                current = parent
+        elif choice.isdigit() and 1 <= int(choice) <= len(entries):
+            is_dir, name = entries[int(choice) - 1]
+            full = os.path.join(current, name)
+            if is_dir:
+                current = full
+            else:
+                return full
+        else:
+            print("  Invalid option.")
+
+
+def askFileOrDirectory(directory_presets=False, start_dir='.'):
+    """Asks the user whether to work with a file or a directory, and returns the choice and path."""
+    while True:
+        print("\n  1. File")
+        print("  2. Directory")
+        choice = input("  Select [1-2]: ").strip()
+        if choice == '1':
+            path = browseFile(start_dir=start_dir)
+            return 'file', path
+        elif choice == '2':
+            if directory_presets:
+                return 'directory', askDirectoryPath()
+            path = input("  Directory path: ").strip()
+            if not os.path.isdir(path):
+                print(f"  Error: directory not found '{path}'")
+                continue
+            return 'directory', path
+        else:
+            print("  Invalid option.")
+
+
+def askValidationType():
+    """Asks the user to pick a validation type. Returns the selected type string."""
+    n = len(VALIDATION_TYPES)
+    print("\n  Validation type:")
+    for i, t in enumerate(VALIDATION_TYPES, 1):
+        print(f"    {i}. {t}")
+    while True:
+        choice = input(f"  Select [1-{n}]: ").strip()
+        if choice.isdigit() and 1 <= int(choice) <= n:
+            return VALIDATION_TYPES[int(choice) - 1]
+        print("  Invalid option.")
+
+
+def menuValidate():
+    print("\n=== VALIDATE ===")
+    kind, path = askFileOrDirectory(directory_presets=True, start_dir='.\\E3C-Corpus\\data_annotation\\Spanish\\layer1')
+    val_type = askValidationType()
+
+    print(f"\nValidating: {path}")
+    validator.validate(path, val_type)
+    print("\nReport saved to validation_report.txt")
+
+
+def menuDetect():
+    print("\n=== DETECT FORMAT ===")
+    path = browseFile()
+    fmt = detector.detectFormat(path)
+    print(f"\nDetected format for '{path}': {fmt}")
+
+
+def menuConvert():
+    print("\n=== CONVERT ===")
+    _, path = askFileOrDirectory(directory_presets=True, start_dir='.\\E3C-Corpus\\data_annotation\\Spanish\\layer1')
+    print(f"\nConverting: {path}")
+    converter.convert(path)
+
+
+def menuVisualize():
+    print("\n=== VISUALIZE ===")
+    path = input("  File path: ").strip()
+    if not os.path.isfile(path):
+        print(f"  Error: file not found '{path}'")
         return
+    visualizer.visualize(path)
 
-    if args.subcommand == 'validate':
-        if args.file:
-            inputFile = args.file[0]
-            print(f"Validating file: {inputFile}")
-            result = validator.validateFile(inputFile, args.type[0])
-            print("\n".join(result[1:]))
-            with open("validation_report.txt", "w", encoding="utf-8") as f:
-                f.write("\n".join(result[1:]))
-        elif args.directory:
-            inputDir = args.directory[0]
-            print(f"Validating folder: {inputDir}")
-            result = validator.validateDirectory(inputDir, args.type[0])
-            print("\n".join(result))
-            with open("validation_report.txt", "w", encoding="utf-8") as f:
-                f.write("\n".join(result))
-    elif args.subcommand == 'detect':
-        if args.file:
-            inputFile = args.file[0]
-            format = detector.detectFormatInFile(inputFile)
-            print(f"Detected format for file {inputFile}: {format}")
-        elif args.directory:
-            inputDir = args.directory[0]
-            formats = detector.detectFormatInDirectory(inputDir)
-            print(f"Detecting formats in directory: {inputDir}")
-            for file, format in formats.items():
-                print(f"File: {file}, Format: {format}")
-    elif args.subcommand == 'convert':
-        if args.file:
-            inputFile = args.file[0]
-            print(f"Converting file: {inputFile}")
-            newContent = converter.convertFile(inputFile, args.typesystem)
-            print(newContent)
-        elif args.directory:
-            inputDir = args.directory[0]
-            print(f"Converting files in directory: {inputDir}")
-            # for file, format in formats.items():
-            #     newContent = converter.convertFile(inputFile, args.typesystem[0])
-            #     print(newContent)
-    elif args.subcommand == "visualize":
-        visualizer.visualize(args.file[0])
 
-        
+def main():
+    print("\n╔════════════════════════════════╗")
+    print("║   Visual Temporal Medical      ║")
+    print("╚════════════════════════════════╝")
+
+    options = {
+        '1': ('Validate file/directory',  menuValidate),
+        '2': ('Detect format',            menuDetect),
+        '3': ('Convert file/directory',   menuConvert),
+        '4': ('Visualize file',           menuVisualize),
+        '0': ('Exit',                     None),
+    }
+
+    while True:
+        print("\nMain menu:")
+        for key, (label, _) in options.items():
+            print(f"  {key}. {label}")
+
+        choice = input("\nSelect an option: ").strip()
+
+        if choice == '0':
+            break
+        elif choice in options:
+            _, action = options[choice]
+            try:
+                action()
+            except Exception:
+                logging.exception("Error executing option")
+        else:
+            print("Invalid option. Enter a menu number.")
+
+
 if __name__ == "__main__":
     try:
         main()
+    except KeyboardInterrupt:
+        print("\nInterrupted by user.")
     except Exception:
-        logging.exception("Error en main")
+        logging.exception("Error in main")

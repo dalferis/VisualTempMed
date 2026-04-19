@@ -317,8 +317,8 @@ def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml'
 
     tml = generateTimeML(cas)
     output_path = e3cFile + ".tml"
-    with open(output_path, 'w', encoding='utf-8') as out_f:
-        out_f.write(etree.tostring(tml, pretty_print=True, xml_declaration=True, encoding="UTF-8").decode("utf-8"))
+    with open(output_path, 'w') as out_f:
+        out_f.write(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
     validation = validator.validateFile(output_path, 'tml-xsd')
     if validation[0]:
