@@ -2,6 +2,8 @@
 from lxml import etree
 import json
 import os
+import locale
+import re
 import validator
 from detector import FileFormat, detectFormat
 from dateutil import parser
@@ -139,11 +141,23 @@ def translateEvent(event, cas_text, cas_tail):
 
     return [new_event] + links
 
+_DATE_PREFIX  = re.compile(r'^[0-9X]{1,4}(-[0-9X]{1,2}(-[0-9X]{1,2})?)?$')
+_VALID_TIME_SUFFIX = re.compile(r'^(\d{2}(:\d{2}(:\d{2})?)?|MO|MI|AF|EV|NI|DT)$')
+
+def _normalizeTimex3Value(timex3):
+    if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower() == "no_value":
+        return "X"
+    v = timex3.value
+    t_pos = v.find("T")
+    if t_pos > 0 and _DATE_PREFIX.match(v[:t_pos]) and not _VALID_TIME_SUFFIX.match(v[t_pos + 1:]):
+        v = v[:t_pos]   # keep date, remove time
+    return v if v else "X"
+
 def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": timex3.xmiID,
-        "attrib": { "tid": "", "type": "", "value": "X" if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower()=="no_value" else timex3.value },
+        "attrib": { "tid": "", "type": "", "value": _normalizeTimex3Value(timex3) },
         "text": cas_text,
         "tail": cas_tail,
     }
@@ -152,22 +166,28 @@ def translateTimex3(timex3, cas_text, cas_tail):
     if hasattr(timex3, "timex3Class"):
         if timex3.timex3Class == "DATE":
             new_timex3["attrib"]["type"] = "DATE"              # direct
-            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "TIME":
             new_timex3["attrib"]["type"] = "TIME"              # direct
-            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "DURATION":
             new_timex3["attrib"]["type"] = "DURATION"          # direct
-            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "QUANTIFIER":
             new_timex3["attrib"]["type"] = "SET"               # approximate
-            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "SET":
             new_timex3["attrib"]["type"] = "SET"               # direct
-            new_timex3["attrib"]["temporalFunction"] = "true"
         elif timex3.timex3Class == "PREPOSTEXP":
             new_timex3["attrib"]["type"] = "DATE"              # approximate
-            new_timex3["attrib"]["temporalFunction"] = "true"
+    # temporalFunction
+    new_timex3["attrib"]["temporalFunction"] = "true"          # default
+    if hasattr(timex3, "timex3Class"):
+        if timex3.timex3Class == "DATE":
+            if re.match(r'\d{3}[\dX]', new_timex3["attrib"]["value"]):
+                new_timex3["attrib"]["temporalFunction"] = "false"  # year present: self-anchored
+        elif timex3.timex3Class == "TIME":
+            if re.match(r'\d{3}[\dX]', new_timex3["attrib"]["value"]):
+                new_timex3["attrib"]["temporalFunction"] = "false"  # year present: self-anchored
+        elif timex3.timex3Class == "DURATION":
+            if "X" not in new_timex3["attrib"]["value"]:
+                new_timex3["attrib"]["temporalFunction"] = "false"  # no unknown quantity: self-contained
     # functionInDocument values
     if hasattr(timex3, "functionInDocument"):
         if timex3.functionInDocument == "DOCTIME":
@@ -317,7 +337,9 @@ def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml'
 
     tml = generateTimeML(cas)
     output_path = e3cFile + ".tml"
+    system_encoding = locale.getpreferredencoding()
     with open(output_path, 'w') as out_f:
+        out_f.write(f'<?xml version="1.0" encoding="{system_encoding}"?>\n')
         out_f.write(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
     validation = validator.validateFile(output_path, 'tml-xsd')

@@ -116,10 +116,7 @@ def menuConvert():
 
 def menuVisualize():
     print("\n=== VISUALIZE ===")
-    path = input("  File path: ").strip()
-    if not os.path.isfile(path):
-        print(f"  Error: file not found '{path}'")
-        return
+    path = browseFile(start_dir='.\\E3C-Corpus\\data_annotation\\Spanish\\layer1')
     visualizer.visualize(path)
 
 
