@@ -2,7 +2,6 @@
 from lxml import etree
 import json
 import os
-import locale
 import re
 import validator
 from detector import FileFormat, detectFormat
@@ -362,9 +361,8 @@ def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml'
 
     tml = generateTimeML(cas)
     output_path = e3cFile + ".tml"
-    system_encoding = locale.getpreferredencoding()
-    with open(output_path, 'w') as out_f:
-        out_f.write(f'<?xml version="1.0" encoding="{system_encoding}"?>\n')
+    with open(output_path, 'w', encoding='utf-8') as out_f:
+        out_f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         out_f.write(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
     validation = validator.validateFile(output_path, 'tml-xsd')
