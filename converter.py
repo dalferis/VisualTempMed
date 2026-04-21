@@ -147,11 +147,36 @@ _VALID_TIME_SUFFIX = re.compile(r'^(\d{2}(:\d{2}(:\d{2})?)?|MO|MI|AF|EV|NI|DT)$'
 def _normalizeTimex3Value(timex3):
     if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower() == "no_value":
         return "X"
-    v = timex3.value
-    t_pos = v.find("T")
-    if t_pos > 0 and _DATE_PREFIX.match(v[:t_pos]) and not _VALID_TIME_SUFFIX.match(v[t_pos + 1:]):
-        v = v[:t_pos]   # keep date, remove time
-    return v if v else "X"
+    result = timex3.value
+    # Fix missing P prefix for duration
+    if re.match(r'^T[\d.]+[HMS]$', result):
+        result = "P" + result
+    # XXXX-XX-XXTXX: remove time, keep date
+    t_pos = result.find("T")
+    if t_pos > 0 and _DATE_PREFIX.match(result[:t_pos]) and not _VALID_TIME_SUFFIX.match(result[t_pos + 1:]):
+        result = result[:t_pos]
+    # Duration fixups
+    if result.startswith("P"):
+        result = re.sub(r'(\d+)-\d+([A-Z])', r'\1\2', result)
+        pre_decimal = result
+        def _expand(m):
+            decimal_value = float(m.group(1)); unit = m.group(2)
+            integer_part = int(decimal_value); fractional_part = decimal_value - integer_part
+            in_time_part = 'T' in pre_decimal[:m.start()]
+            if unit == 'H':                    factor, next_unit = 60, 'M'
+            elif unit == 'M' and in_time_part: factor, next_unit = 60, 'S'
+            elif unit == 'M':                  factor, next_unit = 30, 'D'
+            elif unit == 'D':                  factor, next_unit = 24, 'H'
+            elif unit == 'Y':                  factor, next_unit = 12, 'M'
+            elif unit == 'W':                  factor, next_unit = 7,  'D'
+            else: return str(round(decimal_value)) + unit
+            remainder = round(fractional_part * factor)
+            if remainder >= factor: return f"{integer_part + 1}{unit}"
+            return f"{integer_part}{unit}{remainder}{next_unit}" if remainder else f"{integer_part}{unit}"
+        result = re.sub(r'(\d+\.\d+)([A-Z])', _expand, result)
+        if result == "PXX":
+            result = "PXD"
+    return result if result else "X"
 
 def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
