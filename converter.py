@@ -171,6 +171,8 @@ def _normalizeTimex3Value(timex3):
             else: return str(round(decimal_value)) + unit
             remainder = round(fractional_part * factor)
             if remainder >= factor: return f"{integer_part + 1}{unit}"
+            if unit == 'W':
+                return f"{integer_part * 7 + remainder}D"
             return f"{integer_part}{unit}{remainder}{next_unit}" if remainder else f"{integer_part}{unit}"
         result = re.sub(r'(\d+\.\d+)([A-Z])', _expand, result)
         if result == "PXX":
