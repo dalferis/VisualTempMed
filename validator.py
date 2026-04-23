@@ -39,8 +39,7 @@ def validateXmlXsd(xmlContent: str, xsdFilePath: str) -> list:
         return [False] + [str(e) for e in errors]
 
 def validateFile(xmlFile: str, type: str) -> list:
-    encoding = 'utf-8' if type in ('tml-dtd', 'tml-xsd') else None
-    xmlContent = open(xmlFile, 'r', encoding=encoding).read()
+    xmlContent = open(xmlFile, 'r', encoding='utf-8').read()
     if type == 'xml':
         return validateXml(xmlContent)
     elif type == 'xmi':
