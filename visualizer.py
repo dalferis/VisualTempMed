@@ -6,7 +6,9 @@ from pytlex_core.algorithms import TLEX
 from PySide6.QtWidgets import QApplication
 
 def visualize(filepath):
-    graph = Graph.Graph(filepath=filepath)
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    graph = Graph.Graph(time_ml_string=content)
     tlex = TLEX.TLEX(graph=graph)
     model = DataModel(graph, tlex)
     app = QApplication(sys.argv)
