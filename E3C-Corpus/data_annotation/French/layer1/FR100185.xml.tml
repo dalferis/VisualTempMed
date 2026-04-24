@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>alminardE3C</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2014-05-03T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2014-05-03</TIMEX3>
+  <TEXT>Il s'agit d'une femme de 50 ans, <EVENT eid="e1" class="OCCURRENCE">suivie</EVENT> depuis <TIMEX3 tid="t1" type="DURATION" value="P4Y" temporalFunction="false">quatre ans</TIMEX3> pour une <EVENT eid="e2" class="OCCURRENCE">tumeur</EVENT> du sein gauche pour laquelle elle a bénéficié d'une <EVENT eid="e3" class="OCCURRENCE">mastectomie</EVENT> de type Patey avec curage ganglionnaire axillaire suivie d'une <EVENT eid="e4" class="OCCURRENCE">radiothérapie</EVENT> d'une dose globale de 40Gy, elle <EVENT eid="e5" class="OCCURRENCE">accuse</EVENT> depuis <TIMEX3 tid="t2" type="DURATION" value="P3M" temporalFunction="false">3 mois</TIMEX3> des <EVENT eid="e6" class="OCCURRENCE">paresthésies</EVENT> et une <EVENT eid="e7" class="OCCURRENCE">lourdeur</EVENT> du membre supérieur gauche avec à l'<EVENT eid="e8" class="OCCURRENCE">examen</EVENT> clinique un <EVENT eid="e9" class="OCCURRENCE">déficit</EVENT> moteur proximal et distal des fléchisseurs et des extenseurs, une <EVENT eid="e10" class="OCCURRENCE">abolition</EVENT> des reflexes ostéo-tendineux bicipital et tricipital, une <EVENT eid="e11" class="OCCURRENCE">hypoesthésie</EVENT> de tout le membre et une <EVENT eid="e12" class="OCCURRENCE">amyotrophie</EVENT> de la main.
+L'<EVENT eid="e13" class="OCCURRENCE">Electromyogramme</EVENT> <EVENT eid="e14" class="REPORTING">trouve</EVENT> une <EVENT eid="e15" class="OCCURRENCE">abolition</EVENT> des réponses motrices et sensitives de l'ensemble des nerfs du membre supérieur.
+L'<EVENT eid="e16" class="OCCURRENCE">IRM</EVENT> du plexus brachial <EVENT eid="e17" class="REPORTING">révèle</EVENT> une <EVENT eid="e18" class="OCCURRENCE">lésion</EVENT> nodulaire sus claviculaire de forme arrondie et de contours irréguliers envahissant les troncs plexiques.
+L'<EVENT eid="e19" class="OCCURRENCE">aspect</EVENT> IRM est équivoque de <EVENT eid="e20" class="OCCURRENCE">métastase</EVENT> envahissant le plexus brachial.
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l3" eventInstanceID="ei1" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
+  <TLINK lid="l4" eventInstanceID="ei1" relatedToEventInstance="ei4" relType="INCLUDES"/>
+  <TLINK lid="l5" eventInstanceID="ei1" relatedToTime="t1" relType="SIMULTANEOUS"/>
+  <TLINK lid="l6" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
+  <TLINK lid="l8" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="BEFORE"/>
+  <TLINK lid="l10" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l11" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l12" eventInstanceID="ei5" relatedToTime="t2" relType="SIMULTANEOUS"/>
+  <TLINK lid="l13" eventInstanceID="ei5" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l14" eventInstanceID="ei5" relatedToEventInstance="ei13" relType="INCLUDES"/>
+  <TLINK lid="l15" eventInstanceID="ei5" relatedToEventInstance="ei7" relType="SIMULTANEOUS"/>
+  <TLINK lid="l16" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
+  <TLINK lid="l17" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l18" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l19" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei9" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l22" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l23" eventInstanceID="ei10" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l24" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l25" eventInstanceID="ei11" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l26" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l27" eventInstanceID="ei12" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l28" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l29" eventInstanceID="ei13" relatedToEventInstance="ei16" relType="BEFORE"/>
+  <TLINK lid="l30" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l31" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l32" eventInstanceID="ei15" relatedToEventInstance="ei13" relType="INCLUDES"/>
+  <TLINK lid="l33" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l34" eventInstanceID="ei16" relatedToEventInstance="ei19" relType="INCLUDES"/>
+  <TLINK lid="l35" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l36" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l37" eventInstanceID="ei18" relatedToEventInstance="ei16" relType="INCLUDES"/>
+  <TLINK lid="l38" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l39" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l40" eventInstanceID="ei20" relatedToEventInstance="ei19" relType="INCLUDES"/>
+</TimeML>

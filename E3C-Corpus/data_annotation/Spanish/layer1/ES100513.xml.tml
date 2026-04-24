@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>begona</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
+  <TEXT>Varón de 7 años de edad, que presenta gran <EVENT eid="e1" class="OCCURRENCE">asimetría</EVENT> facial por marcada <EVENT eid="e2" class="OCCURRENCE">hipoplasia</EVENT> facial derecha. Mediante <EVENT eid="e3" class="OCCURRENCE">RMN</EVENT> <EVENT eid="e4" class="REPORTING">confirmamos</EVENT> <EVENT eid="e5" class="OCCURRENCE">anquílosis</EVENT> mandibular acompañada de gran <EVENT eid="e6" class="OCCURRENCE">retracción</EVENT> tisular secundaria y <EVENT eid="e7" class="OCCURRENCE">microrretrognatia</EVENT>, lo que permite tan solo una <EVENT eid="e8" class="OCCURRENCE">apertura</EVENT> interincisal máxima de 4 mm además de una <EVENT eid="e9" class="OCCURRENCE">maloclusión</EVENT> de clase II.&#13;
+Se <EVENT eid="e10" class="OCCURRENCE">procedió</EVENT> quirúrgicamente a la <EVENT eid="e11" class="OCCURRENCE">resección</EVENT> del <EVENT eid="e12" class="OCCURRENCE">bloque</EVENT> anquilótico de la articulación témporomandibular derecha mediante <EVENT eid="e13" class="OCCURRENCE">osteotomía</EVENT> a nivel del cuello condilar y <EVENT eid="e14" class="OCCURRENCE">coronoidectomía</EVENT> derecha, seguidas de <EVENT eid="e15" class="OCCURRENCE">reconstrucción</EVENT> mediante injerto condrocostal de interposición. En <TIMEX3 tid="t1" type="TIME" value="2018-12-01" temporalFunction="false">el momento</TIMEX3> del <EVENT eid="e16" class="OCCURRENCE">alta</EVENT> definitiva, el paciente <EVENT eid="e17" class="ASPECTUAL">mantenía</EVENT> una <EVENT eid="e18" class="OCCURRENCE">apertura</EVENT> bucal de 3 cm.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei5" relType="INCLUDES"/>
+  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
+  <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l6" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l8" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
+  <TLINK lid="l9" eventInstanceID="ei5" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei7" relType="SIMULTANEOUS"/>
+  <TLINK lid="l12" eventInstanceID="ei5" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l13" eventInstanceID="ei5" relatedToEventInstance="ei9" relType="INCLUDES"/>
+  <TLINK lid="l14" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l17" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l18" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei11" relatedToEventInstance="ei15" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei11" relatedToEventInstance="ei13" relType="INCLUDES"/>
+  <TLINK lid="l22" eventInstanceID="ei11" relatedToEventInstance="ei14" relType="INCLUDES"/>
+  <TLINK lid="l23" eventInstanceID="ei11" relatedToEventInstance="ei10" relType="SIMULTANEOUS"/>
+  <TLINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei16" relType="BEFORE"/>
+  <TLINK lid="l25" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l26" eventInstanceID="ei12" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l27" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l28" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l29" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l30" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l31" eventInstanceID="ei16" relatedToTime="t1" relType="SIMULTANEOUS"/>
+  <TLINK lid="l32" eventInstanceID="ei17" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l33" eventInstanceID="ei17" relatedToEventInstance="ei16" relType="INCLUDES"/>
+  <TLINK lid="l35" eventInstanceID="ei18" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l36" eventInstanceID="ei18" relatedToEventInstance="ei16" relType="INCLUDES"/>
+  <ALINK lid="l34" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="CONTINUES"/>
+</TimeML>

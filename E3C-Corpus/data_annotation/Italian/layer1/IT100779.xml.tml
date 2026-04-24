@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>manuela</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2018-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-31</TIMEX3>
+  <TEXT>Donna di 79 anni ricoverata per febbre associata a dolore lombare sinistro con anamnesi positiva per intervento chirurgico imprecisato a carico delle vie urinarie e recente Tvs. La UroTC, eseguita nel sospetto di pielonefrite, ha mostrato una voluminosa massa renale sinistra con aree necrotiche infiltrante il muscolo psoas omolaterale. Dopo posizionamento di drenaggio percutaneo e terapia antibiotica mirata, nel sospetto di neoplasia ascessualizzata la paziente è stata sottoposta a nefrectomia sinistra ed asportazione di ulteriori localizzazioni di malattia a livello peripancreatico, splenico e del muscolo ileo psoas. L’esame istologico sui frammenti operatori è risultato diagnostico per forma estesa di malacoplachia.&#13;
+</TEXT>
+</TimeML>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>CURATION_USER</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2016-09-07T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2016-09-07</TIMEX3>
+  <TEXT>Twenty-five-year-old Sri Lankan female with past history of complete <EVENT eid="e1" class="OCCURRENCE">recovery</EVENT> following an acute inflammatory demyelinating polyneuropathy (AIDP) variant of <EVENT eid="e2" class="OCCURRENCE">Guillain-Barré</EVENT> syndrome <TIMEX3 tid="t1" type="DATE" value="2004" temporalFunction="false">12 years back</TIMEX3> <EVENT eid="e3" class="OCCURRENCE">presented</EVENT> with acute, ascending symmetrical flaccid <EVENT eid="e4" class="OCCURRENCE">quadriparasis</EVENT> <EVENT eid="e5" class="OCCURRENCE">extending</EVENT> to bulbar muscles, bilateral VII cranial nerves and respiratory <EVENT eid="e6" class="OCCURRENCE">compromise</EVENT> <EVENT eid="e7" class="OCCURRENCE">needing</EVENT> mechanical <EVENT eid="e8" class="OCCURRENCE">ventilation</EVENT>. Nerve conduction <EVENT eid="e9" class="OCCURRENCE">study</EVENT> <EVENT eid="e10" class="REPORTING">revealed</EVENT> AIDP variant of <EVENT eid="e11" class="OCCURRENCE">Guillain-Barré</EVENT> syndrome. Cerebrospinal fluid <EVENT eid="e12" class="OCCURRENCE">analysis</EVENT> done after <TIMEX3 tid="t2" type="DURATION" value="P2W" temporalFunction="false">2 weeks</TIMEX3> were normal during both <EVENT eid="e13" class="OCCURRENCE">episodes</EVENT> without albuminocytologic <EVENT eid="e14" class="OCCURRENCE">dissociation</EVENT>. She was <EVENT eid="e15" class="OCCURRENCE">treated</EVENT> with intravenous immunoglobulin resulting in a remarkable <EVENT eid="e16" class="OCCURRENCE">recovery</EVENT>. Both <EVENT eid="e17" class="OCCURRENCE">episodes</EVENT> had a complete clinical <EVENT eid="e18" class="OCCURRENCE">recovery</EVENT> in <TIMEX3 tid="t3" type="DURATION" value="P3M" temporalFunction="false">three</TIMEX3> and <TIMEX3 tid="t4" type="DURATION" value="P4M" temporalFunction="false">four months' time</TIMEX3> respectively, rather a faster <EVENT eid="e19" class="OCCURRENCE">recovery</EVENT> than usually <EVENT eid="e20" class="OCCURRENCE">expected</EVENT>.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l3" timeID="t1" relatedToEventInstance="ei1" relType="INCLUDES"/>
+  <TLINK lid="l4" timeID="t1" relatedToEventInstance="ei2" relType="INCLUDES"/>
+  <TLINK lid="l5" timeID="t1" relatedToEventInstance="ei3" relType="BEFORE"/>
+  <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei9" relType="BEFORE"/>
+  <TLINK lid="l8" eventInstanceID="ei3" relatedToEventInstance="ei8" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l10" eventInstanceID="ei4" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l11" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l12" eventInstanceID="ei5" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l13" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l14" eventInstanceID="ei6" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l16" eventInstanceID="ei7" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l17" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l18" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei11" relatedToEventInstance="ei9" relType="INCLUDES"/>
+  <TLINK lid="l22" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l23" timeID="t2" relatedToEventInstance="ei12" relType="ENDS"/>
+  <TLINK lid="l24" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l25" eventInstanceID="ei13" relatedToTime="t2" relType="INCLUDES"/>
+  <TLINK lid="l26" eventInstanceID="ei13" relatedToEventInstance="ei9" relType="INCLUDES"/>
+  <TLINK lid="l27" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l28" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l29" eventInstanceID="ei15" relatedToEventInstance="ei16" relType="BEFORE"/>
+  <TLINK lid="l30" eventInstanceID="ei15" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
+  <TLINK lid="l31" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l32" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l33" eventInstanceID="ei17" relatedToTime="t3" relType="SIMULTANEOUS"/>
+  <TLINK lid="l34" eventInstanceID="ei17" relatedToTime="t4" relType="SIMULTANEOUS"/>
+  <TLINK lid="l35" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="BEFORE"/>
+  <TLINK lid="l36" eventInstanceID="ei17" relatedToEventInstance="ei15" relType="SIMULTANEOUS"/>
+  <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l38" eventInstanceID="ei18" relatedToEventInstance="ei19" relType="SIMULTANEOUS"/>
+  <TLINK lid="l39" timeID="t3" relatedToEventInstance="ei18" relType="ENDS"/>
+  <TLINK lid="l40" timeID="t4" relatedToEventInstance="ei18" relType="ENDS"/>
+  <TLINK lid="l41" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l42" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l43" eventInstanceID="ei20" relatedToEventInstance="ei19" relType="BEFORE"/>
+</TimeML>

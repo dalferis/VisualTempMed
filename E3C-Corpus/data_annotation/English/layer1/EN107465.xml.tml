@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>CURATION_USER</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2011-07-13T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2011-07-13</TIMEX3>
+  <TEXT>We <EVENT eid="e1" class="OCCURRENCE">report</EVENT> the case of a 15-year-old Caucasian girl who was <EVENT eid="e2" class="OCCURRENCE">diagnosed</EVENT> with Silver-Russell <EVENT eid="e3" class="STATE">syndrome</EVENT> at the age of four and a half years. Recombinant growth <EVENT eid="e4" class="OCCURRENCE">hormone</EVENT> was administered for <TIMEX3 tid="t1" type="DURATION" value="P18M" temporalFunction="false">18 months</TIMEX3> without an appropriate <EVENT eid="e5" class="OCCURRENCE">increase</EVENT> in growth velocity. At the age of seven years, her serum growth hormone <EVENT eid="e6" class="OCCURRENCE">levels</EVENT> were high, and an insulin-like growth factor 1 generation <EVENT eid="e7" class="OCCURRENCE">test</EVENT> did not <EVENT eid="e8" class="STATE">increase</EVENT> insulin-like growth factor 1 <EVENT eid="e9" class="OCCURRENCE">levels</EVENT> (baseline insulin-like growth factor 1 <EVENT eid="e10" class="OCCURRENCE">levels</EVENT>, 52 μg/L; reference range, 75 μg/L to 365 μg/L; and peak, 76 μg/L and 50 μg/L after <TIMEX3 tid="t2" type="DURATION" value="PT12H" temporalFunction="false">12</TIMEX3> and <TIMEX3 tid="t3" type="DURATION" value="PT84H" temporalFunction="false">84 hours</TIMEX3>, respectively, from baseline). The genetic <EVENT eid="e11" class="OCCURRENCE">analysis</EVENT> <EVENT eid="e12" class="REPORTING">showed</EVENT> that the patient was <EVENT eid="e13" class="STATE">homozygous</EVENT> for the R217X <EVENT eid="e14" class="STATE">mutation</EVENT> in the growth hormone receptor gene, which is characteristic of Laron <EVENT eid="e15" class="STATE">syndrome</EVENT>. On the basis of these results, the diagnosis of primary growth hormone insensitivity <EVENT eid="e16" class="STATE">syndrome</EVENT> was made, and recombinant insulin-like growth factor 1 <EVENT eid="e17" class="OCCURRENCE">therapy</EVENT> was <EVENT eid="e18" class="OCCURRENCE">initiated</EVENT>. The patient's <EVENT eid="e19" class="OCCURRENCE">treatment</EVENT> was well <EVENT eid="e20" class="OCCURRENCE">tolerated</EVENT>, but unexplained central <EVENT eid="e21" class="OCCURRENCE">hypothyroidism</EVENT> occurred at the age of 12.9 years. At the age of 15 years, when the patient's sexual <EVENT eid="e22" class="OCCURRENCE">development</EVENT> was almost <EVENT eid="e23" class="OCCURRENCE">completed</EVENT> and her menstrual cycle <EVENT eid="e24" class="OCCURRENCE">occurred</EVENT> irregularly, her <EVENT eid="e25" class="OCCURRENCE">height</EVENT> was 129.8 cm, which is 4.71 standard <EVENT eid="e26" class="OCCURRENCE">deviations</EVENT> below the median for normal girls her age.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="BEFORE"/>
+  <TLINK lid="l4" eventInstanceID="ei3" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l5" eventInstanceID="ei3" relatedToEventInstance="ei1" relType="INCLUDES"/>
+  <TLINK lid="l6" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei1" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="BEFORE"/>
+  <TLINK lid="l10" timeID="t1" relatedToEventInstance="ei4" relType="INCLUDES"/>
+  <TLINK lid="l11" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l13" eventInstanceID="ei6" relatedToEventInstance="ei11" relType="BEFORE"/>
+  <TLINK lid="l14" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="INCLUDES"/>
+  <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l16" eventInstanceID="ei7" relatedToEventInstance="ei8" relType="INCLUDES"/>
+  <TLINK lid="l17" eventInstanceID="ei7" relatedToEventInstance="ei10" relType="INCLUDES"/>
+  <TLINK lid="l18" eventInstanceID="ei7" relatedToEventInstance="ei9" relType="INCLUDES"/>
+  <TLINK lid="l19" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l22" timeID="t2" relatedToEventInstance="ei9" relType="ENDS"/>
+  <TLINK lid="l23" timeID="t3" relatedToEventInstance="ei9" relType="ENDS"/>
+  <TLINK lid="l24" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l25" eventInstanceID="ei11" relatedToEventInstance="ei12" relType="INCLUDES"/>
+  <TLINK lid="l26" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l27" eventInstanceID="ei13" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l28" eventInstanceID="ei13" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l29" eventInstanceID="ei14" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l30" eventInstanceID="ei14" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l31" eventInstanceID="ei15" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l32" eventInstanceID="ei15" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l33" eventInstanceID="ei16" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l34" eventInstanceID="ei16" relatedToEventInstance="ei18" relType="INCLUDES"/>
+  <TLINK lid="l35" eventInstanceID="ei16" relatedToEventInstance="ei11" relType="INCLUDES"/>
+  <TLINK lid="l36" eventInstanceID="ei16" relatedToEventInstance="ei20" relType="INCLUDES"/>
+  <TLINK lid="l37" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l38" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="BEGINS"/>
+  <TLINK lid="l39" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l41" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l42" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="SIMULTANEOUS"/>
+  <TLINK lid="l43" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l44" eventInstanceID="ei20" relatedToEventInstance="ei23" relType="BEFORE"/>
+  <TLINK lid="l45" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="INCLUDES"/>
+  <TLINK lid="l46" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l47" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l48" eventInstanceID="ei22" relatedToEventInstance="ei23" relType="ENDS"/>
+  <TLINK lid="l49" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l50" eventInstanceID="ei23" relatedToEventInstance="ei24" relType="SIMULTANEOUS"/>
+  <TLINK lid="l51" eventInstanceID="ei23" relatedToEventInstance="ei25" relType="SIMULTANEOUS"/>
+  <TLINK lid="l53" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l54" eventInstanceID="ei25" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l55" eventInstanceID="ei26" relatedToTime="t0" relType="BEFORE"/>
+  <ALINK lid="l40" eventInstanceID="ei18" relatedToEventInstance="ei17" relType="INITIATES"/>
+  <ALINK lid="l52" eventInstanceID="ei23" relatedToEventInstance="ei22" relType="TERMINATES"/>
+</TimeML>

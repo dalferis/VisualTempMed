@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>manuela</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2020-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-12-31</TIMEX3>
+  <TEXT>Il Sig. Giovanni di 68 anni si <EVENT eid="e1" class="OCCURRENCE">reca</EVENT> dal proprio medico curante perché da <TIMEX3 tid="t1" type="DURATION" value="P3D" temporalFunction="false">3 giorni</TIMEX3> presenta <EVENT eid="e2" class="OCCURRENCE">ittero</EVENT>. <EVENT eid="e3" class="REPORTING">Riferisce</EVENT> al medico che da <TIMEX3 tid="t2" type="DURATION" value="P1M" temporalFunction="false">circa un mese</TIMEX3> lamenta <EVENT eid="e4" class="OCCURRENCE">dolore</EVENT> in sede epigastrica, <EVENT eid="e5" class="OCCURRENCE">difficoltà</EVENT> durante la <EVENT eid="e6" class="OCCURRENCE">digestione</EVENT>; in <TIMEX3 tid="t3" type="DURATION" value="PXD" temporalFunction="true">poco tempo</TIMEX3> è <EVENT eid="e7" class="OCCURRENCE">dimagrito</EVENT> molto e si sente molto <EVENT eid="e8" class="OCCURRENCE">stanco</EVENT>. Il medico <EVENT eid="e9" class="OCCURRENCE">prescrive</EVENT> alcuni <EVENT eid="e10" class="OCCURRENCE">esami</EVENT> ematici ed un’<EVENT eid="e11" class="OCCURRENCE">ecografia</EVENT> all'addome. Dagli <EVENT eid="e12" class="OCCURRENCE">accertamenti</EVENT> ematici risultano alterati i <EVENT eid="e13" class="OCCURRENCE">marcatori</EVENT> tumorali e <EVENT eid="e14" class="OCCURRENCE">l'ecografia</EVENT> <EVENT eid="e15" class="REPORTING">mostra</EVENT> una <EVENT eid="e16" class="OCCURRENCE">massa</EVENT> di origine tumorale a livello del Pancreas. Il Signore viene <EVENT eid="e17" class="OCCURRENCE">ricoverato</EVENT> nella U.O. di Chirurgia e sottoposto a tutti gli <EVENT eid="e18" class="OCCURRENCE">accertamenti</EVENT> del caso. L'équipe medica <EVENT eid="e19" class="OCCURRENCE">decide</EVENT> di eseguire un intervento chirurgico di <EVENT eid="e20" class="OCCURRENCE">resezione</EVENT> radicale. Il Sig. Giovanni appare molto disorientato e spaventato.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l3" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l4" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l5" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l6" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l8" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l10" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l11" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l12" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l13" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l14" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l15" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l16" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l17" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l18" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+</TimeML>

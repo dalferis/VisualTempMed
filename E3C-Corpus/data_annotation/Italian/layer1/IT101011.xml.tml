@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>manuela</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2020-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-12-31</TIMEX3>
+  <TEXT>Marco di anni 23 si presenta al pronto soccorso dopo una notte insonne per un dolore in fossa iliaca destra, accompagnato da nausea; non ha febbre. Riferisce all’infermiere di triage che da due giorni accusava i seguenti sintomi: senso di pesantezza allo stomaco, aerofagia, un vago dolore addominale con crampi soprattutto intorno all’ombelico, stipsi. La sera precedente, dopo aver cenato, il dolore è aumentato e si è localizzato in fossa iliaca destra. Vengono programmati alcuni accertamenti nell’ipotesi che si tratti di appendicite acuta. Confermata la diagnosi il ragazzo viene ricoverato presso la U.O. di Chirurgia dove viene preparato per sottoporsi ad un intervento di appendicectomia in regime di urgenza.&#13;
+</TEXT>
+</TimeML>

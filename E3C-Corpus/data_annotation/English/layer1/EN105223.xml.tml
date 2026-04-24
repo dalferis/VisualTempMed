@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>CURATION_USER</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2015-11-10T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2015-11-10</TIMEX3>
+  <TEXT>A 49-year-old white Caucasian woman <EVENT eid="e1" class="OCCURRENCE">presented</EVENT> with vaginal <EVENT eid="e2" class="OCCURRENCE">bleeding</EVENT>. A pelvic <EVENT eid="e3" class="OCCURRENCE">examination</EVENT> <EVENT eid="e4" class="REPORTING">revealed</EVENT> a cystic <EVENT eid="e5" class="OCCURRENCE">lesion</EVENT> <EVENT eid="e6" class="OCCURRENCE">arising</EVENT> from her cervix. <EVENT eid="e7" class="OCCURRENCE">Examination</EVENT> of a biopsy specimen <EVENT eid="e8" class="REPORTING">revealed</EVENT> a poorly differentiated <EVENT eid="e9" class="OCCURRENCE">neoplasm</EVENT>, with sheets of small hyperchromatic cells, <EVENT eid="e10" class="OCCURRENCE">staining</EVENT> weakly for neuroendocrine <EVENT eid="e11" class="OCCURRENCE">markers</EVENT>. She was <EVENT eid="e12" class="OCCURRENCE">diagnosed</EVENT> with small cell <EVENT eid="e13" class="OCCURRENCE">carcinoma</EVENT> and <EVENT eid="e14" class="ASPECTUAL">started</EVENT> on concurrent <EVENT eid="e15" class="OCCURRENCE">chemotherapy</EVENT> and <EVENT eid="e16" class="OCCURRENCE">radiation</EVENT>. However, additional positive <EVENT eid="e17" class="OCCURRENCE">immunostaining</EVENT> for CD99 was strongly <EVENT eid="e18" class="REPORTING">suggestive</EVENT> of Ewing's <EVENT eid="e19" class="OCCURRENCE">sarcoma</EVENT>. Fluorescence in situ <EVENT eid="e20" class="OCCURRENCE">hybridization</EVENT> <EVENT eid="e21" class="REPORTING">revealed</EVENT> ESWR1 gene <EVENT eid="e22" class="OCCURRENCE">rearrangement</EVENT>, <EVENT eid="e23" class="REPORTING">confirming</EVENT> Ewing's <EVENT eid="e24" class="OCCURRENCE">sarcoma</EVENT>. Our patient underwent <EVENT eid="e25" class="OCCURRENCE">surgery</EVENT>, which <EVENT eid="e26" class="REPORTING">confirmed</EVENT> stage IIB Ewing's <EVENT eid="e27" class="OCCURRENCE">sarcoma</EVENT>. She received adjuvant <EVENT eid="e28" class="OCCURRENCE">chemotherapy</EVENT> but <EVENT eid="e29" class="OCCURRENCE">died</EVENT> from progressive metastatic <EVENT eid="e30" class="OCCURRENCE">disease</EVENT> after four cycles.&#13;
+</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
+  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
+  <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l6" eventInstanceID="ei3" relatedToEventInstance="ei7" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l8" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei3" relType="INCLUDES"/>
+  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l12" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l13" eventInstanceID="ei7" relatedToEventInstance="ei12" relType="BEFORE"/>
+  <TLINK lid="l14" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l15" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l16" eventInstanceID="ei9" relatedToEventInstance="ei10" relType="INCLUDES"/>
+  <TLINK lid="l17" eventInstanceID="ei9" relatedToEventInstance="ei7" relType="INCLUDES"/>
+  <TLINK lid="l18" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="SIMULTANEOUS"/>
+  <TLINK lid="l20" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l22" eventInstanceID="ei12" relatedToEventInstance="ei14" relType="BEFORE"/>
+  <TLINK lid="l23" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l24" eventInstanceID="ei13" relatedToEventInstance="ei12" relType="INCLUDES"/>
+  <TLINK lid="l25" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l28" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l29" eventInstanceID="ei15" relatedToEventInstance="ei14" relType="BEGINS"/>
+  <TLINK lid="l30" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l31" eventInstanceID="ei16" relatedToEventInstance="ei14" relType="BEGINS"/>
+  <TLINK lid="l32" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l33" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l34" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l35" eventInstanceID="ei19" relatedToEventInstance="ei17" relType="INCLUDES"/>
+  <TLINK lid="l36" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="INCLUDES"/>
+  <TLINK lid="l37" eventInstanceID="ei19" relatedToEventInstance="ei12" relType="INCLUDES"/>
+  <TLINK lid="l38" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l39" eventInstanceID="ei20" relatedToEventInstance="ei25" relType="BEFORE"/>
+  <TLINK lid="l40" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l41" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l42" eventInstanceID="ei22" relatedToEventInstance="ei20" relType="INCLUDES"/>
+  <TLINK lid="l43" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l44" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l45" eventInstanceID="ei24" relatedToEventInstance="ei20" relType="INCLUDES"/>
+  <TLINK lid="l46" eventInstanceID="ei25" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l47" eventInstanceID="ei25" relatedToEventInstance="ei28" relType="BEFORE"/>
+  <TLINK lid="l48" eventInstanceID="ei26" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l49" eventInstanceID="ei27" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l50" eventInstanceID="ei27" relatedToEventInstance="ei25" relType="INCLUDES"/>
+  <TLINK lid="l51" eventInstanceID="ei28" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l52" eventInstanceID="ei28" relatedToEventInstance="ei29" relType="BEFORE"/>
+  <TLINK lid="l53" eventInstanceID="ei29" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l54" eventInstanceID="ei30" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l55" eventInstanceID="ei30" relatedToEventInstance="ei29" relType="INCLUDES"/>
+  <ALINK lid="l26" eventInstanceID="ei14" relatedToEventInstance="ei16" relType="INITIATES"/>
+  <ALINK lid="l27" eventInstanceID="ei14" relatedToEventInstance="ei15" relType="INITIATES"/>
+</TimeML>

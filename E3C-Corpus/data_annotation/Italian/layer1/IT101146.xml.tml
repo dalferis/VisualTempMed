@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>manuela</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2014-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2014-12-31</TIMEX3>
+  <TEXT>Si tratta di un bambino di 2 anni visto in Pronto Soccorso Pediatrico per dolori addominali crampiformi da alcune ore associati a&#13;
+numerose scariche diarroiche senza febbre; dopo breve osservazione&#13;
+clinica veniva dimesso a domicilio con diagnosi di gastroenterite&#13;
+all’esordio. Il bambino rientrava la notte stessa per la persistenza delle algie addominali con diarrea e comparsa di vomiti, non biliari: clinicamente il piccolo paziente era molto sofferente con aspetto letargico; l’addome era disteso con difesa diffusa, timpanico alla percussione soprattutto in mesogastrio e peristalsi torbida all’ascoltazione.&#13;
+&#13;
+Gli Indici di flogosi erano caratterizzati da 25,24 x 10/mm³ globuli bianchi e PCR a 0,05 mg/dL. Richiesta un’ecografia addominale&#13;
+per sospetta invaginazione intestinale, questa non evidenziava immagini dirette o indirette compatibili con una patologia addominale&#13;
+chirurgica in atto per l’abbondante meteorismo intestinale. Viste le&#13;
+scadenti condizioni generali del bambino si insisteva con il Collega&#13;
+Radiologo per la ripetizione dell’ecografia addominale preparando il&#13;
+bambino con un clistere. La seconda ecografia eseguita due ore più&#13;
+tardi evidenziava un’immagine a coccarda compatibile con una invaginazione ileo-ileale a livello dei quadranti addominali di sinistra.&#13;
+&#13;
+Il&#13;
+bambino, pertanto veniva sottoposto d’urgenza ad una laparotomia&#13;
+esplorativa mediante un accesso pararettale destra con il riscontro di&#13;
+un’ernia ileale interna su residuo onfalo mesenterico infiammato con&#13;
+banda aderenziale al seno ombelicale. Il medio-ileo erniato&#13;
+ruotava attorno alla banda aderenziale formando un volvolo occludente. Resecata la briglia aderenziale e derotata l’ansa intestinale, l’ileo riprendeva il suo normale flusso vascolare e l’intervento si&#13;
+concludeva con una resezione del diverticolo di Meckel con anastomosi ileo-ileale termino-terminale. Il cieco appariva particolarmente&#13;
+mobile. Il decorso post-operatorio è stato regolare con ripresa graduale dell’alimentazione enterale. Il bambino è stato dimesso in 8^&#13;
+giornata post-operatoria.&#13;
+</TEXT>
+</TimeML>

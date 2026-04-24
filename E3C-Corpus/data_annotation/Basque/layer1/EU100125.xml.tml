@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>begona</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2019-01-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2019-01-01</TIMEX3>
+  <TEXT>Kristina 19 urteko unibertsitateko ikaslea da, eta <TIMEX3 tid="t1" type="DURATION" value="P6M" temporalFunction="false">duela 6 hilabete</TIMEX3> arte <EVENT eid="e1" class="OCCURRENCE">osasuntsu</EVENT> eta <EVENT eid="e2" class="OCCURRENCE">aktibo</EVENT> zegoen.&#13;
+Bat-batean sozialki <EVENT eid="e3" class="OCCURRENCE">isolatzen</EVENT> <EVENT eid="e4" class="ASPECTUAL">hasi</EVENT> zen; bere logelan <EVENT eid="e5" class="OCCURRENCE">geratzen</EVENT> zen eta klaseetara <EVENT eid="e6" class="OCCURRENCE">huts</EVENT> egiten <EVENT eid="e7" class="ASPECTUAL">hasi</EVENT> zen.&#13;
+Eskolan oso nota onak <EVENT eid="e8" class="OCCURRENCE">ateratzen</EVENT> bazituen ere, akademikoki <EVENT eid="e9" class="OCCURRENCE">zailtasun</EVENT> handiak izan zituen unibertsitateko bigarren lauhilabetean.&#13;
+&#13;
+Medikuarenera <EVENT eid="e10" class="OCCURRENCE">joan</EVENT> da gurasoekin.&#13;
+<EVENT eid="e11" class="OCCURRENCE">Arduratuta</EVENT> daude zerbait <EVENT eid="e12" class="OCCURRENCE">txarto</EVENT> ote dagoen.&#13;
+Gainera, beka <EVENT eid="e13" class="OCCURRENCE">gal</EVENT> dezake ez baditu notak <EVENT eid="e14" class="OCCURRENCE">hobetzen</EVENT>.&#13;
+&#13;
+Gurasoek <EVENT eid="e15" class="REPORTING">diotenez</EVENT>, Kristina oso <EVENT eid="e16" class="OCCURRENCE">arrakastatsua</EVENT> eta sozialki <EVENT eid="e17" class="OCCURRENCE">aktiboa</EVENT> zen institutuan.&#13;
+<TIMEX3 tid="t2" type="DATE" value="2018-SU" temporalFunction="false">Uda hasieran</TIMEX3>, Kristina <EVENT eid="e18" class="OCCURRENCE">pozik</EVENT> zegoela zirudien etxean familiarekin.&#13;
+Baina <TIMEX3 tid="t3" type="DURATION" value="P1W" temporalFunction="false">astebete</TIMEX3> <EVENT eid="e19" class="OCCURRENCE">pasatuta</EVENT>, <TIMEX3 tid="t4" type="DURATION" value="PTXH" temporalFunction="true">denbora luzea</TIMEX3> <EVENT eid="e20" class="ASPECTUAL">hasi</EVENT> zen <EVENT eid="e21" class="ASPECTUAL">pasatzen</EVENT> bakarrik bere logelan.&#13;
+Lagunek egiten zizkioten <EVENT eid="e22" class="OCCURRENCE">gonbidapen</EVENT> guztiak <EVENT eid="e23" class="OCCURRENCE">ukatu</EVENT> egiten zituen.&#13;
+<EVENT eid="e24" class="OCCURRENCE">Haserrekor</EVENT> jartzen zen gurasoek <EVENT eid="e25" class="OCCURRENCE">afaltzera</EVENT> <EVENT eid="e26" class="OCCURRENCE">joateko</EVENT> <EVENT eid="e27" class="OCCURRENCE">esaten</EVENT> ziotenean.&#13;
+<TIMEX3 tid="t5" type="DATE" value="2018-SU" temporalFunction="false">Uda amaieran</TIMEX3>, ez zen bere logelatik ia <EVENT eid="e28" class="OCCURRENCE">irteten</EVENT>, eta behin eta berriro <EVENT eid="e29" class="OCCURRENCE">gogorarazi</EVENT> behar zitzaion <EVENT eid="e30" class="OCCURRENCE">dutxatu</EVENT> behar zela eta ilea <EVENT eid="e31" class="OCCURRENCE">orraztu</EVENT> behar zuela.&#13;
+Aipatutako <EVENT eid="e32" class="OCCURRENCE">sintomak</EVENT> izan arren, Kristina unibertsitatera <EVENT eid="e33" class="OCCURRENCE">bueltatu</EVENT> da bigarren urtea <EVENT eid="e34" class="ASPECTUAL">hasteko</EVENT>.&#13;
+&#13;
+Medikuak Kristina berriz <EVENT eid="e35" class="OCCURRENCE">ikusi</EVENT> du, eta hark bere buruaren <EVENT eid="e36" class="OCCURRENCE">zainketarik</EVENT> ez duela egiten <EVENT eid="e37" class="REPORTING">konturatu</EVENT> da.&#13;
+Ez dauka <EVENT eid="e38" class="OCCURRENCE">begi-kontakturik</EVENT>, eta gutxi <EVENT eid="e39" class="OCCURRENCE">hitz</EVENT> egiten du.&#13;
+Zelan <EVENT eid="e40" class="OCCURRENCE">dagoen</EVENT> <EVENT eid="e41" class="OCCURRENCE">galdetzean</EVENT>, "ondo" <EVENT eid="e42" class="OCCURRENCE">dagoela</EVENT> <EVENT eid="e43" class="REPORTING">erantzuten</EVENT> du, baina ez dauka <EVENT eid="e44" class="OCCURRENCE">espresio</EVENT> emozional handirik aurpegian.&#13;
+Badirudi <EVENT eid="e45" class="OCCURRENCE">deseroso</EVENT> dagoela, eta <EVENT eid="e46" class="OCCURRENCE">zaila</EVENT> da harekin <EVENT eid="e47" class="OCCURRENCE">hitz</EVENT> egitea.&#13;
+<EVENT eid="e48" class="OCCURRENCE">Gertatzen</EVENT> ari zaionaren inguruan <EVENT eid="e49" class="OCCURRENCE">galdetzen</EVENT> zaionean, honako hau <EVENT eid="e50" class="REPORTING">esaten</EVENT> du.&#13;
+"<EVENT eid="e51" class="OCCURRENCE">Suposatzen</EVENT> dut ez nagoela unibertsitatean <EVENT eid="e52" class="OCCURRENCE">interesaturik</EVENT>".&#13;
+<EVENT eid="e53" class="REPORTING">Esaten</EVENT> duenez, ez du <EVENT eid="e54" class="OCCURRENCE">drogarik</EVENT> ez <EVENT eid="e55" class="OCCURRENCE">alkoholik</EVENT> hartzen.&#13;
+<EVENT eid="e56" class="REPORTING">Esaten</EVENT> du ez dela <EVENT eid="e57" class="OCCURRENCE">gaixorik</EVENT> <EVENT eid="e58" class="REPORTING">sentitzen</EVENT>, eta ez duela <EVENT eid="e59" class="OCCURRENCE">minik</EVENT> <EVENT eid="e60" class="REPORTING">sentitzen</EVENT> gorputzean.&#13;
+Kristinak bere buruaz beste egitearen <EVENT eid="e61" class="OCCURRENCE">sentimenduak</EVENT> edo <EVENT eid="e62" class="OCCURRENCE">agresibitate-sentimenduak</EVENT> ere <EVENT eid="e63" class="REPORTING">ukatu</EVENT> egiten ditu.&#13;
+&#13;
+<EVENT eid="e64" class="OCCURRENCE">Zerbait</EVENT> arraroa <EVENT eid="e65" class="OCCURRENCE">entzuten</EVENT>, <EVENT eid="e66" class="OCCURRENCE">ikusten</EVENT> edo <EVENT eid="e67" class="OCCURRENCE">esperimentatzen</EVENT> ari den <EVENT eid="e68" class="OCCURRENCE">galdetzen</EVENT> zaionean badirudi arreta <EVENT eid="e69" class="OCCURRENCE">galtzen</EVENT> duela eta ondoren <EVENT eid="e70" class="REPORTING">erantzuten</EVENT> du "Ez, ez zait halako ezer <EVENT eid="e71" class="OCCURRENCE">gertatzen</EVENT>".&#13;
+&#13;
+Kristinaren gurasoei edukazioz <EVENT eid="e72" class="OCCURRENCE">eskatzen</EVENT> zaie gela <EVENT eid="e73" class="OCCURRENCE">utz</EVENT> dezaten.&#13;
+Bere gurasoak <EVENT eid="e74" class="OCCURRENCE">joaten</EVENT> direnean, Kristinak <EVENT eid="e75" class="REPORTING">esaten</EVENT> du: "Ez <EVENT eid="e76" class="OCCURRENCE">dira</EVENT> nire benetako gurasoak, <EVENT eid="e77" class="OCCURRENCE">bahitzaileak</EVENT> dira, poliziari <EVENT eid="e78" class="OCCURRENCE">deitu</EVENT> beharko zenioke".&#13;
+Hasieran medikuak <EVENT eid="e79" class="OCCURRENCE">txantxetan</EVENT> dabilela <EVENT eid="e80" class="OCCURRENCE">pentsatzen</EVENT> badu ere, laster <EVENT eid="e81" class="REPORTING">konturatzen</EVENT> da <EVENT eid="e82" class="OCCURRENCE">egoera</EVENT> <EVENT eid="e83" class="OCCURRENCE">larria</EVENT> dela eta Kristina <EVENT eid="e84" class="OCCURRENCE">beldurtuta</EVENT> dagoela.&#13;
+Medikua <EVENT eid="e85" class="OCCURRENCE">lasaitasuna</EVENT> ematen <EVENT eid="e86" class="OCCURRENCE">saiatzen</EVENT> da, baina <EVENT eid="e87" class="REPORTING">badirudi</EVENT> Kristina oso <EVENT eid="e88" class="OCCURRENCE">beldurtuta</EVENT> dagoela.&#13;
+&#13;
+Bere <EVENT eid="e89" class="OCCURRENCE">analisiak</EVENT> <EVENT eid="e90" class="OCCURRENCE">normaltasunaren</EVENT> barnean daude, eta badirudi ez duela <EVENT eid="e91" class="OCCURRENCE">drogarik</EVENT> kontsumitzen.&#13;
+&#13;
+<TIMEX3 tid="t6" type="DURATION" value="PXM" temporalFunction="true">Duela hilabete batzuetatik</TIMEX3>, pisu <EVENT eid="e92" class="OCCURRENCE">galera</EVENT> handia izan du.&#13;
+&#13;
+Gurasoek, oso <EVENT eid="e93" class="OCCURRENCE">arduratuta</EVENT>, medikuari <EVENT eid="e94" class="REPORTING">komentatzen</EVENT> diote Kristina bakarrik <EVENT eid="e95" class="OCCURRENCE">hitz</EVENT> egiten <EVENT eid="e96" class="REPORTING">entzuten</EVENT> dutela noizbehinka bere logelan.&#13;
+<EVENT eid="e97" class="OCCURRENCE">Beldur</EVENT> dira bere osabaren <EVENT eid="e98" class="OCCURRENCE">gaitz</EVENT> berdina izango ote duen.&#13;
+Osabak <EVENT eid="e99" class="OCCURRENCE">eskizofrenia</EVENT> omen dauka.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei96" eventID="e96" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei97" eventID="e97" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei98" eventID="e98" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei99" eventID="e99" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
+  <TLINK lid="l1" timeID="t1" relatedToEventInstance="ei2" relType="BEGINS"/>
+  <TLINK lid="l2" timeID="t1" relatedToEventInstance="ei1" relType="BEGINS"/>
+  <TLINK lid="l3" timeID="t1" relatedToEventInstance="ei4" relType="BEGINS"/>
+  <TLINK lid="l4" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l5" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="BEGINS"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l9" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="BEFORE"/>
+  <TLINK lid="l10" eventInstanceID="ei4" relatedToEventInstance="ei9" relType="BEFORE"/>
+  <TLINK lid="l11" eventInstanceID="ei4" relatedToEventInstance="ei7" relType="BEFORE"/>
+  <TLINK lid="l13" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l14" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l15" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="BEGINS"/>
+  <TLINK lid="l16" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l18" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="BEFORE"/>
+  <TLINK lid="l20" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l21" eventInstanceID="ei9" relatedToEventInstance="ei10" relType="BEFORE"/>
+  <TLINK lid="l22" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l23" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei15" relType="INCLUDES"/>
+  <TLINK lid="l25" eventInstanceID="ei11" relatedToEventInstance="ei10" relType="INCLUDES"/>
+  <TLINK lid="l26" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l27" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l28" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l29" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l30" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l31" eventInstanceID="ei16" relatedToEventInstance="ei15" relType="BEFORE"/>
+  <TLINK lid="l32" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l33" eventInstanceID="ei17" relatedToEventInstance="ei15" relType="BEFORE"/>
+  <TLINK lid="l34" timeID="t2" relatedToEventInstance="ei18" relType="INCLUDES"/>
+  <TLINK lid="l35" timeID="t2" relatedToEventInstance="ei15" relType="BEFORE"/>
+  <TLINK lid="l36" timeID="t2" relatedToEventInstance="ei20" relType="BEFORE"/>
+  <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l38" timeID="t3" relatedToEventInstance="ei19" relType="INCLUDES"/>
+  <TLINK lid="l39" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l40" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="BEFORE"/>
+  <TLINK lid="l41" timeID="t4" relatedToEventInstance="ei21" relType="INCLUDES"/>
+  <TLINK lid="l42" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l43" eventInstanceID="ei20" relatedToEventInstance="ei23" relType="BEFORE"/>
+  <TLINK lid="l45" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l46" eventInstanceID="ei21" relatedToEventInstance="ei20" relType="BEGINS"/>
+  <TLINK lid="l47" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l48" eventInstanceID="ei22" relatedToEventInstance="ei23" relType="BEFORE"/>
+  <TLINK lid="l49" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l50" eventInstanceID="ei23" relatedToEventInstance="ei27" relType="SIMULTANEOUS"/>
+  <TLINK lid="l51" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l52" eventInstanceID="ei25" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l53" eventInstanceID="ei26" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l54" eventInstanceID="ei27" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l55" eventInstanceID="ei27" relatedToEventInstance="ei25" relType="BEFORE"/>
+  <TLINK lid="l56" eventInstanceID="ei27" relatedToEventInstance="ei24" relType="SIMULTANEOUS"/>
+  <TLINK lid="l57" eventInstanceID="ei27" relatedToTime="t5" relType="BEFORE"/>
+  <TLINK lid="l58" eventInstanceID="ei27" relatedToEventInstance="ei26" relType="BEFORE"/>
+  <TLINK lid="l59" timeID="t5" relatedToEventInstance="ei30" relType="INCLUDES"/>
+  <TLINK lid="l60" timeID="t5" relatedToEventInstance="ei29" relType="INCLUDES"/>
+  <TLINK lid="l61" timeID="t5" relatedToEventInstance="ei31" relType="INCLUDES"/>
+  <TLINK lid="l62" timeID="t5" relatedToEventInstance="ei28" relType="INCLUDES"/>
+  <TLINK lid="l63" eventInstanceID="ei28" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l64" eventInstanceID="ei29" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l65" eventInstanceID="ei30" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l66" eventInstanceID="ei31" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l67" eventInstanceID="ei32" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l68" eventInstanceID="ei32" relatedToEventInstance="ei35" relType="INCLUDES"/>
+  <TLINK lid="l69" eventInstanceID="ei32" relatedToTime="t5" relType="INCLUDES"/>
+  <TLINK lid="l70" eventInstanceID="ei32" relatedToEventInstance="ei34" relType="INCLUDES"/>
+  <TLINK lid="l71" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="INCLUDES"/>
+  <TLINK lid="l72" eventInstanceID="ei33" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l73" eventInstanceID="ei34" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l74" eventInstanceID="ei35" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l75" eventInstanceID="ei35" relatedToEventInstance="ei38" relType="SIMULTANEOUS"/>
+  <TLINK lid="l76" eventInstanceID="ei35" relatedToEventInstance="ei37" relType="SIMULTANEOUS"/>
+  <TLINK lid="l77" eventInstanceID="ei36" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l78" eventInstanceID="ei36" relatedToEventInstance="ei37" relType="INCLUDES"/>
+  <TLINK lid="l79" eventInstanceID="ei37" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l80" eventInstanceID="ei38" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l81" eventInstanceID="ei38" relatedToEventInstance="ei39" relType="SIMULTANEOUS"/>
+  <TLINK lid="l82" eventInstanceID="ei38" relatedToEventInstance="ei41" relType="INCLUDES"/>
+  <TLINK lid="l83" eventInstanceID="ei39" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l84" eventInstanceID="ei40" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l85" eventInstanceID="ei40" relatedToEventInstance="ei41" relType="INCLUDES"/>
+  <TLINK lid="l86" eventInstanceID="ei41" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l87" eventInstanceID="ei41" relatedToEventInstance="ei43" relType="BEFORE"/>
+  <TLINK lid="l88" eventInstanceID="ei42" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l89" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="INCLUDES"/>
+  <TLINK lid="l90" eventInstanceID="ei43" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l91" eventInstanceID="ei44" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l92" eventInstanceID="ei44" relatedToEventInstance="ei43" relType="INCLUDES"/>
+  <TLINK lid="l93" eventInstanceID="ei45" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l94" eventInstanceID="ei45" relatedToEventInstance="ei47" relType="INCLUDES"/>
+  <TLINK lid="l95" eventInstanceID="ei45" relatedToEventInstance="ei49" relType="INCLUDES"/>
+  <TLINK lid="l96" eventInstanceID="ei45" relatedToEventInstance="ei46" relType="SIMULTANEOUS"/>
+  <TLINK lid="l97" eventInstanceID="ei45" relatedToEventInstance="ei41" relType="INCLUDES"/>
+  <TLINK lid="l98" eventInstanceID="ei46" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l99" eventInstanceID="ei47" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l100" eventInstanceID="ei48" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l101" eventInstanceID="ei48" relatedToEventInstance="ei49" relType="INCLUDES"/>
+  <TLINK lid="l102" eventInstanceID="ei49" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l103" eventInstanceID="ei49" relatedToEventInstance="ei50" relType="BEFORE"/>
+  <TLINK lid="l104" eventInstanceID="ei50" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l105" eventInstanceID="ei51" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l106" eventInstanceID="ei51" relatedToEventInstance="ei49" relType="INCLUDES"/>
+  <TLINK lid="l107" eventInstanceID="ei51" relatedToEventInstance="ei53" relType="INCLUDES"/>
+  <TLINK lid="l108" eventInstanceID="ei52" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l109" eventInstanceID="ei52" relatedToEventInstance="ei51" relType="INCLUDES"/>
+  <TLINK lid="l110" eventInstanceID="ei53" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l111" eventInstanceID="ei53" relatedToEventInstance="ei56" relType="BEFORE"/>
+  <TLINK lid="l112" eventInstanceID="ei54" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l113" eventInstanceID="ei54" relatedToEventInstance="ei53" relType="INCLUDES"/>
+  <TLINK lid="l114" eventInstanceID="ei55" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l115" eventInstanceID="ei55" relatedToEventInstance="ei53" relType="INCLUDES"/>
+  <TLINK lid="l116" eventInstanceID="ei56" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l117" eventInstanceID="ei56" relatedToEventInstance="ei63" relType="BEFORE"/>
+  <TLINK lid="l118" eventInstanceID="ei57" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l119" eventInstanceID="ei57" relatedToEventInstance="ei58" relType="SIMULTANEOUS"/>
+  <TLINK lid="l120" eventInstanceID="ei58" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l121" eventInstanceID="ei58" relatedToEventInstance="ei56" relType="INCLUDES"/>
+  <TLINK lid="l122" eventInstanceID="ei59" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l123" eventInstanceID="ei59" relatedToEventInstance="ei60" relType="SIMULTANEOUS"/>
+  <TLINK lid="l124" eventInstanceID="ei60" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l125" eventInstanceID="ei60" relatedToEventInstance="ei56" relType="INCLUDES"/>
+  <TLINK lid="l126" eventInstanceID="ei61" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l127" eventInstanceID="ei61" relatedToEventInstance="ei63" relType="INCLUDES"/>
+  <TLINK lid="l128" eventInstanceID="ei62" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l129" eventInstanceID="ei62" relatedToEventInstance="ei63" relType="INCLUDES"/>
+  <TLINK lid="l130" eventInstanceID="ei63" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l131" eventInstanceID="ei63" relatedToEventInstance="ei68" relType="BEFORE"/>
+  <TLINK lid="l132" eventInstanceID="ei64" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l133" eventInstanceID="ei65" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l134" eventInstanceID="ei66" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l135" eventInstanceID="ei67" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l136" eventInstanceID="ei68" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l137" eventInstanceID="ei68" relatedToEventInstance="ei70" relType="BEFORE"/>
+  <TLINK lid="l138" eventInstanceID="ei68" relatedToEventInstance="ei72" relType="BEFORE"/>
+  <TLINK lid="l139" eventInstanceID="ei68" relatedToEventInstance="ei69" relType="SIMULTANEOUS"/>
+  <TLINK lid="l140" eventInstanceID="ei69" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l141" eventInstanceID="ei70" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l142" eventInstanceID="ei71" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l143" eventInstanceID="ei71" relatedToEventInstance="ei70" relType="INCLUDES"/>
+  <TLINK lid="l144" eventInstanceID="ei72" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l145" eventInstanceID="ei72" relatedToEventInstance="ei74" relType="BEFORE"/>
+  <TLINK lid="l146" eventInstanceID="ei72" relatedToEventInstance="ei73" relType="BEFORE"/>
+  <TLINK lid="l147" eventInstanceID="ei73" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l148" eventInstanceID="ei74" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l149" eventInstanceID="ei74" relatedToEventInstance="ei80" relType="BEFORE"/>
+  <TLINK lid="l150" eventInstanceID="ei74" relatedToEventInstance="ei75" relType="BEFORE"/>
+  <TLINK lid="l151" eventInstanceID="ei75" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l152" eventInstanceID="ei76" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l153" eventInstanceID="ei76" relatedToEventInstance="ei75" relType="INCLUDES"/>
+  <TLINK lid="l154" eventInstanceID="ei77" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l155" eventInstanceID="ei77" relatedToEventInstance="ei75" relType="INCLUDES"/>
+  <TLINK lid="l156" eventInstanceID="ei78" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l157" eventInstanceID="ei79" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l158" eventInstanceID="ei79" relatedToEventInstance="ei80" relType="INCLUDES"/>
+  <TLINK lid="l159" eventInstanceID="ei80" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l160" eventInstanceID="ei80" relatedToEventInstance="ei81" relType="BEFORE"/>
+  <TLINK lid="l161" eventInstanceID="ei80" relatedToEventInstance="ei86" relType="BEFORE"/>
+  <TLINK lid="l162" eventInstanceID="ei81" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l163" eventInstanceID="ei82" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l164" eventInstanceID="ei82" relatedToEventInstance="ei81" relType="INCLUDES"/>
+  <TLINK lid="l165" eventInstanceID="ei83" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l166" eventInstanceID="ei83" relatedToEventInstance="ei81" relType="INCLUDES"/>
+  <TLINK lid="l167" eventInstanceID="ei84" relatedToTime="t0" relType="INCLUDES"/>
+  <TLINK lid="l168" eventInstanceID="ei84" relatedToEventInstance="ei81" relType="INCLUDES"/>
+  <TLINK lid="l169" eventInstanceID="ei85" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l170" eventInstanceID="ei86" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l171" eventInstanceID="ei86" relatedToEventInstance="ei87" relType="SIMULTANEOUS"/>
+  <TLINK lid="l172" eventInstanceID="ei87" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l173" eventInstanceID="ei88" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l174" eventInstanceID="ei88" relatedToEventInstance="ei87" relType="INCLUDES"/>
+  <TLINK lid="l175" eventInstanceID="ei89" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l176" eventInstanceID="ei89" relatedToEventInstance="ei90" relType="SIMULTANEOUS"/>
+  <TLINK lid="l177" eventInstanceID="ei89" relatedToEventInstance="ei86" relType="BEFORE"/>
+  <TLINK lid="l178" eventInstanceID="ei90" relatedToTime="t0" relType="BEFORE"/>
+  <TLINK lid="l179" eventInstanceID="ei91" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l180" timeID="t6" relatedToEventInstance="ei92" relType="INCLUDES"/>
+  <TLINK lid="l181" eventInstanceID="ei92" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l182" eventInstanceID="ei92" relatedToEventInstance="ei89" relType="INCLUDES"/>
+  <TLINK lid="l183" eventInstanceID="ei92" relatedToEventInstance="ei94" relType="INCLUDES"/>
+  <TLINK lid="l184" eventInstanceID="ei93" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l185" eventInstanceID="ei93" relatedToEventInstance="ei94" relType="INCLUDES"/>
+  <TLINK lid="l186" eventInstanceID="ei94" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l187" eventInstanceID="ei95" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l188" eventInstanceID="ei96" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l189" eventInstanceID="ei96" relatedToEventInstance="ei95" relType="SIMULTANEOUS"/>
+  <TLINK lid="l190" eventInstanceID="ei96" relatedToEventInstance="ei94" relType="INCLUDES"/>
+  <TLINK lid="l191" eventInstanceID="ei97" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l192" eventInstanceID="ei97" relatedToEventInstance="ei94" relType="INCLUDES"/>
+  <TLINK lid="l193" eventInstanceID="ei98" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l194" eventInstanceID="ei99" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l195" eventInstanceID="ei99" relatedToEventInstance="ei97" relType="INCLUDES"/>
+  <ALINK lid="l12" eventInstanceID="ei4" relatedToEventInstance="ei3" relType="INITIATES"/>
+  <ALINK lid="l17" eventInstanceID="ei7" relatedToEventInstance="ei6" relType="INITIATES"/>
+  <ALINK lid="l44" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="INITIATES"/>
+</TimeML>

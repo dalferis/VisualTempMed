@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
+  <DOCID>manuela</DOCID>
+  <TIMEX3 tid="t0" type="DATE" value="2013-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2013-12-31</TIMEX3>
+  <TEXT>Una bambina di 11 anni, prepubere, giungeva alla nostra osservazione per bassa statura, anemia e astenia. Dall’anamnesi remota&#13;
+emergeva ricovero all’età di 1 anno presso altra struttura ospedaliera dove, per una grave anemia (Hb 6,8 gr/dl) era stata sottoposta ad&#13;
+aspirato midollare che evidenziava un deficit selettivo della linea eritroide e per la quale aveva assunto terapia marziale e acido folico.&#13;
+In occasione della valutazione clinico-auxologica presso il nostro&#13;
+centro venivano riscontrati: deficit staturale (-2.8 SDS vs TG -1.8&#13;
+SDS) con età ossea conforme, eccesso ponderale del 38%, microcrania, collo tozzo, impianto basso dei padiglioni auricolari, pectus&#13;
+excavatum, ipertelia, brachimetacarpia del IV dito delle mani, sindattilia II e III dito dei piedi.&#13;
+&#13;
+Sulla base del quadro clinico-auxologico veniva avanzato il sospetto&#13;
+clinico di sindrome di Turner ed eseguito cariotipo, risultato però&#13;
+normale.&#13;
+&#13;
+Poiché la valutazione clinica evidenziava anche segni clinici di&#13;
+anemia venivano avviate altre indagini diagnostiche che mostravano una severa anemia normocromica macrocitica (Hb 5,7 gr/dl,&#13;
+G.R. 1.820.000 mmc, MCV 100 fl, Ht 17%) in assenza di segni&#13;
+clinico-laboratoristici di emolisi periferica o di infezione recente o&#13;
+pregressa.&#13;
+&#13;
+Prima di procedere con trasfusione di emazie concentrate, venivano effettuate delle indagini finalizzate ad escludere le più comuni&#13;
+cause di anemia macrocitica (carenza di vitamina B12 e ac. folico)&#13;
+ed altre patologie più rare associate ad aplasia pura della serie eritroide (anemia di Fanconi, anemia di Blackfan-Diamond).&#13;
+&#13;
+L’ipotesi di eritroblastopenia transitoria dell’infanzia veniva immediatamente scartata, poiché caratterizzata da un esordio più tardivo,&#13;
+da carattere transitorio ed assenza di anomalie fenotipiche. La&#13;
+carenza di vitamina B12 appariva poco probabile per l’assenza di&#13;
+segni clinici e laboratoristici (glossite, perdita di peso, nausea, stipsi, aftosi recidivanti, sintomi neurologici, iperbilirubinemia) così&#13;
+come poco probabile risultava l’ipotesi di carenza di acido folico&#13;
+(assenza di diarrea, glossite, cheilite, iperbilirubinemia ed aumento&#13;
+della LDH). La carenza di acido folico e/o vitamina B12 veniva&#13;
+definitivamente esclusa dai normali livelli ematici di vit B12 e ac.&#13;
+Folico.&#13;
+&#13;
+Le indagini venivano, dunque, indirizzate verso le cause di aplasia&#13;
+pura della serie eritroide, ipotesi supportata dal riscontro di elevati&#13;
+livelli di ferritina, emoglobina fetale ed eritropoietina. Al fine di&#13;
+escludere una anemia di Fanconi, aplasia pura della serie eritroide,&#13;
+veniva eseguito test al diepossibutano, risultato negativo. L’anemia&#13;
+di Blackfan-Diamond appariva, a questo punto, l’ipotesi più probabile sulla scorta dell’esordio precoce (presenza di anemia nel primo&#13;
+anno di vita), del fenotipo (bassa statura, microcefalia, displasia della valvola aortica, brachimetacarpia del IV dito delle mani, sindattilia IV e V dito dei piedi bilateralmente) e delle indagini laboratoristiche (anemia, reticolocitopenia, midollo normocellulare con difetto selettivo dei precursori eritroidi).&#13;
+&#13;
+Tale diagnosi veniva ulteriormente avvalorata dai livelli elevati di&#13;
+ADA deaminasi e, quindi, confermata dallo studio del gene RPL5&#13;
+che mostrava, in eterezogosi, una delezione di 2 nucleotidi nell’esone 3 del gene RPL5 (c.175_176delGA p.Asp59TyrfsX53). Le&#13;
+indagini genetiche eseguite sulla madre sono risultate negative.&#13;
+</TEXT>
+</TimeML>
