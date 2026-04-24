@@ -144,19 +144,38 @@ _DATE_PREFIX  = re.compile(r'^[0-9X]{1,4}(-[0-9X]{1,2}(-[0-9X]{1,2})?)?$')
 _VALID_TIME_SUFFIX = re.compile(r'^(\d{2}(:\d{2}(:\d{2})?)?|MO|MI|AF|EV|NI|DT)$')
 
 def _normalizeTimex3Value(timex3):
+    # None or no_value -> unknown
     if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower() == "no_value":
         return "X"
     result = timex3.value
-    # Fix missing P prefix for duration
-    if re.match(r'^T[\d.]+[HMS]$', result):
+    # Duplicated unit suffix without P prefix: nDD -> P1D, nHH -> PTnH
+    m = re.match(r'^\d+([YMWDHS])\1$', result)
+    if m:
+        unit = m.group(1)
+        result = ("PT" if unit in ('H', 'S') else "P") + result[:-1]
+    # Bare duration without P prefix: 4Y -> P4Y, 4H -> PT4H
+    elif re.match(r'^\d+[YMWDHS]$', result):
+        result = ("PT" if result[-1] in ('H', 'S') else "P") + result
+    # Missing P prefix for T-duration: T6H -> PT6H
+    elif re.match(r'^T[\d.]+[HMS]$', result):
         result = "P" + result
-    # XXXX-XX-XXTXX: remove time, keep date
+    # Underscores as date wildcards: __-__-__ -> XXXX-XX-XX
+    if result.startswith('__'):
+        result = 'XXXX' + result[2:]
+    result = result.replace('__', 'XX')
+    # Invalid T suffix on date: XXXX-XX-XXTXX -> XXXX-XX-XX
     t_pos = result.find("T")
     if t_pos > 0 and _DATE_PREFIX.match(result[:t_pos]) and not _VALID_TIME_SUFFIX.match(result[t_pos + 1:]):
         result = result[:t_pos]
     # Duration fixups
     if result.startswith("P"):
+        # Range -> lower bound: PT5-6H -> PT5H
         result = re.sub(r'(\d+)-\d+([A-Z])', r'\1\2', result)
+        # Duplicated unit inside P-duration: P1DD -> P1D, PT5HH -> PT5H
+        result = re.sub(r'([YMWDHS])\1', r'\1', result)
+        # Missing T separator before time units: P6H -> PT6H
+        if 'T' not in result and re.search(r'\d+[HS]', result):
+            result = re.sub(r'(\d+[HS])', r'T\1', result, count=1)
         pre_decimal = result
         def _expand(m):
             decimal_value = float(m.group(1)); unit = m.group(2)
@@ -174,7 +193,11 @@ def _normalizeTimex3Value(timex3):
             if unit == 'W':
                 return f"{integer_part * 7 + remainder}D"
             return f"{integer_part}{unit}{remainder}{next_unit}" if remainder else f"{integer_part}{unit}"
+        # Decimal component -> integer + remainder in next unit: P1.5M -> P1M15D
         result = re.sub(r'(\d+\.\d+)([A-Z])', _expand, result)
+        # W mixed with D: P6W6D -> P48D (XSD requires W alone)
+        result = re.sub(r'P(\d+)W(\d+)D', lambda m: f"P{int(m.group(1)) * 7 + int(m.group(2))}D", result)
+        # Unknown duration without unit: PXX -> PXD
         if result == "PXX":
             result = "PXD"
     return result if result else "X"
@@ -183,7 +206,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
         "tag": "TIMEX3",
         "cas_id": timex3.xmiID,
-        "attrib": { "tid": "", "type": "", "value": _normalizeTimex3Value(timex3) },
+        "attrib": { "tid": "", "type": "DATE", "value": _normalizeTimex3Value(timex3) },
         "text": cas_text,
         "tail": cas_tail,
     }
@@ -213,7 +236,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
                 new_timex3["attrib"]["temporalFunction"] = "false"  # year present: self-anchored
         elif timex3.timex3Class == "DURATION":
             if "X" not in new_timex3["attrib"]["value"]:
-                new_timex3["attrib"]["temporalFunction"] = "false"  # no unknown quantity: self-contained
+                new_timex3["attrib"]["temporalFunction"] = "false"  # known quantity: self-contained
     # functionInDocument values
     if hasattr(timex3, "functionInDocument"):
         if timex3.functionInDocument == "DOCTIME":
@@ -312,16 +335,17 @@ def generateTimeML(cas):
 
     # TML header information
     cas_metadata = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData") + cas.select("webanno.custom.METADATA")
+    dct_generated = False
     for meta in cas_metadata:
         if hasattr(meta, "documentId"):
             etree.SubElement(root, "DOCID").text = meta.documentId
-        if hasattr(meta, "docTime"):
-            # dct = etree.SubElement(root, "DD")
+        if hasattr(meta, "docTime") and not dct_generated:
             try:
                 dct_parsed = parser.parse(meta.docTime)
                 etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
             except (ParserError, ValueError):
                 etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
+            dct_generated = True
 
     # TML elements
     # 1. Generate "pre-TML" elements for each CAS element, including text and tail
