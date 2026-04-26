@@ -1,4 +1,5 @@
-﻿import math
+﻿import html
+import math
 import networkx as nx
 from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
@@ -8,6 +9,12 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont, QPainter
 from PySide6.QtCore import Qt, QPointF, QLineF
+
+
+def decodeText(s):
+    if not s:
+        return s
+    return html.unescape(s)
 
 class GraphView(QGraphicsView):
     def __init__(self, model):
@@ -64,9 +71,9 @@ class GraphScene(QGraphicsScene):
                 ypos = line + (count // self._max_columns) * self._vertical_distance
                 graphModel.add_node(node.get_id_str())
                 if isinstance(node, Instance.Instance):
-                    text = self._graph.events[node.event].stem
+                    text = decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = node.phrase
+                    text = decodeText(node.phrase)
                 else:
                     text = ""
                 graphNode = NodeItem(node.get_id_str(), text=text)
@@ -82,9 +89,9 @@ class GraphScene(QGraphicsScene):
                 ypos = line + (count // self._max_columns) * self._vertical_distance
                 graphModel.add_node(node.get_id_str())
                 if isinstance(node, Instance.Instance):
-                    text = self._graph.events[node.event].stem
+                    text = decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = node.value
+                    text = decodeText(node.value)
                 else:
                     text = ""
                 graphNode = NodeItem(node.get_id_str(), text=text)

@@ -63,9 +63,9 @@ class TimelineScene(QGraphicsScene):
             count = 0
             for node in partition.nodes.values():
                 if isinstance(node, Instance.Instance):
-                    text = self._graph.events[node.event].stem
+                    text = gv.decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = node.value
+                    text = gv.decodeText(node.value)
                 else:
                     text = ""
                 graphNode = gv.NodeItem(node.get_id_str(), text=text)
@@ -82,9 +82,9 @@ class TimelineScene(QGraphicsScene):
             count = 0
             for node in partition.nodes.values():
                 if isinstance(node, Instance.Instance):
-                    text = self._graph.events[node.event].stem
+                    text = gv.decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = node.value
+                    text = gv.decodeText(node.value)
                 else:
                     text = ""
                 graphNode = gv.NodeItem(node.get_id_str(), text=text)
