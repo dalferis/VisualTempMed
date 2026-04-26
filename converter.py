@@ -66,11 +66,6 @@ def translateEvent(event, cas_text, cas_tail):
             if new_event["attrib"].get("class") == "OCCURRENCE":
                 new_event["attrib"]["class"] = "STATE"            # approximate
         # Value not converted: ACTUAL
-    # contextualAspect values
-    if hasattr(event, "contextualAspect"):
-        if event["contextualAspect"] == "N/A":
-            new_event["instance"]["attrib"]["aspect"] = "NONE"    # equivalent
-        # Values not converted: NOVEL, INTERMITTENT
     # permanence values
     if hasattr(event, "permanence"):
         if event["permanence"] == "PERMANENT":
@@ -246,8 +241,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
     if hasattr(timex3, "functionInDocument"):
         if timex3.functionInDocument == "DOCTIME":
             new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"  # equivalent
-        elif timex3.functionInDocument == "SECTIONTIME":
-            new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"  # approximate
+        # Values not converted: OTHER, SECTIONTIME
     # links
     if timex3.timexLink is not None and timex3.timexLink.elements is not None:
         for link in timex3.timexLink.elements:
