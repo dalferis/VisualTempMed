@@ -837,7 +837,7 @@
     <custom:CLINENTITY xmi:id="10459" sofa="10647" begin="3470" end="3485" entityID="C0007815" xtra="FRE"/>
     <custom:TIMEX3 xmi:id="10468" sofa="10647" begin="196" end="202" timex3Class="DURATION" value="P3Y"/>
     <custom:TIMEX3 xmi:id="10477" sofa="10647" begin="1410" end="1418" timex3Class="SET" value="P1D"/>
-    <custom:TIMEX3 xmi:id="10486" sofa="10647" begin="1440" end="1455" functionInDocument="NONE" timex3Class="DURATION" timexLink="10982 10985" value="PTX"/>
+    <custom:TIMEX3 xmi:id="10486" sofa="10647" begin="1440" end="1455" functionInDocument="NONE" timex3Class="DURATION" timexLink="10982 10985" value="PTXH"/>
     <custom:TIMEX3 xmi:id="10495" sofa="10647" begin="3364" end="3370" functionInDocument="NONE" timex3Class="DURATION" timexLink="11238" value="P3M"/>
     <type2:TagsetDescription xmi:id="10504" sofa="10647" begin="0" end="0" layer="webanno.custom.ACTOR" name="role values" input="false"/>
     <type2:TagsetDescription xmi:id="10517" sofa="10647" begin="0" end="0" layer="webanno.custom.BODYPART" name="eventiveValue values" input="false"/>

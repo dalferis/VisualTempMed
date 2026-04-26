@@ -847,7 +847,7 @@
     <custom:TIMEX3 xmi:id="10590" sofa="12" begin="640" end="654" timex3Class="SET" value="P1W"/>
     <custom:TIMEX3 xmi:id="10599" sofa="12" begin="842" end="861" timex3Class="SET" value="PT8H"/>
     <custom:TIMEX3 xmi:id="10608" sofa="12" begin="939" end="951" timex3Class="SET" value="P1W"/>
-    <custom:TIMEX3 xmi:id="10617" sofa="12" begin="2022" end="2030" timex3Class="DURATION" timexLink="11306" value="P31WP4D"/>
+    <custom:TIMEX3 xmi:id="10617" sofa="12" begin="2022" end="2030" timex3Class="DURATION" timexLink="11306" value="P31W4D"/>
     <custom:TIMEX3 xmi:id="10626" sofa="12" begin="2484" end="2487" timex3Class="DURATION" timexLink="11312" value="PT24H"/>
     <custom:TIMEX3 xmi:id="10635" sofa="12" begin="2854" end="2864" timex3Class="DURATION" value="P2D"/>
     <custom:TIMEX3 xmi:id="10644" sofa="12" begin="2972" end="2980" timex3Class="DURATION" timexLink="11318" value="PT4H"/>

@@ -777,7 +777,7 @@
     <custom:TIMEX3 xmi:id="9700" sofa="9924" begin="3421" end="3431" functionInDocument="NONE" timex3Class="DURATION" timexLink="10453 10456" value="P7W"/>
     <custom:CLINENTITY xmi:id="9709" sofa="9924" begin="277" end="289" entityID="C0025874" xtra="FRE"/>
     <custom:CLINENTITY xmi:id="9718" sofa="9924" begin="565" end="574" entityID="C2004491" xtra="FRE"/>
-    <custom:CLINENTITY xmi:id="10041" sofa="9924" begin="629" end="636" entityID="C0030193" sourceUMLS="FRENCH" xtra="modification after curation"/>
+    <custom:CLINENTITY xmi:id="10041" sofa="9924" begin="629" end="636" entityID="C0030193" xtra="modification after curation"/>
     <custom:CLINENTITY xmi:id="9727" sofa="9924" begin="669" end="696" entityID="CUILESS"/>
     <custom:CLINENTITY xmi:id="9736" sofa="9924" begin="1181" end="1203" entityID="C0003962" xtra="FRE"/>
     <custom:CLINENTITY xmi:id="9745" sofa="9924" begin="1919" end="1930" entityID="C0025874" xtra="FRE"/>

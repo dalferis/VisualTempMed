@@ -456,7 +456,7 @@
     <custom:TIMEX3 xmi:id="5809" sofa="6168" begin="231" end="240" functionInDocument="NONE" timex3Class="DURATION" timexLink="6208 6211" value="P1Y"/>
     <custom:TIMEX3 xmi:id="5818" sofa="6168" begin="361" end="365" timex3Class="SET" value="P1D"/>
     <custom:TIMEX3 xmi:id="5827" sofa="6168" begin="368" end="377" functionInDocument="NONE" timex3Class="DATE" timexLink="" value="XXXX-XX-XX"/>
-    <custom:TIMEX3 xmi:id="5836" sofa="6168" begin="563" end="580" functionInDocument="NONE" timex3Class="DURATION" value="PYM"/>
+    <custom:TIMEX3 xmi:id="5836" sofa="6168" begin="563" end="580" functionInDocument="NONE" timex3Class="DURATION" value="P7M"/>
     <custom:TIMEX3 xmi:id="5845" sofa="6168" begin="722" end="734" functionInDocument="NONE" timex3Class="DATE" timexLink="6271" value="2014-06-21"/>
     <custom:TIMEX3 xmi:id="5854" sofa="6168" begin="1178" end="1195" functionInDocument="NONE" timex3Class="DURATION" value="PT5M"/>
     <custom:TIMEX3 xmi:id="5863" sofa="6168" begin="1220" end="1234" functionInDocument="NONE" timex3Class="SET" value="P1M"/>

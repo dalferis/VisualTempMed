@@ -583,7 +583,7 @@
     <custom:TIMEX3 xmi:id="6693" sofa="1" begin="910" end="915" functionInDocument="NONE" timex3Class="DURATION" timexLink="9157" value="P1D"/>
     <custom:TIMEX3 xmi:id="6702" sofa="1" begin="954" end="965" functionInDocument="NONE" timex3Class="TIME" timexLink="9169" value="XXXX-XX-XXTAF"/>
     <custom:TIMEX3 xmi:id="6739" sofa="1" begin="1173" end="1180" functionInDocument="NONE" timex3Class="DATE" timexLink="9191" value="PAST_REF"/>
-    <custom:TIMEX3 xmi:id="6755" sofa="1" begin="1343" end="1352" functionInDocument="NONE" timex3Class="DURATION" timexLink="9201 9204 9207" value="PNI"/>
+    <custom:TIMEX3 xmi:id="6755" sofa="1" begin="1343" end="1352" functionInDocument="NONE" timex3Class="DURATION" timexLink="9201 9204 9207" value="TNI"/>
     <custom:TIMEX3 xmi:id="6834" sofa="1" begin="1666" end="1678" functionInDocument="NONE" timex3Class="DURATION" timexLink="9265 9268" value="P1Y"/>
     <custom:EVENT xmi:id="6906" sofa="1" begin="79" end="82" ALINK="" TLINK="9405" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="IS-CONTAINED" eventType="N/A" permanence="FINITE" polarity="POS"/>
     <custom:EVENT xmi:id="6923" sofa="1" begin="94" end="99" ALINK="" TLINK="9049" contextualAspect="N/A" contextualModality="ACTUAL" degree="N/A" docTimeRel="CONTAINS" eventType="N/A" permanence="FINITE" polarity="NEG"/>
