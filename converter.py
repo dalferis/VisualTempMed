@@ -169,11 +169,14 @@ def _normalizeTimex3Value(timex3):
         result = result[:t_pos]
     # Duration fixups
     if result.startswith("P"):
-        # Range -> lower bound: PT5-6H -> PT5H
-        result = re.sub(r'(\d+)-\d+([A-Z])', r'\1\2', result)
-        # Duplicated unit inside P-duration: P1DD -> P1D, PT5HH -> PT5H
+        # Range of durations -> midpoint: PT5-6H -> PT5.5H -> PT5H30M, P16-18W -> P17W
+        while m := re.search(r'(\d+)-(\d+)([A-Z])', result):
+            avg = (int(m.group(1)) + int(m.group(2))) / 2
+            val = str(int(avg)) if avg.is_integer() else str(avg)
+            result = result[:m.start()] + val + m.group(3) + result[m.end():]
+        # Duplicated unit in duration: P1DD -> P1D, PT5HH -> PT5H
         result = re.sub(r'([YMWDHS])\1', r'\1', result)
-        # Missing T separator before time units: P6H -> PT6H
+        # Missing T separator before time: P6H -> PT6H
         if 'T' not in result and re.search(r'\d+[HS]', result):
             result = re.sub(r'(\d+[HS])', r'T\1', result, count=1)
         pre_decimal = result
@@ -192,6 +195,8 @@ def _normalizeTimex3Value(timex3):
             if remainder >= factor: return f"{integer_part + 1}{unit}"
             if unit == 'W':
                 return f"{integer_part * 7 + remainder}D"
+            if unit == 'D' and remainder:
+                return f"{integer_part}DT{remainder}H"
             return f"{integer_part}{unit}{remainder}{next_unit}" if remainder else f"{integer_part}{unit}"
         # Decimal component -> integer + remainder in next unit: P1.5M -> P1M15D
         result = re.sub(r'(\d+\.\d+)([A-Z])', _expand, result)
