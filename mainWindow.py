@@ -1,4 +1,5 @@
 from tkinter import SE
+import sceneItems as si
 import graphView as gv
 import timelineView as tlv
 import textView as txv
@@ -142,14 +143,14 @@ class MainWindow(QMainWindow):
 
     def updateEdgeWidth(self, value):
         for item in self.graphScene.items():
-            if isinstance(item, gv.EdgeItem):
+            if isinstance(item, si.EdgeItem):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
 
     def updateEdgeWidthText(self, value):
         for item in self.textScene.items():
-            if isinstance(item, gv.EdgeItem):
+            if isinstance(item, si.EdgeItem):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
@@ -161,15 +162,15 @@ class MainWindow(QMainWindow):
     
     def toggleShowIds(self, state):
         for item in self.graphScene.items():
-            if isinstance(item, gv.NodeItem):
+            if isinstance(item, si.NodeItem):
                 item.id_bg.setVisible(state)
                 item.id_text.setVisible(state)
         for item in self.timelineScene.items():
-            if isinstance(item, gv.NodeItem):
+            if isinstance(item, si.NodeItem):
                 item.id_bg.setVisible(state)
                 item.id_text.setVisible(state)
         for item in self.textScene.items():
-            if isinstance(item, gv.NodeItem):
+            if isinstance(item, si.NodeItem):
                 item.id_bg.setVisible(state)
                 item.id_text.setVisible(state)
 

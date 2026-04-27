@@ -1,6 +1,6 @@
 import math
 import re
-import graphView as gv
+import sceneItems as si
 from pytlex_core.data import Instance, TimeX
 from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsTextItem, QGraphicsItem, QGraphicsRectItem
@@ -25,7 +25,7 @@ class TextView(QGraphicsView):
             self.scale(1 / factor, 1 / factor)
 
 
-class LaneEdgeItem(gv.EdgeItem):
+class LaneEdgeItem(si.EdgeItem):
     """Edge with orthogonal routing through inter-line gutters and a left rail.
 
     Path geometry is described by a ``plan`` dict produced by TextScene:
@@ -212,7 +212,7 @@ class TextScene(QGraphicsScene):
         if isinstance(clicked, LaneEdgeItem):
             clicked.setHighlighted(True)
             self._highlighted_edges = [clicked]
-        elif isinstance(clicked, gv.NodeItem):
+        elif isinstance(clicked, si.NodeItem):
             outgoing = [e for e in self.items()
                         if isinstance(e, LaneEdgeItem) and e.source is clicked]
             for e in outgoing:
@@ -222,7 +222,7 @@ class TextScene(QGraphicsScene):
     @staticmethod
     def _enclosingTarget(item):
         while item is not None:
-            if isinstance(item, (LaneEdgeItem, gv.NodeItem)):
+            if isinstance(item, (LaneEdgeItem, si.NodeItem)):
                 return item
             item = item.parentItem()
         return None
@@ -234,7 +234,7 @@ class TextScene(QGraphicsScene):
 
     def addItem(self, item):
         super().addItem(item)
-        if isinstance(item, gv.NodeItem):
+        if isinstance(item, si.NodeItem):
             self.nodes[item.node_id] = item
 
     # ------- Geometry helpers (used by LaneEdgeItem) -------
@@ -283,7 +283,7 @@ class TextScene(QGraphicsScene):
             self._lines.append([])
 
     def addWord(self, word, x, y, line_idx):
-        text_item = QGraphicsTextItem(gv.decodeText(word))
+        text_item = QGraphicsTextItem(si.decodeText(word))
         text_item.setFont(self._font)
         rect = text_item.boundingRect()
         if x + rect.width() > self._max_line_width and x > self._left_margin:
@@ -298,7 +298,7 @@ class TextScene(QGraphicsScene):
         return x, y, line_idx
 
     def addNodeInline(self, node_id, text, x, y, line_idx):
-        node = gv.NodeItem(node_id, text=text)
+        node = si.NodeItem(node_id, text=text)
         node.setFlag(QGraphicsItem.ItemIsMovable, False)
         rect = node.boundingRect()
         w = rect.width()
@@ -348,7 +348,7 @@ class TextScene(QGraphicsScene):
                 event_match = self._EVENT_RE.match(body, pos)
                 if event_match:
                     eid_m = self._EID_RE.search(event_match.group(1))
-                    inner = gv.decodeText(self.stripInnerTags(event_match.group(2)).strip()) or "?"
+                    inner = si.decodeText(self.stripInnerTags(event_match.group(2)).strip()) or "?"
                     if eid_m and eid_m.group(1) in eid_to_node_id:
                         x, y, line_idx = self.addNodeInline(eid_to_node_id[eid_m.group(1)], inner, x, y, line_idx)
                     else:
@@ -359,7 +359,7 @@ class TextScene(QGraphicsScene):
                 timex_match = self._TIMEX_RE.match(body, pos)
                 if timex_match:
                     tid_m = self._TID_RE.search(timex_match.group(1))
-                    inner = gv.decodeText(self.stripInnerTags(timex_match.group(2)).strip()) or "?"
+                    inner = si.decodeText(self.stripInnerTags(timex_match.group(2)).strip()) or "?"
                     placed = False
                     if tid_m:
                         tid = tid_m.group(1)

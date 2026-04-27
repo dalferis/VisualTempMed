@@ -1,4 +1,4 @@
-import graphView as gv
+import sceneItems as si
 from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
 from xmlrpc.client import DateTime
@@ -44,7 +44,7 @@ class TimelineScene(QGraphicsScene):
 
     def addItem(self, item):
         super().addItem(item)
-        if isinstance(item, gv.NodeItem):
+        if isinstance(item, si.NodeItem):
             self.nodes[item.node_id] = item
 
     def createScene(self):
@@ -63,12 +63,12 @@ class TimelineScene(QGraphicsScene):
             count = 0
             for node in partition.nodes.values():
                 if isinstance(node, Instance.Instance):
-                    text = gv.decodeText(self._graph.events[node.event].stem)
+                    text = si.decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = gv.decodeText(node.value)
+                    text = si.decodeText(node.value)
                 else:
                     text = ""
-                graphNode = gv.NodeItem(node.get_id_str(), text=text)
+                graphNode = si.NodeItem(node.get_id_str(), text=text)
                 lane.addElement(count, graphNode)
                 count += 1
             laneCount += 1
@@ -82,12 +82,12 @@ class TimelineScene(QGraphicsScene):
             count = 0
             for node in partition.nodes.values():
                 if isinstance(node, Instance.Instance):
-                    text = gv.decodeText(self._graph.events[node.event].stem)
+                    text = si.decodeText(self._graph.events[node.event].stem)
                 elif isinstance(node, TimeX.TimeX):
-                    text = gv.decodeText(node.value)
+                    text = si.decodeText(node.value)
                 else:
                     text = ""
-                graphNode = gv.NodeItem(node.get_id_str(), text=text)
+                graphNode = si.NodeItem(node.get_id_str(), text=text)
                 lane.addElement(count, graphNode)
                 count += 1
             laneCount += 1
