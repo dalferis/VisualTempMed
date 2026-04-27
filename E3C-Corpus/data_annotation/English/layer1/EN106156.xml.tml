@@ -2,36 +2,36 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2014-06-03T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2014-06-03</TIMEX3>
-  <TEXT>A 2-year-old Japanese boy <TIMEX3 tid="t1" type="DATE" value="XXXX-XX-XX" temporalFunction="true">recently</TIMEX3> <EVENT eid="e1" class="OCCURRENCE">presented</EVENT> to our department with a chief <EVENT eid="e2" class="REPORTING">complaint</EVENT> of neck <EVENT eid="e3" class="OCCURRENCE">swelling</EVENT>.
-Physical <EVENT eid="e4" class="OCCURRENCE">examination</EVENT> <EVENT eid="e5" class="REPORTING">revealed</EVENT> bilateral <EVENT eid="e6" class="OCCURRENCE">tonsillitis</EVENT> and <EVENT eid="e7" class="OCCURRENCE">swelling</EVENT> of the left posterior pharyngeal wall.
-Emergency neck computed tomography <EVENT eid="e8" class="OCCURRENCE">angiography</EVENT> <EVENT eid="e9" class="REPORTING">showed</EVENT> a contrast-enhanced abscess <EVENT eid="e10" class="OCCURRENCE">cavity</EVENT> posterior to the left retropharyngeal space, and a low-density <EVENT eid="e11" class="OCCURRENCE">area</EVENT> <EVENT eid="e12" class="OCCURRENCE">surrounded</EVENT> by an area without contrast enhancement in the posterior neck.
-The latter was <EVENT eid="e13" class="OCCURRENCE">suspected</EVENT> to be a deep neck <EVENT eid="e14" class="OCCURRENCE">infection</EVENT> secondary to a retropharyngeal abscess.
-After <EVENT eid="e15" class="OCCURRENCE">surgery</EVENT>, the patient was <EVENT eid="e16" class="OCCURRENCE">diagnosed</EVENT> with a retropharyngeal <EVENT eid="e17" class="OCCURRENCE">abscess</EVENT> and concurrent cystic <EVENT eid="e18" class="OCCURRENCE">lymphangioma</EVENT>.
-The <EVENT eid="e19" class="OCCURRENCE">lesions</EVENT> <EVENT eid="e20" class="OCCURRENCE">improved</EVENT> after intraoral <EVENT eid="e21" class="OCCURRENCE">incision</EVENT> and <EVENT eid="e22" class="OCCURRENCE">drainage</EVENT>, and <EVENT eid="e23" class="OCCURRENCE">administration</EVENT> of antibiotics.
+  <TEXT>A 2-year-old Japanese boy <TIMEX3 tid="t1" type="DATE" value="XXXX-XX-XX" temporalFunction="true">recently</TIMEX3> <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">presented</EVENT> to our department with a chief <EVENT eid="e2" class="REPORTING" comment="e3c:permanence=FINITE">complaint</EVENT> of neck <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">swelling</EVENT>.
+Physical <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> <EVENT eid="e5" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> bilateral <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">tonsillitis</EVENT> and <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">swelling</EVENT> of the left posterior pharyngeal wall.
+Emergency neck computed tomography <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">angiography</EVENT> <EVENT eid="e9" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> a contrast-enhanced abscess <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">cavity</EVENT> posterior to the left retropharyngeal space, and a low-density <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">area</EVENT> <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">surrounded</EVENT> by an area without contrast enhancement in the posterior neck.
+The latter was <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">suspected</EVENT> to be a deep neck <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">infection</EVENT> secondary to a retropharyngeal abscess.
+After <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">surgery</EVENT>, the patient was <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnosed</EVENT> with a retropharyngeal <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">abscess</EVENT> and concurrent cystic <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">lymphangioma</EVENT>.
+The <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesions</EVENT> <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">improved</EVENT> after intraoral <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">incision</EVENT> and <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainage</EVENT>, and <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">administration</EVENT> of antibiotics.
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei4" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS"/>

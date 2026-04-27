@@ -2,21 +2,21 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>manuela</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2020-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-12-31</TIMEX3>
-  <TEXT>Il signor Giacinto, di anni 54, è in <EVENT eid="e1" class="OCCURRENCE">cura</EVENT> presso il proprio domicilio da <TIMEX3 tid="t1" type="DURATION" value="P15D" temporalFunction="false">15 giorni</TIMEX3> in <EVENT eid="e2" class="OCCURRENCE">coma</EVENT> <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true">post-anossico</TIMEX3> per un <EVENT eid="e3" class="OCCURRENCE">arresto</EVENT> cardio-respiratorio. Giacinto si presenta con <EVENT eid="e4" class="OCCURRENCE">tracheostomia</EVENT> in respiro spontaneo, ha in corso una <EVENT eid="e5" class="OCCURRENCE">nutrizione</EVENT> enterale totale tramite PEG e un catetere vescicale. L'Infermiera dell'assistenza domiciliare si <EVENT eid="e6" class="OCCURRENCE">reca</EVENT> come <TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">tutte le mattine</TIMEX3> a casa del signore e mentre sta eseguendo un <EVENT eid="e7" class="OCCURRENCE">broncolavaggio</EVENT> con <EVENT eid="e8" class="OCCURRENCE">aspirazione</EVENT> bronchiale, si <EVENT eid="e9" class="OCCURRENCE">avvicina</EVENT> la figlia e dal <EVENT eid="e10" class="OCCURRENCE">colloquio</EVENT> <EVENT eid="e11" class="REPORTING">emerge</EVENT> che durante <TIMEX3 tid="t4" type="DATE" value="2020-12-31" temporalFunction="false">la giornata</TIMEX3> <EVENT eid="e12" class="OCCURRENCE">suona</EVENT> l'allarme della pompa per la nutrizione enterale e la figlia <EVENT eid="e13" class="OCCURRENCE">chiede</EVENT> chiarimenti.&#13;
+  <TEXT>Il signor Giacinto, di anni 54, è in <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">cura</EVENT> presso il proprio domicilio da <TIMEX3 tid="t1" type="DURATION" value="P15D" temporalFunction="false">15 giorni</TIMEX3> in <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">coma</EVENT> <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">post-anossico</TIMEX3> per un <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">arresto</EVENT> cardio-respiratorio. Giacinto si presenta con <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">tracheostomia</EVENT> in respiro spontaneo, ha in corso una <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">nutrizione</EVENT> enterale totale tramite PEG e un catetere vescicale. L'Infermiera dell'assistenza domiciliare si <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">reca</EVENT> come <TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">tutte le mattine</TIMEX3> a casa del signore e mentre sta eseguendo un <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">broncolavaggio</EVENT> con <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">aspirazione</EVENT> bronchiale, si <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">avvicina</EVENT> la figlia e dal <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">colloquio</EVENT> <EVENT eid="e11" class="REPORTING" comment="e3c:permanence=FINITE">emerge</EVENT> che durante <TIMEX3 tid="t4" type="DATE" value="2020-12-31" temporalFunction="false">la giornata</TIMEX3> <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">suona</EVENT> l'allarme della pompa per la nutrizione enterale e la figlia <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">chiede</EVENT> chiarimenti.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l3" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>

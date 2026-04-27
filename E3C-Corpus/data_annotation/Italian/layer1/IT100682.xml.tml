@@ -2,31 +2,31 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>manuela</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2016-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2016-12-31</TIMEX3>
-  <TEXT>Donna di a. 63, anamnesi di malattia di <EVENT eid="e1" class="OCCURRENCE">Takayasu</EVENT> trattata con cortisone da <TIMEX3 tid="t1" type="DURATION" value="P10Y" temporalFunction="false">10 anni</TIMEX3>, <EVENT eid="e2" class="STATE">diabete</EVENT> mellito, <EVENT eid="e3" class="STATE">ipertensione</EVENT>. In seguito a <EVENT eid="e4" class="OCCURRENCE">trauma</EVENT> addominale accidentale, eseguiva <EVENT eid="e5" class="OCCURRENCE">tac</EVENT> addome con <EVENT eid="e6" class="REPORTING">evidenza</EVENT> di <EVENT eid="e7" class="OCCURRENCE">distensione</EVENT> del colon e presenza di <EVENT eid="e8" class="OCCURRENCE">bolle</EVENT> aree nella parete e nel tessuto adiposo pericolico. Anche se <EVENT eid="e9" class="OCCURRENCE">asintomatica</EVENT> e <EVENT eid="e10" class="OCCURRENCE">obiettività</EVENT> addominale nella norma, eseguiva <EVENT eid="e11" class="OCCURRENCE">AngioTac</EVENT> addome che <EVENT eid="e12" class="REPORTING">documentava</EVENT> <EVENT eid="e13" class="OCCURRENCE">pervio</EVENT> il tronco celiaco, a. mesenterica inferiore, diramazioni e asse mesenterico- portale. Alla <EVENT eid="e14" class="OCCURRENCE">colonscopia</EVENT> <EVENT eid="e15" class="REPORTING">aspetto</EVENT> della mucosa mammelonata per presenza di <EVENT eid="e16" class="REPORTING">cisti</EVENT> sottomucose pallide e bluastre che <EVENT eid="e17" class="OCCURRENCE">bioptizzate</EVENT> si <EVENT eid="e18" class="OCCURRENCE">sgonfiavano</EVENT> con <EVENT eid="e19" class="OCCURRENCE">sibilo</EVENT> sonoro. Considerata la <EVENT eid="e20" class="OCCURRENCE">benignità</EVENT> del quadro ed il <EVENT eid="e21" class="OCCURRENCE">riscontro</EVENT> occasionale la paziente era <EVENT eid="e22" class="OCCURRENCE">dimessa</EVENT> con indicazione a <EVENT eid="e23" class="OCCURRENCE">controlli</EVENT> endoscopici periodici.&#13;
+  <TEXT>Donna di a. 63, anamnesi di malattia di <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">Takayasu</EVENT> trattata con cortisone da <TIMEX3 tid="t1" type="DURATION" value="P10Y" temporalFunction="false">10 anni</TIMEX3>, <EVENT eid="e2" class="STATE" comment="e3c:permanence=PERMANENT">diabete</EVENT> mellito, <EVENT eid="e3" class="STATE" comment="e3c:permanence=PERMANENT">ipertensione</EVENT>. In seguito a <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">trauma</EVENT> addominale accidentale, eseguiva <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">tac</EVENT> addome con <EVENT eid="e6" class="REPORTING" comment="e3c:permanence=FINITE">evidenza</EVENT> di <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">distensione</EVENT> del colon e presenza di <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">bolle</EVENT> aree nella parete e nel tessuto adiposo pericolico. Anche se <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">asintomatica</EVENT> e <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">obiettività</EVENT> addominale nella norma, eseguiva <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">AngioTac</EVENT> addome che <EVENT eid="e12" class="REPORTING" comment="e3c:permanence=FINITE">documentava</EVENT> <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">pervio</EVENT> il tronco celiaco, a. mesenterica inferiore, diramazioni e asse mesenterico- portale. Alla <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">colonscopia</EVENT> <EVENT eid="e15" class="REPORTING" comment="e3c:permanence=FINITE">aspetto</EVENT> della mucosa mammelonata per presenza di <EVENT eid="e16" class="REPORTING" comment="e3c:permanence=FINITE">cisti</EVENT> sottomucose pallide e bluastre che <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">bioptizzate</EVENT> si <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">sgonfiavano</EVENT> con <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">sibilo</EVENT> sonoro. Considerata la <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">benignità</EVENT> del quadro ed il <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">riscontro</EVENT> occasionale la paziente era <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">dimessa</EVENT> con indicazione a <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">controlli</EVENT> endoscopici periodici.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>

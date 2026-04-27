@@ -4,114 +4,114 @@
   <TIMEX3 tid="t0" type="DATE" value="2008-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2008-12-31</TIMEX3>
   <TEXT>Donna - aa. 30&#13;
 &#13;
-<EVENT eid="e1" class="OCCURRENCE">Anamnesi</EVENT> Patologica&#13;
-<EVENT eid="e2" class="OCCURRENCE">Asportazione</EVENT> di cisti dermoide dell’ovaio destro all’età di circa 20 anni.&#13;
+<EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">Anamnesi</EVENT> Patologica&#13;
+<EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">Asportazione</EVENT> di cisti dermoide dell’ovaio destro all’età di circa 20 anni.&#13;
 &#13;
-<EVENT eid="e3" class="ASPECTUAL">Esordio</EVENT> della <EVENT eid="e4" class="OCCURRENCE">malattia</EVENT> attuale&#13;
-<EVENT eid="e5" class="OCCURRENCE">Dolore</EVENT> addominale, <EVENT eid="e6" class="OCCURRENCE">vomito</EVENT> biliare, <EVENT eid="e7" class="OCCURRENCE">febbre</EVENT>. <EVENT eid="e8" class="OCCURRENCE">Ricovero</EVENT> d’urgenza nel nostro reparto con diagnosi di <EVENT eid="e9" class="OCCURRENCE">addome</EVENT> acuto.&#13;
+<EVENT eid="e3" class="ASPECTUAL" comment="e3c:permanence=FINITE">Esordio</EVENT> della <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">malattia</EVENT> attuale&#13;
+<EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">Dolore</EVENT> addominale, <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">vomito</EVENT> biliare, <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">febbre</EVENT>. <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">Ricovero</EVENT> d’urgenza nel nostro reparto con diagnosi di <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">addome</EVENT> acuto.&#13;
 &#13;
-<EVENT eid="e10" class="OCCURRENCE">Esame</EVENT> obiettivo&#13;
-Paziente sofferente per <EVENT eid="e11" class="OCCURRENCE">dolore</EVENT> addominale, <EVENT eid="e12" class="OCCURRENCE">febbrile</EVENT> (38°C <EVENT eid="e13" class="OCCURRENCE">ascellare</EVENT>, 39,5°C <EVENT eid="e14" class="OCCURRENCE">rettale</EVENT>), <EVENT eid="e15" class="OCCURRENCE">tachicardica</EVENT>. Addome poco <EVENT eid="e16" class="OCCURRENCE">trattabile</EVENT> per <EVENT eid="e17" class="OCCURRENCE">contrattura</EVENT> muscolare di parete, soprattutto nel quadrante inferiore destro, dove la <EVENT eid="e18" class="OCCURRENCE">dolorabilità</EVENT> è particolarmente <EVENT eid="e19" class="OCCURRENCE">accentuata</EVENT> e dove sembra di <EVENT eid="e20" class="OCCURRENCE">palpare</EVENT> <EVENT eid="e21" class="OCCURRENCE">tumefazione</EVENT> a limiti indistinti. Forte <EVENT eid="e22" class="OCCURRENCE">dolorabilità</EVENT> del Douglas all’<EVENT eid="e23" class="OCCURRENCE">esplorazione</EVENT> rettale. Un’<EVENT eid="e24" class="OCCURRENCE">ecografia</EVENT> addominale non è <EVENT eid="e25" class="OCCURRENCE">contributiva</EVENT>. Espletati i consueti <EVENT eid="e26" class="OCCURRENCE">esami</EVENT> preoperatori (<EVENT eid="e27" class="OCCURRENCE">leucocitosi</EVENT> neutrofila) si <EVENT eid="e28" class="REPORTING">conferma</EVENT> la diagnosi di <EVENT eid="e29" class="OCCURRENCE">addome</EVENT> acuto da presumibile <EVENT eid="e30" class="OCCURRENCE">appendicite</EVENT> acuta (<EVENT eid="e31" class="OCCURRENCE">ascesso</EVENT> appendicolare?) e in alternativa da possibile <EVENT eid="e32" class="OCCURRENCE">torsione</EVENT> ovarica destra.&#13;
-Si procede a <EVENT eid="e33" class="OCCURRENCE">intervento</EVENT> chirurgico.&#13;
-&#13;
-&#13;
-<EVENT eid="e34" class="OCCURRENCE">Intervento</EVENT>&#13;
-Open - <EVENT eid="e35" class="OCCURRENCE">laparoscopy</EVENT> ombelicale (Hasson trocar).&#13;
-<EVENT eid="e36" class="OCCURRENCE">Induzione</EVENT> di pneumoperitoneo CO2 - 12 mm Hg. <EVENT eid="e37" class="OCCURRENCE">Esplorazione</EVENT> della cavità peritoneale: si <EVENT eid="e38" class="REPORTING">reperta</EVENT> grossa <EVENT eid="e39" class="OCCURRENCE">formazione</EVENT> grossolanamente sferica di circa 10 cm di <EVENT eid="e40" class="OCCURRENCE">diametro</EVENT>, che <EVENT eid="e41" class="OCCURRENCE">sostituisce</EVENT> in pratica l’ovaio di destra e <EVENT eid="e42" class="OCCURRENCE">aderisce</EVENT> al peritoneo parietale, al cieco, all’appendice e ai vasi iliaci. Nessuna altra <EVENT eid="e43" class="OCCURRENCE">constatazione</EVENT> patologica. <EVENT eid="e44" class="OCCURRENCE">Lisi</EVENT> delle aderenze e <EVENT eid="e45" class="OCCURRENCE">liberazione</EVENT> del cieco e dell’appendice che <EVENT eid="e46" class="REPORTING">appaiono</EVENT> <EVENT eid="e47" class="OCCURRENCE">normali</EVENT>. <EVENT eid="e48" class="OCCURRENCE">Distacco</EVENT> della massa dai vasi iliaci e <EVENT eid="e49" class="OCCURRENCE">identificazione</EVENT> dell’uretere. <EVENT eid="e50" class="OCCURRENCE">Interruzione</EVENT> della tuba e dei vasi ovarici (bisturi armonico). <EVENT eid="e51" class="OCCURRENCE">Applicazione</EVENT> di clip su moncone tubarico residuo. <EVENT eid="e52" class="OCCURRENCE">Liberazione</EVENT> completa della massa, che è <EVENT eid="e53" class="OCCURRENCE">estratta</EVENT> in bag. <EVENT eid="e54" class="OCCURRENCE">Controllo</EVENT> dell’emostasi, <EVENT eid="e55" class="OCCURRENCE">lavaggio</EVENT> e <EVENT eid="e56" class="OCCURRENCE">toilette</EVENT> del cavo addominale. <EVENT eid="e57" class="OCCURRENCE">Evacuazione</EVENT> della CO2. <EVENT eid="e58" class="OCCURRENCE">Sutura</EVENT> degli accessi.&#13;
-&#13;
-<EVENT eid="e59" class="OCCURRENCE">Anatomia</EVENT> Patologica&#13;
-<EVENT eid="e60" class="OCCURRENCE">Macroscopia</EVENT> - La <EVENT eid="e61" class="OCCURRENCE">massa</EVENT> di circa 10 cm ha <EVENT eid="e62" class="OCCURRENCE">colorito</EVENT> bluastro e al <EVENT eid="e63" class="OCCURRENCE">taglio</EVENT> si <EVENT eid="e64" class="REPORTING">rivela</EVENT> di <EVENT eid="e65" class="OCCURRENCE">struttura</EVENT> cistica a parete ispessita e a contenuto liquido, denso, ematico. L’ovaio è ridotto a scarsi <EVENT eid="e66" class="OCCURRENCE">residui</EVENT> con altre <EVENT eid="e67" class="OCCURRENCE">cisti</EVENT> contenenti liquido chiaro.&#13;
-<EVENT eid="e68" class="OCCURRENCE">Microscopia</EVENT> - Nelle sezioni istologiche <EVENT eid="e69" class="OCCURRENCE">eseguite</EVENT> previo adeguato, ampio <EVENT eid="e70" class="OCCURRENCE">campionamento</EVENT> la <EVENT eid="e71" class="OCCURRENCE">formazione</EVENT> cistica maggiore, a contenuto ematico, <EVENT eid="e72" class="REPORTING">risulta</EVENT> <EVENT eid="e73" class="OCCURRENCE">rivestita</EVENT> internamente da più strati di <EVENT eid="e74" class="OCCURRENCE">elementi</EVENT> ad ampio citoplasma eosinofilo di tipo luteinico; le altre <EVENT eid="e75" class="OCCURRENCE">cisti</EVENT> minori sono di <EVENT eid="e76" class="OCCURRENCE">tipo</EVENT> follicolare.&#13;
-<EVENT eid="e77" class="OCCURRENCE">Diagnosi</EVENT>: <EVENT eid="e78" class="OCCURRENCE">Ovaio</EVENT> con corpo luteo emorragico e cisti follicolari corticali&#13;
+<EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">Esame</EVENT> obiettivo&#13;
+Paziente sofferente per <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolore</EVENT> addominale, <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">febbrile</EVENT> (38°C <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">ascellare</EVENT>, 39,5°C <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">rettale</EVENT>), <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">tachicardica</EVENT>. Addome poco <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">trattabile</EVENT> per <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">contrattura</EVENT> muscolare di parete, soprattutto nel quadrante inferiore destro, dove la <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolorabilità</EVENT> è particolarmente <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">accentuata</EVENT> e dove sembra di <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">palpare</EVENT> <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">tumefazione</EVENT> a limiti indistinti. Forte <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolorabilità</EVENT> del Douglas all’<EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">esplorazione</EVENT> rettale. Un’<EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecografia</EVENT> addominale non è <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">contributiva</EVENT>. Espletati i consueti <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">esami</EVENT> preoperatori (<EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">leucocitosi</EVENT> neutrofila) si <EVENT eid="e28" class="REPORTING" comment="e3c:permanence=FINITE">conferma</EVENT> la diagnosi di <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">addome</EVENT> acuto da presumibile <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">appendicite</EVENT> acuta (<EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">ascesso</EVENT> appendicolare?) e in alternativa da possibile <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">torsione</EVENT> ovarica destra.&#13;
+Si procede a <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">intervento</EVENT> chirurgico.&#13;
 &#13;
 &#13;
-<EVENT eid="e79" class="OCCURRENCE">Decorso</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true">post-operatorio</TIMEX3> regolare con <EVENT eid="e80" class="OCCURRENCE">dimissione</EVENT> dopo <TIMEX3 tid="t2" type="DURATION" value="PXD" temporalFunction="true">pochi giorni</TIMEX3>.&#13;
+<EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">Intervento</EVENT>&#13;
+Open - <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">laparoscopy</EVENT> ombelicale (Hasson trocar).&#13;
+<EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">Induzione</EVENT> di pneumoperitoneo CO2 - 12 mm Hg. <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">Esplorazione</EVENT> della cavità peritoneale: si <EVENT eid="e38" class="REPORTING" comment="e3c:permanence=FINITE">reperta</EVENT> grossa <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">formazione</EVENT> grossolanamente sferica di circa 10 cm di <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">diametro</EVENT>, che <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">sostituisce</EVENT> in pratica l’ovaio di destra e <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">aderisce</EVENT> al peritoneo parietale, al cieco, all’appendice e ai vasi iliaci. Nessuna altra <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">constatazione</EVENT> patologica. <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">Lisi</EVENT> delle aderenze e <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">liberazione</EVENT> del cieco e dell’appendice che <EVENT eid="e46" class="REPORTING" comment="e3c:permanence=FINITE">appaiono</EVENT> <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">normali</EVENT>. <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">Distacco</EVENT> della massa dai vasi iliaci e <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">identificazione</EVENT> dell’uretere. <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">Interruzione</EVENT> della tuba e dei vasi ovarici (bisturi armonico). <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">Applicazione</EVENT> di clip su moncone tubarico residuo. <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">Liberazione</EVENT> completa della massa, che è <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">estratta</EVENT> in bag. <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">Controllo</EVENT> dell’emostasi, <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">lavaggio</EVENT> e <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">toilette</EVENT> del cavo addominale. <EVENT eid="e57" class="OCCURRENCE" comment="e3c:permanence=FINITE">Evacuazione</EVENT> della CO2. <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">Sutura</EVENT> degli accessi.&#13;
 &#13;
-<EVENT eid="e81" class="OCCURRENCE">Follow-up</EVENT> e <EVENT eid="e82" class="OCCURRENCE">outcome</EVENT> senza <EVENT eid="e83" class="OCCURRENCE">particolarità</EVENT> degne di rilievo.&#13;
+<EVENT eid="e59" class="OCCURRENCE" comment="e3c:permanence=FINITE">Anatomia</EVENT> Patologica&#13;
+<EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">Macroscopia</EVENT> - La <EVENT eid="e61" class="OCCURRENCE" comment="e3c:permanence=FINITE">massa</EVENT> di circa 10 cm ha <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">colorito</EVENT> bluastro e al <EVENT eid="e63" class="OCCURRENCE" comment="e3c:permanence=FINITE">taglio</EVENT> si <EVENT eid="e64" class="REPORTING" comment="e3c:permanence=FINITE">rivela</EVENT> di <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">struttura</EVENT> cistica a parete ispessita e a contenuto liquido, denso, ematico. L’ovaio è ridotto a scarsi <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">residui</EVENT> con altre <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">cisti</EVENT> contenenti liquido chiaro.&#13;
+<EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">Microscopia</EVENT> - Nelle sezioni istologiche <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">eseguite</EVENT> previo adeguato, ampio <EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">campionamento</EVENT> la <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">formazione</EVENT> cistica maggiore, a contenuto ematico, <EVENT eid="e72" class="REPORTING" comment="e3c:permanence=FINITE">risulta</EVENT> <EVENT eid="e73" class="OCCURRENCE" comment="e3c:permanence=FINITE">rivestita</EVENT> internamente da più strati di <EVENT eid="e74" class="OCCURRENCE" comment="e3c:permanence=FINITE">elementi</EVENT> ad ampio citoplasma eosinofilo di tipo luteinico; le altre <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">cisti</EVENT> minori sono di <EVENT eid="e76" class="OCCURRENCE" comment="e3c:permanence=FINITE">tipo</EVENT> follicolare.&#13;
+<EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">Diagnosi</EVENT>: <EVENT eid="e78" class="OCCURRENCE" comment="e3c:permanence=FINITE">Ovaio</EVENT> con corpo luteo emorragico e cisti follicolari corticali&#13;
+&#13;
+&#13;
+<EVENT eid="e79" class="OCCURRENCE" comment="e3c:permanence=FINITE">Decorso</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">post-operatorio</TIMEX3> regolare con <EVENT eid="e80" class="OCCURRENCE" comment="e3c:permanence=FINITE">dimissione</EVENT> dopo <TIMEX3 tid="t2" type="DURATION" value="PXD" temporalFunction="true">pochi giorni</TIMEX3>.&#13;
+&#13;
+<EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">Follow-up</EVENT> e <EVENT eid="e82" class="OCCURRENCE" comment="e3c:permanence=FINITE">outcome</EVENT> senza <EVENT eid="e83" class="OCCURRENCE" comment="e3c:permanence=FINITE">particolarità</EVENT> degne di rilievo.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
@@ -194,6 +194,6 @@ Open - <EVENT eid="e35" class="OCCURRENCE">laparoscopy</EVENT> ombelicale (Hasso
   <TLINK lid="l81" eventInstanceID="ei80" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l82" eventInstanceID="ei81" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l83" eventInstanceID="ei82" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l84" eventInstanceID="ei83" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l84" eventInstanceID="ei83" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <ALINK lid="l4" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="INITIATES"/>
 </TimeML>

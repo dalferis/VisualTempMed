@@ -2,52 +2,52 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2013-04-23T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2013-04-23</TIMEX3>
-  <TEXT>A 17 year-old woman with a <EVENT eid="e1" class="STATE">history</EVENT> of moderate persistent allergic <EVENT eid="e2" class="STATE">asthma</EVENT> has benefited from a first desensitization <EVENT eid="e3" class="STATE">protocol</EVENT> at age 3. The protocol has been <EVENT eid="e4" class="STATE">interrupted</EVENT> <TIMEX3 tid="t1" type="DATE" value="2003-XX-XX" temporalFunction="false">4 years</TIMEX3> later because of a mild skin <EVENT eid="e5" class="OCCURRENCE">reaction</EVENT>. Her doctor decided to <EVENT eid="e6" class="ASPECTUAL">stop</EVENT> the specific <EVENT eid="e7" class="OCCURRENCE">immunotherapy</EVENT>. But another doctor <EVENT eid="e8" class="ASPECTUAL">restarted</EVENT> a new protocol of <EVENT eid="e9" class="STATE">desensitization</EVENT> at age 16 against pollens because of a lack of control of his condition. She was never <EVENT eid="e10" class="STATE">hospitalized</EVENT>, she was receiving no <EVENT eid="e11" class="STATE">medication</EVENT> and she was doing well one year after she <EVENT eid="e12" class="STATE">received</EVENT> a new regimen of <EVENT eid="e13" class="STATE">pneumallergens</EVENT> (Alustal® Stallergenes SA, France). Indeed, <TIMEX3 tid="t2" type="DURATION" value="PT12H" temporalFunction="false">12 hours</TIMEX3> after <EVENT eid="e14" class="ASPECTUAL">initiation</EVENT> of <EVENT eid="e15" class="OCCURRENCE">treatment</EVENT>, she complained of abdominal <EVENT eid="e16" class="OCCURRENCE">pain</EVENT>, <EVENT eid="e17" class="OCCURRENCE">vomiting</EVENT> and <EVENT eid="e18" class="OCCURRENCE">diarrhea</EVENT> without <EVENT eid="e19" class="OCCURRENCE">fever</EVENT>. <TIMEX3 tid="t3" type="SET" value="X" temporalFunction="true">Several hours</TIMEX3> after, she <EVENT eid="e20" class="STATE">consulted</EVENT> to the emergency department where a surgical emergency was ruled out. She was then <EVENT eid="e21" class="OCCURRENCE">admitted</EVENT> to the internal medicine ward. <TIMEX3 tid="t4" type="DATE" value="2013-04-20" temporalFunction="false">Two days later</TIMEX3>, she developed an acute respiratory <EVENT eid="e22" class="STATE">failure</EVENT> and was referred to the intensive care unit where laboratory <EVENT eid="e23" class="OCCURRENCE">tests</EVENT> <EVENT eid="e24" class="REPORTING">revealed</EVENT> multiorgan <EVENT eid="e25" class="OCCURRENCE">failure</EVENT>: liver <EVENT eid="e26" class="OCCURRENCE">enzymes</EVENT>, 5000U/L (normal level, 0-37U/L); creatine <EVENT eid="e27" class="OCCURRENCE">phosphokinase</EVENT>, 59000U/L (normal level, 10-200U/L); cardiac <EVENT eid="e28" class="OCCURRENCE">troponin</EVENT> T, 21ng/ml (normal level, under 0,01ng/ml); <EVENT eid="e29" class="OCCURRENCE">leucopenia</EVENT>, 2600/mm 3 (normal level, 4000-9000/ mm 3); <EVENT eid="e30" class="OCCURRENCE">thrombocytopenia</EVENT>, 13000/ mm 3 (normal level, 150000-400000/ mm 3); prothrombin <EVENT eid="e31" class="OCCURRENCE">time</EVENT>, 38% (normal level, 70-100%). Chest <EVENT eid="e32" class="OCCURRENCE">X-ray</EVENT> <EVENT eid="e33" class="REPORTING">demonstrated</EVENT> bilateral interstitial <EVENT eid="e34" class="OCCURRENCE">markings</EVENT> with a normal cardiac silhouette. Viral <EVENT eid="e35" class="OCCURRENCE">serology</EVENT> was normal for hepatitis A, B, C, D, and E, Epstein-Barr virus and Cytomegalovirus. A skin morbilliform <EVENT eid="e36" class="STATE">rash</EVENT> and facial <EVENT eid="e37" class="STATE">edema</EVENT> appeared later. The patient received a fluid <EVENT eid="e38" class="STATE">resuscitation</EVENT>, platelet and erythrocyte transfusion, steroids and antibiotics. A hypoxic <EVENT eid="e39" class="STATE">coma</EVENT> occurred on <TIMEX3 tid="t5" type="DATE" value="2013-04-22" temporalFunction="false">day 4</TIMEX3> leading to <EVENT eid="e40" class="STATE">intubation</EVENT> and mechanical <EVENT eid="e41" class="STATE">ventilation</EVENT>. Rapidly, she experienced intractable <EVENT eid="e42" class="STATE">shock</EVENT> and acute renal <EVENT eid="e43" class="STATE">impairment</EVENT> despite inotropic agents leading to <EVENT eid="e44" class="STATE">death</EVENT> on <TIMEX3 tid="t6" type="DATE" value="2013-04-23" temporalFunction="false">day 5</TIMEX3>.&#13;
+  <TEXT>A 17 year-old woman with a <EVENT eid="e1" class="STATE" comment="e3c:permanence=PERMANENT">history</EVENT> of moderate persistent allergic <EVENT eid="e2" class="STATE" comment="e3c:permanence=PERMANENT">asthma</EVENT> has benefited from a first desensitization <EVENT eid="e3" class="STATE" comment="e3c:permanence=PERMANENT">protocol</EVENT> at age 3. The protocol has been <EVENT eid="e4" class="STATE" comment="e3c:permanence=PERMANENT">interrupted</EVENT> <TIMEX3 tid="t1" type="DATE" value="2003-XX-XX" temporalFunction="false">4 years</TIMEX3> later because of a mild skin <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">reaction</EVENT>. Her doctor decided to <EVENT eid="e6" class="ASPECTUAL" comment="e3c:permanence=PERMANENT">stop</EVENT> the specific <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">immunotherapy</EVENT>. But another doctor <EVENT eid="e8" class="ASPECTUAL" comment="e3c:permanence=PERMANENT">restarted</EVENT> a new protocol of <EVENT eid="e9" class="STATE" comment="e3c:permanence=PERMANENT">desensitization</EVENT> at age 16 against pollens because of a lack of control of his condition. She was never <EVENT eid="e10" class="STATE" comment="e3c:permanence=PERMANENT">hospitalized</EVENT>, she was receiving no <EVENT eid="e11" class="STATE" comment="e3c:permanence=PERMANENT">medication</EVENT> and she was doing well one year after she <EVENT eid="e12" class="STATE" comment="e3c:permanence=PERMANENT">received</EVENT> a new regimen of <EVENT eid="e13" class="STATE" comment="e3c:permanence=PERMANENT">pneumallergens</EVENT> (Alustal® Stallergenes SA, France). Indeed, <TIMEX3 tid="t2" type="DURATION" value="PT12H" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">12 hours</TIMEX3> after <EVENT eid="e14" class="ASPECTUAL" comment="e3c:permanence=FINITE">initiation</EVENT> of <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">treatment</EVENT>, she complained of abdominal <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">pain</EVENT>, <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">vomiting</EVENT> and <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">diarrhea</EVENT> without <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">fever</EVENT>. <TIMEX3 tid="t3" type="SET" value="X" temporalFunction="true" comment="e3c:functionInDocument=SECTIONTIME">Several hours</TIMEX3> after, she <EVENT eid="e20" class="STATE" comment="e3c:permanence=PERMANENT">consulted</EVENT> to the emergency department where a surgical emergency was ruled out. She was then <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">admitted</EVENT> to the internal medicine ward. <TIMEX3 tid="t4" type="DATE" value="2013-04-20" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">Two days later</TIMEX3>, she developed an acute respiratory <EVENT eid="e22" class="STATE" comment="e3c:permanence=PERMANENT">failure</EVENT> and was referred to the intensive care unit where laboratory <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">tests</EVENT> <EVENT eid="e24" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> multiorgan <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">failure</EVENT>: liver <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">enzymes</EVENT>, 5000U/L (normal level, 0-37U/L); creatine <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">phosphokinase</EVENT>, 59000U/L (normal level, 10-200U/L); cardiac <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">troponin</EVENT> T, 21ng/ml (normal level, under 0,01ng/ml); <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">leucopenia</EVENT>, 2600/mm 3 (normal level, 4000-9000/ mm 3); <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">thrombocytopenia</EVENT>, 13000/ mm 3 (normal level, 150000-400000/ mm 3); prothrombin <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">time</EVENT>, 38% (normal level, 70-100%). Chest <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">X-ray</EVENT> <EVENT eid="e33" class="REPORTING" comment="e3c:permanence=FINITE">demonstrated</EVENT> bilateral interstitial <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">markings</EVENT> with a normal cardiac silhouette. Viral <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">serology</EVENT> was normal for hepatitis A, B, C, D, and E, Epstein-Barr virus and Cytomegalovirus. A skin morbilliform <EVENT eid="e36" class="STATE" comment="e3c:permanence=PERMANENT">rash</EVENT> and facial <EVENT eid="e37" class="STATE" comment="e3c:permanence=PERMANENT">edema</EVENT> appeared later. The patient received a fluid <EVENT eid="e38" class="STATE" comment="e3c:permanence=PERMANENT">resuscitation</EVENT>, platelet and erythrocyte transfusion, steroids and antibiotics. A hypoxic <EVENT eid="e39" class="STATE" comment="e3c:permanence=PERMANENT">coma</EVENT> occurred on <TIMEX3 tid="t5" type="DATE" value="2013-04-22" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">day 4</TIMEX3> leading to <EVENT eid="e40" class="STATE" comment="e3c:permanence=PERMANENT">intubation</EVENT> and mechanical <EVENT eid="e41" class="STATE" comment="e3c:permanence=PERMANENT">ventilation</EVENT>. Rapidly, she experienced intractable <EVENT eid="e42" class="STATE" comment="e3c:permanence=PERMANENT">shock</EVENT> and acute renal <EVENT eid="e43" class="STATE" comment="e3c:permanence=PERMANENT">impairment</EVENT> despite inotropic agents leading to <EVENT eid="e44" class="STATE" comment="e3c:permanence=PERMANENT">death</EVENT> on <TIMEX3 tid="t6" type="DATE" value="2013-04-23" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">day 5</TIMEX3>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="INCLUDES"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
@@ -103,7 +103,7 @@
   <TLINK lid="l56" eventInstanceID="ei23" relatedToEventInstance="ei31" relType="INCLUDES"/>
   <TLINK lid="l57" eventInstanceID="ei23" relatedToEventInstance="ei24" relType="INCLUDES"/>
   <TLINK lid="l58" eventInstanceID="ei23" relatedToEventInstance="ei28" relType="INCLUDES"/>
-  <TLINK lid="l59" eventInstanceID="ei23" relatedToEventInstance="ei32" relType="SIMULTANEOUS"/>
+  <TLINK lid="l59" eventInstanceID="ei23" relatedToEventInstance="ei32" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l60" eventInstanceID="ei24" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l61" eventInstanceID="ei25" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l62" eventInstanceID="ei26" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -114,7 +114,7 @@
   <TLINK lid="l67" eventInstanceID="ei31" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l68" eventInstanceID="ei32" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l69" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="INCLUDES"/>
-  <TLINK lid="l70" eventInstanceID="ei32" relatedToEventInstance="ei35" relType="SIMULTANEOUS"/>
+  <TLINK lid="l70" eventInstanceID="ei32" relatedToEventInstance="ei35" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l71" eventInstanceID="ei32" relatedToEventInstance="ei34" relType="BEFORE"/>
   <TLINK lid="l72" eventInstanceID="ei33" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l73" eventInstanceID="ei34" relatedToTime="t0" relType="IS_INCLUDED"/>

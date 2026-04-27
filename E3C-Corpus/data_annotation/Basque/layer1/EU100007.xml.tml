@@ -16,84 +16,84 @@ Gorputz-adarretara <EVENT eid="e11" class="OCCURRENCE">zabaldu</EVENT> zaizkio e
 <EVENT eid="e16" class="OCCURRENCE">AZTERKETA</EVENT> FISIKOA&#13;
 <EVENT eid="e17" class="OCCURRENCE">Tenperatura</EVENT>: 36,5 °C.&#13;
 <EVENT eid="e18" class="OCCURRENCE">Egoera</EVENT> orokor ona du.&#13;
-Azaleko <EVENT eid="e19" class="OCCURRENCE">lesioak</EVENT>.&#13;
-Lesioen <EVENT eid="e20" class="OCCURRENCE">tankera</EVENT>, <EVENT eid="e21" class="OCCURRENCE">kokapena</EVENT> eta <EVENT eid="e22" class="OCCURRENCE">banaketa</EVENT>: simetrikoki enbor eta gorputz-adarretan <EVENT eid="e23" class="OCCURRENCE">exantema</EVENT> makulopapulosorako joera <EVENT eid="e24" class="REPORTING">ikusten</EVENT> zaien <EVENT eid="e25" class="OCCURRENCE">lesioak</EVENT>.&#13;
-Ez dago <EVENT eid="e26" class="OCCURRENCE">lesiorik</EVENT> ahoko mukosan, esku-ahurretan eta oinetan.&#13;
-<EVENT eid="e27" class="OCCURRENCE">DIAGNOSTIKO</EVENT> NAGUSIA&#13;
-<EVENT eid="e28" class="OCCURRENCE">Toxikodermia</EVENT> morbiliformea.&#13;
-<EVENT eid="e29" class="OCCURRENCE">TRATAMENDUA</EVENT>&#13;
-Medikamentu susmagarria <EVENT eid="e30" class="OCCURRENCE">hartzeari</EVENT> <EVENT eid="e31" class="ASPECTUAL">utzi</EVENT>.&#13;
-<EVENT eid="e32" class="OCCURRENCE">Loratadina</EVENT> hartu <TIMEX3 tid="t4" type="SET" value="P1D" temporalFunction="true">goizean</TIMEX3> eta <TIMEX3 tid="t5" type="SET" value="P1D" temporalFunction="true">eguerdian</TIMEX3>.&#13;
-Atarax ® <EVENT eid="e33" class="OCCURRENCE">konprimituak</EVENT> hartu <TIMEX3 tid="t6" type="SET" value="P1D" temporalFunction="true">gauean</TIMEX3>.&#13;
-Elocom ® (mometasona furoatoa) <EVENT eid="e34" class="OCCURRENCE">krema</EVENT>, <EVENT eid="e35" class="OCCURRENCE">geruza</EVENT> fin bat eman, ondo <EVENT eid="e36" class="OCCURRENCE">zabaldu</EVENT>, eta utzi <EVENT eid="e37" class="OCCURRENCE">desagertzen</EVENT> pixkanaka.&#13;
-BESTE <EVENT eid="e38" class="OCCURRENCE">GOMENDIO</EVENT> BATZUK&#13;
-Ez hartu <EVENT eid="e39" class="OCCURRENCE">amoxizilina</EVENT> gehiagorik.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+Azaleko <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesioak</EVENT>.&#13;
+Lesioen <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">tankera</EVENT>, <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">kokapena</EVENT> eta <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">banaketa</EVENT>: simetrikoki enbor eta gorputz-adarretan <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">exantema</EVENT> makulopapulosorako joera <EVENT eid="e24" class="REPORTING" comment="e3c:permanence=FINITE">ikusten</EVENT> zaien <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesioak</EVENT>.&#13;
+Ez dago <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesiorik</EVENT> ahoko mukosan, esku-ahurretan eta oinetan.&#13;
+<EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">DIAGNOSTIKO</EVENT> NAGUSIA&#13;
+<EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">Toxikodermia</EVENT> morbiliformea.&#13;
+<EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">TRATAMENDUA</EVENT>&#13;
+Medikamentu susmagarria <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">hartzeari</EVENT> <EVENT eid="e31" class="ASPECTUAL" comment="e3c:permanence=FINITE">utzi</EVENT>.&#13;
+<EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">Loratadina</EVENT> hartu <TIMEX3 tid="t4" type="SET" value="P1D" temporalFunction="true">goizean</TIMEX3> eta <TIMEX3 tid="t5" type="SET" value="P1D" temporalFunction="true">eguerdian</TIMEX3>.&#13;
+Atarax ® <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">konprimituak</EVENT> hartu <TIMEX3 tid="t6" type="SET" value="P1D" temporalFunction="true">gauean</TIMEX3>.&#13;
+Elocom ® (mometasona furoatoa) <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">krema</EVENT>, <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">geruza</EVENT> fin bat eman, ondo <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">zabaldu</EVENT>, eta utzi <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">desagertzen</EVENT> pixkanaka.&#13;
+BESTE <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">GOMENDIO</EVENT> BATZUK&#13;
+Ez hartu <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">amoxizilina</EVENT> gehiagorik.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="SIMULTANEOUS"/>
+  <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
-  <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l6" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="SIMULTANEOUS"/>
-  <TLINK lid="l7" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
-  <TLINK lid="l9" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
-  <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l6" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l7" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l9" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l12" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="INCLUDES"/>
   <TLINK lid="l13" eventInstanceID="ei6" relatedToTime="t1" relType="INCLUDES"/>
   <TLINK lid="l14" eventInstanceID="ei6" relatedToEventInstance="ei8" relType="INCLUDES"/>
-  <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l17" timeID="t2" relatedToEventInstance="ei10" relType="BEGINS"/>
   <TLINK lid="l18" timeID="t2" relatedToEventInstance="ei9" relType="INCLUDES"/>
-  <TLINK lid="l19" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l19" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l20" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l21" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="BEFORE"/>
   <TLINK lid="l22" eventInstanceID="ei10" relatedToTime="t1" relType="BEFORE"/>
   <TLINK lid="l23" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei12" relType="SIMULTANEOUS"/>
-  <TLINK lid="l25" eventInstanceID="ei12" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l26" timeID="t3" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
-  <TLINK lid="l27" timeID="t3" relatedToEventInstance="ei14" relType="SIMULTANEOUS"/>
+  <TLINK lid="l25" eventInstanceID="ei12" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l26" timeID="t3" relatedToEventInstance="ei13" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l27" timeID="t3" relatedToEventInstance="ei14" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l28" timeID="t3" relatedToEventInstance="ei15" relType="INCLUDES"/>
   <TLINK lid="l29" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l30" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
@@ -103,32 +103,32 @@ Ez hartu <EVENT eid="e39" class="OCCURRENCE">amoxizilina</EVENT> gehiagorik.</TE
   <TLINK lid="l34" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l35" eventInstanceID="ei16" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l36" eventInstanceID="ei17" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l37" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
+  <TLINK lid="l37" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l38" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l39" eventInstanceID="ei19" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l39" eventInstanceID="ei19" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l40" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="SIMULTANEOUS"/>
-  <TLINK lid="l41" eventInstanceID="ei19" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
-  <TLINK lid="l42" eventInstanceID="ei20" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l41" eventInstanceID="ei19" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l42" eventInstanceID="ei20" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l43" eventInstanceID="ei20" relatedToEventInstance="ei22" relType="SIMULTANEOUS"/>
   <TLINK lid="l44" eventInstanceID="ei20" relatedToEventInstance="ei25" relType="SIMULTANEOUS"/>
-  <TLINK lid="l45" eventInstanceID="ei20" relatedToEventInstance="ei26" relType="SIMULTANEOUS"/>
+  <TLINK lid="l45" eventInstanceID="ei20" relatedToEventInstance="ei26" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l46" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="SIMULTANEOUS"/>
   <TLINK lid="l47" eventInstanceID="ei20" relatedToEventInstance="ei23" relType="SIMULTANEOUS"/>
-  <TLINK lid="l48" eventInstanceID="ei21" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l49" eventInstanceID="ei22" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l50" eventInstanceID="ei23" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l48" eventInstanceID="ei21" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l49" eventInstanceID="ei22" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l50" eventInstanceID="ei23" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l51" eventInstanceID="ei24" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l52" eventInstanceID="ei25" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l52" eventInstanceID="ei25" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l53" eventInstanceID="ei25" relatedToEventInstance="ei24" relType="INCLUDES"/>
-  <TLINK lid="l54" eventInstanceID="ei26" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l55" eventInstanceID="ei26" relatedToEventInstance="ei27" relType="SIMULTANEOUS"/>
+  <TLINK lid="l54" eventInstanceID="ei26" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l55" eventInstanceID="ei26" relatedToEventInstance="ei27" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l56" eventInstanceID="ei27" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l57" eventInstanceID="ei28" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l57" eventInstanceID="ei28" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l58" eventInstanceID="ei28" relatedToEventInstance="ei27" relType="INCLUDES"/>
   <TLINK lid="l59" eventInstanceID="ei28" relatedToEventInstance="ei29" relType="INCLUDES"/>
-  <TLINK lid="l60" eventInstanceID="ei29" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l60" eventInstanceID="ei29" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l61" eventInstanceID="ei29" relatedToEventInstance="ei31" relType="INCLUDES"/>
-  <TLINK lid="l62" eventInstanceID="ei30" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l62" eventInstanceID="ei30" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l63" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="ENDS"/>
   <TLINK lid="l64" eventInstanceID="ei31" relatedToTime="t0" relType="AFTER"/>
   <TLINK lid="l66" eventInstanceID="ei32" relatedToTime="t0" relType="AFTER"/>

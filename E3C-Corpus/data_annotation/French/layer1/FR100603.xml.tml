@@ -2,40 +2,40 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2016-12-06T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2016-12-06</TIMEX3>
-  <TEXT>Nous <EVENT eid="e1" class="OCCURRENCE">rapportons</EVENT> dans cette <EVENT eid="e2" class="OCCURRENCE">observation</EVENT> le cas d'une jeune femme âgée de 32 ans chez quile diagnostic d'<EVENT eid="e3" class="OCCURRENCE">endocardite</EVENT> communautaire de la valve pulmonaire a été <EVENT eid="e4" class="OCCURRENCE">confirmé</EVENT>.
-Cette <EVENT eid="e5" class="OCCURRENCE">observation</EVENT> est d'autant plus <EVENT eid="e6" class="OCCURRENCE">intéressante</EVENT> qu'elle <EVENT eid="e7" class="OCCURRENCE">survient</EVENT> chez une patiente sans <EVENT eid="e8" class="OCCURRENCE">antécédents</EVENT> de toxicomanie, avec néanmoins la notion de <EVENT eid="e9" class="OCCURRENCE">communication</EVENT> interventriculaire restrictive.
-La patiente a été <EVENT eid="e10" class="OCCURRENCE">opérée</EVENT> en urgence devant l'image de grosse <EVENT eid="e11" class="OCCURRENCE">végétation</EVENT> très mobile sur les données de l'<EVENT eid="e12" class="OCCURRENCE">échographie</EVENT> cardiaque transthoracique.
-La <EVENT eid="e13" class="OCCURRENCE">chirurgie</EVENT> a été pratiquée sous <EVENT eid="e14" class="OCCURRENCE">circulation</EVENT> extracorporelle et la valve pulmonaire a été <EVENT eid="e15" class="OCCURRENCE">remplacée</EVENT> par une <EVENT eid="e16" class="OCCURRENCE">bioprothèse</EVENT>.
-Les <EVENT eid="e17" class="OCCURRENCE">hémocultures</EVENT> et la <EVENT eid="e18" class="OCCURRENCE">culture</EVENT> de la valve ont <EVENT eid="e19" class="REPORTING">retrouvé</EVENT> un <EVENT eid="e20" class="OCCURRENCE">staphylococcus</EVENT> aureus sensible à la Méticilline.
-L'<EVENT eid="e21" class="OCCURRENCE">évolution</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true">postopératoire</TIMEX3> a été <EVENT eid="e22" class="OCCURRENCE">favorable</EVENT> avec un recul de <TIMEX3 tid="t2" type="DURATION" value="P6M" temporalFunction="false">06 mois</TIMEX3> sans <EVENT eid="e23" class="OCCURRENCE">récurrence</EVENT> infectieuse.
+  <TEXT>Nous <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">rapportons</EVENT> dans cette <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">observation</EVENT> le cas d'une jeune femme âgée de 32 ans chez quile diagnostic d'<EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">endocardite</EVENT> communautaire de la valve pulmonaire a été <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">confirmé</EVENT>.
+Cette <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">observation</EVENT> est d'autant plus <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">intéressante</EVENT> qu'elle <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">survient</EVENT> chez une patiente sans <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">antécédents</EVENT> de toxicomanie, avec néanmoins la notion de <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">communication</EVENT> interventriculaire restrictive.
+La patiente a été <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">opérée</EVENT> en urgence devant l'image de grosse <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">végétation</EVENT> très mobile sur les données de l'<EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">échographie</EVENT> cardiaque transthoracique.
+La <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">chirurgie</EVENT> a été pratiquée sous <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">circulation</EVENT> extracorporelle et la valve pulmonaire a été <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">remplacée</EVENT> par une <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">bioprothèse</EVENT>.
+Les <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">hémocultures</EVENT> et la <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">culture</EVENT> de la valve ont <EVENT eid="e19" class="REPORTING" comment="e3c:permanence=FINITE">retrouvé</EVENT> un <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">staphylococcus</EVENT> aureus sensible à la Méticilline.
+L'<EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">évolution</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postopératoire</TIMEX3> a été <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">favorable</EVENT> avec un recul de <TIMEX3 tid="t2" type="DURATION" value="P6M" temporalFunction="false">06 mois</TIMEX3> sans <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">récurrence</EVENT> infectieuse.
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
-  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="SIMULTANEOUS"/>
+  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l6" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="INCLUDES"/>
   <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei1" relType="INCLUDES"/>
@@ -44,16 +44,16 @@ L'<EVENT eid="e21" class="OCCURRENCE">évolution</EVENT> <TIMEX3 tid="t1" type="
   <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei4" relType="INCLUDES"/>
   <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei7" relType="BEGINS"/>
   <TLINK lid="l12" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
-  <TLINK lid="l13" eventInstanceID="ei5" relatedToEventInstance="ei8" relType="SIMULTANEOUS"/>
+  <TLINK lid="l13" eventInstanceID="ei5" relatedToEventInstance="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l14" eventInstanceID="ei5" relatedToEventInstance="ei10" relType="INCLUDES"/>
-  <TLINK lid="l15" eventInstanceID="ei5" relatedToEventInstance="ei9" relType="SIMULTANEOUS"/>
+  <TLINK lid="l15" eventInstanceID="ei5" relatedToEventInstance="ei9" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l16" eventInstanceID="ei6" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l17" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l18" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l19" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l20" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l21" eventInstanceID="ei10" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
-  <TLINK lid="l22" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="SIMULTANEOUS"/>
+  <TLINK lid="l22" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l23" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei12" relType="INCLUDES"/>
   <TLINK lid="l25" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
@@ -67,14 +67,14 @@ L'<EVENT eid="e21" class="OCCURRENCE">évolution</EVENT> <TIMEX3 tid="t1" type="
   <TLINK lid="l33" eventInstanceID="ei16" relatedToEventInstance="ei15" relType="BEGINS"/>
   <TLINK lid="l34" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l35" eventInstanceID="ei17" relatedToEventInstance="ei21" relType="BEFORE"/>
-  <TLINK lid="l36" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
+  <TLINK lid="l36" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l38" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l39" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l40" eventInstanceID="ei20" relatedToEventInstance="ei18" relType="INCLUDES"/>
   <TLINK lid="l41" eventInstanceID="ei20" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l42" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l43" eventInstanceID="ei21" relatedToEventInstance="ei23" relType="SIMULTANEOUS"/>
+  <TLINK lid="l43" eventInstanceID="ei21" relatedToEventInstance="ei23" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l44" eventInstanceID="ei21" relatedToTime="t2" relType="SIMULTANEOUS"/>
   <TLINK lid="l45" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS"/>
   <TLINK lid="l46" timeID="t1" relatedToEventInstance="ei21" relType="INCLUDES"/>

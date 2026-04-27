@@ -255,6 +255,7 @@
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:attribute>
+					<xs:attribute name="comment" type="xs:string"/>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -322,6 +323,7 @@
 							<xs:union memberTypes="Frequency"/>
 						</xs:simpleType>
 					</xs:attribute>
+					<xs:attribute name="comment" type="xs:string"/>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -332,6 +334,7 @@
 				<xs:extension base="xs:string">
 					<xs:attribute name="sid" type="SignalID" use="required"/>
 					<xs:attribute name="sentID" type="xs:integer"/>
+					<xs:attribute name="comment" type="xs:string"/>
 				</xs:extension>
 			</xs:simpleContent>
 		</xs:complexType>
@@ -385,6 +388,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
+			<xs:attribute name="comment" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="TLINK">
@@ -417,6 +421,7 @@
 				</xs:simpleType>
 			</xs:attribute>
 			<xs:attribute name="magnitude" type="TimeID"/>
+			<xs:attribute name="comment" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="SLINK">
@@ -439,6 +444,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
+			<xs:attribute name="comment" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="ALINK">
@@ -459,6 +465,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
+			<xs:attribute name="comment" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="CONFIDENCE">

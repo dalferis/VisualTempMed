@@ -2,103 +2,103 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2020-11-21T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-11-21</TIMEX3>
-  <TEXT>A 35-year-old mentally ill man was <EVENT eid="e1" class="OCCURRENCE">transferred</EVENT> from a local psychiatric hospital after attempted <EVENT eid="e2" class="OCCURRENCE">suicide</EVENT> by fire <TIMEX3 tid="t1" type="DATE" value="2020-09-13" temporalFunction="false">3 days</TIMEX3> before <EVENT eid="e3" class="OCCURRENCE">admission</EVENT>. He acquired full-and partial-thickness <EVENT eid="e4" class="OCCURRENCE">injury</EVENT> in approximately 38% of his TBSA, including face and neck (5%), both upper extremities (8%), right thigh (4%), left thigh and leg (3%), and most of his anterior and posterior trunk (16%). The patient was <EVENT eid="e5" class="OCCURRENCE">hospitalized</EVENT> for <TIMEX3 tid="t2" type="DURATION" value="P66D" temporalFunction="false">66 days</TIMEX3> and underwent five debridement <EVENT eid="e6" class="OCCURRENCE">surgeries</EVENT>. The psychiatric <EVENT eid="e7" class="OCCURRENCE">diagnosis</EVENT> was <EVENT eid="e8" class="OCCURRENCE">schizophrenia</EVENT> type ICD 10 F20.3, <EVENT eid="e9" class="OCCURRENCE">treated</EVENT> with <EVENT eid="e10" class="OCCURRENCE">Haloperidol</EVENT> 1.5 mg and <EVENT eid="e11" class="OCCURRENCE">Diazepam</EVENT> 5 mg <TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">daily</TIMEX3>. The patient was occasionally <EVENT eid="e12" class="OCCURRENCE">restrained</EVENT> due to rebellious and self-destruction <EVENT eid="e13" class="OCCURRENCE">behavior</EVENT>. The nutrition <EVENT eid="e14" class="OCCURRENCE">management</EVENT> of this patient was <EVENT eid="e15" class="ASPECTUAL">started</EVENT> after <TIMEX3 tid="t4" type="DURATION" value="P1W" temporalFunction="false">a week</TIMEX3> of <EVENT eid="e16" class="OCCURRENCE">hospitalization</EVENT>, which is considered late. In the initial nutrition <EVENT eid="e17" class="OCCURRENCE">assessment</EVENT>, the patient was 40 kg <EVENT eid="e18" class="OCCURRENCE">weight</EVENT> and 150 cm <EVENT eid="e19" class="OCCURRENCE">tall</EVENT> thus the body mass <EVENT eid="e20" class="OCCURRENCE">index</EVENT> (<EVENT eid="e21" class="OCCURRENCE">BMI</EVENT>) was 17,57 kg/m 2 or <EVENT eid="e22" class="OCCURRENCE">underweight</EVENT>. Gastrointestinal <EVENT eid="e23" class="OCCURRENCE">symptoms</EVENT> and <EVENT eid="e24" class="OCCURRENCE">signs</EVENT> were not found. <EVENT eid="e25" class="OCCURRENCE">Information</EVENT> regarding the patient's dietary <EVENT eid="e26" class="OCCURRENCE">intake</EVENT> in <TIMEX3 tid="t5" type="DURATION" value="P2W" temporalFunction="false">the last two weeks</TIMEX3> and weight <EVENT eid="e27" class="OCCURRENCE">change</EVENT> within <TIMEX3 tid="t6" type="DURATION" value="P6M" temporalFunction="false">the last 6 months</TIMEX3> could not be obtained, but his mother <EVENT eid="e28" class="REPORTING">claimed</EVENT> that the patient seemed to <EVENT eid="e29" class="OCCURRENCE">lose</EVENT> weight because he <EVENT eid="e30" class="OCCURRENCE">refused</EVENT> any food that had been <EVENT eid="e31" class="OCCURRENCE">offered</EVENT> to him; he only <EVENT eid="e32" class="OCCURRENCE">smoked</EVENT> and <EVENT eid="e33" class="OCCURRENCE">drank</EVENT> coffee. Albumin <EVENT eid="e34" class="OCCURRENCE">level</EVENT> was 3.6 gr/L with imbalanced electrolyte <EVENT eid="e35" class="OCCURRENCE">levels</EVENT>. <EVENT eid="e36" class="REPORTING">Signs</EVENT> of fluid <EVENT eid="e37" class="OCCURRENCE">accumulation</EVENT> were not found. According to the subjective global <EVENT eid="e38" class="OCCURRENCE">assessment</EVENT> (<EVENT eid="e39" class="OCCURRENCE">SGA</EVENT>) tool, the patient <EVENT eid="e40" class="OCCURRENCE">belonged</EVENT> to group C (severely <EVENT eid="e41" class="OCCURRENCE">malnourished</EVENT>). Energy and protein were <EVENT eid="e42" class="OCCURRENCE">given</EVENT> starting from 30 kcal/kg, <EVENT eid="e43" class="OCCURRENCE">increasing</EVENT> gradually to 50 kcal/kg, and 2 gp/kg divided into oral <EVENT eid="e44" class="OCCURRENCE">nutrition</EVENT> and oral nutrition <EVENT eid="e45" class="OCCURRENCE">supplements</EVENT> (<EVENT eid="e46" class="OCCURRENCE">ONS</EVENT>) with a 50:50 ratio. The patient was also <EVENT eid="e47" class="OCCURRENCE">given</EVENT> micronutrient supplementations, specifically <EVENT eid="e48" class="OCCURRENCE">vitamin</EVENT> A 100,000 units for <TIMEX3 tid="t7" type="DURATION" value="P1W" temporalFunction="false">the first week</TIMEX3>, <EVENT eid="e49" class="OCCURRENCE">vitamin</EVENT> C 100 mg <TIMEX3 tid="t8" type="SET" value="P1D" temporalFunction="true">3 times a day</TIMEX3>, and <EVENT eid="e50" class="OCCURRENCE">zinc</EVENT> 20 mg <TIMEX3 tid="t9" type="SET" value="P1D" temporalFunction="true">once a day</TIMEX3>. During <TIMEX3 tid="t10" type="DURATION" value="PXW" temporalFunction="true">the early weeks</TIMEX3> of <EVENT eid="e51" class="OCCURRENCE">hospitalization</EVENT>, the patient's weight <EVENT eid="e52" class="OCCURRENCE">loss</EVENT> <EVENT eid="e53" class="ASPECTUAL">continued</EVENT>. At the end of <TIMEX3 tid="t11" type="DURATION" value="P1W" temporalFunction="false">the second week</TIMEX3>, his body <EVENT eid="e54" class="OCCURRENCE">weight</EVENT> was 36 kilograms while his serum albumin <EVENT eid="e55" class="OCCURRENCE">level</EVENT> was 2.7 gr/L. On <TIMEX3 tid="t12" type="DATE" value="2020-10-14" temporalFunction="false">the 28 th day</TIMEX3>, the patient's body <EVENT eid="e56" class="OCCURRENCE">weight</EVENT> was 33 kilograms while his serum albumin <EVENT eid="e57" class="OCCURRENCE">level</EVENT> was 2.1 gr/L. Energy and protein <EVENT eid="e58" class="OCCURRENCE">intake</EVENT> was <EVENT eid="e59" class="ASPECTUAL">maintained</EVENT>, but the ratio of oral <EVENT eid="e60" class="OCCURRENCE">intake</EVENT> and ONS was <EVENT eid="e61" class="OCCURRENCE">modified</EVENT> to 70:30. During the <EVENT eid="e62" class="OCCURRENCE">treatment</EVENT>, the patient's appetite was <EVENT eid="e63" class="OCCURRENCE">unstable</EVENT>. The patient was also hardly <EVENT eid="e64" class="OCCURRENCE">cooperative</EVENT> with enteral <EVENT eid="e65" class="OCCURRENCE">access</EVENT>. The patient often <EVENT eid="e66" class="OCCURRENCE">writhed</EVENT> in pain and became more <EVENT eid="e67" class="OCCURRENCE">aggressive</EVENT>. The patient did not <EVENT eid="e68" class="OCCURRENCE">respond</EVENT> well to analgesics and sedations. Partially parenteral <EVENT eid="e69" class="OCCURRENCE">nutrition</EVENT> (<EVENT eid="e70" class="OCCURRENCE">PN</EVENT>) <EVENT eid="e71" class="OCCURRENCE">enriched</EVENT> with branched-chain amino acid (BCAA) was <EVENT eid="e72" class="OCCURRENCE">administered</EVENT> to <EVENT eid="e73" class="OCCURRENCE">support</EVENT> protein <EVENT eid="e74" class="OCCURRENCE">needs</EVENT>. However, his <EVENT eid="e75" class="OCCURRENCE">BMI</EVENT> <EVENT eid="e76" class="ASPECTUAL">continued</EVENT> to <EVENT eid="e77" class="OCCURRENCE">decline</EVENT>, and on <TIMEX3 tid="t13" type="DATE" value="2020-10-10" temporalFunction="false">the 42 nd day</TIMEX3>, his body <EVENT eid="e78" class="OCCURRENCE">weight</EVENT> <EVENT eid="e79" class="OCCURRENCE">dropped</EVENT> to 32 kilograms with a serum albumin <EVENT eid="e80" class="OCCURRENCE">level</EVENT> of 2 gr/L. On <TIMEX3 tid="t14" type="DATE" value="2020-11-21" temporalFunction="false">the 66 th day</TIMEX3>, granulation tissues <EVENT eid="e81" class="OCCURRENCE">appeared</EVENT> on the wound bed. <EVENT eid="e82" class="OCCURRENCE">Considering</EVENT> the mental and nutrition <EVENT eid="e83" class="OCCURRENCE">status</EVENT> of the patient, it was <EVENT eid="e84" class="OCCURRENCE">decided</EVENT> not to <EVENT eid="e85" class="ASPECTUAL">continue</EVENT> with the skin graft <EVENT eid="e86" class="ASPECTUAL">surgery</EVENT>. The patient had <EVENT eid="e87" class="OCCURRENCE">lost</EVENT> 24% of body weight (<EVENT eid="e88" class="OCCURRENCE">BMI</EVENT> 11.96 kg/m 2) and the serum albumin <EVENT eid="e89" class="OCCURRENCE">level</EVENT> was 2.5 gr/L. The patient <EVENT eid="e90" class="REPORTING">displayed</EVENT> severe muscle <EVENT eid="e91" class="OCCURRENCE">wasting</EVENT> and subcutaneous fat <EVENT eid="e92" class="OCCURRENCE">loss</EVENT>. However, the general and mental <EVENT eid="e93" class="OCCURRENCE">condition</EVENT> was relatively <EVENT eid="e94" class="OCCURRENCE">better</EVENT>. The patient was <EVENT eid="e95" class="OCCURRENCE">discharged</EVENT> from the hospital.&#13;
+  <TEXT>A 35-year-old mentally ill man was <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">transferred</EVENT> from a local psychiatric hospital after attempted <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">suicide</EVENT> by fire <TIMEX3 tid="t1" type="DATE" value="2020-09-13" temporalFunction="false">3 days</TIMEX3> before <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">admission</EVENT>. He acquired full-and partial-thickness <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">injury</EVENT> in approximately 38% of his TBSA, including face and neck (5%), both upper extremities (8%), right thigh (4%), left thigh and leg (3%), and most of his anterior and posterior trunk (16%). The patient was <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">hospitalized</EVENT> for <TIMEX3 tid="t2" type="DURATION" value="P66D" temporalFunction="false">66 days</TIMEX3> and underwent five debridement <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">surgeries</EVENT>. The psychiatric <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnosis</EVENT> was <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">schizophrenia</EVENT> type ICD 10 F20.3, <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">treated</EVENT> with <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">Haloperidol</EVENT> 1.5 mg and <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">Diazepam</EVENT> 5 mg <TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">daily</TIMEX3>. The patient was occasionally <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">restrained</EVENT> due to rebellious and self-destruction <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">behavior</EVENT>. The nutrition <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">management</EVENT> of this patient was <EVENT eid="e15" class="ASPECTUAL" comment="e3c:permanence=FINITE">started</EVENT> after <TIMEX3 tid="t4" type="DURATION" value="P1W" temporalFunction="false">a week</TIMEX3> of <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">hospitalization</EVENT>, which is considered late. In the initial nutrition <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">assessment</EVENT>, the patient was 40 kg <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">weight</EVENT> and 150 cm <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">tall</EVENT> thus the body mass <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">index</EVENT> (<EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">BMI</EVENT>) was 17,57 kg/m 2 or <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">underweight</EVENT>. Gastrointestinal <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">symptoms</EVENT> and <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">signs</EVENT> were not found. <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">Information</EVENT> regarding the patient's dietary <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">intake</EVENT> in <TIMEX3 tid="t5" type="DURATION" value="P2W" temporalFunction="false">the last two weeks</TIMEX3> and weight <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">change</EVENT> within <TIMEX3 tid="t6" type="DURATION" value="P6M" temporalFunction="false">the last 6 months</TIMEX3> could not be obtained, but his mother <EVENT eid="e28" class="REPORTING" comment="e3c:permanence=FINITE">claimed</EVENT> that the patient seemed to <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">lose</EVENT> weight because he <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">refused</EVENT> any food that had been <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">offered</EVENT> to him; he only <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">smoked</EVENT> and <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">drank</EVENT> coffee. Albumin <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> was 3.6 gr/L with imbalanced electrolyte <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">levels</EVENT>. <EVENT eid="e36" class="REPORTING" comment="e3c:permanence=FINITE">Signs</EVENT> of fluid <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">accumulation</EVENT> were not found. According to the subjective global <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">assessment</EVENT> (<EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">SGA</EVENT>) tool, the patient <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">belonged</EVENT> to group C (severely <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">malnourished</EVENT>). Energy and protein were <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">given</EVENT> starting from 30 kcal/kg, <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">increasing</EVENT> gradually to 50 kcal/kg, and 2 gp/kg divided into oral <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">nutrition</EVENT> and oral nutrition <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">supplements</EVENT> (<EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">ONS</EVENT>) with a 50:50 ratio. The patient was also <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">given</EVENT> micronutrient supplementations, specifically <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">vitamin</EVENT> A 100,000 units for <TIMEX3 tid="t7" type="DURATION" value="P1W" temporalFunction="false">the first week</TIMEX3>, <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">vitamin</EVENT> C 100 mg <TIMEX3 tid="t8" type="SET" value="P1D" temporalFunction="true">3 times a day</TIMEX3>, and <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">zinc</EVENT> 20 mg <TIMEX3 tid="t9" type="SET" value="P1D" temporalFunction="true">once a day</TIMEX3>. During <TIMEX3 tid="t10" type="DURATION" value="PXW" temporalFunction="true">the early weeks</TIMEX3> of <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">hospitalization</EVENT>, the patient's weight <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">loss</EVENT> <EVENT eid="e53" class="ASPECTUAL" comment="e3c:permanence=FINITE">continued</EVENT>. At the end of <TIMEX3 tid="t11" type="DURATION" value="P1W" temporalFunction="false">the second week</TIMEX3>, his body <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">weight</EVENT> was 36 kilograms while his serum albumin <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> was 2.7 gr/L. On <TIMEX3 tid="t12" type="DATE" value="2020-10-14" temporalFunction="false">the 28 th day</TIMEX3>, the patient's body <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">weight</EVENT> was 33 kilograms while his serum albumin <EVENT eid="e57" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> was 2.1 gr/L. Energy and protein <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">intake</EVENT> was <EVENT eid="e59" class="ASPECTUAL" comment="e3c:permanence=FINITE">maintained</EVENT>, but the ratio of oral <EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">intake</EVENT> and ONS was <EVENT eid="e61" class="OCCURRENCE" comment="e3c:permanence=FINITE">modified</EVENT> to 70:30. During the <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">treatment</EVENT>, the patient's appetite was <EVENT eid="e63" class="OCCURRENCE" comment="e3c:permanence=FINITE">unstable</EVENT>. The patient was also hardly <EVENT eid="e64" class="OCCURRENCE" comment="e3c:permanence=FINITE">cooperative</EVENT> with enteral <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">access</EVENT>. The patient often <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">writhed</EVENT> in pain and became more <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">aggressive</EVENT>. The patient did not <EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">respond</EVENT> well to analgesics and sedations. Partially parenteral <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">nutrition</EVENT> (<EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">PN</EVENT>) <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">enriched</EVENT> with branched-chain amino acid (BCAA) was <EVENT eid="e72" class="OCCURRENCE" comment="e3c:permanence=FINITE">administered</EVENT> to <EVENT eid="e73" class="OCCURRENCE" comment="e3c:permanence=FINITE">support</EVENT> protein <EVENT eid="e74" class="OCCURRENCE" comment="e3c:permanence=FINITE">needs</EVENT>. However, his <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">BMI</EVENT> <EVENT eid="e76" class="ASPECTUAL" comment="e3c:permanence=FINITE">continued</EVENT> to <EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">decline</EVENT>, and on <TIMEX3 tid="t13" type="DATE" value="2020-10-10" temporalFunction="false">the 42 nd day</TIMEX3>, his body <EVENT eid="e78" class="OCCURRENCE" comment="e3c:permanence=FINITE">weight</EVENT> <EVENT eid="e79" class="OCCURRENCE" comment="e3c:permanence=FINITE">dropped</EVENT> to 32 kilograms with a serum albumin <EVENT eid="e80" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> of 2 gr/L. On <TIMEX3 tid="t14" type="DATE" value="2020-11-21" temporalFunction="false">the 66 th day</TIMEX3>, granulation tissues <EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">appeared</EVENT> on the wound bed. <EVENT eid="e82" class="OCCURRENCE" comment="e3c:permanence=FINITE">Considering</EVENT> the mental and nutrition <EVENT eid="e83" class="OCCURRENCE" comment="e3c:permanence=FINITE">status</EVENT> of the patient, it was <EVENT eid="e84" class="OCCURRENCE" comment="e3c:permanence=FINITE">decided</EVENT> not to <EVENT eid="e85" class="ASPECTUAL" comment="e3c:permanence=FINITE">continue</EVENT> with the skin graft <EVENT eid="e86" class="ASPECTUAL" comment="e3c:permanence=FINITE">surgery</EVENT>. The patient had <EVENT eid="e87" class="OCCURRENCE" comment="e3c:permanence=FINITE">lost</EVENT> 24% of body weight (<EVENT eid="e88" class="OCCURRENCE" comment="e3c:permanence=FINITE">BMI</EVENT> 11.96 kg/m 2) and the serum albumin <EVENT eid="e89" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> was 2.5 gr/L. The patient <EVENT eid="e90" class="REPORTING" comment="e3c:permanence=FINITE">displayed</EVENT> severe muscle <EVENT eid="e91" class="OCCURRENCE" comment="e3c:permanence=FINITE">wasting</EVENT> and subcutaneous fat <EVENT eid="e92" class="OCCURRENCE" comment="e3c:permanence=FINITE">loss</EVENT>. However, the general and mental <EVENT eid="e93" class="OCCURRENCE" comment="e3c:permanence=FINITE">condition</EVENT> was relatively <EVENT eid="e94" class="OCCURRENCE" comment="e3c:permanence=FINITE">better</EVENT>. The patient was <EVENT eid="e95" class="OCCURRENCE" comment="e3c:permanence=FINITE">discharged</EVENT> from the hospital.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="BEFORE"/>
@@ -127,7 +127,7 @@
   <TLINK lid="l26" eventInstanceID="ei11" relatedToEventInstance="ei9" relType="SIMULTANEOUS"/>
   <TLINK lid="l27" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l28" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l29" eventInstanceID="ei13" relatedToEventInstance="ei12" relType="SIMULTANEOUS"/>
+  <TLINK lid="l29" eventInstanceID="ei13" relatedToEventInstance="ei12" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l30" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l31" eventInstanceID="ei14" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l32" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
@@ -138,19 +138,19 @@
   <TLINK lid="l38" eventInstanceID="ei17" relatedToEventInstance="ei29" relType="BEFORE"/>
   <TLINK lid="l39" eventInstanceID="ei17" relatedToEventInstance="ei38" relType="BEFORE"/>
   <TLINK lid="l40" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l41" eventInstanceID="ei18" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
+  <TLINK lid="l41" eventInstanceID="ei18" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l42" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l43" eventInstanceID="ei19" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
+  <TLINK lid="l43" eventInstanceID="ei19" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l44" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l45" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="SIMULTANEOUS"/>
-  <TLINK lid="l46" eventInstanceID="ei20" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
+  <TLINK lid="l46" eventInstanceID="ei20" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l47" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l48" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS"/>
   <TLINK lid="l49" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l50" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l51" eventInstanceID="ei23" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l52" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l53" eventInstanceID="ei24" relatedToEventInstance="ei23" relType="SIMULTANEOUS"/>
+  <TLINK lid="l53" eventInstanceID="ei24" relatedToEventInstance="ei23" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l54" eventInstanceID="ei25" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l55" eventInstanceID="ei26" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l56" timeID="t5" relatedToEventInstance="ei26" relType="INCLUDES"/>
@@ -173,7 +173,7 @@
   <TLINK lid="l73" eventInstanceID="ei34" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l74" eventInstanceID="ei34" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l75" eventInstanceID="ei35" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l76" eventInstanceID="ei35" relatedToEventInstance="ei34" relType="SIMULTANEOUS"/>
+  <TLINK lid="l76" eventInstanceID="ei35" relatedToEventInstance="ei34" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l77" eventInstanceID="ei36" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l78" eventInstanceID="ei37" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l79" eventInstanceID="ei37" relatedToEventInstance="ei17" relType="INCLUDES"/>
@@ -245,9 +245,9 @@
   <TLINK lid="l147" eventInstanceID="ei65" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l148" eventInstanceID="ei66" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l149" eventInstanceID="ei67" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l150" eventInstanceID="ei67" relatedToEventInstance="ei66" relType="SIMULTANEOUS"/>
+  <TLINK lid="l150" eventInstanceID="ei67" relatedToEventInstance="ei66" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l151" eventInstanceID="ei68" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l152" eventInstanceID="ei68" relatedToEventInstance="ei66" relType="SIMULTANEOUS"/>
+  <TLINK lid="l152" eventInstanceID="ei68" relatedToEventInstance="ei66" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l153" eventInstanceID="ei69" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l154" eventInstanceID="ei69" relatedToEventInstance="ei70" relType="SIMULTANEOUS"/>
   <TLINK lid="l155" eventInstanceID="ei69" relatedToEventInstance="ei72" relType="SIMULTANEOUS"/>
@@ -262,14 +262,14 @@
   <TLINK lid="l164" eventInstanceID="ei75" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l165" eventInstanceID="ei76" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l167" eventInstanceID="ei77" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l168" eventInstanceID="ei77" relatedToEventInstance="ei75" relType="SIMULTANEOUS"/>
+  <TLINK lid="l168" eventInstanceID="ei77" relatedToEventInstance="ei75" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l169" eventInstanceID="ei77" relatedToEventInstance="ei76" relType="INCLUDES"/>
   <TLINK lid="l170" timeID="t13" relatedToEventInstance="ei79" relType="INCLUDES"/>
   <TLINK lid="l171" eventInstanceID="ei78" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l172" eventInstanceID="ei78" relatedToTime="t13" relType="SIMULTANEOUS"/>
+  <TLINK lid="l172" eventInstanceID="ei78" relatedToTime="t13" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l173" eventInstanceID="ei79" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l174" eventInstanceID="ei80" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l175" eventInstanceID="ei80" relatedToTime="t13" relType="SIMULTANEOUS"/>
+  <TLINK lid="l175" eventInstanceID="ei80" relatedToTime="t13" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l176" timeID="t14" relatedToEventInstance="ei81" relType="INCLUDES"/>
   <TLINK lid="l177" timeID="t14" relatedToEventInstance="ei84" relType="BEFORE"/>
   <TLINK lid="l178" eventInstanceID="ei81" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -286,14 +286,14 @@
   <TLINK lid="l190" eventInstanceID="ei87" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l191" eventInstanceID="ei87" relatedToEventInstance="ei84" relType="INCLUDES"/>
   <TLINK lid="l192" eventInstanceID="ei88" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l193" eventInstanceID="ei88" relatedToEventInstance="ei87" relType="SIMULTANEOUS"/>
+  <TLINK lid="l193" eventInstanceID="ei88" relatedToEventInstance="ei87" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l194" eventInstanceID="ei89" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l195" eventInstanceID="ei89" relatedToEventInstance="ei87" relType="SIMULTANEOUS"/>
+  <TLINK lid="l195" eventInstanceID="ei89" relatedToEventInstance="ei87" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l196" eventInstanceID="ei90" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l197" eventInstanceID="ei91" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l198" eventInstanceID="ei91" relatedToEventInstance="ei87" relType="SIMULTANEOUS"/>
+  <TLINK lid="l198" eventInstanceID="ei91" relatedToEventInstance="ei87" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l199" eventInstanceID="ei92" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l200" eventInstanceID="ei92" relatedToEventInstance="ei91" relType="SIMULTANEOUS"/>
+  <TLINK lid="l200" eventInstanceID="ei92" relatedToEventInstance="ei91" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l201" eventInstanceID="ei93" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l202" eventInstanceID="ei93" relatedToEventInstance="ei94" relType="SIMULTANEOUS"/>
   <TLINK lid="l203" eventInstanceID="ei93" relatedToEventInstance="ei91" relType="INCLUDES"/>

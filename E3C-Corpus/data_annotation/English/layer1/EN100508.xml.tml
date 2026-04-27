@@ -2,65 +2,65 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2020-04-14T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-04-14</TIMEX3>
-  <TEXT>Male infant 9.5 month old was <EVENT eid="e1" class="OCCURRENCE">examined</EVENT> in the emergency department of our hospital because of an empty scrotum and the ipsilateral testis <EVENT eid="e2" class="OCCURRENCE">lying</EVENT> in a high iliac crest position. With the <EVENT eid="e3" class="OCCURRENCE">increase</EVENT> in intrabdominal pressure [<EVENT eid="e4" class="OCCURRENCE">crying</EVENT> etc.] there was an ever-increasing <EVENT eid="e5" class="OCCURRENCE">swelling</EVENT> with spiral course from the groin to ipsilateral iliac crest. On clinical <EVENT eid="e6" class="OCCURRENCE">examination</EVENT>, a reducible <EVENT eid="e7" class="OCCURRENCE">mass</EVENT> was present in the right ileac crest. The <EVENT eid="e8" class="OCCURRENCE">swelling</EVENT> looked like a spigelian <EVENT eid="e9" class="OCCURRENCE">hernia</EVENT> [4]. However no abdominal wall <EVENT eid="e10" class="OCCURRENCE">defect</EVENT> could be <EVENT eid="e11" class="REPORTING">palpated</EVENT> at that area. Moreover the ipsilateral scrotum was <EVENT eid="e12" class="OCCURRENCE">empty</EVENT> and the testis could be <EVENT eid="e13" class="REPORTING">palpated</EVENT> with difficulty <EVENT eid="e14" class="OCCURRENCE">lying</EVENT> in a high inguinal position. <EVENT eid="e15" class="OCCURRENCE">Ultrasonography</EVENT> <EVENT eid="e16" class="REPORTING">showed</EVENT> a <EVENT eid="e17" class="OCCURRENCE">loop</EVENT> of herniated small bowel and an undescended testis on the right. At <EVENT eid="e18" class="OCCURRENCE">operation</EVENT>, under general <EVENT eid="e19" class="OCCURRENCE">anesthesia</EVENT>, an extended transverse inguinal <EVENT eid="e20" class="OCCURRENCE">incision</EVENT> was made. Upon <EVENT eid="e21" class="OCCURRENCE">entering</EVENT> the inguinal canal a large hernia <EVENT eid="e22" class="OCCURRENCE">sac</EVENT> was <EVENT eid="e23" class="REPORTING">identified</EVENT>. This <EVENT eid="e24" class="OCCURRENCE">followed</EVENT> a course through the superficial inguinal ring, <EVENT eid="e25" class="OCCURRENCE">extended</EVENT> upwards to the anterior abdomninal wall below the subcutaneous plane and was <EVENT eid="e26" class="OCCURRENCE">fixed</EVENT> in the area of the right iliac crest. We <EVENT eid="e27" class="REPORTING">noticed</EVENT> that the <EVENT eid="e28" class="OCCURRENCE">hernia</EVENT> orifice was in a higher than normal <EVENT eid="e29" class="OCCURRENCE">position</EVENT> 5 cm from the pubic bone. This <EVENT eid="e30" class="OCCURRENCE">bulk</EVENT> was easily <EVENT eid="e31" class="OCCURRENCE">reduced</EVENT> back to the abdomen along with an ipsilateral mobile intravaginal testis. After careful <EVENT eid="e32" class="OCCURRENCE">isolation</EVENT> of the sac at a length of 3 cm the ipsilateral testis was <EVENT eid="e33" class="OCCURRENCE">isolated</EVENT>. The vas and the vessels were <EVENT eid="e34" class="OCCURRENCE">intravaginal</EVENT>, the gubernaculum was <EVENT eid="e35" class="OCCURRENCE">fixed</EVENT> in an ectopic <EVENT eid="e36" class="OCCURRENCE">position</EVENT> and the dorsal inguinal wall was <EVENT eid="e37" class="OCCURRENCE">lax</EVENT>. We <EVENT eid="e38" class="OCCURRENCE">removed</EVENT> the large <EVENT eid="e39" class="OCCURRENCE">sac</EVENT> after <EVENT eid="e40" class="OCCURRENCE">separating</EVENT> the vas and vessels and the testis. Moreover we <EVENT eid="e41" class="OCCURRENCE">strengthened</EVENT> the dorsal inguinal wall, <EVENT eid="e42" class="OCCURRENCE">fixated</EVENT> the testis in a subdartos pouch and <EVENT eid="e43" class="OCCURRENCE">closed</EVENT> the <EVENT eid="e44" class="OCCURRENCE">wound</EVENT>. Patient <EVENT eid="e45" class="OCCURRENCE">stayed</EVENT> for <TIMEX3 tid="t1" type="DURATION" value="P1D" temporalFunction="false">a day</TIMEX3> in the hospital. No <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true">postoperative</TIMEX3> <EVENT eid="e46" class="OCCURRENCE">complications</EVENT> happened. <TIMEX3 tid="t3" type="DATE" value="2018" temporalFunction="false">Three years later</TIMEX3> the boy was <EVENT eid="e47" class="OCCURRENCE">operated</EVENT> for left <EVENT eid="e48" class="OCCURRENCE">hydrocele</EVENT>. The boy remains in perfect <EVENT eid="e49" class="OCCURRENCE">health</EVENT> <TIMEX3 tid="t4" type="DATE" value="PRESENT_REF" temporalFunction="true">now</TIMEX3> <TIMEX3 tid="t5" type="DURATION" value="P5Y" temporalFunction="false">five years</TIMEX3> after the initial <EVENT eid="e50" class="OCCURRENCE">operation</EVENT>.&#13;
+  <TEXT>Male infant 9.5 month old was <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">examined</EVENT> in the emergency department of our hospital because of an empty scrotum and the ipsilateral testis <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">lying</EVENT> in a high iliac crest position. With the <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">increase</EVENT> in intrabdominal pressure [<EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">crying</EVENT> etc.] there was an ever-increasing <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">swelling</EVENT> with spiral course from the groin to ipsilateral iliac crest. On clinical <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT>, a reducible <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">mass</EVENT> was present in the right ileac crest. The <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">swelling</EVENT> looked like a spigelian <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">hernia</EVENT> [4]. However no abdominal wall <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">defect</EVENT> could be <EVENT eid="e11" class="REPORTING" comment="e3c:permanence=FINITE">palpated</EVENT> at that area. Moreover the ipsilateral scrotum was <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">empty</EVENT> and the testis could be <EVENT eid="e13" class="REPORTING" comment="e3c:permanence=FINITE">palpated</EVENT> with difficulty <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">lying</EVENT> in a high inguinal position. <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">Ultrasonography</EVENT> <EVENT eid="e16" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> a <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">loop</EVENT> of herniated small bowel and an undescended testis on the right. At <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">operation</EVENT>, under general <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">anesthesia</EVENT>, an extended transverse inguinal <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">incision</EVENT> was made. Upon <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">entering</EVENT> the inguinal canal a large hernia <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">sac</EVENT> was <EVENT eid="e23" class="REPORTING" comment="e3c:permanence=FINITE">identified</EVENT>. This <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">followed</EVENT> a course through the superficial inguinal ring, <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">extended</EVENT> upwards to the anterior abdomninal wall below the subcutaneous plane and was <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">fixed</EVENT> in the area of the right iliac crest. We <EVENT eid="e27" class="REPORTING" comment="e3c:permanence=FINITE">noticed</EVENT> that the <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">hernia</EVENT> orifice was in a higher than normal <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">position</EVENT> 5 cm from the pubic bone. This <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">bulk</EVENT> was easily <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">reduced</EVENT> back to the abdomen along with an ipsilateral mobile intravaginal testis. After careful <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">isolation</EVENT> of the sac at a length of 3 cm the ipsilateral testis was <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">isolated</EVENT>. The vas and the vessels were <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">intravaginal</EVENT>, the gubernaculum was <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">fixed</EVENT> in an ectopic <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">position</EVENT> and the dorsal inguinal wall was <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">lax</EVENT>. We <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">removed</EVENT> the large <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">sac</EVENT> after <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">separating</EVENT> the vas and vessels and the testis. Moreover we <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">strengthened</EVENT> the dorsal inguinal wall, <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">fixated</EVENT> the testis in a subdartos pouch and <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">closed</EVENT> the <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">wound</EVENT>. Patient <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">stayed</EVENT> for <TIMEX3 tid="t1" type="DURATION" value="P1D" temporalFunction="false">a day</TIMEX3> in the hospital. No <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postoperative</TIMEX3> <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">complications</EVENT> happened. <TIMEX3 tid="t3" type="DATE" value="2018" temporalFunction="false">Three years later</TIMEX3> the boy was <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">operated</EVENT> for left <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">hydrocele</EVENT>. The boy remains in perfect <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">health</EVENT> <TIMEX3 tid="t4" type="DATE" value="PRESENT_REF" temporalFunction="true">now</TIMEX3> <TIMEX3 tid="t5" type="DURATION" value="P5Y" temporalFunction="false">five years</TIMEX3> after the initial <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">operation</EVENT>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
   <TLINK lid="l4" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l5" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l6" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l7" eventInstanceID="ei5" relatedToEventInstance="ei4" relType="SIMULTANEOUS"/>
+  <TLINK lid="l7" eventInstanceID="ei5" relatedToEventInstance="ei4" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l8" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="BEFORE"/>
   <TLINK lid="l9" eventInstanceID="ei5" relatedToEventInstance="ei1" relType="BEFORE"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei3" relType="SIMULTANEOUS"/>
@@ -75,7 +75,7 @@
   <TLINK lid="l19" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l20" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l21" eventInstanceID="ei11" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
-  <TLINK lid="l22" eventInstanceID="ei11" relatedToEventInstance="ei10" relType="SIMULTANEOUS"/>
+  <TLINK lid="l22" eventInstanceID="ei11" relatedToEventInstance="ei10" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l23" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l24" eventInstanceID="ei12" relatedToEventInstance="ei13" relType="INCLUDES"/>
   <TLINK lid="l25" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
@@ -121,10 +121,10 @@
   <TLINK lid="l65" eventInstanceID="ei33" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l66" eventInstanceID="ei34" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l67" eventInstanceID="ei34" relatedToEventInstance="ei38" relType="INCLUDES"/>
-  <TLINK lid="l68" eventInstanceID="ei34" relatedToEventInstance="ei35" relType="SIMULTANEOUS"/>
+  <TLINK lid="l68" eventInstanceID="ei34" relatedToEventInstance="ei35" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l69" eventInstanceID="ei34" relatedToEventInstance="ei32" relType="INCLUDES"/>
-  <TLINK lid="l70" eventInstanceID="ei34" relatedToEventInstance="ei36" relType="SIMULTANEOUS"/>
-  <TLINK lid="l71" eventInstanceID="ei34" relatedToEventInstance="ei37" relType="SIMULTANEOUS"/>
+  <TLINK lid="l70" eventInstanceID="ei34" relatedToEventInstance="ei36" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l71" eventInstanceID="ei34" relatedToEventInstance="ei37" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l72" eventInstanceID="ei35" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l73" eventInstanceID="ei36" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l74" eventInstanceID="ei37" relatedToTime="t0" relType="BEFORE"/>

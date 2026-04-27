@@ -2,21 +2,21 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-06-09T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-06-09</TIMEX3>
-  <TEXT>Nous <EVENT eid="e1" class="OCCURRENCE">rapportons</EVENT> le cas d'une <EVENT eid="e2" class="OCCURRENCE">rupture</EVENT> septale apicale chez un patient de 70 ans <EVENT eid="e3" class="OCCURRENCE">admis</EVENT> aux urgences pour <EVENT eid="e4" class="OCCURRENCE">prise</EVENT> en charge d'un post <EVENT eid="e5" class="OCCURRENCE">infarctus</EVENT> de myocarde antéro-septal.
-C'est une <EVENT eid="e6" class="STATE">urgence</EVENT> extrême dont la <EVENT eid="e7" class="STATE">prise</EVENT> en charge doit être <EVENT eid="e8" class="STATE">multidisciplinaire</EVENT>.
-Nous mettons le point sur les <EVENT eid="e9" class="STATE">facteurs</EVENT> de risque et sur le <EVENT eid="e10" class="STATE">traitement</EVENT> à proposer pour ce <EVENT eid="e11" class="STATE">type</EVENT> de complication.
+  <TEXT>Nous <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">rapportons</EVENT> le cas d'une <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">rupture</EVENT> septale apicale chez un patient de 70 ans <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">admis</EVENT> aux urgences pour <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">prise</EVENT> en charge d'un post <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">infarctus</EVENT> de myocarde antéro-septal.
+C'est une <EVENT eid="e6" class="STATE" comment="e3c:permanence=FINITE">urgence</EVENT> extrême dont la <EVENT eid="e7" class="STATE" comment="e3c:permanence=FINITE">prise</EVENT> en charge doit être <EVENT eid="e8" class="STATE" comment="e3c:permanence=FINITE">multidisciplinaire</EVENT>.
+Nous mettons le point sur les <EVENT eid="e9" class="STATE" comment="e3c:permanence=FINITE">facteurs</EVENT> de risque et sur le <EVENT eid="e10" class="STATE" comment="e3c:permanence=FINITE">traitement</EVENT> à proposer pour ce <EVENT eid="e11" class="STATE" comment="e3c:permanence=FINITE">type</EVENT> de complication.
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="BEFORE"/>
@@ -27,10 +27,10 @@ Nous mettons le point sur les <EVENT eid="e9" class="STATE">facteurs</EVENT> de 
   <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei3" relType="BEGINS"/>
   <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei3" relType="BEFORE"/>
-  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l12" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l13" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l14" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l15" eventInstanceID="ei10" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l16" eventInstanceID="ei11" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l12" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l13" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l14" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l15" eventInstanceID="ei10" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l16" eventInstanceID="ei11" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
 </TimeML>

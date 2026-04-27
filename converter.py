@@ -8,6 +8,13 @@ from detector import FileFormat, detectFormat
 from dateutil import parser
 from dateutil.parser import ParserError
 
+def _addE3cComment(attrib: dict, key: str, value: str):
+    pair = f"e3c:{key}={value}"
+    if attrib.get("comment"):
+        attrib["comment"] = attrib["comment"] + "; " + pair
+    else:
+        attrib["comment"] = pair
+
 def translateEvent(event, cas_text, cas_tail):
     new_event =  {
         "tag": "EVENT",
@@ -51,11 +58,12 @@ def translateEvent(event, cas_text, cas_tail):
             new_link["attrib"]["relType"] = "IS_INCLUDED"  # equivalent
         elif event["docTimeRel"] == "OVERLAP":
             new_link["attrib"]["relType"] = "SIMULTANEOUS" # approximate
+            _addE3cComment(new_link["attrib"], "docTimeRel", "OVERLAP")
         links.append(new_link)
 
     ### MAKEINSTANCE ATTRIBUTES ###
     # contextualModality values
-    if hasattr(event, "contextualModality"):
+    if hasattr(event, "contextualModality") and event["contextualModality"]:
         if event["contextualModality"] == "HYPOTHETICAL-IF":
             new_event["instance"]["attrib"]["modality"] = "would" # approximate
         elif event["contextualModality"] == "HYPOTHETICAL-OTHER":
@@ -66,12 +74,19 @@ def translateEvent(event, cas_text, cas_tail):
             if new_event["attrib"].get("class") == "OCCURRENCE":
                 new_event["attrib"]["class"] = "STATE"            # approximate
         # Value not converted: ACTUAL
+        _addE3cComment(new_event["instance"]["attrib"], "contextualModality", event["contextualModality"])
     # permanence values
-    if hasattr(event, "permanence"):
+    if hasattr(event, "permanence") and event["permanence"]:
         if event["permanence"] == "PERMANENT":
             if new_event["attrib"].get("class") == "OCCURRENCE":
                 new_event["attrib"]["class"] = "STATE"            # approximate
         # Value not converted: FINITE
+        _addE3cComment(new_event["attrib"], "permanence", event["permanence"])
+    # contextualAspect values
+    if hasattr(event, "contextualAspect"):
+        if event["contextualAspect"] == "NOVEL" or event["contextualAspect"] == "INTERMITTENT":
+            _addE3cComment(new_event["instance"]["attrib"], "contextualAspect", event["contextualAspect"])
+        # N/A is the implicit default
     # polarity values
     if hasattr(event, "polarity"):
         new_event["instance"]["attrib"]["polarity"] = event["polarity"]  # direct
@@ -99,6 +114,7 @@ def translateEvent(event, cas_text, cas_tail):
                 new_link["attrib"]["relType"] = "BEFORE"         # direct
             elif link.role == "OVERLAP":
                 new_link["attrib"]["relType"] = "SIMULTANEOUS"   # approximate
+                _addE3cComment(new_link["attrib"], "role", "OVERLAP")
             elif link.role == "CONTAINS":
                 new_link["attrib"]["relType"] = "INCLUDES"       # equivalent
             elif link.role == "BEGINS-ON":
@@ -221,10 +237,15 @@ def translateTimex3(timex3, cas_text, cas_tail):
             new_timex3["attrib"]["type"] = "DURATION"          # direct
         elif timex3.timex3Class == "QUANTIFIER":
             new_timex3["attrib"]["type"] = "SET"               # approximate
+            _addE3cComment(new_timex3["attrib"], "timex3Class", "QUANTIFIER")
         elif timex3.timex3Class == "SET":
             new_timex3["attrib"]["type"] = "SET"               # direct
         elif timex3.timex3Class == "PREPOSTEXP":
             new_timex3["attrib"]["type"] = "DATE"              # approximate
+            _addE3cComment(new_timex3["attrib"], "timex3Class", "PREPOSTEXP")
+    # value loss
+    if hasattr(timex3, "value") and timex3.value is not None and timex3.value.lower() == "no_value":
+        _addE3cComment(new_timex3["attrib"], "value", "NO_VALUE")
     # temporalFunction
     new_timex3["attrib"]["temporalFunction"] = "true"          # default
     if hasattr(timex3, "timex3Class"):
@@ -241,7 +262,9 @@ def translateTimex3(timex3, cas_text, cas_tail):
     if hasattr(timex3, "functionInDocument"):
         if timex3.functionInDocument == "DOCTIME":
             new_timex3["attrib"]["functionInDocument"] = "CREATION_TIME"  # equivalent
-        # Values not converted: OTHER, SECTIONTIME
+        elif timex3.functionInDocument == "SECTIONTIME":
+            _addE3cComment(new_timex3["attrib"], "functionInDocument", "SECTIONTIME")
+        # OTHER is the implicit TimeML default
     # links
     if timex3.timexLink is not None and timex3.timexLink.elements is not None:
         for link in timex3.timexLink.elements:
@@ -265,6 +288,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
                 new_link["attrib"]["relType"] = "BEFORE"         # direct
             elif link.role == "OVERLAP":
                 new_link["attrib"]["relType"] = "SIMULTANEOUS"   # approximate
+                _addE3cComment(new_link["attrib"], "role", "OVERLAP")
             elif link.role == "SIMULTANEOUS":
                 new_link["attrib"]["relType"] = "SIMULTANEOUS"   # direct
             elif link.role == "CONTAINS":
@@ -310,6 +334,12 @@ def assignId(tml_elements):
                 link["attrib"]["relatedToTime"] = id_map.get(link["cas_target_id"], "")
             elif "relatedToEventInstance" in link["attrib"]:
                 link["attrib"]["relatedToEventInstance"] = id_map.get(link["cas_target_id"], "")
+    # Move comments to the end of attributes for better readability:
+    for element in tml_elements:
+        if "comment" in element["attrib"]:
+            element["attrib"]["comment"] = element["attrib"].pop("comment")
+        if element["tag"] == "EVENT" and "comment" in element["instance"]["attrib"]:
+            element["instance"]["attrib"]["comment"] = element["instance"]["attrib"].pop("comment")
 
 def sortTmlElements(element):
     if element["tag"] == "EVENT" or element["tag"] == "TIMEX3":

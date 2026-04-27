@@ -2,116 +2,116 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>Jason</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
-  <TEXT>Mujer de 58 años de edad que es <EVENT eid="e1" class="OCCURRENCE">estudiada</EVENT> por el Servicio de digestivo por <EVENT eid="e2" class="OCCURRENCE">dolor</EVENT> en hipocondrio derecho de <TIMEX3 tid="t1" type="DURATION" value="P6M" temporalFunction="false">6 meses</TIMEX3> de <EVENT eid="e3" class="OCCURRENCE">evolución</EVENT>, acompañándose de <EVENT eid="e4" class="OCCURRENCE">alteración</EVENT> del hábito intestinal. No presenta <EVENT eid="e5" class="OCCURRENCE">síndrome</EVENT> general ni <EVENT eid="e6" class="OCCURRENCE">clínica</EVENT> urológica.&#13;
-A la <EVENT eid="e7" class="OCCURRENCE">exploración</EVENT> física <EVENT eid="e8" class="REPORTING">impresiona</EVENT> de buen <EVENT eid="e9" class="OCCURRENCE">estado</EVENT> general, <EVENT eid="e10" class="OCCURRENCE">normohidratada</EVENT> y <EVENT eid="e11" class="OCCURRENCE">normocoloreada</EVENT> y con <EVENT eid="e12" class="OCCURRENCE">obesidad</EVENT> moderada. No existe <EVENT eid="e13" class="OCCURRENCE">hábito</EVENT> cushingoide ni <EVENT eid="e14" class="OCCURRENCE">estigmas</EVENT> de virilización. Las <EVENT eid="e15" class="OCCURRENCE">cifras</EVENT> tensionales son normales.&#13;
-La <EVENT eid="e16" class="OCCURRENCE">auscultación</EVENT> cardiopulmonar es normal. El abdomen es globuloso, blando y depresible, <EVENT eid="e17" class="OCCURRENCE">dificultando</EVENT> la <EVENT eid="e18" class="OCCURRENCE">palpación</EVENT> de posibles <EVENT eid="e19" class="OCCURRENCE">masas</EVENT> u <EVENT eid="e20" class="OCCURRENCE">organomegalias</EVENT>, mostrando leve <EVENT eid="e21" class="OCCURRENCE">dolor</EVENT> a la <EVENT eid="e22" class="OCCURRENCE">presión</EVENT> profunda en hipocondrio derecho, no presentando <EVENT eid="e23" class="OCCURRENCE">signo</EVENT> de Murphy.&#13;
-En cuanto a las <EVENT eid="e24" class="OCCURRENCE">exploraciones</EVENT> complementarias, el <EVENT eid="e25" class="OCCURRENCE">análisis</EVENT> rutinario bioquímico y hematológico, así como las <EVENT eid="e26" class="OCCURRENCE">pruebas</EVENT> de función suprarrenal se encuentran en rangos de normalidad.&#13;
-La <EVENT eid="e27" class="OCCURRENCE">ecografía</EVENT> <EVENT eid="e28" class="REPORTING">demuestra</EVENT> la presencia de una <EVENT eid="e29" class="OCCURRENCE">tumoración</EVENT> en el área suprarrenal derecha de aproximadamente 6x6 cm. No se <EVENT eid="e30" class="REPORTING">observan</EVENT> <EVENT eid="e31" class="OCCURRENCE">metástasis</EVENT> hepáticas.&#13;
-La <EVENT eid="e32" class="OCCURRENCE">TAC</EVENT> <EVENT eid="e33" class="REPORTING">confirma</EVENT> la <EVENT eid="e34" class="OCCURRENCE">masa</EVENT> referida, en íntimo <EVENT eid="e35" class="OCCURRENCE">contacto</EVENT> con la pared de vena cava inferior a la que aparentemente <EVENT eid="e36" class="OCCURRENCE">desplaza</EVENT>, sin poder <EVENT eid="e37" class="OCCURRENCE">descartarse</EVENT> <EVENT eid="e38" class="OCCURRENCE">infiltración</EVENT> de la misma. No existe <EVENT eid="e39" class="REPORTING">evidencia</EVENT> de <EVENT eid="e40" class="OCCURRENCE">afectación</EVENT> ganglionar retroperitoneal ni <EVENT eid="e41" class="OCCURRENCE">metástasis</EVENT> a otro nivel. No se <EVENT eid="e42" class="REPORTING">demuestra</EVENT> asimismo presencia de <EVENT eid="e43" class="OCCURRENCE">trombosis</EVENT> tumoral.&#13;
-Ante estos <EVENT eid="e44" class="OCCURRENCE">hallazgos</EVENT> se <EVENT eid="e45" class="OCCURRENCE">decide</EVENT> practicar <EVENT eid="e46" class="OCCURRENCE">RMN</EVENT> para una correcta <EVENT eid="e47" class="OCCURRENCE">definición</EVENT> de la afectación de tejidos vecinos, <EVENT eid="e48" class="REPORTING">informando</EVENT> de idénticos <EVENT eid="e49" class="OCCURRENCE">hallazgos</EVENT> de la TAC y sin poder <EVENT eid="e50" class="OCCURRENCE">predecir</EVENT> de modo definitivo la <EVENT eid="e51" class="OCCURRENCE">infiltración</EVENT> parietal.&#13;
-Con el diagnóstico de <EVENT eid="e52" class="OCCURRENCE">masa</EVENT> suprarrenal se <EVENT eid="e53" class="OCCURRENCE">decide</EVENT> <EVENT eid="e54" class="OCCURRENCE">intervención</EVENT>, que se lleva a cabo a través de una <EVENT eid="e55" class="OCCURRENCE">incisión</EVENT> subcostal derecha transperitoneal. Se <EVENT eid="e56" class="OCCURRENCE">aborda</EVENT> la región suprarrenal derecha, <EVENT eid="e57" class="REPORTING">evidenciándose</EVENT> una voluminosa <EVENT eid="e58" class="OCCURRENCE">tumoración</EVENT> a dicho nivel. Se <EVENT eid="e59" class="ASPECTUAL">inicia</EVENT> la <EVENT eid="e60" class="OCCURRENCE">disección</EVENT> de la misma, no <EVENT eid="e61" class="REPORTING">hallándose</EVENT> <EVENT eid="e62" class="OCCURRENCE">plano</EVENT> de separación en la zona de contacto con la pared lateral y posterior de vena cava, por lo que se <EVENT eid="e63" class="OCCURRENCE">decide</EVENT> <EVENT eid="e64" class="OCCURRENCE">exéresis</EVENT> de la misma tras <EVENT eid="e65" class="OCCURRENCE">control</EVENT> venoso proximal y distal a la masa y con <EVENT eid="e66" class="OCCURRENCE">sutura</EVENT> con polipropileno de la pared de la vena cava inferior.&#13;
-La paciente sigue un <EVENT eid="e67" class="OCCURRENCE">curso</EVENT> <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true">postoperatorio</TIMEX3> favorable, sin desarrollar <EVENT eid="e68" class="OCCURRENCE">complicaciones</EVENT>. Cursa <EVENT eid="e69" class="OCCURRENCE">alta</EVENT> <TIMEX3 tid="t3" type="DATE" value="XXXX-XX-XX" temporalFunction="true">al séptimo día postintervención</TIMEX3>.&#13;
-El <EVENT eid="e70" class="OCCURRENCE">estudio</EVENT> histológico macroscópico <EVENT eid="e71" class="REPORTING">demuestra</EVENT> una <EVENT eid="e72" class="OCCURRENCE">pieza</EVENT> de 6 x 8 cm. de consistencia elástica y fácil corte, de aspecto carnoso y coloración pardo-grisácea. Se <EVENT eid="e73" class="REPORTING">reconocen</EVENT> <EVENT eid="e74" class="OCCURRENCE">restos</EVENT> de tejido suprarrenal en periferia, de aspecto aparentemente normal.&#13;
-La <EVENT eid="e75" class="OCCURRENCE">microscopía</EVENT> nos <EVENT eid="e76" class="REPORTING">informa</EVENT> de una <EVENT eid="e77" class="OCCURRENCE">proliferación</EVENT> de elementos celulares de estirpe estromal, con núcleos pleomórficos de gran tamaño, con células multinucleadas que adoptan un <EVENT eid="e78" class="OCCURRENCE">patrón</EVENT> fascicular. El <EVENT eid="e79" class="OCCURRENCE">índice</EVENT> mitótico es elevado ( 7 m/ 10 campos de gran aumento). Existen <EVENT eid="e80" class="OCCURRENCE">zonas</EVENT> de necrosis intratumoral e <EVENT eid="e81" class="OCCURRENCE">invasión</EVENT> de tejido suprarrenal presente en área periférica.&#13;
-El diagnóstico definitivo es de <EVENT eid="e82" class="OCCURRENCE">LEIOMIOSARCOMA</EVENT> DE CAVA.&#13;
-En cuanto a la <EVENT eid="e83" class="OCCURRENCE">evolución</EVENT>, los <EVENT eid="e84" class="OCCURRENCE">controles</EVENT>, tanto analíticos como de imagen, realizados en <TIMEX3 tid="t4" type="DATE" value="X" temporalFunction="true">el período postquirúrgico precoz</TIMEX3> <EVENT eid="e85" class="REPORTING">muestran</EVENT> normalidad. Se <EVENT eid="e86" class="OCCURRENCE">remite</EVENT> el caso al Servicio de Oncología que <EVENT eid="e87" class="OCCURRENCE">decide</EVENT> <EVENT eid="e88" class="OCCURRENCE">tratamiento</EVENT> radioterápico de consolidación sobre lecho quirúrgico, <EVENT eid="e89" class="ASPECTUAL">iniciándose</EVENT> éste a <TIMEX3 tid="t5" type="DURATION" value="P40D" temporalFunction="false">los 40 días</TIMEX3> tras la <EVENT eid="e90" class="OCCURRENCE">intervención</EVENT>.&#13;
-Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TIMEX3 tid="t6" type="DURATION" value="P6M" temporalFunction="false">los seis</TIMEX3>, <TIMEX3 tid="t7" type="DURATION" value="P9M" temporalFunction="false">nueve</TIMEX3>, <TIMEX3 tid="t8" type="DURATION" value="P12M" temporalFunction="false">doce</TIMEX3> y <TIMEX3 tid="t9" type="DURATION" value="P24M" temporalFunction="false">veinticuatro meses</TIMEX3>, resultando todos ellos normales.&#13;
-<TIMEX3 tid="t10" type="DATE" value="PRESENT_REF" temporalFunction="true">Actualmente</TIMEX3> la paciente se encuentra <EVENT eid="e92" class="OCCURRENCE">viva</EVENT> y libre de <EVENT eid="e93" class="OCCURRENCE">enfermedad</EVENT>, tras <TIMEX3 tid="t11" type="DURATION" value="P28M" temporalFunction="false">28 meses</TIMEX3> de <EVENT eid="e94" class="OCCURRENCE">seguimiento</EVENT>.&#13;
+  <TEXT>Mujer de 58 años de edad que es <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudiada</EVENT> por el Servicio de digestivo por <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolor</EVENT> en hipocondrio derecho de <TIMEX3 tid="t1" type="DURATION" value="P6M" temporalFunction="false">6 meses</TIMEX3> de <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">evolución</EVENT>, acompañándose de <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">alteración</EVENT> del hábito intestinal. No presenta <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">síndrome</EVENT> general ni <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">clínica</EVENT> urológica.&#13;
+A la <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">exploración</EVENT> física <EVENT eid="e8" class="REPORTING" comment="e3c:permanence=FINITE">impresiona</EVENT> de buen <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">estado</EVENT> general, <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">normohidratada</EVENT> y <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">normocoloreada</EVENT> y con <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">obesidad</EVENT> moderada. No existe <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">hábito</EVENT> cushingoide ni <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">estigmas</EVENT> de virilización. Las <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">cifras</EVENT> tensionales son normales.&#13;
+La <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">auscultación</EVENT> cardiopulmonar es normal. El abdomen es globuloso, blando y depresible, <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">dificultando</EVENT> la <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">palpación</EVENT> de posibles <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">masas</EVENT> u <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">organomegalias</EVENT>, mostrando leve <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolor</EVENT> a la <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">presión</EVENT> profunda en hipocondrio derecho, no presentando <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">signo</EVENT> de Murphy.&#13;
+En cuanto a las <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">exploraciones</EVENT> complementarias, el <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">análisis</EVENT> rutinario bioquímico y hematológico, así como las <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">pruebas</EVENT> de función suprarrenal se encuentran en rangos de normalidad.&#13;
+La <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecografía</EVENT> <EVENT eid="e28" class="REPORTING" comment="e3c:permanence=FINITE">demuestra</EVENT> la presencia de una <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">tumoración</EVENT> en el área suprarrenal derecha de aproximadamente 6x6 cm. No se <EVENT eid="e30" class="REPORTING" comment="e3c:permanence=FINITE">observan</EVENT> <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">metástasis</EVENT> hepáticas.&#13;
+La <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">TAC</EVENT> <EVENT eid="e33" class="REPORTING" comment="e3c:permanence=FINITE">confirma</EVENT> la <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">masa</EVENT> referida, en íntimo <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">contacto</EVENT> con la pared de vena cava inferior a la que aparentemente <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">desplaza</EVENT>, sin poder <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">descartarse</EVENT> <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">infiltración</EVENT> de la misma. No existe <EVENT eid="e39" class="REPORTING" comment="e3c:permanence=FINITE">evidencia</EVENT> de <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">afectación</EVENT> ganglionar retroperitoneal ni <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">metástasis</EVENT> a otro nivel. No se <EVENT eid="e42" class="REPORTING" comment="e3c:permanence=FINITE">demuestra</EVENT> asimismo presencia de <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">trombosis</EVENT> tumoral.&#13;
+Ante estos <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">hallazgos</EVENT> se <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">decide</EVENT> practicar <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">RMN</EVENT> para una correcta <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">definición</EVENT> de la afectación de tejidos vecinos, <EVENT eid="e48" class="REPORTING" comment="e3c:permanence=FINITE">informando</EVENT> de idénticos <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">hallazgos</EVENT> de la TAC y sin poder <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">predecir</EVENT> de modo definitivo la <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">infiltración</EVENT> parietal.&#13;
+Con el diagnóstico de <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">masa</EVENT> suprarrenal se <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">decide</EVENT> <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">intervención</EVENT>, que se lleva a cabo a través de una <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">incisión</EVENT> subcostal derecha transperitoneal. Se <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">aborda</EVENT> la región suprarrenal derecha, <EVENT eid="e57" class="REPORTING" comment="e3c:permanence=FINITE">evidenciándose</EVENT> una voluminosa <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">tumoración</EVENT> a dicho nivel. Se <EVENT eid="e59" class="ASPECTUAL" comment="e3c:permanence=FINITE">inicia</EVENT> la <EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">disección</EVENT> de la misma, no <EVENT eid="e61" class="REPORTING" comment="e3c:permanence=FINITE">hallándose</EVENT> <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">plano</EVENT> de separación en la zona de contacto con la pared lateral y posterior de vena cava, por lo que se <EVENT eid="e63" class="OCCURRENCE" comment="e3c:permanence=FINITE">decide</EVENT> <EVENT eid="e64" class="OCCURRENCE" comment="e3c:permanence=FINITE">exéresis</EVENT> de la misma tras <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">control</EVENT> venoso proximal y distal a la masa y con <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">sutura</EVENT> con polipropileno de la pared de la vena cava inferior.&#13;
+La paciente sigue un <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">curso</EVENT> <TIMEX3 tid="t2" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postoperatorio</TIMEX3> favorable, sin desarrollar <EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">complicaciones</EVENT>. Cursa <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">alta</EVENT> <TIMEX3 tid="t3" type="DATE" value="XXXX-XX-XX" temporalFunction="true">al séptimo día postintervención</TIMEX3>.&#13;
+El <EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> histológico macroscópico <EVENT eid="e71" class="REPORTING" comment="e3c:permanence=FINITE">demuestra</EVENT> una <EVENT eid="e72" class="OCCURRENCE" comment="e3c:permanence=FINITE">pieza</EVENT> de 6 x 8 cm. de consistencia elástica y fácil corte, de aspecto carnoso y coloración pardo-grisácea. Se <EVENT eid="e73" class="REPORTING" comment="e3c:permanence=FINITE">reconocen</EVENT> <EVENT eid="e74" class="OCCURRENCE" comment="e3c:permanence=FINITE">restos</EVENT> de tejido suprarrenal en periferia, de aspecto aparentemente normal.&#13;
+La <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">microscopía</EVENT> nos <EVENT eid="e76" class="REPORTING" comment="e3c:permanence=FINITE">informa</EVENT> de una <EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">proliferación</EVENT> de elementos celulares de estirpe estromal, con núcleos pleomórficos de gran tamaño, con células multinucleadas que adoptan un <EVENT eid="e78" class="OCCURRENCE" comment="e3c:permanence=FINITE">patrón</EVENT> fascicular. El <EVENT eid="e79" class="OCCURRENCE" comment="e3c:permanence=FINITE">índice</EVENT> mitótico es elevado ( 7 m/ 10 campos de gran aumento). Existen <EVENT eid="e80" class="OCCURRENCE" comment="e3c:permanence=FINITE">zonas</EVENT> de necrosis intratumoral e <EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">invasión</EVENT> de tejido suprarrenal presente en área periférica.&#13;
+El diagnóstico definitivo es de <EVENT eid="e82" class="OCCURRENCE" comment="e3c:permanence=FINITE">LEIOMIOSARCOMA</EVENT> DE CAVA.&#13;
+En cuanto a la <EVENT eid="e83" class="OCCURRENCE" comment="e3c:permanence=FINITE">evolución</EVENT>, los <EVENT eid="e84" class="OCCURRENCE" comment="e3c:permanence=FINITE">controles</EVENT>, tanto analíticos como de imagen, realizados en <TIMEX3 tid="t4" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">el período postquirúrgico precoz</TIMEX3> <EVENT eid="e85" class="REPORTING" comment="e3c:permanence=FINITE">muestran</EVENT> normalidad. Se <EVENT eid="e86" class="OCCURRENCE" comment="e3c:permanence=FINITE">remite</EVENT> el caso al Servicio de Oncología que <EVENT eid="e87" class="OCCURRENCE" comment="e3c:permanence=FINITE">decide</EVENT> <EVENT eid="e88" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> radioterápico de consolidación sobre lecho quirúrgico, <EVENT eid="e89" class="ASPECTUAL" comment="e3c:permanence=FINITE">iniciándose</EVENT> éste a <TIMEX3 tid="t5" type="DURATION" value="P40D" temporalFunction="false">los 40 días</TIMEX3> tras la <EVENT eid="e90" class="OCCURRENCE" comment="e3c:permanence=FINITE">intervención</EVENT>.&#13;
+Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE" comment="e3c:permanence=FINITE">controles</EVENT> a <TIMEX3 tid="t6" type="DURATION" value="P6M" temporalFunction="false">los seis</TIMEX3>, <TIMEX3 tid="t7" type="DURATION" value="P9M" temporalFunction="false">nueve</TIMEX3>, <TIMEX3 tid="t8" type="DURATION" value="P12M" temporalFunction="false">doce</TIMEX3> y <TIMEX3 tid="t9" type="DURATION" value="P24M" temporalFunction="false">veinticuatro meses</TIMEX3>, resultando todos ellos normales.&#13;
+<TIMEX3 tid="t10" type="DATE" value="PRESENT_REF" temporalFunction="true">Actualmente</TIMEX3> la paciente se encuentra <EVENT eid="e92" class="OCCURRENCE" comment="e3c:permanence=FINITE">viva</EVENT> y libre de <EVENT eid="e93" class="OCCURRENCE" comment="e3c:permanence=FINITE">enfermedad</EVENT>, tras <TIMEX3 tid="t11" type="DURATION" value="P28M" temporalFunction="false">28 meses</TIMEX3> de <EVENT eid="e94" class="OCCURRENCE" comment="e3c:permanence=FINITE">seguimiento</EVENT>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=NOVEL"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
@@ -122,7 +122,7 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei1" relType="INCLUDES"/>
   <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei7" relType="INCLUDES"/>
-  <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
+  <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l12" eventInstanceID="ei5" relatedToEventInstance="ei1" relType="INCLUDES"/>
   <TLINK lid="l13" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l14" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
@@ -136,7 +136,7 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l22" eventInstanceID="ei12" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l23" eventInstanceID="ei12" relatedToEventInstance="ei7" relType="INCLUDES"/>
   <TLINK lid="l24" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l25" eventInstanceID="ei13" relatedToEventInstance="ei14" relType="SIMULTANEOUS"/>
+  <TLINK lid="l25" eventInstanceID="ei13" relatedToEventInstance="ei14" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l26" eventInstanceID="ei13" relatedToEventInstance="ei7" relType="INCLUDES"/>
   <TLINK lid="l27" eventInstanceID="ei13" relatedToEventInstance="ei15" relType="INCLUDES"/>
   <TLINK lid="l28" eventInstanceID="ei14" relatedToTime="t0" relType="BEFORE"/>
@@ -168,7 +168,7 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l54" eventInstanceID="ei29" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l55" eventInstanceID="ei29" relatedToEventInstance="ei27" relType="INCLUDES"/>
   <TLINK lid="l56" eventInstanceID="ei30" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l57" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="SIMULTANEOUS"/>
+  <TLINK lid="l57" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l58" eventInstanceID="ei30" relatedToEventInstance="ei32" relType="BEFORE"/>
   <TLINK lid="l59" eventInstanceID="ei31" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l60" eventInstanceID="ei32" relatedToTime="t0" relType="BEFORE"/>
@@ -184,15 +184,15 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l70" eventInstanceID="ei38" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l71" eventInstanceID="ei38" relatedToEventInstance="ei37" relType="INCLUDES"/>
   <TLINK lid="l72" eventInstanceID="ei39" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l73" eventInstanceID="ei39" relatedToEventInstance="ei40" relType="SIMULTANEOUS"/>
+  <TLINK lid="l73" eventInstanceID="ei39" relatedToEventInstance="ei40" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l74" eventInstanceID="ei39" relatedToEventInstance="ei42" relType="INCLUDES"/>
   <TLINK lid="l75" eventInstanceID="ei39" relatedToEventInstance="ei32" relType="INCLUDES"/>
-  <TLINK lid="l76" eventInstanceID="ei39" relatedToEventInstance="ei41" relType="SIMULTANEOUS"/>
+  <TLINK lid="l76" eventInstanceID="ei39" relatedToEventInstance="ei41" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l77" eventInstanceID="ei40" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l78" eventInstanceID="ei41" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l79" eventInstanceID="ei42" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l80" eventInstanceID="ei42" relatedToEventInstance="ei45" relType="BEFORE"/>
-  <TLINK lid="l81" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="SIMULTANEOUS"/>
+  <TLINK lid="l81" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l82" eventInstanceID="ei43" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l83" eventInstanceID="ei44" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l84" eventInstanceID="ei44" relatedToEventInstance="ei45" relType="BEFORE"/>
@@ -228,7 +228,7 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l115" eventInstanceID="ei60" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l116" eventInstanceID="ei60" relatedToEventInstance="ei63" relType="BEFORE"/>
   <TLINK lid="l117" eventInstanceID="ei60" relatedToEventInstance="ei59" relType="BEGINS"/>
-  <TLINK lid="l118" eventInstanceID="ei60" relatedToEventInstance="ei62" relType="SIMULTANEOUS"/>
+  <TLINK lid="l118" eventInstanceID="ei60" relatedToEventInstance="ei62" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l119" eventInstanceID="ei60" relatedToEventInstance="ei61" relType="INCLUDES"/>
   <TLINK lid="l120" eventInstanceID="ei61" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l121" eventInstanceID="ei62" relatedToTime="t0" relType="BEFORE"/>
@@ -266,7 +266,7 @@ Se realizaron nuevos <EVENT eid="e91" class="OCCURRENCE">controles</EVENT> a <TI
   <TLINK lid="l153" eventInstanceID="ei79" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l154" eventInstanceID="ei80" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l155" eventInstanceID="ei80" relatedToEventInstance="ei79" relType="INCLUDES"/>
-  <TLINK lid="l156" eventInstanceID="ei80" relatedToEventInstance="ei81" relType="SIMULTANEOUS"/>
+  <TLINK lid="l156" eventInstanceID="ei80" relatedToEventInstance="ei81" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l157" eventInstanceID="ei81" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l158" eventInstanceID="ei82" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l159" eventInstanceID="ei82" relatedToEventInstance="ei80" relType="INCLUDES"/>

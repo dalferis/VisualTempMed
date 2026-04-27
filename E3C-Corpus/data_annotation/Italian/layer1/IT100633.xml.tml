@@ -2,24 +2,24 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>manuela</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2016-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2016-12-31</TIMEX3>
-  <TEXT>Caucasico di 68 anni viene sottoposto a <EVENT eid="e1" class="OCCURRENCE">coronarografia</EVENT> <TIMEX3 tid="t1" type="DURATION" value="PT1H" temporalFunction="false">circa un’ora</TIMEX3> dopo la comparsa di <EVENT eid="e2" class="OCCURRENCE">sintomi</EVENT> di IMA. Viene praticata <EVENT eid="e3" class="OCCURRENCE">PTCA</EVENT> primaria. Dopo <TIMEX3 tid="t2" type="DURATION" value="P6D" temporalFunction="false">6 giorni</TIMEX3> dalla <EVENT eid="e4" class="OCCURRENCE">procedura</EVENT>, comparsa di <EVENT eid="e5" class="OCCURRENCE">dolore</EVENT> alle dita dei piedi con <EVENT eid="e6" class="OCCURRENCE">cianosi</EVENT> e <EVENT eid="e7" class="OCCURRENCE">marezzatura</EVENT>. Progressivo <EVENT eid="e8" class="OCCURRENCE">peggioramento</EVENT> del quadro periferico fino alla comparsa di <EVENT eid="e9" class="OCCURRENCE">aree</EVENT> di necrosi parcellari alle dita dei piedi. Incremento della <EVENT eid="e10" class="OCCURRENCE">creatinina</EVENT> (<EVENT eid="e11" class="OCCURRENCE">Cr</EVENT>.:3.2 mg%). Come da <EVENT eid="e12" class="OCCURRENCE">consulenza</EVENT> chirurgica, si procede ad <EVENT eid="e13" class="OCCURRENCE">amputazione</EVENT> di quattro dita del piede sx e due del piede dx. Al <EVENT eid="e14" class="OCCURRENCE">riscontro</EVENT> istologico <EVENT eid="e15" class="OCCURRENCE">quadro</EVENT> di embolizzazione da cristalli di colesterolo. <TIMEX3 tid="t3" type="DURATION" value="P2M" temporalFunction="false">Nei due mesi successivi</TIMEX3> progressivo <EVENT eid="e16" class="OCCURRENCE">recupero</EVENT> della funzione renale.&#13;
+  <TEXT>Caucasico di 68 anni viene sottoposto a <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">coronarografia</EVENT> <TIMEX3 tid="t1" type="DURATION" value="PT1H" temporalFunction="false">circa un’ora</TIMEX3> dopo la comparsa di <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">sintomi</EVENT> di IMA. Viene praticata <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">PTCA</EVENT> primaria. Dopo <TIMEX3 tid="t2" type="DURATION" value="P6D" temporalFunction="false">6 giorni</TIMEX3> dalla <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">procedura</EVENT>, comparsa di <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">dolore</EVENT> alle dita dei piedi con <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">cianosi</EVENT> e <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">marezzatura</EVENT>. Progressivo <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">peggioramento</EVENT> del quadro periferico fino alla comparsa di <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">aree</EVENT> di necrosi parcellari alle dita dei piedi. Incremento della <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">creatinina</EVENT> (<EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">Cr</EVENT>.:3.2 mg%). Come da <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">consulenza</EVENT> chirurgica, si procede ad <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">amputazione</EVENT> di quattro dita del piede sx e due del piede dx. Al <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">riscontro</EVENT> istologico <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">quadro</EVENT> di embolizzazione da cristalli di colesterolo. <TIMEX3 tid="t3" type="DURATION" value="P2M" temporalFunction="false">Nei due mesi successivi</TIMEX3> progressivo <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">recupero</EVENT> della funzione renale.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei3" relType="BEFORE"/>
   <TLINK lid="l3" timeID="t1" relatedToEventInstance="ei1" relType="BEGINS"/>

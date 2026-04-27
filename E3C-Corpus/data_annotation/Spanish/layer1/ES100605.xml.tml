@@ -2,36 +2,36 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
-  <TEXT>Varón de 16 años de edad, en <EVENT eid="e1" class="OCCURRENCE">tratamiento</EVENT> quimioterápico por <EVENT eid="e2" class="OCCURRENCE">enfermedad</EVENT> de Hodgkin de carácter recidivante. En el curso de dicho <EVENT eid="e3" class="OCCURRENCE">tratamiento</EVENT>, el paciente <EVENT eid="e4" class="REPORTING">mostró</EVENT> <EVENT eid="e5" class="REPORTING">signos</EVENT> de <EVENT eid="e6" class="OCCURRENCE">hemorragia</EVENT> digestiva (<EVENT eid="e7" class="OCCURRENCE">melenas</EVENT>), acompañados de una intensa <EVENT eid="e8" class="OCCURRENCE">elevación</EVENT> de las transaminasas y una importante <EVENT eid="e9" class="OCCURRENCE">alteración</EVENT> en las <EVENT eid="e10" class="OCCURRENCE">pruebas</EVENT> de coagulación sanguínea (<EVENT eid="e11" class="OCCURRENCE">actividad</EVENT> de protombina). Dicho paciente <EVENT eid="e12" class="OCCURRENCE">falleció</EVENT> a <TIMEX3 tid="t1" type="DURATION" value="PXD" temporalFunction="true">los pocos días</TIMEX3>, por un cuadro de <EVENT eid="e13" class="OCCURRENCE">insuficiencia</EVENT> hepática aguda, con <EVENT eid="e14" class="REPORTING">signos</EVENT> de <EVENT eid="e15" class="OCCURRENCE">encefalopatía</EVENT> y <EVENT eid="e16" class="OCCURRENCE">hemorragia</EVENT> digestiva masiva.&#13;
-En la <EVENT eid="e17" class="OCCURRENCE">necropsia</EVENT> se <EVENT eid="e18" class="REPORTING">observó</EVENT> un <EVENT eid="e19" class="OCCURRENCE">daño</EVENT> hepático difuso, acompañado de <EVENT eid="e20" class="OCCURRENCE">lesiones</EVENT> focales en el tercio inferior del esófago. El <EVENT eid="e21" class="OCCURRENCE">estudio</EVENT> histológico <EVENT eid="e22" class="REPORTING">demostró</EVENT>, en ambos órganos, una <EVENT eid="e23" class="OCCURRENCE">lesión</EVENT> inflamatoria de carácter necrotizante, <EVENT eid="e24" class="REPORTING">evidenciándose</EVENT> <EVENT eid="e25" class="OCCURRENCE">cambios</EVENT> citopáticos propios de infección herpética, consistentes en <EVENT eid="e26" class="OCCURRENCE">imágenes</EVENT> de multinucleación y presencia de <EVENT eid="e27" class="OCCURRENCE">cuerpos</EVENT> de Cowdry tipo A.&#13;
+  <TEXT>Varón de 16 años de edad, en <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> quimioterápico por <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">enfermedad</EVENT> de Hodgkin de carácter recidivante. En el curso de dicho <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT>, el paciente <EVENT eid="e4" class="REPORTING" comment="e3c:permanence=FINITE">mostró</EVENT> <EVENT eid="e5" class="REPORTING" comment="e3c:permanence=FINITE">signos</EVENT> de <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">hemorragia</EVENT> digestiva (<EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">melenas</EVENT>), acompañados de una intensa <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">elevación</EVENT> de las transaminasas y una importante <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">alteración</EVENT> en las <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">pruebas</EVENT> de coagulación sanguínea (<EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">actividad</EVENT> de protombina). Dicho paciente <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">falleció</EVENT> a <TIMEX3 tid="t1" type="DURATION" value="PXD" temporalFunction="true">los pocos días</TIMEX3>, por un cuadro de <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">insuficiencia</EVENT> hepática aguda, con <EVENT eid="e14" class="REPORTING" comment="e3c:permanence=FINITE">signos</EVENT> de <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">encefalopatía</EVENT> y <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">hemorragia</EVENT> digestiva masiva.&#13;
+En la <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">necropsia</EVENT> se <EVENT eid="e18" class="REPORTING" comment="e3c:permanence=FINITE">observó</EVENT> un <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">daño</EVENT> hepático difuso, acompañado de <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesiones</EVENT> focales en el tercio inferior del esófago. El <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> histológico <EVENT eid="e22" class="REPORTING" comment="e3c:permanence=FINITE">demostró</EVENT>, en ambos órganos, una <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesión</EVENT> inflamatoria de carácter necrotizante, <EVENT eid="e24" class="REPORTING" comment="e3c:permanence=FINITE">evidenciándose</EVENT> <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">cambios</EVENT> citopáticos propios de infección herpética, consistentes en <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">imágenes</EVENT> de multinucleación y presencia de <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">cuerpos</EVENT> de Cowdry tipo A.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei3" relType="SIMULTANEOUS"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>

@@ -2,33 +2,33 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>manuela</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2014-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2014-12-31</TIMEX3>
-  <TEXT>Uomo di 76 anni, <EVENT eid="e1" class="OCCURRENCE">giungeva</EVENT> alla nostra <EVENT eid="e2" class="OCCURRENCE">osservazione</EVENT> per episodio di <EVENT eid="e3" class="OCCURRENCE">perdita</EVENT> di coscienza acuto, (sospetto <EVENT eid="e4" class="OCCURRENCE">T.I.A</EVENT>.). Veniva <EVENT eid="e5" class="REPORTING">riferito</EVENT> dai familiari, un <EVENT eid="e6" class="OCCURRENCE">decadimento</EVENT> cognitivo progressivo, <EVENT eid="e7" class="ASPECTUAL">iniziato</EVENT> circa <TIMEX3 tid="t1" type="DATE" value="2012" temporalFunction="false">2 anni prima</TIMEX3>, occasionali episodi di <EVENT eid="e8" class="OCCURRENCE">allucinazioni</EVENT> visive ed <EVENT eid="e9" class="OCCURRENCE">idee</EVENT> di riferimento. Dopo l’<EVENT eid="e10" class="OCCURRENCE">esame</EVENT> clinico, venivano eseguiti <EVENT eid="e11" class="OCCURRENCE">esami</EVENT> ematici e strumentali (fra cui <EVENT eid="e12" class="OCCURRENCE">EEG</EVENT>, <EVENT eid="e13" class="OCCURRENCE">TAC</EVENT> cranio, <EVENT eid="e14" class="OCCURRENCE">ecocolordoppler</EVENT> TSA, <EVENT eid="e15" class="OCCURRENCE">ecocardiogramma</EVENT>, <EVENT eid="e16" class="OCCURRENCE">rx</EVENT> torace) ed inoltre veniva eseguita una <EVENT eid="e17" class="OCCURRENCE">VMD</EVENT>. La <EVENT eid="e18" class="OCCURRENCE">TAC</EVENT> <EVENT eid="e19" class="REPORTING">evidenziava</EVENT>, fra l’altro, le <EVENT eid="e20" class="OCCURRENCE">calcificazioni</EVENT> dei nuclei lenticolari e a livello cerebellare, tipiche della malattia di <EVENT eid="e21" class="OCCURRENCE">Fahr</EVENT>. Veniva quindi <EVENT eid="e22" class="ASPECTUAL">iniziata</EVENT> terapia con vitamina D3, <EVENT eid="e23" class="OCCURRENCE">citicolina</EVENT> 500 mgx2/<TIMEX3 tid="t2" type="SET" value="P1D" temporalFunction="true">die</TIMEX3>, <EVENT eid="e24" class="OCCURRENCE">Aloperidolo</EVENT> 0,2% 4 gocce/<TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">die</TIMEX3>, ottenendo una <EVENT eid="e25" class="OCCURRENCE">riduzione</EVENT> di frequenza degli episodi di allucinazioni.&#13;
+  <TEXT>Uomo di 76 anni, <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">giungeva</EVENT> alla nostra <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">osservazione</EVENT> per episodio di <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">perdita</EVENT> di coscienza acuto, (sospetto <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">T.I.A</EVENT>.). Veniva <EVENT eid="e5" class="REPORTING" comment="e3c:permanence=FINITE">riferito</EVENT> dai familiari, un <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">decadimento</EVENT> cognitivo progressivo, <EVENT eid="e7" class="ASPECTUAL" comment="e3c:permanence=FINITE">iniziato</EVENT> circa <TIMEX3 tid="t1" type="DATE" value="2012" temporalFunction="false">2 anni prima</TIMEX3>, occasionali episodi di <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">allucinazioni</EVENT> visive ed <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">idee</EVENT> di riferimento. Dopo l’<EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">esame</EVENT> clinico, venivano eseguiti <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">esami</EVENT> ematici e strumentali (fra cui <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">EEG</EVENT>, <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">TAC</EVENT> cranio, <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecocolordoppler</EVENT> TSA, <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecocardiogramma</EVENT>, <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">rx</EVENT> torace) ed inoltre veniva eseguita una <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">VMD</EVENT>. La <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">TAC</EVENT> <EVENT eid="e19" class="REPORTING" comment="e3c:permanence=FINITE">evidenziava</EVENT>, fra l’altro, le <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">calcificazioni</EVENT> dei nuclei lenticolari e a livello cerebellare, tipiche della malattia di <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">Fahr</EVENT>. Veniva quindi <EVENT eid="e22" class="ASPECTUAL" comment="e3c:permanence=FINITE">iniziata</EVENT> terapia con vitamina D3, <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">citicolina</EVENT> 500 mgx2/<TIMEX3 tid="t2" type="SET" value="P1D" temporalFunction="true">die</TIMEX3>, <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">Aloperidolo</EVENT> 0,2% 4 gocce/<TIMEX3 tid="t3" type="SET" value="P1D" temporalFunction="true">die</TIMEX3>, ottenendo una <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">riduzione</EVENT> di frequenza degli episodi di allucinazioni.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>

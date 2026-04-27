@@ -2,32 +2,32 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2016-01-23T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2016-01-23</TIMEX3>
-  <TEXT>We <EVENT eid="e1" class="OCCURRENCE">present</EVENT> a case of a 77-year-old Caucasian woman with obstructive <EVENT eid="e2" class="OCCURRENCE">jaundice</EVENT>. Laboratory <EVENT eid="e3" class="OCCURRENCE">tests</EVENT> <EVENT eid="e4" class="REPORTING">revealed</EVENT> that she had elevated bilirubin and liver enzyme <EVENT eid="e5" class="OCCURRENCE">levels</EVENT>. A computed tomographic <EVENT eid="e6" class="OCCURRENCE">scan</EVENT> <EVENT eid="e7" class="REPORTING">showed</EVENT> a homogeneous 5 × 3-cm <EVENT eid="e8" class="OCCURRENCE">mass</EVENT> <EVENT eid="e9" class="OCCURRENCE">obstructing</EVENT> the common bile duct. The <EVENT eid="e10" class="OCCURRENCE">results</EVENT> of brush cytology were <EVENT eid="e11" class="REPORTING">consistent</EVENT> with a bile duct villous <EVENT eid="e12" class="REPORTING">papilloma</EVENT>. However, on the basis of the tumor's radiological <EVENT eid="e13" class="OCCURRENCE">features</EVENT>, a preliminary diagnosis of extrahepatic bile duct malignant <EVENT eid="e14" class="OCCURRENCE">tumor</EVENT> was made. After <EVENT eid="e15" class="OCCURRENCE">discussion</EVENT> among the multidisciplinary team, a surgical <EVENT eid="e16" class="OCCURRENCE">resection</EVENT> of the bile duct tumor was performed. Histopathological <EVENT eid="e17" class="OCCURRENCE">examination</EVENT> <EVENT eid="e18" class="REPORTING">confirmed</EVENT> a villous <EVENT eid="e19" class="OCCURRENCE">adenoma</EVENT>. The patient's <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true">postoperative</TIMEX3> <EVENT eid="e20" class="OCCURRENCE">course</EVENT> was <EVENT eid="e21" class="OCCURRENCE">uneventful</EVENT>.&#13;
+  <TEXT>We <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">present</EVENT> a case of a 77-year-old Caucasian woman with obstructive <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">jaundice</EVENT>. Laboratory <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">tests</EVENT> <EVENT eid="e4" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> that she had elevated bilirubin and liver enzyme <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">levels</EVENT>. A computed tomographic <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">scan</EVENT> <EVENT eid="e7" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> a homogeneous 5 × 3-cm <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">mass</EVENT> <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">obstructing</EVENT> the common bile duct. The <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">results</EVENT> of brush cytology were <EVENT eid="e11" class="REPORTING" comment="e3c:permanence=FINITE">consistent</EVENT> with a bile duct villous <EVENT eid="e12" class="REPORTING" comment="e3c:permanence=FINITE">papilloma</EVENT>. However, on the basis of the tumor's radiological <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">features</EVENT>, a preliminary diagnosis of extrahepatic bile duct malignant <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">tumor</EVENT> was made. After <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">discussion</EVENT> among the multidisciplinary team, a surgical <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">resection</EVENT> of the bile duct tumor was performed. Histopathological <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> <EVENT eid="e18" class="REPORTING" comment="e3c:permanence=FINITE">confirmed</EVENT> a villous <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">adenoma</EVENT>. The patient's <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postoperative</TIMEX3> <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">course</EVENT> was <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">uneventful</EVENT>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="SIMULTANEOUS"/>
+  <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="INCLUDES"/>
   <TLINK lid="l5" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l6" eventInstanceID="ei3" relatedToEventInstance="ei6" relType="BEFORE"/>

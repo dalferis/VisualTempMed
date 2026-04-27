@@ -2,107 +2,107 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>Jason</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
-  <TEXT>Varón 40 años que <EVENT eid="e1" class="OCCURRENCE">acude</EVENT> a urgencias por la aparición de <EVENT eid="e2" class="OCCURRENCE">edemas</EVENT>. Presenta el <EVENT eid="e3" class="OCCURRENCE">antecedente</EVENT> familiar de madre con <EVENT eid="e4" class="OCCURRENCE">amiloidosis</EVENT> renal no filiada. El informe de la <EVENT eid="e5" class="OCCURRENCE">biopsia</EVENT> renal de la madre <EVENT eid="e6" class="REPORTING">refiere</EVENT> <EVENT eid="e7" class="STATE">resistencia</EVENT> al permanganato, lo que parece <EVENT eid="e8" class="OCCURRENCE">descartar</EVENT> <EVENT eid="e9" class="STATE">amiloidosis</EVENT> AA, e induce a <EVENT eid="e10" class="OCCURRENCE">considerar</EVENT>, en <TIMEX3 tid="t1" type="TIME" value="XXXX-XX-XX" temporalFunction="true">el momento</TIMEX3> en el que se hizo el <EVENT eid="e11" class="OCCURRENCE">diagnóstico</EVENT>, la posibilidad de una <EVENT eid="e12" class="STATE">amiloidosis</EVENT> AL.&#13;
-El paciente no recibe ningún <EVENT eid="e13" class="OCCURRENCE">tratamiento</EVENT> farmacológico. A la <EVENT eid="e14" class="OCCURRENCE">exploración</EVENT> física destaca <EVENT eid="e15" class="OCCURRENCE">presión</EVENT> arterial de 135/75 mmHg y <EVENT eid="e16" class="OCCURRENCE">edemas</EVENT> bimaleolares, sin otros datos de interés. Las <EVENT eid="e17" class="OCCURRENCE">pruebas</EVENT> de laboratorio <EVENT eid="e18" class="REPORTING">confirman</EVENT> la presencia de <EVENT eid="e19" class="OCCURRENCE">síndrome</EVENT> nefrótico (<EVENT eid="e20" class="OCCURRENCE">albúmina</EVENT> sérica de 2,5 g/dl, <EVENT eid="e21" class="OCCURRENCE">colesterolemia</EVENT> de 275 mg/dl y <EVENT eid="e22" class="OCCURRENCE">proteinuria</EVENT> de 6 g/24 h), sin <EVENT eid="e23" class="OCCURRENCE">alteraciones</EVENT> en el sedimento y <EVENT eid="e24" class="OCCURRENCE">filtrado</EVENT> glomerular normal. El <EVENT eid="e25" class="OCCURRENCE">espectro</EVENT> electroforético en sangre y orina, el <EVENT eid="e26" class="OCCURRENCE">estudio</EVENT> inmunológico y la <EVENT eid="e27" class="OCCURRENCE">ecografía</EVENT> renal son normales. Se realiza <EVENT eid="e28" class="OCCURRENCE">biopsia</EVENT> renal, <EVENT eid="e29" class="REPORTING">observándose</EVENT> 19 <EVENT eid="e30" class="OCCURRENCE">glomérulos</EVENT> con una estructura totalmente distorsionada por un <EVENT eid="e31" class="OCCURRENCE">depósito</EVENT> hialino en disposición nodular, con positividad para <EVENT eid="e32" class="OCCURRENCE">rojo</EVENT> Congo y <EVENT eid="e33" class="OCCURRENCE">tioflavina</EVENT>; los túbulos y los vasos no <EVENT eid="e34" class="REPORTING">muestran</EVENT> <EVENT eid="e35" class="OCCURRENCE">alteraciones</EVENT> significativas, siendo el resultado compatible con <EVENT eid="e36" class="STATE">amiloidosis</EVENT>. En el <EVENT eid="e37" class="OCCURRENCE">estudio</EVENT> sobre muestra en parafina se <EVENT eid="e38" class="REPORTING">evidencia</EVENT> marcada positividad para <EVENT eid="e39" class="OCCURRENCE">proteína</EVENT> AP, que es una <EVENT eid="e40" class="STATE">parte</EVENT> de la sustancia amiloide común en todos los tipos de amiloidosis, con negatividad para <EVENT eid="e41" class="OCCURRENCE">cadenas</EVENT> ligeras y <EVENT eid="e42" class="OCCURRENCE">proteínas</EVENT> AA, <EVENT eid="e43" class="OCCURRENCE">B2</EVENT> microglobulina y <EVENT eid="e44" class="OCCURRENCE">transtirretina</EVENT>. Se realiza <EVENT eid="e45" class="OCCURRENCE">estudio</EVENT> complementario con anticuerpos frente a <EVENT eid="e46" class="OCCURRENCE">fibrinógeno</EVENT> y <EVENT eid="e47" class="OCCURRENCE">lisozima</EVENT>, resultando los <EVENT eid="e48" class="OCCURRENCE">depósitos</EVENT> de sustancia amiloide positivos para la <EVENT eid="e49" class="OCCURRENCE">cadena</EVENT> A alfa del fibrinógeno (Afib). Sin embargo, en el <EVENT eid="e50" class="OCCURRENCE">estudio</EVENT> genético no se <EVENT eid="e51" class="REPORTING">encuentra</EVENT> ninguna <EVENT eid="e52" class="OCCURRENCE">mutación</EVENT> en el gen de la cadena Afib, y sí se <EVENT eid="e53" class="REPORTING">demuestra</EVENT> una <EVENT eid="e54" class="OCCURRENCE">mutación</EVENT> previamente no descrita en el gen de la apolipoproteína AI (apo AI). Ante esta <EVENT eid="e55" class="OCCURRENCE">discrepancia</EVENT> se <EVENT eid="e56" class="OCCURRENCE">analiza</EVENT> la <EVENT eid="e57" class="OCCURRENCE">biopsia</EVENT> de la madre, que contiene <EVENT eid="e58" class="OCCURRENCE">depósito</EVENT> glomerular en la corteza y <EVENT eid="e59" class="OCCURRENCE">depósito</EVENT> masivo a nivel medular. El <EVENT eid="e60" class="STATE">depósito</EVENT> a nivel medular no está <EVENT eid="e61" class="REPORTING">descrito</EVENT> en la <EVENT eid="e62" class="STATE">amiloidosis</EVENT> Afib, siendo muy <EVENT eid="e63" class="STATE">característico</EVENT> de la apo AI. Se <EVENT eid="e64" class="OCCURRENCE">concluye</EVENT> que los primeros <EVENT eid="e65" class="OCCURRENCE">resultados</EVENT> de la inmunohistoquímica no son <EVENT eid="e66" class="OCCURRENCE">fiables</EVENT> por no haberse <EVENT eid="e67" class="OCCURRENCE">hecho</EVENT> en las condiciones adecuadas, <EVENT eid="e68" class="REPORTING">confirmándose</EVENT> posteriormente mediante la misma <EVENT eid="e69" class="OCCURRENCE">técnica</EVENT> la presencia de <EVENT eid="e70" class="OCCURRENCE">apo</EVENT> AI.&#13;
-Se realiza <EVENT eid="e71" class="OCCURRENCE">estudio</EVENT> de extensión, con <EVENT eid="e72" class="OCCURRENCE">ecocardiograma</EVENT> y <EVENT eid="e73" class="OCCURRENCE">electromiograma</EVENT>, sin <EVENT eid="e74" class="REPORTING">evidencia</EVENT> de <EVENT eid="e75" class="OCCURRENCE">afectación</EVENT> cardiaca ni <EVENT eid="e76" class="OCCURRENCE">neuropatía</EVENT> autonómica. En la <EVENT eid="e77" class="OCCURRENCE">evolución</EVENT> se <EVENT eid="e78" class="REPORTING">detecta</EVENT> un <EVENT eid="e79" class="OCCURRENCE">aumento</EVENT> progresivo de transaminasas, sugerente de <EVENT eid="e80" class="OCCURRENCE">afectación</EVENT> hepática. Estos <EVENT eid="e81" class="OCCURRENCE">resultados</EVENT> son <EVENT eid="e82" class="OCCURRENCE">concordantes</EVENT> con este tipo de <EVENT eid="e83" class="STATE">amiloidosis</EVENT> familiar, con <EVENT eid="e84" class="STATE">afectación</EVENT> preferentemente renal y hepática. A pesar de la <EVENT eid="e85" class="OCCURRENCE">normalidad</EVENT> inicial, la <EVENT eid="e86" class="OCCURRENCE">función</EVENT> renal se <EVENT eid="e87" class="OCCURRENCE">deteriora</EVENT> progresivamente hasta requerir <EVENT eid="e88" class="OCCURRENCE">terapia</EVENT> renal sustitutiva en <TIMEX3 tid="t2" type="DURATION" value="P2Y" temporalFunction="false">un plazo de 2 años</TIMEX3>. El paciente recibe <EVENT eid="e89" class="OCCURRENCE">tratamiento</EVENT> con diálisis peritoneal durante <TIMEX3 tid="t3" type="DURATION" value="P4Y" temporalFunction="false">4 años</TIMEX3>, hasta que es <EVENT eid="e90" class="OCCURRENCE">intervenido</EVENT> realizándose <EVENT eid="e91" class="OCCURRENCE">trasplante</EVENT> renal de donante cadáver. Presenta <TIMEX3 tid="t4" type="DATE" value="X" temporalFunction="true">un postoperatorio complicado</TIMEX3> con <EVENT eid="e92" class="OCCURRENCE">rotura</EVENT> esplénica, en el contexto de su <EVENT eid="e93" class="STATE">enfermedad</EVENT>, con <EVENT eid="e94" class="OCCURRENCE">depósito</EVENT> de amiloide en bazo, siendo necesaria una <EVENT eid="e95" class="OCCURRENCE">esplenectomía</EVENT> urgente. Finalmente, el paciente es dado de <EVENT eid="e96" class="OCCURRENCE">alta</EVENT> en <EVENT eid="e97" class="OCCURRENCE">situación</EVENT> estable.&#13;
+  <TEXT>Varón 40 años que <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">acude</EVENT> a urgencias por la aparición de <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">edemas</EVENT>. Presenta el <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">antecedente</EVENT> familiar de madre con <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">amiloidosis</EVENT> renal no filiada. El informe de la <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">biopsia</EVENT> renal de la madre <EVENT eid="e6" class="REPORTING" comment="e3c:permanence=FINITE">refiere</EVENT> <EVENT eid="e7" class="STATE" comment="e3c:permanence=PERMANENT">resistencia</EVENT> al permanganato, lo que parece <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">descartar</EVENT> <EVENT eid="e9" class="STATE" comment="e3c:permanence=PERMANENT">amiloidosis</EVENT> AA, e induce a <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">considerar</EVENT>, en <TIMEX3 tid="t1" type="TIME" value="XXXX-XX-XX" temporalFunction="true">el momento</TIMEX3> en el que se hizo el <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnóstico</EVENT>, la posibilidad de una <EVENT eid="e12" class="STATE" comment="e3c:permanence=PERMANENT">amiloidosis</EVENT> AL.&#13;
+El paciente no recibe ningún <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> farmacológico. A la <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">exploración</EVENT> física destaca <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">presión</EVENT> arterial de 135/75 mmHg y <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">edemas</EVENT> bimaleolares, sin otros datos de interés. Las <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">pruebas</EVENT> de laboratorio <EVENT eid="e18" class="REPORTING" comment="e3c:permanence=FINITE">confirman</EVENT> la presencia de <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">síndrome</EVENT> nefrótico (<EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">albúmina</EVENT> sérica de 2,5 g/dl, <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">colesterolemia</EVENT> de 275 mg/dl y <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">proteinuria</EVENT> de 6 g/24 h), sin <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">alteraciones</EVENT> en el sedimento y <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">filtrado</EVENT> glomerular normal. El <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">espectro</EVENT> electroforético en sangre y orina, el <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> inmunológico y la <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecografía</EVENT> renal son normales. Se realiza <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">biopsia</EVENT> renal, <EVENT eid="e29" class="REPORTING" comment="e3c:permanence=FINITE">observándose</EVENT> 19 <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">glomérulos</EVENT> con una estructura totalmente distorsionada por un <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">depósito</EVENT> hialino en disposición nodular, con positividad para <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">rojo</EVENT> Congo y <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">tioflavina</EVENT>; los túbulos y los vasos no <EVENT eid="e34" class="REPORTING" comment="e3c:permanence=FINITE">muestran</EVENT> <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">alteraciones</EVENT> significativas, siendo el resultado compatible con <EVENT eid="e36" class="STATE" comment="e3c:permanence=PERMANENT">amiloidosis</EVENT>. En el <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> sobre muestra en parafina se <EVENT eid="e38" class="REPORTING" comment="e3c:permanence=FINITE">evidencia</EVENT> marcada positividad para <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">proteína</EVENT> AP, que es una <EVENT eid="e40" class="STATE" comment="e3c:permanence=FINITE">parte</EVENT> de la sustancia amiloide común en todos los tipos de amiloidosis, con negatividad para <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">cadenas</EVENT> ligeras y <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">proteínas</EVENT> AA, <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">B2</EVENT> microglobulina y <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">transtirretina</EVENT>. Se realiza <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> complementario con anticuerpos frente a <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">fibrinógeno</EVENT> y <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">lisozima</EVENT>, resultando los <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">depósitos</EVENT> de sustancia amiloide positivos para la <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">cadena</EVENT> A alfa del fibrinógeno (Afib). Sin embargo, en el <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> genético no se <EVENT eid="e51" class="REPORTING" comment="e3c:permanence=FINITE">encuentra</EVENT> ninguna <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">mutación</EVENT> en el gen de la cadena Afib, y sí se <EVENT eid="e53" class="REPORTING" comment="e3c:permanence=FINITE">demuestra</EVENT> una <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">mutación</EVENT> previamente no descrita en el gen de la apolipoproteína AI (apo AI). Ante esta <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">discrepancia</EVENT> se <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">analiza</EVENT> la <EVENT eid="e57" class="OCCURRENCE" comment="e3c:permanence=FINITE">biopsia</EVENT> de la madre, que contiene <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">depósito</EVENT> glomerular en la corteza y <EVENT eid="e59" class="OCCURRENCE" comment="e3c:permanence=FINITE">depósito</EVENT> masivo a nivel medular. El <EVENT eid="e60" class="STATE" comment="e3c:permanence=FINITE">depósito</EVENT> a nivel medular no está <EVENT eid="e61" class="REPORTING" comment="e3c:permanence=FINITE">descrito</EVENT> en la <EVENT eid="e62" class="STATE" comment="e3c:permanence=FINITE">amiloidosis</EVENT> Afib, siendo muy <EVENT eid="e63" class="STATE" comment="e3c:permanence=FINITE">característico</EVENT> de la apo AI. Se <EVENT eid="e64" class="OCCURRENCE" comment="e3c:permanence=FINITE">concluye</EVENT> que los primeros <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">resultados</EVENT> de la inmunohistoquímica no son <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">fiables</EVENT> por no haberse <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">hecho</EVENT> en las condiciones adecuadas, <EVENT eid="e68" class="REPORTING" comment="e3c:permanence=FINITE">confirmándose</EVENT> posteriormente mediante la misma <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">técnica</EVENT> la presencia de <EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">apo</EVENT> AI.&#13;
+Se realiza <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">estudio</EVENT> de extensión, con <EVENT eid="e72" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecocardiograma</EVENT> y <EVENT eid="e73" class="OCCURRENCE" comment="e3c:permanence=FINITE">electromiograma</EVENT>, sin <EVENT eid="e74" class="REPORTING" comment="e3c:permanence=FINITE">evidencia</EVENT> de <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">afectación</EVENT> cardiaca ni <EVENT eid="e76" class="OCCURRENCE" comment="e3c:permanence=FINITE">neuropatía</EVENT> autonómica. En la <EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">evolución</EVENT> se <EVENT eid="e78" class="REPORTING" comment="e3c:permanence=FINITE">detecta</EVENT> un <EVENT eid="e79" class="OCCURRENCE" comment="e3c:permanence=FINITE">aumento</EVENT> progresivo de transaminasas, sugerente de <EVENT eid="e80" class="OCCURRENCE" comment="e3c:permanence=FINITE">afectación</EVENT> hepática. Estos <EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">resultados</EVENT> son <EVENT eid="e82" class="OCCURRENCE" comment="e3c:permanence=FINITE">concordantes</EVENT> con este tipo de <EVENT eid="e83" class="STATE" comment="e3c:permanence=FINITE">amiloidosis</EVENT> familiar, con <EVENT eid="e84" class="STATE" comment="e3c:permanence=FINITE">afectación</EVENT> preferentemente renal y hepática. A pesar de la <EVENT eid="e85" class="OCCURRENCE" comment="e3c:permanence=FINITE">normalidad</EVENT> inicial, la <EVENT eid="e86" class="OCCURRENCE" comment="e3c:permanence=FINITE">función</EVENT> renal se <EVENT eid="e87" class="OCCURRENCE" comment="e3c:permanence=FINITE">deteriora</EVENT> progresivamente hasta requerir <EVENT eid="e88" class="OCCURRENCE" comment="e3c:permanence=FINITE">terapia</EVENT> renal sustitutiva en <TIMEX3 tid="t2" type="DURATION" value="P2Y" temporalFunction="false">un plazo de 2 años</TIMEX3>. El paciente recibe <EVENT eid="e89" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> con diálisis peritoneal durante <TIMEX3 tid="t3" type="DURATION" value="P4Y" temporalFunction="false">4 años</TIMEX3>, hasta que es <EVENT eid="e90" class="OCCURRENCE" comment="e3c:permanence=FINITE">intervenido</EVENT> realizándose <EVENT eid="e91" class="OCCURRENCE" comment="e3c:permanence=FINITE">trasplante</EVENT> renal de donante cadáver. Presenta <TIMEX3 tid="t4" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">un postoperatorio complicado</TIMEX3> con <EVENT eid="e92" class="OCCURRENCE" comment="e3c:permanence=FINITE">rotura</EVENT> esplénica, en el contexto de su <EVENT eid="e93" class="STATE" comment="e3c:permanence=PERMANENT">enfermedad</EVENT>, con <EVENT eid="e94" class="OCCURRENCE" comment="e3c:permanence=FINITE">depósito</EVENT> de amiloide en bazo, siendo necesaria una <EVENT eid="e95" class="OCCURRENCE" comment="e3c:permanence=FINITE">esplenectomía</EVENT> urgente. Finalmente, el paciente es dado de <EVENT eid="e96" class="OCCURRENCE" comment="e3c:permanence=FINITE">alta</EVENT> en <EVENT eid="e97" class="OCCURRENCE" comment="e3c:permanence=FINITE">situación</EVENT> estable.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei96" eventID="e96" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei97" eventID="e97" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei96" eventID="e96" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei97" eventID="e97" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="INCLUDES"/>
@@ -112,7 +112,7 @@ Se realiza <EVENT eid="e71" class="OCCURRENCE">estudio</EVENT> de extensión, co
   <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei5" relType="INCLUDES"/>
   <TLINK lid="l8" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei13" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei11" relType="BEFORE"/>
   <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
@@ -161,7 +161,7 @@ Se realiza <EVENT eid="e71" class="OCCURRENCE">estudio</EVENT> de extensión, co
   <TLINK lid="l56" eventInstanceID="ei29" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l57" eventInstanceID="ei30" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l58" eventInstanceID="ei30" relatedToEventInstance="ei28" relType="INCLUDES"/>
-  <TLINK lid="l59" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="SIMULTANEOUS"/>
+  <TLINK lid="l59" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l60" eventInstanceID="ei31" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l61" eventInstanceID="ei32" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l62" eventInstanceID="ei33" relatedToTime="t0" relType="BEFORE"/>
@@ -242,7 +242,7 @@ Se realiza <EVENT eid="e71" class="OCCURRENCE">estudio</EVENT> de extensión, co
   <TLINK lid="l137" eventInstanceID="ei76" relatedToEventInstance="ei71" relType="INCLUDES"/>
   <TLINK lid="l138" eventInstanceID="ei77" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l139" eventInstanceID="ei77" relatedToEventInstance="ei81" relType="INCLUDES"/>
-  <TLINK lid="l140" eventInstanceID="ei77" relatedToEventInstance="ei80" relType="SIMULTANEOUS"/>
+  <TLINK lid="l140" eventInstanceID="ei77" relatedToEventInstance="ei80" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l141" eventInstanceID="ei77" relatedToEventInstance="ei79" relType="INCLUDES"/>
   <TLINK lid="l142" eventInstanceID="ei78" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l143" eventInstanceID="ei79" relatedToTime="t0" relType="BEFORE"/>

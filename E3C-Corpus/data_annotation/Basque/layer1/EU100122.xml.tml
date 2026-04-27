@@ -3,137 +3,137 @@
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2019-01-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2019-01-01</TIMEX3>
   <TEXT>Ainhoa 24 urteko gazte bat da.&#13;
-Bere amak <EVENT eid="e1" class="OCCURRENCE">ekartzen</EVENT> du osasun mentalaren zentrora, alabaren <EVENT eid="e2" class="OCCURRENCE">jokabidearengatik</EVENT> <EVENT eid="e3" class="OCCURRENCE">frustratuta</EVENT> sentitzen dela <EVENT eid="e4" class="REPORTING">esanez</EVENT>.&#13;
-Ainhoaren ama <EVENT eid="e5" class="OCCURRENCE">kokoteraino</EVENT> dago alaba ez delako jendearekin ondo <EVENT eid="e6" class="OCCURRENCE">konpontzen</EVENT>, <EVENT eid="e7" class="OCCURRENCE">gai</EVENT> ez delako <EVENT eid="e8" class="STATE">lan</EVENT> bati <EVENT eid="e9" class="OCCURRENCE">eusteko</EVENT>, eta ezta bakarrik <EVENT eid="e10" class="OCCURRENCE">bizitzeko</EVENT> ere.&#13;
+Bere amak <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">ekartzen</EVENT> du osasun mentalaren zentrora, alabaren <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">jokabidearengatik</EVENT> <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">frustratuta</EVENT> sentitzen dela <EVENT eid="e4" class="REPORTING" comment="e3c:permanence=FINITE">esanez</EVENT>.&#13;
+Ainhoaren ama <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">kokoteraino</EVENT> dago alaba ez delako jendearekin ondo <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">konpontzen</EVENT>, <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">gai</EVENT> ez delako <EVENT eid="e8" class="STATE" comment="e3c:permanence=FINITE">lan</EVENT> bati <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">eusteko</EVENT>, eta ezta bakarrik <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">bizitzeko</EVENT> ere.&#13;
 &#13;
-Psikiatrarengana <EVENT eid="e11" class="OCCURRENCE">joatea</EVENT> izan da azken <EVENT eid="e12" class="OCCURRENCE">baliabidea</EVENT> beretzat.&#13;
+Psikiatrarengana <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">joatea</EVENT> izan da azken <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">baliabidea</EVENT> beretzat.&#13;
 &#13;
-Ainhoaren <EVENT eid="e13" class="OCCURRENCE">kexa</EVENT> nagusia honako hau da: "<EVENT eid="e14" class="OCCURRENCE">Nekatuta</EVENT> nago nire ama beti ari delako nire bizitzan <EVENT eid="e15" class="OCCURRENCE">agintzen</EVENT>".&#13;
-Pazientea <EVENT eid="e16" class="OCCURRENCE">deseroso</EVENT> dago kontsultan, eta gela osoa <EVENT eid="e17" class="OCCURRENCE">begiratzen</EVENT> ari da <TIMEX3 tid="t1" type="DURATION" value="PTXH" temporalFunction="true">denbora guztian</TIMEX3>.&#13;
-<TIMEX3 tid="t2" type="DURATION" value="PTXH" temporalFunction="true">Denbora guztian</TIMEX3> atzera <EVENT eid="e18" class="OCCURRENCE">begira</EVENT> ari da, eta, azkenean, aulkia aterantz begira <EVENT eid="e19" class="OCCURRENCE">jar</EVENT> dezakeen <EVENT eid="e20" class="OCCURRENCE">galdetzen</EVENT> du.&#13;
+Ainhoaren <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">kexa</EVENT> nagusia honako hau da: "<EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">Nekatuta</EVENT> nago nire ama beti ari delako nire bizitzan <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">agintzen</EVENT>".&#13;
+Pazientea <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">deseroso</EVENT> dago kontsultan, eta gela osoa <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">begiratzen</EVENT> ari da <TIMEX3 tid="t1" type="DURATION" value="PTXH" temporalFunction="true">denbora guztian</TIMEX3>.&#13;
+<TIMEX3 tid="t2" type="DURATION" value="PTXH" temporalFunction="true">Denbora guztian</TIMEX3> atzera <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">begira</EVENT> ari da, eta, azkenean, aulkia aterantz begira <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">jar</EVENT> dezakeen <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">galdetzen</EVENT> du.&#13;
 &#13;
-Ama <EVENT eid="e21" class="OCCURRENCE">negarrez</EVENT> dago.&#13;
+Ama <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">negarrez</EVENT> dago.&#13;
 &#13;
-Ainhoaren amak <EVENT eid="e22" class="REPORTING">esaten</EVENT> du bere alaba berarekin <EVENT eid="e23" class="OCCURRENCE">bizi</EVENT> dela, <EVENT eid="e24" class="STATE">lan</EVENT> bati <EVENT eid="e25" class="OCCURRENCE">eusteko</EVENT> <EVENT eid="e26" class="OCCURRENCE">zailtasuna</EVENT> duelako.&#13;
-Ainhoak hori <EVENT eid="e27" class="OCCURRENCE">entzutean</EVENT> <EVENT eid="e28" class="OCCURRENCE">elkarrizketa</EVENT> <EVENT eid="e29" class="ASPECTUAL">eteten</EVENT> du, eta <EVENT eid="e30" class="REPORTING">esaten</EVENT> du ama beti egon dela bere <EVENT eid="e31" class="OCCURRENCE">aurka</EVENT>, txikitatik, eta gainera beti egin diela <EVENT eid="e32" class="OCCURRENCE">kasu</EVENT> gehiago bere neba-arrebei berari baino.&#13;
-Gainera, (defentsiban) <EVENT eid="e33" class="REPORTING">esaten</EVENT> du ez dela inoiz bere <EVENT eid="e34" class="OCCURRENCE">errua</EVENT> <EVENT eid="e35" class="OCCURRENCE">lan</EVENT> bat <EVENT eid="e36" class="OCCURRENCE">uzten</EVENT> duenean.&#13;
-Bere nagusiak izaten dira "beti" <EVENT eid="e37" class="OCCURRENCE">errudunak</EVENT>.&#13;
+Ainhoaren amak <EVENT eid="e22" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du bere alaba berarekin <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">bizi</EVENT> dela, <EVENT eid="e24" class="STATE" comment="e3c:permanence=FINITE">lan</EVENT> bati <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">eusteko</EVENT> <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">zailtasuna</EVENT> duelako.&#13;
+Ainhoak hori <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">entzutean</EVENT> <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">elkarrizketa</EVENT> <EVENT eid="e29" class="ASPECTUAL" comment="e3c:permanence=FINITE">eteten</EVENT> du, eta <EVENT eid="e30" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du ama beti egon dela bere <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">aurka</EVENT>, txikitatik, eta gainera beti egin diela <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">kasu</EVENT> gehiago bere neba-arrebei berari baino.&#13;
+Gainera, (defentsiban) <EVENT eid="e33" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du ez dela inoiz bere <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">errua</EVENT> <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">lan</EVENT> bat <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">uzten</EVENT> duenean.&#13;
+Bere nagusiak izaten dira "beti" <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">errudunak</EVENT>.&#13;
 &#13;
-Hainbat <EVENT eid="e38" class="OCCURRENCE">lan</EVENT> izan ditu, eta guztietatik <EVENT eid="e39" class="OCCURRENCE">bota</EVENT> egin dute artxibo konfidentzialak eta kideen e-mailak <EVENT eid="e40" class="OCCURRENCE">begiratzen</EVENT> zituelako.&#13;
-Ainhoak <EVENT eid="e41" class="REPORTING">esaten</EVENT> du bere kideak ez zirela berarekin <EVENT eid="e42" class="OCCURRENCE">zintzoak</EVENT> izaten <EVENT eid="e43" class="OCCURRENCE">proiektuei</EVENT> zegokienez, eta horregatik <EVENT eid="e44" class="OCCURRENCE">begiratzen</EVENT> zituela.&#13;
-Berak <EVENT eid="e45" class="OCCURRENCE">uste</EVENT> du <EVENT eid="e46" class="OCCURRENCE">lanetik</EVENT> <EVENT eid="e47" class="OCCURRENCE">bota</EVENT> egiten zutela "<EVENT eid="e48" class="OCCURRENCE">sekretu</EVENT>" gehiegiz <EVENT eid="e49" class="OCCURRENCE">ohartzen</EVENT> zelako, eta bere nagusiek ez zutelako <EVENT eid="e50" class="OCCURRENCE">nahi</EVENT> gai horiez besteek <EVENT eid="e51" class="OCCURRENCE">jakiterik</EVENT>.&#13;
+Hainbat <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">lan</EVENT> izan ditu, eta guztietatik <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">bota</EVENT> egin dute artxibo konfidentzialak eta kideen e-mailak <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">begiratzen</EVENT> zituelako.&#13;
+Ainhoak <EVENT eid="e41" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du bere kideak ez zirela berarekin <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">zintzoak</EVENT> izaten <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">proiektuei</EVENT> zegokienez, eta horregatik <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">begiratzen</EVENT> zituela.&#13;
+Berak <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">uste</EVENT> du <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">lanetik</EVENT> <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">bota</EVENT> egiten zutela "<EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">sekretu</EVENT>" gehiegiz <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">ohartzen</EVENT> zelako, eta bere nagusiek ez zutelako <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">nahi</EVENT> gai horiez besteek <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">jakiterik</EVENT>.&#13;
 &#13;
-Bere amak <EVENT eid="e52" class="REPORTING">esaten</EVENT> du alabak bi <EVENT eid="e53" class="OCCURRENCE">harreman</EVENT> <EVENT eid="e54" class="OCCURRENCE">apurtu</EVENT> dituela <TIMEX3 tid="t3" type="DURATION" value="P3Y" temporalFunction="false" functionInDocument="CREATION_TIME">azken hiru urteetan</TIMEX3>.&#13;
-Ainhoak berriro ere <EVENT eid="e55" class="OCCURRENCE">elkarrizketa</EVENT> <EVENT eid="e56" class="ASPECTUAL">eteten</EVENT> du, eta <EVENT eid="e57" class="REPORTING">esaten</EVENT> du bere mutil-lagunek <EVENT eid="e58" class="OCCURRENCE">engainatu</EVENT> egiten zutela, eta inoiz ezingo litzatekeela <EVENT eid="e59" class="OCCURRENCE">ezkondu</EVENT> <EVENT eid="e60" class="OCCURRENCE">fidatu</EVENT> ezin daitekeen norbaitekin.&#13;
-<EVENT eid="e61" class="OCCURRENCE">Desleialtasunei</EVENT> buruz <EVENT eid="e62" class="OCCURRENCE">galdetzen</EVENT> zaionean, Ainhoak honela <EVENT eid="e63" class="OCCURRENCE">esaten</EVENT> du: "Ez dut <EVENT eid="e64" class="OCCURRENCE">frogarik</EVENT> behar.&#13;
-Nik <EVENT eid="e65" class="OCCURRENCE">badakit</EVENT> ni <EVENT eid="e66" class="OCCURRENCE">engainatzen</EVENT> ari zirela".&#13;
+Bere amak <EVENT eid="e52" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du alabak bi <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">harreman</EVENT> <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">apurtu</EVENT> dituela <TIMEX3 tid="t3" type="DURATION" value="P3Y" temporalFunction="false" functionInDocument="CREATION_TIME">azken hiru urteetan</TIMEX3>.&#13;
+Ainhoak berriro ere <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">elkarrizketa</EVENT> <EVENT eid="e56" class="ASPECTUAL" comment="e3c:permanence=FINITE">eteten</EVENT> du, eta <EVENT eid="e57" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du bere mutil-lagunek <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">engainatu</EVENT> egiten zutela, eta inoiz ezingo litzatekeela <EVENT eid="e59" class="OCCURRENCE" comment="e3c:permanence=FINITE">ezkondu</EVENT> <EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">fidatu</EVENT> ezin daitekeen norbaitekin.&#13;
+<EVENT eid="e61" class="OCCURRENCE" comment="e3c:permanence=FINITE">Desleialtasunei</EVENT> buruz <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">galdetzen</EVENT> zaionean, Ainhoak honela <EVENT eid="e63" class="OCCURRENCE" comment="e3c:permanence=FINITE">esaten</EVENT> du: "Ez dut <EVENT eid="e64" class="OCCURRENCE" comment="e3c:permanence=FINITE">frogarik</EVENT> behar.&#13;
+Nik <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">badakit</EVENT> ni <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">engainatzen</EVENT> ari zirela".&#13;
 &#13;
-Modu logikoan eta naturaltasunez <EVENT eid="e67" class="OCCURRENCE">hitz</EVENT> egiten du.&#13;
-<EVENT eid="e68" class="OCCURRENCE">Drogarik</EVENT> ez duela hartzen <EVENT eid="e69" class="REPORTING">esaten</EVENT> du.&#13;
-Ez dauka inolako <EVENT eid="e70" class="OCCURRENCE">haluzinaziorik</EVENT>.&#13;
-Ez du inolako <EVENT eid="e71" class="OCCURRENCE">lesiorik</EVENT> izan buruan.&#13;
+Modu logikoan eta naturaltasunez <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">hitz</EVENT> egiten du.&#13;
+<EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">Drogarik</EVENT> ez duela hartzen <EVENT eid="e69" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du.&#13;
+Ez dauka inolako <EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">haluzinaziorik</EVENT>.&#13;
+Ez du inolako <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesiorik</EVENT> izan buruan.&#13;
 &#13;
-Ainhoaren aitak <EVENT eid="e72" class="STATE">eskizofrenia</EVENT> paranoidea dauka, eta horrek <EVENT eid="e73" class="OCCURRENCE">liskar</EVENT> asko sortu omen ditu etxean <TIMEX3 tid="t4" type="DURATION" value="PXY" temporalFunction="true">urteetan zehar</TIMEX3>.&#13;
-Aitak <EVENT eid="e74" class="OCCURRENCE">arazo</EVENT> legalak izan ditu, eta, horregatik, askotan <EVENT eid="e75" class="OCCURRENCE">juiziotara</EVENT> joan behar izan du.&#13;
+Ainhoaren aitak <EVENT eid="e72" class="STATE" comment="e3c:permanence=PERMANENT">eskizofrenia</EVENT> paranoidea dauka, eta horrek <EVENT eid="e73" class="OCCURRENCE" comment="e3c:permanence=FINITE">liskar</EVENT> asko sortu omen ditu etxean <TIMEX3 tid="t4" type="DURATION" value="PXY" temporalFunction="true">urteetan zehar</TIMEX3>.&#13;
+Aitak <EVENT eid="e74" class="OCCURRENCE" comment="e3c:permanence=FINITE">arazo</EVENT> legalak izan ditu, eta, horregatik, askotan <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">juiziotara</EVENT> joan behar izan du.&#13;
 &#13;
-Odoleko <EVENT eid="e76" class="OCCURRENCE">analisiak</EVENT> <EVENT eid="e77" class="OCCURRENCE">muga</EVENT> normaletan daude, eta ez dago <EVENT eid="e78" class="OCCURRENCE">droga-kontsumorik</EVENT> gernuaren <EVENT eid="e79" class="OCCURRENCE">analisian</EVENT>.&#13;
+Odoleko <EVENT eid="e76" class="OCCURRENCE" comment="e3c:permanence=FINITE">analisiak</EVENT> <EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">muga</EVENT> normaletan daude, eta ez dago <EVENT eid="e78" class="OCCURRENCE" comment="e3c:permanence=FINITE">droga-kontsumorik</EVENT> gernuaren <EVENT eid="e79" class="OCCURRENCE" comment="e3c:permanence=FINITE">analisian</EVENT>.&#13;
 &#13;
-Medikuak <EVENT eid="e80" class="REPORTING">esaten</EVENT> dio, agian, <TIMEX3 tid="t5" type="DATE" value="XXXX-XX-XX" temporalFunction="true">une zailak</TIMEX3> <EVENT eid="e81" class="OCCURRENCE">pasatu</EVENT> dituela bere <EVENT eid="e82" class="OCCURRENCE">harremanengatik</EVENT>.&#13;
-Ainhoak <EVENT eid="e83" class="REPORTING">esaten</EVENT> du <EVENT eid="e84" class="OCCURRENCE">arrazoi</EVENT> duela medikuak.&#13;
-Medikuak <EVENT eid="e85" class="REPORTING">esaten</EVENT> dio ea <EVENT eid="e86" class="OCCURRENCE">nahi</EVENT> duen <TIMEX3 tid="t6" type="DURATION" value="P2W" temporalFunction="false">bi aste</TIMEX3> barru berriro <EVENT eid="e87" class="OCCURRENCE">geratzea</EVENT> horri guztiari buruz <EVENT eid="e88" class="OCCURRENCE">hitz</EVENT> egiteko eta <EVENT eid="e89" class="OCCURRENCE">lagundu</EVENT> dezaketen <EVENT eid="e90" class="OCCURRENCE">zerbitzuak</EVENT> bilatzeko.&#13;
-Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez da berriro kontsultan <EVENT eid="e92" class="OCCURRENCE">agertu</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+Medikuak <EVENT eid="e80" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> dio, agian, <TIMEX3 tid="t5" type="DATE" value="XXXX-XX-XX" temporalFunction="true">une zailak</TIMEX3> <EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">pasatu</EVENT> dituela bere <EVENT eid="e82" class="OCCURRENCE" comment="e3c:permanence=FINITE">harremanengatik</EVENT>.&#13;
+Ainhoak <EVENT eid="e83" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> du <EVENT eid="e84" class="OCCURRENCE" comment="e3c:permanence=FINITE">arrazoi</EVENT> duela medikuak.&#13;
+Medikuak <EVENT eid="e85" class="REPORTING" comment="e3c:permanence=FINITE">esaten</EVENT> dio ea <EVENT eid="e86" class="OCCURRENCE" comment="e3c:permanence=FINITE">nahi</EVENT> duen <TIMEX3 tid="t6" type="DURATION" value="P2W" temporalFunction="false">bi aste</TIMEX3> barru berriro <EVENT eid="e87" class="OCCURRENCE" comment="e3c:permanence=FINITE">geratzea</EVENT> horri guztiari buruz <EVENT eid="e88" class="OCCURRENCE" comment="e3c:permanence=FINITE">hitz</EVENT> egiteko eta <EVENT eid="e89" class="OCCURRENCE" comment="e3c:permanence=FINITE">lagundu</EVENT> dezaketen <EVENT eid="e90" class="OCCURRENCE" comment="e3c:permanence=FINITE">zerbitzuak</EVENT> bilatzeko.&#13;
+Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE" comment="e3c:permanence=FINITE">esaten</EVENT> du, baina ez da berriro kontsultan <EVENT eid="e92" class="OCCURRENCE" comment="e3c:permanence=FINITE">agertu</EVENT>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="NEG" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei4" relType="SIMULTANEOUS"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
@@ -171,7 +171,7 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l35" timeID="t2" relatedToEventInstance="ei18" relType="INCLUDES"/>
   <TLINK lid="l36" timeID="t2" relatedToEventInstance="ei20" relType="INCLUDES"/>
   <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l38" eventInstanceID="ei18" relatedToEventInstance="ei21" relType="SIMULTANEOUS"/>
+  <TLINK lid="l38" eventInstanceID="ei18" relatedToEventInstance="ei21" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l39" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l40" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l41" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
@@ -206,7 +206,7 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l71" eventInstanceID="ei36" relatedToEventInstance="ei34" relType="SIMULTANEOUS"/>
   <TLINK lid="l73" eventInstanceID="ei37" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l74" eventInstanceID="ei37" relatedToEventInstance="ei33" relType="BEFORE"/>
-  <TLINK lid="l75" eventInstanceID="ei37" relatedToEventInstance="ei38" relType="SIMULTANEOUS"/>
+  <TLINK lid="l75" eventInstanceID="ei37" relatedToEventInstance="ei38" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l76" eventInstanceID="ei38" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l77" eventInstanceID="ei38" relatedToEventInstance="ei41" relType="BEFORE"/>
   <TLINK lid="l78" eventInstanceID="ei38" relatedToEventInstance="ei39" relType="INCLUDES"/>
@@ -261,8 +261,8 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l128" eventInstanceID="ei64" relatedToEventInstance="ei63" relType="INCLUDES"/>
   <TLINK lid="l129" eventInstanceID="ei65" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l130" eventInstanceID="ei65" relatedToEventInstance="ei62" relType="INCLUDES"/>
-  <TLINK lid="l131" eventInstanceID="ei65" relatedToEventInstance="ei66" relType="SIMULTANEOUS"/>
-  <TLINK lid="l132" eventInstanceID="ei65" relatedToEventInstance="ei67" relType="SIMULTANEOUS"/>
+  <TLINK lid="l131" eventInstanceID="ei65" relatedToEventInstance="ei66" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l132" eventInstanceID="ei65" relatedToEventInstance="ei67" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l133" eventInstanceID="ei66" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l134" eventInstanceID="ei67" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l135" eventInstanceID="ei67" relatedToEventInstance="ei69" relType="INCLUDES"/>
@@ -270,18 +270,18 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l137" eventInstanceID="ei68" relatedToEventInstance="ei69" relType="INCLUDES"/>
   <TLINK lid="l138" eventInstanceID="ei69" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l139" eventInstanceID="ei70" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l140" eventInstanceID="ei70" relatedToEventInstance="ei71" relType="SIMULTANEOUS"/>
+  <TLINK lid="l140" eventInstanceID="ei70" relatedToEventInstance="ei71" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l141" eventInstanceID="ei70" relatedToEventInstance="ei69" relType="INCLUDES"/>
   <TLINK lid="l142" eventInstanceID="ei71" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l143" eventInstanceID="ei71" relatedToEventInstance="ei72" relType="SIMULTANEOUS"/>
+  <TLINK lid="l143" eventInstanceID="ei71" relatedToEventInstance="ei72" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l144" eventInstanceID="ei72" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l145" eventInstanceID="ei72" relatedToEventInstance="ei74" relType="SIMULTANEOUS"/>
+  <TLINK lid="l145" eventInstanceID="ei72" relatedToEventInstance="ei74" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l146" eventInstanceID="ei72" relatedToEventInstance="ei73" relType="INCLUDES"/>
   <TLINK lid="l147" eventInstanceID="ei73" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l148" timeID="t4" relatedToEventInstance="ei73" relType="INCLUDES"/>
   <TLINK lid="l149" eventInstanceID="ei74" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l150" eventInstanceID="ei74" relatedToEventInstance="ei76" relType="BEFORE"/>
-  <TLINK lid="l151" eventInstanceID="ei74" relatedToEventInstance="ei75" relType="SIMULTANEOUS"/>
+  <TLINK lid="l151" eventInstanceID="ei74" relatedToEventInstance="ei75" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l152" eventInstanceID="ei75" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l153" eventInstanceID="ei76" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l154" eventInstanceID="ei76" relatedToEventInstance="ei77" relType="SIMULTANEOUS"/>
@@ -295,7 +295,7 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l162" eventInstanceID="ei80" relatedToEventInstance="ei83" relType="BEFORE"/>
   <TLINK lid="l163" eventInstanceID="ei81" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l164" eventInstanceID="ei81" relatedToEventInstance="ei80" relType="BEFORE"/>
-  <TLINK lid="l165" eventInstanceID="ei81" relatedToEventInstance="ei82" relType="SIMULTANEOUS"/>
+  <TLINK lid="l165" eventInstanceID="ei81" relatedToEventInstance="ei82" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l166" eventInstanceID="ei82" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l167" eventInstanceID="ei83" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l168" eventInstanceID="ei83" relatedToEventInstance="ei85" relType="BEFORE"/>
@@ -310,7 +310,7 @@ Ainhoak baietz <EVENT eid="e91" class="OCCURRENCE">esaten</EVENT> du, baina ez d
   <TLINK lid="l177" eventInstanceID="ei90" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l178" eventInstanceID="ei91" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l179" eventInstanceID="ei91" relatedToEventInstance="ei92" relType="BEFORE"/>
-  <TLINK lid="l180" eventInstanceID="ei92" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l180" eventInstanceID="ei92" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <ALINK lid="l59" eventInstanceID="ei29" relatedToEventInstance="ei28" relType="TERMINATES"/>
   <ALINK lid="l72" eventInstanceID="ei36" relatedToEventInstance="ei35" relType="TERMINATES"/>
   <ALINK lid="l116" eventInstanceID="ei56" relatedToEventInstance="ei55" relType="TERMINATES"/>

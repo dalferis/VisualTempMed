@@ -2,84 +2,84 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2019-03-18T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2019-03-18</TIMEX3>
-  <TEXT>A 61-year-old woman, gravida 3 para 3, <EVENT eid="e1" class="OCCURRENCE">presented</EVENT> with an increased size of ovarian cyst. Her <EVENT eid="e2" class="OCCURRENCE">history</EVENT> <EVENT eid="e3" class="REPORTING">revealed</EVENT> a <EVENT eid="e4" class="OCCURRENCE">diagnosis</EVENT> of left ovarian cyst 3cm in diameter <TIMEX3 tid="t1" type="DATE" value="2016-XX-XX" temporalFunction="false">3 years</TIMEX3> previously. Her serum cancer antigen (CA) 125 and CA 19-9 levels were within the normal ranges, and she was followed up at <TIMEX3 tid="t2" type="DURATION" value="P6M" temporalFunction="false">6-month</TIMEX3> intervals at a private hospital. The ovarian cyst <EVENT eid="e5" class="OCCURRENCE">size</EVENT> had not <EVENT eid="e6" class="OCCURRENCE">changed</EVENT> in size and structure on <TIMEX3 tid="t3" type="SET" value="P1Y" temporalFunction="true">biannual</TIMEX3> transvaginal <EVENT eid="e7" class="OCCURRENCE">ultrasound</EVENT> (TVS). However, she was <EVENT eid="e8" class="OCCURRENCE">referred</EVENT> to our institution in <TIMEX3 tid="t4" type="DATE" value="2016-07-XX" temporalFunction="false">July 2016</TIMEX3> with progression of ovarian cyst to 6cm on a pelvic <EVENT eid="e9" class="OCCURRENCE">ultrasonogram</EVENT> <TIMEX3 tid="t5" type="DATE" value="2019-03-13" temporalFunction="false">2 weeks</TIMEX3> ago. The patient underwent <EVENT eid="e10" class="OCCURRENCE">menopause</EVENT> at age 48 years, with an uneventful past menstrual cycle. She had no medical <EVENT eid="e11" class="OCCURRENCE">history</EVENT> except the benign thyroid nodule, no relevant surgical <EVENT eid="e12" class="OCCURRENCE">history</EVENT> and had not received hormonal <EVENT eid="e13" class="OCCURRENCE">therapy</EVENT>. Routine blood <EVENT eid="e14" class="OCCURRENCE">chemistry</EVENT> and serum tumor marker <EVENT eid="e15" class="OCCURRENCE">analysis</EVENT> <EVENT eid="e16" class="REPORTING">showed</EVENT> that the <EVENT eid="e17" class="REPORTING">levels</EVENT> of carcinoembryonic antigen, CA 19-9, CA 125, and human epididymis protein 4 were all within the normal <EVENT eid="e18" class="OCCURRENCE">ranges</EVENT>. Uterine cervical <EVENT eid="e19" class="OCCURRENCE">cytology</EVENT> at the time of admission was normal. <EVENT eid="e20" class="OCCURRENCE">TVS</EVENT> <EVENT eid="e21" class="REPORTING">showed</EVENT> a left ovarian unilocular cyst, size 6cm × 5cm × 4cm, with diffuse low-level internal <EVENT eid="e22" class="OCCURRENCE">echoes</EVENT>, thin walled, smooth margined, no <EVENT eid="e23" class="OCCURRENCE">septa</EVENT> and no papillary <EVENT eid="e24" class="OCCURRENCE">projections</EVENT>. The uterus size was 6cm × 4cm × 3cm, and a 1cm uterine <EVENT eid="e25" class="STATE">myoma</EVENT> was found in the fundus. Pelvic contrast-enhanced computed <EVENT eid="e26" class="REPORTING">tomography</EVENT> (ECT) images <EVENT eid="e27" class="REPORTING">revealed</EVENT> a unilocular cystic <EVENT eid="e28" class="OCCURRENCE">lesion</EVENT> <EVENT eid="e29" class="OCCURRENCE">measuring</EVENT> 6 cm at its widest dimension, without enhancing solid intramural <EVENT eid="e30" class="OCCURRENCE">nodules</EVENT> and no evidence of <EVENT eid="e31" class="OCCURRENCE">lymphadenopathy</EVENT> or <EVENT eid="e32" class="OCCURRENCE">ascites</EVENT>. CT <EVENT eid="e33" class="OCCURRENCE">scan</EVENT> <EVENT eid="e34" class="OCCURRENCE">indicated</EVENT> benign ovarian cystic tumors.&#13;
-The patient underwent laparoendoscopic single-site (LESS) <EVENT eid="e35" class="OCCURRENCE">surgery</EVENT>. On laparoscopic <EVENT eid="e36" class="OCCURRENCE">inspection</EVENT>, the cyst was found to be located in the ampullary and fimbrial regions of the left fallopian tube. The left fallopian tube was grossly unremarkable and the left ovary was atrophied. The left ovary and tube were completely separate from the cyst and the cyst was surrounded by a translucent wall with serous cystic components, but solid components were not seen inside. Clinical <EVENT eid="e37" class="OCCURRENCE">diagnosis</EVENT> was suggestive of left paratubal cyst. The patient underwent <EVENT eid="e38" class="OCCURRENCE">hysterectomy</EVENT> and <EVENT eid="e39" class="OCCURRENCE">BSO</EVENT>. Although tumor <EVENT eid="e40" class="OCCURRENCE">markers</EVENT> were normal and there was no presence of papillary <EVENT eid="e41" class="OCCURRENCE">projections</EVENT>, the <EVENT eid="e42" class="OCCURRENCE">progression</EVENT> in size in the postmenopausal woman <EVENT eid="e43" class="REPORTING">indicated</EVENT> a possible <EVENT eid="e44" class="OCCURRENCE">malignancy</EVENT>. Frozen sections were prepared from surgery <EVENT eid="e45" class="OCCURRENCE">specimens</EVENT> and <EVENT eid="e46" class="REPORTING">confirmed</EVENT> a benign cyst. <TIMEX3 tid="t6" type="DATE" value="X" temporalFunction="true">After surgery</TIMEX3>, the pelvic cavity was <EVENT eid="e47" class="OCCURRENCE">explored</EVENT> and no specific <EVENT eid="e48" class="OCCURRENCE">findings</EVENT> were found in the abdominal cavity.&#13;
-Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the paratubal cyst <EVENT eid="e50" class="REPORTING">revealed</EVENT> the presence of polypoid <EVENT eid="e51" class="OCCURRENCE">lesions</EVENT> on the internal surface of the cyst. The tumor cells <EVENT eid="e52" class="REPORTING">showed</EVENT> nuclear <EVENT eid="e53" class="OCCURRENCE">atypism</EVENT> and <EVENT eid="e54" class="OCCURRENCE">stratification</EVENT>, which are histological characteristics of borderline tumor. A final <EVENT eid="e55" class="OCCURRENCE">diagnosis</EVENT> of paratubal borderline serous tumor was <EVENT eid="e56" class="REPORTING">confirmed</EVENT>. The patient was <EVENT eid="e57" class="OCCURRENCE">discharged</EVENT> from the hospital on <TIMEX3 tid="t7" type="DATE" value="X" temporalFunction="true">postoperative day 3</TIMEX3>. CT <EVENT eid="e58" class="OCCURRENCE">images</EVENT> were retrospectively <EVENT eid="e59" class="REPORTING">evaluated</EVENT>, focusing on the left ovary, fallopian tube, and paratubal cyst <TIMEX3 tid="t8" type="DATE" value="X" temporalFunction="true">after surgery</TIMEX3>. Multiplanar reconstruction CT <EVENT eid="e60" class="OCCURRENCE">imaging</EVENT> <EVENT eid="e61" class="REPORTING">revealed</EVENT> linear fat planes between the left ovary and the <EVENT eid="e62" class="OCCURRENCE">cyst</EVENT>, <EVENT eid="e63" class="REPORTING">indicating</EVENT> that the left ovary, fallopian tube and paratubal cyst were separate structures, similar to those seen <TIMEX3 tid="t9" type="DATE" value="X" temporalFunction="true">during surgery</TIMEX3>. The tumor was not completely <EVENT eid="e64" class="STATE">staged</EVENT>, and a comprehensive surgical staging operation was recommended; however, the patient <EVENT eid="e65" class="OCCURRENCE">refused</EVENT> adjuvant surgical <EVENT eid="e66" class="OCCURRENCE">treatment</EVENT> and opted for close <EVENT eid="e67" class="OCCURRENCE">follow-up</EVENT>. Pelvic <EVENT eid="e68" class="OCCURRENCE">ECT</EVENT>, <EVENT eid="e69" class="OCCURRENCE">TVS</EVENT> and tumor <EVENT eid="e70" class="OCCURRENCE">markers</EVENT> were <EVENT eid="e71" class="OCCURRENCE">checked</EVENT> every <TIMEX3 tid="t10" type="SET" value="P3M" temporalFunction="true">three months</TIMEX3>. The patient remains <EVENT eid="e72" class="OCCURRENCE">asymptomatic</EVENT> and follow-up at <TIMEX3 tid="t11" type="DATE" value="P24M" temporalFunction="true">24 months</TIMEX3> <EVENT eid="e73" class="REPORTING">showed</EVENT> no evidence of recurrence or <EVENT eid="e74" class="STATE">metastasis</EVENT>.&#13;
+  <TEXT>A 61-year-old woman, gravida 3 para 3, <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">presented</EVENT> with an increased size of ovarian cyst. Her <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">history</EVENT> <EVENT eid="e3" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> a <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnosis</EVENT> of left ovarian cyst 3cm in diameter <TIMEX3 tid="t1" type="DATE" value="2016-XX-XX" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">3 years</TIMEX3> previously. Her serum cancer antigen (CA) 125 and CA 19-9 levels were within the normal ranges, and she was followed up at <TIMEX3 tid="t2" type="DURATION" value="P6M" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">6-month</TIMEX3> intervals at a private hospital. The ovarian cyst <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">size</EVENT> had not <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">changed</EVENT> in size and structure on <TIMEX3 tid="t3" type="SET" value="P1Y" temporalFunction="true" comment="e3c:timex3Class=QUANTIFIER">biannual</TIMEX3> transvaginal <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">ultrasound</EVENT> (TVS). However, she was <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">referred</EVENT> to our institution in <TIMEX3 tid="t4" type="DATE" value="2016-07-XX" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">July 2016</TIMEX3> with progression of ovarian cyst to 6cm on a pelvic <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">ultrasonogram</EVENT> <TIMEX3 tid="t5" type="DATE" value="2019-03-13" temporalFunction="false" comment="e3c:functionInDocument=SECTIONTIME">2 weeks</TIMEX3> ago. The patient underwent <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">menopause</EVENT> at age 48 years, with an uneventful past menstrual cycle. She had no medical <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">history</EVENT> except the benign thyroid nodule, no relevant surgical <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">history</EVENT> and had not received hormonal <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">therapy</EVENT>. Routine blood <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">chemistry</EVENT> and serum tumor marker <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">analysis</EVENT> <EVENT eid="e16" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> that the <EVENT eid="e17" class="REPORTING" comment="e3c:permanence=FINITE">levels</EVENT> of carcinoembryonic antigen, CA 19-9, CA 125, and human epididymis protein 4 were all within the normal <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">ranges</EVENT>. Uterine cervical <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">cytology</EVENT> at the time of admission was normal. <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">TVS</EVENT> <EVENT eid="e21" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> a left ovarian unilocular cyst, size 6cm × 5cm × 4cm, with diffuse low-level internal <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">echoes</EVENT>, thin walled, smooth margined, no <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">septa</EVENT> and no papillary <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">projections</EVENT>. The uterus size was 6cm × 4cm × 3cm, and a 1cm uterine <EVENT eid="e25" class="STATE" comment="e3c:permanence=PERMANENT">myoma</EVENT> was found in the fundus. Pelvic contrast-enhanced computed <EVENT eid="e26" class="REPORTING" comment="e3c:permanence=PERMANENT">tomography</EVENT> (ECT) images <EVENT eid="e27" class="REPORTING" comment="e3c:permanence=PERMANENT">revealed</EVENT> a unilocular cystic <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesion</EVENT> <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">measuring</EVENT> 6 cm at its widest dimension, without enhancing solid intramural <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">nodules</EVENT> and no evidence of <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">lymphadenopathy</EVENT> or <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">ascites</EVENT>. CT <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">scan</EVENT> <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">indicated</EVENT> benign ovarian cystic tumors.&#13;
+The patient underwent laparoendoscopic single-site (LESS) <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">surgery</EVENT>. On laparoscopic <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">inspection</EVENT>, the cyst was found to be located in the ampullary and fimbrial regions of the left fallopian tube. The left fallopian tube was grossly unremarkable and the left ovary was atrophied. The left ovary and tube were completely separate from the cyst and the cyst was surrounded by a translucent wall with serous cystic components, but solid components were not seen inside. Clinical <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnosis</EVENT> was suggestive of left paratubal cyst. The patient underwent <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">hysterectomy</EVENT> and <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">BSO</EVENT>. Although tumor <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">markers</EVENT> were normal and there was no presence of papillary <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">projections</EVENT>, the <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">progression</EVENT> in size in the postmenopausal woman <EVENT eid="e43" class="REPORTING" comment="e3c:permanence=FINITE">indicated</EVENT> a possible <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">malignancy</EVENT>. Frozen sections were prepared from surgery <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">specimens</EVENT> and <EVENT eid="e46" class="REPORTING" comment="e3c:permanence=FINITE">confirmed</EVENT> a benign cyst. <TIMEX3 tid="t6" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:functionInDocument=SECTIONTIME">After surgery</TIMEX3>, the pelvic cavity was <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">explored</EVENT> and no specific <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">findings</EVENT> were found in the abdominal cavity.&#13;
+Histopathological <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> of the paratubal cyst <EVENT eid="e50" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> the presence of polypoid <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesions</EVENT> on the internal surface of the cyst. The tumor cells <EVENT eid="e52" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> nuclear <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">atypism</EVENT> and <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">stratification</EVENT>, which are histological characteristics of borderline tumor. A final <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">diagnosis</EVENT> of paratubal borderline serous tumor was <EVENT eid="e56" class="REPORTING" comment="e3c:permanence=FINITE">confirmed</EVENT>. The patient was <EVENT eid="e57" class="OCCURRENCE" comment="e3c:permanence=FINITE">discharged</EVENT> from the hospital on <TIMEX3 tid="t7" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP">postoperative day 3</TIMEX3>. CT <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">images</EVENT> were retrospectively <EVENT eid="e59" class="REPORTING" comment="e3c:permanence=FINITE">evaluated</EVENT>, focusing on the left ovary, fallopian tube, and paratubal cyst <TIMEX3 tid="t8" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:functionInDocument=SECTIONTIME">after surgery</TIMEX3>. Multiplanar reconstruction CT <EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">imaging</EVENT> <EVENT eid="e61" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> linear fat planes between the left ovary and the <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">cyst</EVENT>, <EVENT eid="e63" class="REPORTING" comment="e3c:permanence=FINITE">indicating</EVENT> that the left ovary, fallopian tube and paratubal cyst were separate structures, similar to those seen <TIMEX3 tid="t9" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:functionInDocument=SECTIONTIME">during surgery</TIMEX3>. The tumor was not completely <EVENT eid="e64" class="STATE" comment="e3c:permanence=PERMANENT">staged</EVENT>, and a comprehensive surgical staging operation was recommended; however, the patient <EVENT eid="e65" class="OCCURRENCE" comment="e3c:permanence=FINITE">refused</EVENT> adjuvant surgical <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">treatment</EVENT> and opted for close <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">follow-up</EVENT>. Pelvic <EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">ECT</EVENT>, <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">TVS</EVENT> and tumor <EVENT eid="e70" class="OCCURRENCE" comment="e3c:permanence=FINITE">markers</EVENT> were <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">checked</EVENT> every <TIMEX3 tid="t10" type="SET" value="P3M" temporalFunction="true" comment="e3c:timex3Class=QUANTIFIER">three months</TIMEX3>. The patient remains <EVENT eid="e72" class="OCCURRENCE" comment="e3c:permanence=FINITE">asymptomatic</EVENT> and follow-up at <TIMEX3 tid="t11" type="DATE" value="P24M" temporalFunction="true" comment="e3c:functionInDocument=SECTIONTIME">24 months</TIMEX3> <EVENT eid="e73" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> no evidence of recurrence or <EVENT eid="e74" class="STATE" comment="e3c:permanence=PERMANENT">metastasis</EVENT>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="NEG" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l2" eventInstanceID="ei2" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToEventInstance="ei3" relType="INCLUDES"/>
@@ -87,7 +87,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l5" eventInstanceID="ei2" relatedToEventInstance="ei4" relType="INCLUDES"/>
   <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l7" eventInstanceID="ei4" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l8" eventInstanceID="ei4" relType="SIMULTANEOUS"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l9" timeID="t1" relatedToEventInstance="ei4" relType="BEGINS"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
@@ -97,7 +97,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l15" eventInstanceID="ei7" relatedToEventInstance="ei1" relType="BEFORE"/>
   <TLINK lid="l16" eventInstanceID="ei7" relatedToEventInstance="ei6" relType="BEFORE"/>
   <TLINK lid="l17" eventInstanceID="ei8" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l18" eventInstanceID="ei8" relatedToEventInstance="ei10" relType="SIMULTANEOUS"/>
+  <TLINK lid="l18" eventInstanceID="ei8" relatedToEventInstance="ei10" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l19" eventInstanceID="ei8" relatedToEventInstance="ei19" relType="BEFORE"/>
   <TLINK lid="l20" eventInstanceID="ei8" relatedToEventInstance="ei1" relType="SIMULTANEOUS"/>
   <TLINK lid="l21" eventInstanceID="ei8" relatedToEventInstance="ei11" relType="INCLUDES"/>
@@ -105,7 +105,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l23" eventInstanceID="ei8" relatedToEventInstance="ei20" relType="BEFORE"/>
   <TLINK lid="l24" timeID="t4" relatedToEventInstance="ei8" relType="BEGINS"/>
   <TLINK lid="l25" eventInstanceID="ei9" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l26" eventInstanceID="ei9" relType="SIMULTANEOUS"/>
+  <TLINK lid="l26" eventInstanceID="ei9" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l27" eventInstanceID="ei9" relatedToEventInstance="ei8" relType="BEFORE"/>
   <TLINK lid="l28" timeID="t5" relatedToEventInstance="ei9" relType="ENDS"/>
   <TLINK lid="l29" eventInstanceID="ei10" relatedToTime="t0" relType="BEFORE"/>
@@ -115,11 +115,11 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l33" eventInstanceID="ei12" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
   <TLINK lid="l34" eventInstanceID="ei13" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l35" eventInstanceID="ei14" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l36" eventInstanceID="ei14" relatedToEventInstance="ei15" relType="SIMULTANEOUS"/>
+  <TLINK lid="l36" eventInstanceID="ei14" relatedToEventInstance="ei15" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l37" eventInstanceID="ei15" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l38" eventInstanceID="ei15" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
+  <TLINK lid="l38" eventInstanceID="ei15" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l39" eventInstanceID="ei15" relatedToEventInstance="ei16" relType="INCLUDES"/>
-  <TLINK lid="l40" eventInstanceID="ei15" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
+  <TLINK lid="l40" eventInstanceID="ei15" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l41" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l42" eventInstanceID="ei17" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l43" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -128,7 +128,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l46" eventInstanceID="ei20" relatedToEventInstance="ei23" relType="INCLUDES"/>
   <TLINK lid="l47" eventInstanceID="ei20" relatedToEventInstance="ei22" relType="INCLUDES"/>
   <TLINK lid="l48" eventInstanceID="ei20" relatedToEventInstance="ei24" relType="INCLUDES"/>
-  <TLINK lid="l49" eventInstanceID="ei20" relatedToEventInstance="ei25" relType="SIMULTANEOUS"/>
+  <TLINK lid="l49" eventInstanceID="ei20" relatedToEventInstance="ei25" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l50" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="INCLUDES"/>
   <TLINK lid="l51" eventInstanceID="ei20" relatedToEventInstance="ei26" relType="BEFORE"/>
   <TLINK lid="l52" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -138,8 +138,8 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l56" eventInstanceID="ei25" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l57" eventInstanceID="ei26" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l58" eventInstanceID="ei26" relatedToEventInstance="ei27" relType="INCLUDES"/>
-  <TLINK lid="l59" eventInstanceID="ei26" relatedToEventInstance="ei33" relType="SIMULTANEOUS"/>
-  <TLINK lid="l60" eventInstanceID="ei26" relatedToEventInstance="ei28" relType="SIMULTANEOUS"/>
+  <TLINK lid="l59" eventInstanceID="ei26" relatedToEventInstance="ei33" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l60" eventInstanceID="ei26" relatedToEventInstance="ei28" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l61" eventInstanceID="ei27" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l62" eventInstanceID="ei28" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l63" eventInstanceID="ei28" relatedToEventInstance="ei32" relType="INCLUDES"/>
@@ -153,27 +153,27 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l71" eventInstanceID="ei33" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l72" eventInstanceID="ei33" relatedToEventInstance="ei35" relType="BEFORE"/>
   <TLINK lid="l73" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="INCLUDES"/>
-  <TLINK lid="l74" eventInstanceID="ei33" relType="SIMULTANEOUS"/>
-  <TLINK lid="l75" eventInstanceID="ei33" relatedToEventInstance="ei36" relType="SIMULTANEOUS"/>
+  <TLINK lid="l74" eventInstanceID="ei33" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l75" eventInstanceID="ei33" relatedToEventInstance="ei36" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l76" eventInstanceID="ei34" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l77" eventInstanceID="ei35" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l78" eventInstanceID="ei36" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l79" eventInstanceID="ei36" relType="SIMULTANEOUS"/>
+  <TLINK lid="l79" eventInstanceID="ei36" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l80" eventInstanceID="ei36" relatedToEventInstance="ei37" relType="BEFORE"/>
   <TLINK lid="l81" eventInstanceID="ei37" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l82" eventInstanceID="ei37" relatedToEventInstance="ei38" relType="BEFORE"/>
   <TLINK lid="l83" eventInstanceID="ei38" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l84" eventInstanceID="ei38" relatedToEventInstance="ei39" relType="SIMULTANEOUS"/>
+  <TLINK lid="l84" eventInstanceID="ei38" relatedToEventInstance="ei39" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l85" eventInstanceID="ei39" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l86" eventInstanceID="ei40" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l87" eventInstanceID="ei41" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l88" eventInstanceID="ei42" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l89" eventInstanceID="ei42" relatedToEventInstance="ei41" relType="SIMULTANEOUS"/>
+  <TLINK lid="l89" eventInstanceID="ei42" relatedToEventInstance="ei41" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l90" eventInstanceID="ei42" relatedToEventInstance="ei44" relType="INCLUDES"/>
   <TLINK lid="l91" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="INCLUDES"/>
-  <TLINK lid="l92" eventInstanceID="ei42" relatedToEventInstance="ei40" relType="SIMULTANEOUS"/>
+  <TLINK lid="l92" eventInstanceID="ei42" relatedToEventInstance="ei40" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l93" eventInstanceID="ei42" relatedToEventInstance="ei45" relType="BEFORE"/>
-  <TLINK lid="l94" eventInstanceID="ei42" relatedToEventInstance="ei39" relType="SIMULTANEOUS"/>
+  <TLINK lid="l94" eventInstanceID="ei42" relatedToEventInstance="ei39" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l95" eventInstanceID="ei43" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l96" eventInstanceID="ei44" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l97" eventInstanceID="ei45" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -187,8 +187,8 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l105" eventInstanceID="ei48" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l106" eventInstanceID="ei49" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l107" eventInstanceID="ei49" relatedToEventInstance="ei50" relType="INCLUDES"/>
-  <TLINK lid="l108" eventInstanceID="ei49" relatedToEventInstance="ei53" relType="SIMULTANEOUS"/>
-  <TLINK lid="l109" eventInstanceID="ei49" relatedToEventInstance="ei51" relType="SIMULTANEOUS"/>
+  <TLINK lid="l108" eventInstanceID="ei49" relatedToEventInstance="ei53" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l109" eventInstanceID="ei49" relatedToEventInstance="ei51" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l110" eventInstanceID="ei50" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l111" eventInstanceID="ei51" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l112" eventInstanceID="ei52" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -199,7 +199,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l117" eventInstanceID="ei53" relatedToEventInstance="ei52" relType="INCLUDES"/>
   <TLINK lid="l118" eventInstanceID="ei54" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l119" eventInstanceID="ei55" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l120" eventInstanceID="ei55" relType="SIMULTANEOUS"/>
+  <TLINK lid="l120" eventInstanceID="ei55" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l121" eventInstanceID="ei55" relatedToEventInstance="ei58" relType="BEFORE"/>
   <TLINK lid="l122" eventInstanceID="ei55" relatedToEventInstance="ei56" relType="INCLUDES"/>
   <TLINK lid="l123" eventInstanceID="ei56" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -207,21 +207,21 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l125" timeID="t7" relatedToEventInstance="ei57" relType="ENDS"/>
   <TLINK lid="l126" eventInstanceID="ei58" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l127" eventInstanceID="ei58" relatedToEventInstance="ei59" relType="INCLUDES"/>
-  <TLINK lid="l128" eventInstanceID="ei58" relType="SIMULTANEOUS"/>
-  <TLINK lid="l129" eventInstanceID="ei58" relType="SIMULTANEOUS"/>
-  <TLINK lid="l130" eventInstanceID="ei58" relType="SIMULTANEOUS"/>
+  <TLINK lid="l128" eventInstanceID="ei58" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l129" eventInstanceID="ei58" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l130" eventInstanceID="ei58" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l131" eventInstanceID="ei58" relatedToEventInstance="ei60" relType="BEFORE"/>
   <TLINK lid="l132" eventInstanceID="ei58" relatedToEventInstance="ei57" relType="BEFORE"/>
   <TLINK lid="l133" eventInstanceID="ei59" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l134" timeID="t8" relatedToEventInstance="ei38" relType="BEGINS"/>
   <TLINK lid="l135" eventInstanceID="ei60" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l136" eventInstanceID="ei60" relatedToEventInstance="ei62" relType="SIMULTANEOUS"/>
+  <TLINK lid="l136" eventInstanceID="ei60" relatedToEventInstance="ei62" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l137" eventInstanceID="ei60" relatedToEventInstance="ei64" relType="BEFORE"/>
   <TLINK lid="l138" eventInstanceID="ei60" relatedToEventInstance="ei63" relType="INCLUDES"/>
-  <TLINK lid="l139" eventInstanceID="ei60" relType="SIMULTANEOUS"/>
+  <TLINK lid="l139" eventInstanceID="ei60" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l140" eventInstanceID="ei60" relatedToEventInstance="ei61" relType="INCLUDES"/>
-  <TLINK lid="l141" eventInstanceID="ei60" relType="SIMULTANEOUS"/>
-  <TLINK lid="l142" eventInstanceID="ei60" relType="SIMULTANEOUS"/>
+  <TLINK lid="l141" eventInstanceID="ei60" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l142" eventInstanceID="ei60" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l143" eventInstanceID="ei61" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l144" eventInstanceID="ei62" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l145" eventInstanceID="ei63" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -242,7 +242,7 @@ Histopathological <EVENT eid="e49" class="OCCURRENCE">examination</EVENT> of the
   <TLINK lid="l160" eventInstanceID="ei71" relatedToEventInstance="ei69" relType="INCLUDES"/>
   <TLINK lid="l161" eventInstanceID="ei71" relatedToEventInstance="ei68" relType="INCLUDES"/>
   <TLINK lid="l162" eventInstanceID="ei71" relatedToEventInstance="ei70" relType="INCLUDES"/>
-  <TLINK lid="l163" eventInstanceID="ei71" relatedToEventInstance="ei72" relType="SIMULTANEOUS"/>
+  <TLINK lid="l163" eventInstanceID="ei71" relatedToEventInstance="ei72" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l164" timeID="t10" relatedToEventInstance="ei71" relType="INCLUDES"/>
   <TLINK lid="l165" eventInstanceID="ei72" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l166" eventInstanceID="ei72" relatedToEventInstance="ei73" relType="INCLUDES"/>

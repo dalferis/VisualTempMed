@@ -2,117 +2,117 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-10-17T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-10-17</TIMEX3>
-  <TEXT>A 23-year-old previously healthy man, <EVENT eid="e1" class="OCCURRENCE">presented</EVENT> to the hospital's emergency department, with a <TIMEX3 tid="t1" type="DURATION" value="P3D" temporalFunction="false">3-day</TIMEX3> history of high-grade <EVENT eid="e2" class="OCCURRENCE">fever</EVENT> up to 40°C and upper right abdominal <EVENT eid="e3" class="OCCURRENCE">pain</EVENT>. The patient's past medical <EVENT eid="e4" class="OCCURRENCE">history</EVENT> was <EVENT eid="e5" class="OCCURRENCE">non-significant</EVENT>. He was a <EVENT eid="e6" class="OCCURRENCE">student</EVENT> and had not <EVENT eid="e7" class="OCCURRENCE">received</EVENT> any medication. He <EVENT eid="e8" class="OCCURRENCE">had</EVENT> a pet dog and <EVENT eid="e9" class="REPORTING">reported</EVENT> no recent <EVENT eid="e10" class="REPORTING">travel</EVENT>. During physical <EVENT eid="e11" class="OCCURRENCE">examination</EVENT> on admission, vital <EVENT eid="e12" class="OCCURRENCE">signs</EVENT> were normal and he was <EVENT eid="e13" class="OCCURRENCE">febrile</EVENT> with a body <EVENT eid="e14" class="OCCURRENCE">temperature</EVENT> of 38°C. Abdominal <EVENT eid="e15" class="OCCURRENCE">examination</EVENT> <EVENT eid="e16" class="REPORTING">revealed</EVENT> a tender palpable liver, with no <EVENT eid="e17" class="REPORTING">signs</EVENT> of peritoneal <EVENT eid="e18" class="OCCURRENCE">irritation</EVENT>. The remainder of physical <EVENT eid="e19" class="OCCURRENCE">examination</EVENT> was <EVENT eid="e20" class="OCCURRENCE">unremarkable</EVENT>. Abnormal laboratory <EVENT eid="e21" class="OCCURRENCE">results</EVENT> on admission included a white blood cell <EVENT eid="e22" class="OCCURRENCE">count</EVENT> (<EVENT eid="e23" class="OCCURRENCE">WBC</EVENT>) of 20.830 (4-10.5x10³/μL), elevated C-reactive protein (CRP) <EVENT eid="e24" class="OCCURRENCE">level</EVENT> (28mg/dl, normal ≤0.5mg/dl), slightly elevated alanine <EVENT eid="e25" class="OCCURRENCE">aminotransferase</EVENT> (<EVENT eid="e26" class="OCCURRENCE">ALT</EVENT>) of 56 IU/L (normal 5-40 IU/L), and lactic <EVENT eid="e27" class="OCCURRENCE">dehydrogenase</EVENT> (<EVENT eid="e28" class="OCCURRENCE">LDH</EVENT>) of 255 IU/L (normal &lt;225 IU/L). Alkaline <EVENT eid="e29" class="OCCURRENCE">phosphatase</EVENT> (<EVENT eid="e30" class="OCCURRENCE">ALP</EVENT>) was normal. Abdominal <EVENT eid="e31" class="OCCURRENCE">ultrasonography</EVENT> on admission <EVENT eid="e32" class="REPORTING">revealed</EVENT> a mildly enlarged liver and spleen and the presence of 2 sizable, hypoechoic <EVENT eid="e33" class="OCCURRENCE">lesions</EVENT>. Abdominal computed tomography (CT) <EVENT eid="e34" class="OCCURRENCE">scan</EVENT> <EVENT eid="e35" class="REPORTING">revealed</EVENT> the 2 aforementioned <EVENT eid="e36" class="OCCURRENCE">lesions</EVENT> in <EVENT eid="e37" class="OCCURRENCE">diameter</EVENT> of 5.6cm at the left liver lobe and 5.2cm in the right lobe. The <EVENT eid="e38" class="OCCURRENCE">lesions</EVENT> were <EVENT eid="e39" class="OCCURRENCE">hypodense</EVENT> and presented peripheral <EVENT eid="e40" class="OCCURRENCE">enhancement</EVENT> after intravenous <EVENT eid="e41" class="OCCURRENCE">contrast</EVENT>, similar to the morphology of hepatic <EVENT eid="e42" class="OCCURRENCE">abscesses</EVENT>. The patient was <EVENT eid="e43" class="OCCURRENCE">admitted</EVENT> for further <EVENT eid="e44" class="OCCURRENCE">evaluation</EVENT> and <EVENT eid="e45" class="OCCURRENCE">treatment</EVENT>. Culture guided <EVENT eid="e46" class="OCCURRENCE">antimicrobials</EVENT> and appropriate <EVENT eid="e47" class="OCCURRENCE">drainage</EVENT> was our first option. Empiric antibiotic <EVENT eid="e48" class="OCCURRENCE">therapy</EVENT> with intravenous ciprofloxacin (400mg every 12 hours), and metronidazole (500mg every 8 hours) was <EVENT eid="e49" class="ASPECTUAL">initiated</EVENT>. All <EVENT eid="e50" class="OCCURRENCE">cultures</EVENT> resulted negative. Initially, we performed percutaneous sonographic (U/S) guided <EVENT eid="e51" class="OCCURRENCE">aspiration</EVENT> into the left hepatic abscess cavity. A thick, purulent material of 40cc was <EVENT eid="e52" class="OCCURRENCE">drained</EVENT> and <EVENT eid="e53" class="OCCURRENCE">sent</EVENT> for culture. <EVENT eid="e54" class="OCCURRENCE">Microbiology</EVENT> <EVENT eid="e55" class="REPORTING">revealed</EVENT> a Gram-negative <EVENT eid="e56" class="OCCURRENCE">bacterium</EVENT> that presented slow <EVENT eid="e57" class="OCCURRENCE">growth</EVENT>. On <TIMEX3 tid="t2" type="DATE" value="XXXX-XX-XX" temporalFunction="true">the 5th</TIMEX3> and <TIMEX3 tid="t3" type="DATE" value="XXXX-XX-XX" temporalFunction="true">8th days</TIMEX3> of <EVENT eid="e58" class="OCCURRENCE">admission</EVENT>, we performed CT guided catheter <EVENT eid="e59" class="OCCURRENCE">drainage</EVENT> of both abscesses. Meanwhile irregular spikes of <EVENT eid="e60" class="OCCURRENCE">fever</EVENT> with <TIMEX3 tid="t4" type="TIME" value="X" temporalFunction="true">daytime</TIMEX3> <EVENT eid="e61" class="OCCURRENCE">variation</EVENT> accompanied by <TIMEX3 tid="t5" type="TIME" value="X" temporalFunction="true">night</TIMEX3> <EVENT eid="e62" class="OCCURRENCE">sweats</EVENT> <EVENT eid="e63" class="ASPECTUAL">persisted</EVENT>. <EVENT eid="e64" class="OCCURRENCE">Ciprofloxacin</EVENT> <EVENT eid="e65" class="ASPECTUAL">discontinued</EVENT> and meropenem at a dose of 1gr every 8 hours <EVENT eid="e66" class="OCCURRENCE">administered</EVENT>. Thorough <EVENT eid="e67" class="OCCURRENCE">screening</EVENT> for other possible sources of infection, resulted negative. Transthoracic <EVENT eid="e68" class="OCCURRENCE">echocardiography</EVENT> was negative for <EVENT eid="e69" class="OCCURRENCE">vegetations</EVENT> and <EVENT eid="e70" class="REPORTING">showed</EVENT> mild mitral <EVENT eid="e71" class="OCCURRENCE">regurgitation</EVENT>. <EVENT eid="e72" class="OCCURRENCE">Entamoeba</EVENT> histolytica Abs, <EVENT eid="e73" class="OCCURRENCE">echinococcus</EVENT> Abs, <EVENT eid="e74" class="OCCURRENCE">leismania</EVENT> Abs, <EVENT eid="e75" class="OCCURRENCE">brucella</EVENT> Abs were negative. Gastrointestinal endoscopic <EVENT eid="e76" class="OCCURRENCE">evaluation</EVENT> was unrevealing. The patient was also HIV <EVENT eid="e77" class="OCCURRENCE">negative</EVENT> and no other immunodeficiency <EVENT eid="e78" class="OCCURRENCE">conditions</EVENT> were <EVENT eid="e79" class="REPORTING">identified</EVENT>. Eventually, the isolate <EVENT eid="e80" class="OCCURRENCE">identified</EVENT> by the Vitek 2 automated system and <EVENT eid="e81" class="OCCURRENCE">classified</EVENT> as A. aphrophilus. To <EVENT eid="e82" class="REPORTING">confirm</EVENT> the identification of the <EVENT eid="e83" class="OCCURRENCE">strain</EVENT> we performed matrix assisted laser desorption ionization-time of flight mass <EVENT eid="e84" class="OCCURRENCE">spectrometry</EVENT> (MALDI-TOF MS). The sensitivity <EVENT eid="e85" class="OCCURRENCE">test</EVENT> was performed with minimal inhibitory concentration (MIC) test strips; the isolate's <EVENT eid="e86" class="OCCURRENCE">susceptibility</EVENT> was to <EVENT eid="e87" class="OCCURRENCE">ceftriaxone</EVENT> ≤0.125 (S), <EVENT eid="e88" class="OCCURRENCE">cefepime</EVENT> ≤0.5 (S), <EVENT eid="e89" class="OCCURRENCE">ciprofloxacin</EVENT> ≤0.125 (S), <EVENT eid="e90" class="OCCURRENCE">gentamycin</EVENT> ≤0.5 (S), <EVENT eid="e91" class="OCCURRENCE">amikacin</EVENT> ≤0.125 (S) and to <EVENT eid="e92" class="OCCURRENCE">meropenem</EVENT> ≤0.032 (S). Percutaneous <EVENT eid="e93" class="OCCURRENCE">drainage</EVENT> of both abscesses, combined with antimicrobial <EVENT eid="e94" class="OCCURRENCE">treatment</EVENT>, was <EVENT eid="e95" class="OCCURRENCE">successful</EVENT> and the patient's clinical <EVENT eid="e96" class="OCCURRENCE">condition</EVENT> <EVENT eid="e97" class="OCCURRENCE">improved</EVENT>. Thankfully, no surgical <EVENT eid="e98" class="OCCURRENCE">procedure</EVENT> was required. The drains were <EVENT eid="e99" class="OCCURRENCE">removed</EVENT> immediately the fluid from the abscess cavities became <EVENT eid="e100" class="OCCURRENCE">clear</EVENT>. Meropenem was <EVENT eid="e101" class="OCCURRENCE">administered</EVENT> for <TIMEX3 tid="t6" type="DURATION" value="P2W" temporalFunction="false">a total of 2 weeks</TIMEX3>. Then <EVENT eid="e102" class="OCCURRENCE">meropenem</EVENT> was <EVENT eid="e103" class="OCCURRENCE">switched</EVENT> to oral <EVENT eid="e104" class="OCCURRENCE">ciprofloxacin</EVENT> for <TIMEX3 tid="t7" type="DURATION" value="P4W" temporalFunction="false">another 4 weeks</TIMEX3> and the patient was <EVENT eid="e105" class="OCCURRENCE">discharged</EVENT> from the hospital, in full <EVENT eid="e106" class="OCCURRENCE">recovery</EVENT>. Follow-up <EVENT eid="e107" class="OCCURRENCE">sonogram</EVENT> obtained <TIMEX3 tid="t8" type="DURATION" value="P2M" temporalFunction="false">almost 2 months</TIMEX3> after the <EVENT eid="e108" class="OCCURRENCE">drainage</EVENT> <EVENT eid="e109" class="REPORTING">showed</EVENT> completely normal liver parenchyma without any residual liver cavities.&#13;
+  <TEXT>A 23-year-old previously healthy man, <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">presented</EVENT> to the hospital's emergency department, with a <TIMEX3 tid="t1" type="DURATION" value="P3D" temporalFunction="false">3-day</TIMEX3> history of high-grade <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">fever</EVENT> up to 40°C and upper right abdominal <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">pain</EVENT>. The patient's past medical <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">history</EVENT> was <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">non-significant</EVENT>. He was a <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">student</EVENT> and had not <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">received</EVENT> any medication. He <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">had</EVENT> a pet dog and <EVENT eid="e9" class="REPORTING" comment="e3c:permanence=FINITE">reported</EVENT> no recent <EVENT eid="e10" class="REPORTING" comment="e3c:permanence=FINITE">travel</EVENT>. During physical <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> on admission, vital <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">signs</EVENT> were normal and he was <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">febrile</EVENT> with a body <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">temperature</EVENT> of 38°C. Abdominal <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> <EVENT eid="e16" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> a tender palpable liver, with no <EVENT eid="e17" class="REPORTING" comment="e3c:permanence=FINITE">signs</EVENT> of peritoneal <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">irritation</EVENT>. The remainder of physical <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">examination</EVENT> was <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">unremarkable</EVENT>. Abnormal laboratory <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">results</EVENT> on admission included a white blood cell <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">count</EVENT> (<EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">WBC</EVENT>) of 20.830 (4-10.5x10³/μL), elevated C-reactive protein (CRP) <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> (28mg/dl, normal ≤0.5mg/dl), slightly elevated alanine <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">aminotransferase</EVENT> (<EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">ALT</EVENT>) of 56 IU/L (normal 5-40 IU/L), and lactic <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">dehydrogenase</EVENT> (<EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">LDH</EVENT>) of 255 IU/L (normal &lt;225 IU/L). Alkaline <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">phosphatase</EVENT> (<EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">ALP</EVENT>) was normal. Abdominal <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">ultrasonography</EVENT> on admission <EVENT eid="e32" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> a mildly enlarged liver and spleen and the presence of 2 sizable, hypoechoic <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesions</EVENT>. Abdominal computed tomography (CT) <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">scan</EVENT> <EVENT eid="e35" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> the 2 aforementioned <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesions</EVENT> in <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">diameter</EVENT> of 5.6cm at the left liver lobe and 5.2cm in the right lobe. The <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">lesions</EVENT> were <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">hypodense</EVENT> and presented peripheral <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">enhancement</EVENT> after intravenous <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">contrast</EVENT>, similar to the morphology of hepatic <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">abscesses</EVENT>. The patient was <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">admitted</EVENT> for further <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">evaluation</EVENT> and <EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">treatment</EVENT>. Culture guided <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">antimicrobials</EVENT> and appropriate <EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainage</EVENT> was our first option. Empiric antibiotic <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">therapy</EVENT> with intravenous ciprofloxacin (400mg every 12 hours), and metronidazole (500mg every 8 hours) was <EVENT eid="e49" class="ASPECTUAL" comment="e3c:permanence=FINITE">initiated</EVENT>. All <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">cultures</EVENT> resulted negative. Initially, we performed percutaneous sonographic (U/S) guided <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">aspiration</EVENT> into the left hepatic abscess cavity. A thick, purulent material of 40cc was <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">drained</EVENT> and <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">sent</EVENT> for culture. <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">Microbiology</EVENT> <EVENT eid="e55" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> a Gram-negative <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">bacterium</EVENT> that presented slow <EVENT eid="e57" class="OCCURRENCE" comment="e3c:permanence=FINITE">growth</EVENT>. On <TIMEX3 tid="t2" type="DATE" value="XXXX-XX-XX" temporalFunction="true">the 5th</TIMEX3> and <TIMEX3 tid="t3" type="DATE" value="XXXX-XX-XX" temporalFunction="true">8th days</TIMEX3> of <EVENT eid="e58" class="OCCURRENCE" comment="e3c:permanence=FINITE">admission</EVENT>, we performed CT guided catheter <EVENT eid="e59" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainage</EVENT> of both abscesses. Meanwhile irregular spikes of <EVENT eid="e60" class="OCCURRENCE" comment="e3c:permanence=FINITE">fever</EVENT> with <TIMEX3 tid="t4" type="TIME" value="X" temporalFunction="true">daytime</TIMEX3> <EVENT eid="e61" class="OCCURRENCE" comment="e3c:permanence=FINITE">variation</EVENT> accompanied by <TIMEX3 tid="t5" type="TIME" value="X" temporalFunction="true">night</TIMEX3> <EVENT eid="e62" class="OCCURRENCE" comment="e3c:permanence=FINITE">sweats</EVENT> <EVENT eid="e63" class="ASPECTUAL" comment="e3c:permanence=FINITE">persisted</EVENT>. <EVENT eid="e64" class="OCCURRENCE" comment="e3c:permanence=FINITE">Ciprofloxacin</EVENT> <EVENT eid="e65" class="ASPECTUAL" comment="e3c:permanence=FINITE">discontinued</EVENT> and meropenem at a dose of 1gr every 8 hours <EVENT eid="e66" class="OCCURRENCE" comment="e3c:permanence=FINITE">administered</EVENT>. Thorough <EVENT eid="e67" class="OCCURRENCE" comment="e3c:permanence=FINITE">screening</EVENT> for other possible sources of infection, resulted negative. Transthoracic <EVENT eid="e68" class="OCCURRENCE" comment="e3c:permanence=FINITE">echocardiography</EVENT> was negative for <EVENT eid="e69" class="OCCURRENCE" comment="e3c:permanence=FINITE">vegetations</EVENT> and <EVENT eid="e70" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> mild mitral <EVENT eid="e71" class="OCCURRENCE" comment="e3c:permanence=FINITE">regurgitation</EVENT>. <EVENT eid="e72" class="OCCURRENCE" comment="e3c:permanence=FINITE">Entamoeba</EVENT> histolytica Abs, <EVENT eid="e73" class="OCCURRENCE" comment="e3c:permanence=FINITE">echinococcus</EVENT> Abs, <EVENT eid="e74" class="OCCURRENCE" comment="e3c:permanence=FINITE">leismania</EVENT> Abs, <EVENT eid="e75" class="OCCURRENCE" comment="e3c:permanence=FINITE">brucella</EVENT> Abs were negative. Gastrointestinal endoscopic <EVENT eid="e76" class="OCCURRENCE" comment="e3c:permanence=FINITE">evaluation</EVENT> was unrevealing. The patient was also HIV <EVENT eid="e77" class="OCCURRENCE" comment="e3c:permanence=FINITE">negative</EVENT> and no other immunodeficiency <EVENT eid="e78" class="OCCURRENCE" comment="e3c:permanence=FINITE">conditions</EVENT> were <EVENT eid="e79" class="REPORTING" comment="e3c:permanence=FINITE">identified</EVENT>. Eventually, the isolate <EVENT eid="e80" class="OCCURRENCE" comment="e3c:permanence=FINITE">identified</EVENT> by the Vitek 2 automated system and <EVENT eid="e81" class="OCCURRENCE" comment="e3c:permanence=FINITE">classified</EVENT> as A. aphrophilus. To <EVENT eid="e82" class="REPORTING" comment="e3c:permanence=FINITE">confirm</EVENT> the identification of the <EVENT eid="e83" class="OCCURRENCE" comment="e3c:permanence=FINITE">strain</EVENT> we performed matrix assisted laser desorption ionization-time of flight mass <EVENT eid="e84" class="OCCURRENCE" comment="e3c:permanence=FINITE">spectrometry</EVENT> (MALDI-TOF MS). The sensitivity <EVENT eid="e85" class="OCCURRENCE" comment="e3c:permanence=FINITE">test</EVENT> was performed with minimal inhibitory concentration (MIC) test strips; the isolate's <EVENT eid="e86" class="OCCURRENCE" comment="e3c:permanence=FINITE">susceptibility</EVENT> was to <EVENT eid="e87" class="OCCURRENCE" comment="e3c:permanence=FINITE">ceftriaxone</EVENT> ≤0.125 (S), <EVENT eid="e88" class="OCCURRENCE" comment="e3c:permanence=FINITE">cefepime</EVENT> ≤0.5 (S), <EVENT eid="e89" class="OCCURRENCE" comment="e3c:permanence=FINITE">ciprofloxacin</EVENT> ≤0.125 (S), <EVENT eid="e90" class="OCCURRENCE" comment="e3c:permanence=FINITE">gentamycin</EVENT> ≤0.5 (S), <EVENT eid="e91" class="OCCURRENCE" comment="e3c:permanence=FINITE">amikacin</EVENT> ≤0.125 (S) and to <EVENT eid="e92" class="OCCURRENCE" comment="e3c:permanence=FINITE">meropenem</EVENT> ≤0.032 (S). Percutaneous <EVENT eid="e93" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainage</EVENT> of both abscesses, combined with antimicrobial <EVENT eid="e94" class="OCCURRENCE" comment="e3c:permanence=FINITE">treatment</EVENT>, was <EVENT eid="e95" class="OCCURRENCE" comment="e3c:permanence=FINITE">successful</EVENT> and the patient's clinical <EVENT eid="e96" class="OCCURRENCE" comment="e3c:permanence=FINITE">condition</EVENT> <EVENT eid="e97" class="OCCURRENCE" comment="e3c:permanence=FINITE">improved</EVENT>. Thankfully, no surgical <EVENT eid="e98" class="OCCURRENCE" comment="e3c:permanence=FINITE">procedure</EVENT> was required. The drains were <EVENT eid="e99" class="OCCURRENCE" comment="e3c:permanence=FINITE">removed</EVENT> immediately the fluid from the abscess cavities became <EVENT eid="e100" class="OCCURRENCE" comment="e3c:permanence=FINITE">clear</EVENT>. Meropenem was <EVENT eid="e101" class="OCCURRENCE" comment="e3c:permanence=FINITE">administered</EVENT> for <TIMEX3 tid="t6" type="DURATION" value="P2W" temporalFunction="false">a total of 2 weeks</TIMEX3>. Then <EVENT eid="e102" class="OCCURRENCE" comment="e3c:permanence=FINITE">meropenem</EVENT> was <EVENT eid="e103" class="OCCURRENCE" comment="e3c:permanence=FINITE">switched</EVENT> to oral <EVENT eid="e104" class="OCCURRENCE" comment="e3c:permanence=FINITE">ciprofloxacin</EVENT> for <TIMEX3 tid="t7" type="DURATION" value="P4W" temporalFunction="false">another 4 weeks</TIMEX3> and the patient was <EVENT eid="e105" class="OCCURRENCE" comment="e3c:permanence=FINITE">discharged</EVENT> from the hospital, in full <EVENT eid="e106" class="OCCURRENCE" comment="e3c:permanence=FINITE">recovery</EVENT>. Follow-up <EVENT eid="e107" class="OCCURRENCE" comment="e3c:permanence=FINITE">sonogram</EVENT> obtained <TIMEX3 tid="t8" type="DURATION" value="P2M" temporalFunction="false">almost 2 months</TIMEX3> after the <EVENT eid="e108" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainage</EVENT> <EVENT eid="e109" class="REPORTING" comment="e3c:permanence=FINITE">showed</EVENT> completely normal liver parenchyma without any residual liver cavities.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei96" eventID="e96" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei97" eventID="e97" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei98" eventID="e98" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei99" eventID="e99" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei100" eventID="e100" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei101" eventID="e101" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei102" eventID="e102" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei103" eventID="e103" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei104" eventID="e104" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei105" eventID="e105" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei106" eventID="e106" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei107" eventID="e107" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei108" eventID="e108" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei109" eventID="e109" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei57" eventID="e57" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei58" eventID="e58" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei59" eventID="e59" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei60" eventID="e60" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei61" eventID="e61" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei62" eventID="e62" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=INTERMITTENT"/>
+  <MAKEINSTANCE eiid="ei63" eventID="e63" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei64" eventID="e64" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei65" eventID="e65" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei66" eventID="e66" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei67" eventID="e67" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei68" eventID="e68" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei69" eventID="e69" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei70" eventID="e70" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei71" eventID="e71" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei72" eventID="e72" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei73" eventID="e73" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei74" eventID="e74" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei75" eventID="e75" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei76" eventID="e76" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei77" eventID="e77" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei78" eventID="e78" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei79" eventID="e79" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei80" eventID="e80" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei81" eventID="e81" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei82" eventID="e82" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei83" eventID="e83" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei84" eventID="e84" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei85" eventID="e85" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei86" eventID="e86" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei87" eventID="e87" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei88" eventID="e88" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei89" eventID="e89" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei90" eventID="e90" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei91" eventID="e91" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei92" eventID="e92" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei93" eventID="e93" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei94" eventID="e94" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei95" eventID="e95" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei96" eventID="e96" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei97" eventID="e97" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei98" eventID="e98" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei99" eventID="e99" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei100" eventID="e100" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei101" eventID="e101" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei102" eventID="e102" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei103" eventID="e103" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei104" eventID="e104" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei105" eventID="e105" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei106" eventID="e106" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei107" eventID="e107" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei108" eventID="e108" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei109" eventID="e109" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" timeID="t1" relatedToEventInstance="ei1" relType="ENDS"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
@@ -125,8 +125,8 @@
   <TLINK lid="l10" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="INCLUDES"/>
   <TLINK lid="l11" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l13" eventInstanceID="ei6" relatedToEventInstance="ei8" relType="SIMULTANEOUS"/>
-  <TLINK lid="l14" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="SIMULTANEOUS"/>
+  <TLINK lid="l13" eventInstanceID="ei6" relatedToEventInstance="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l14" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l15" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l17" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="INCLUDES"/>
@@ -144,8 +144,8 @@
   <TLINK lid="l29" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l30" eventInstanceID="ei15" relatedToEventInstance="ei19" relType="BEFORE"/>
   <TLINK lid="l31" eventInstanceID="ei15" relatedToEventInstance="ei16" relType="INCLUDES"/>
-  <TLINK lid="l32" eventInstanceID="ei15" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
-  <TLINK lid="l33" eventInstanceID="ei15" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
+  <TLINK lid="l32" eventInstanceID="ei15" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l33" eventInstanceID="ei15" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l34" eventInstanceID="ei16" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l35" eventInstanceID="ei17" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l36" eventInstanceID="ei18" relatedToTime="t0" relType="BEFORE"/>
@@ -205,7 +205,7 @@
   <TLINK lid="l90" eventInstanceID="ei44" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l91" eventInstanceID="ei45" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l92" eventInstanceID="ei46" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l93" eventInstanceID="ei46" relatedToEventInstance="ei47" relType="SIMULTANEOUS"/>
+  <TLINK lid="l93" eventInstanceID="ei46" relatedToEventInstance="ei47" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l94" eventInstanceID="ei46" relatedToEventInstance="ei48" relType="SIMULTANEOUS"/>
   <TLINK lid="l95" eventInstanceID="ei47" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l96" eventInstanceID="ei48" relatedToTime="t0" relType="BEFORE"/>
@@ -230,7 +230,7 @@
   <TLINK lid="l116" eventInstanceID="ei57" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l117" eventInstanceID="ei57" relatedToEventInstance="ei54" relType="INCLUDES"/>
   <TLINK lid="l118" timeID="t2" relatedToEventInstance="ei59" relType="INCLUDES"/>
-  <TLINK lid="l119" timeID="t2" relatedToEventInstance="ei63" relType="SIMULTANEOUS"/>
+  <TLINK lid="l119" timeID="t2" relatedToEventInstance="ei63" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l120" timeID="t3" relatedToEventInstance="ei59" relType="INCLUDES"/>
   <TLINK lid="l121" eventInstanceID="ei58" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l122" eventInstanceID="ei58" relatedToTime="t2" relType="INCLUDES"/>
@@ -256,7 +256,7 @@
   <TLINK lid="l145" eventInstanceID="ei67" relatedToEventInstance="ei68" relType="BEFORE"/>
   <TLINK lid="l146" eventInstanceID="ei68" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l147" eventInstanceID="ei68" relatedToEventInstance="ei72" relType="BEFORE"/>
-  <TLINK lid="l148" eventInstanceID="ei68" relatedToEventInstance="ei69" relType="SIMULTANEOUS"/>
+  <TLINK lid="l148" eventInstanceID="ei68" relatedToEventInstance="ei69" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l149" eventInstanceID="ei68" relatedToEventInstance="ei70" relType="INCLUDES"/>
   <TLINK lid="l150" eventInstanceID="ei69" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l151" eventInstanceID="ei70" relatedToTime="t0" relType="BEFORE"/>
@@ -272,8 +272,8 @@
   <TLINK lid="l161" eventInstanceID="ei75" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l162" eventInstanceID="ei76" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l163" eventInstanceID="ei77" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l164" eventInstanceID="ei77" relatedToEventInstance="ei78" relType="SIMULTANEOUS"/>
-  <TLINK lid="l165" eventInstanceID="ei77" relatedToEventInstance="ei79" relType="SIMULTANEOUS"/>
+  <TLINK lid="l164" eventInstanceID="ei77" relatedToEventInstance="ei78" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l165" eventInstanceID="ei77" relatedToEventInstance="ei79" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l166" eventInstanceID="ei77" relatedToEventInstance="ei76" relType="INCLUDES"/>
   <TLINK lid="l167" eventInstanceID="ei77" relatedToEventInstance="ei80" relType="INCLUDES"/>
   <TLINK lid="l168" eventInstanceID="ei78" relatedToTime="t0" relType="BEFORE"/>
@@ -315,7 +315,7 @@
   <TLINK lid="l204" eventInstanceID="ei97" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l205" eventInstanceID="ei97" relatedToEventInstance="ei93" relType="BEGINS"/>
   <TLINK lid="l206" eventInstanceID="ei98" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l207" eventInstanceID="ei98" relatedToEventInstance="ei99" relType="SIMULTANEOUS"/>
+  <TLINK lid="l207" eventInstanceID="ei98" relatedToEventInstance="ei99" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l208" eventInstanceID="ei99" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l209" eventInstanceID="ei99" relatedToEventInstance="ei101" relType="BEFORE"/>
   <TLINK lid="l210" eventInstanceID="ei100" relatedToTime="t0" relType="BEFORE"/>

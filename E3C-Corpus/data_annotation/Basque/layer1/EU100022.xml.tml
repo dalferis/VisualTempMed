@@ -3,128 +3,128 @@
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2014-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2014-12-31</TIMEX3>
   <TEXT>OTORRINOLARINGOLOGIA (ORL)&#13;
-<EVENT eid="e1" class="OCCURRENCE">OSPITALERATZEKO</EVENT>/<EVENT eid="e2" class="OCCURRENCE">KONTSULTARAKO</EVENT> ARRAZOIA.&#13;
-<EVENT eid="e3" class="OCCURRENCE">Odinofagiagatik</EVENT> datorren 22 urteko gizonezkoa.&#13;
+<EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">OSPITALERATZEKO</EVENT>/<EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">KONTSULTARAKO</EVENT> ARRAZOIA.&#13;
+<EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">Odinofagiagatik</EVENT> datorren 22 urteko gizonezkoa.&#13;
 AURREKARI PERTSONALAK&#13;
-Ez du <EVENT eid="e4" class="OCCURRENCE">alergia</EVENT> ezagunik.&#13;
-Ez da <EVENT eid="e5" class="OCCURRENCE">erretzailea</EVENT>.&#13;
-Ez du <EVENT eid="e6" class="OCCURRENCE">gaixotasun</EVENT> nabarmenik.&#13;
-Ez du ohiko <EVENT eid="e7" class="OCCURRENCE">tratamendurik</EVENT> jarraitzen.&#13;
-<TIMEX3 tid="t1" type="DATE" value="PRESENT_REF" temporalFunction="true">EGUNGO</TIMEX3> <EVENT eid="e8" class="OCCURRENCE">GAIXOTASUNA</EVENT>&#13;
-<EVENT eid="e9" class="OCCURRENCE">Sukar</EVENT> eta <EVENT eid="e10" class="OCCURRENCE">ondoezarekin</EVENT> <EVENT eid="e11" class="ASPECTUAL">hasi</EVENT> zen <TIMEX3 tid="t2" type="DURATION" value="P4D" temporalFunction="false">orain dela lau egun</TIMEX3>; <TIMEX3 tid="t3" type="DURATION" value="PT24H" temporalFunction="false">24 orduko</TIMEX3> <EVENT eid="e12" class="OCCURRENCE">disfagia</EVENT> duelako <EVENT eid="e13" class="OCCURRENCE">etorri</EVENT> da, solidoekiko batez ere, likidoak ozta-ozta <EVENT eid="e14" class="OCCURRENCE">irensten</EVENT> dituela.&#13;
-Bere medikuak <EVENT eid="e15" class="OCCURRENCE">azitromizina</EVENT> eman dio, baina <TIMEX3 tid="t4" type="DATE" value="2014-12-31" temporalFunction="false">gaur</TIMEX3> <EVENT eid="e16" class="OCCURRENCE">okerrago</EVENT> dago: <EVENT eid="e17" class="OCCURRENCE">mina</EVENT>, gehiegizko <EVENT eid="e18" class="OCCURRENCE">listu-jariatzea</EVENT> eta <EVENT eid="e19" class="OCCURRENCE">disfagia</EVENT> ditu.&#13;
-<EVENT eid="e20" class="OCCURRENCE">AZTERKETA</EVENT> FISIKOA&#13;
-<EVENT eid="e21" class="OCCURRENCE">Tentsio</EVENT> arteriala, 144/83; <EVENT eid="e22" class="OCCURRENCE">bihotz-maiztasuna</EVENT>, 98 tau/min; <EVENT eid="e23" class="OCCURRENCE">O2Sat</EVENT>,% 99.&#13;
-<EVENT eid="e24" class="OCCURRENCE">Kontziente</EVENT> dago, <EVENT eid="e25" class="OCCURRENCE">orientatua</EVENT>, ongi <EVENT eid="e26" class="OCCURRENCE">hidratatua</EVENT> eta <EVENT eid="e27" class="OCCURRENCE">perfusio</EVENT> ona du; <EVENT eid="e28" class="OCCURRENCE">eupneiko</EVENT> dago.&#13;
-Burua eta lepoa: <EVENT eid="e29" class="OCCURRENCE">otoskopia</EVENT> normala<EVENT eid="e30" class="OCCURRENCE">; orofaringea</EVENT>: eskuineko amigdala erdialdera <EVENT eid="e31" class="OCCURRENCE">desplazatua</EVENT>, ahosabai biguna eta ubula edematizatua.&#13;
-Ez dago <EVENT eid="e32" class="OCCURRENCE">laringe-masarik</EVENT>, ahots-kordak ondo <EVENT eid="e33" class="OCCURRENCE">mugitzen</EVENT> dira.&#13;
-Biriken <EVENT eid="e34" class="OCCURRENCE">auskultazioa</EVENT>: <EVENT eid="e35" class="OCCURRENCE">murmurio</EVENT> normala.&#13;
-<EVENT eid="e36" class="OCCURRENCE">Bihotz-auskultazioa</EVENT>: <EVENT eid="e37" class="OCCURRENCE">erritmikoa</EVENT>; ez da <EVENT eid="e38" class="OCCURRENCE">murmuriorik</EVENT> <EVENT eid="e39" class="REPORTING">entzuten</EVENT>.&#13;
-Sabelaldean ez da ezer <EVENT eid="e40" class="OCCURRENCE">patologikorik</EVENT> <EVENT eid="e41" class="REPORTING">atzematen</EVENT>.&#13;
-Gorputz-adarrak: ez du <EVENT eid="e42" class="REPORTING">edemarik</EVENT>; <EVENT eid="e43" class="OCCURRENCE">pultsu</EVENT> periferikoak normalak dira.&#13;
-<EVENT eid="e44" class="OCCURRENCE">PROBA</EVENT> OSAGARRIAK&#13;
-<EVENT eid="e45" class="OCCURRENCE">ANALITIKA</EVENT>: <EVENT eid="e46" class="OCCURRENCE">LEUKOZITOSI</EVENT> NEUTROFILIKOA.&#13;
-<EVENT eid="e47" class="OCCURRENCE">EBOLUZIOA</EVENT>&#13;
-Larrialdietako Zerbitzuan <EVENT eid="e48" class="OCCURRENCE">anestesia</EVENT> lokalarekin aho bidezko abzesuaren <EVENT eid="e49" class="OCCURRENCE">drainatze</EVENT> kirurgikoa egin diogu, eta zorne-kantitate handia <EVENT eid="e50" class="OCCURRENCE">aterata</EVENT>, <EVENT eid="e51" class="OCCURRENCE">mina</EVENT> <EVENT eid="e52" class="OCCURRENCE">arindu</EVENT> egin zaio.&#13;
-Pazientea <EVENT eid="e53" class="OCCURRENCE">ospitaleratu</EVENT> egin dugu zain barneko <EVENT eid="e54" class="OCCURRENCE">tratamendu</EVENT> antibiotikoa egiteko, eta ez du <EVENT eid="e55" class="OCCURRENCE">konplikaziorik</EVENT> izan <EVENT eid="e56" class="OCCURRENCE">eboluzioan</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+Ez du <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">alergia</EVENT> ezagunik.&#13;
+Ez da <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">erretzailea</EVENT>.&#13;
+Ez du <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">gaixotasun</EVENT> nabarmenik.&#13;
+Ez du ohiko <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamendurik</EVENT> jarraitzen.&#13;
+<TIMEX3 tid="t1" type="DATE" value="PRESENT_REF" temporalFunction="true">EGUNGO</TIMEX3> <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">GAIXOTASUNA</EVENT>&#13;
+<EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">Sukar</EVENT> eta <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">ondoezarekin</EVENT> <EVENT eid="e11" class="ASPECTUAL" comment="e3c:permanence=FINITE">hasi</EVENT> zen <TIMEX3 tid="t2" type="DURATION" value="P4D" temporalFunction="false">orain dela lau egun</TIMEX3>; <TIMEX3 tid="t3" type="DURATION" value="PT24H" temporalFunction="false">24 orduko</TIMEX3> <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">disfagia</EVENT> duelako <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">etorri</EVENT> da, solidoekiko batez ere, likidoak ozta-ozta <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">irensten</EVENT> dituela.&#13;
+Bere medikuak <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">azitromizina</EVENT> eman dio, baina <TIMEX3 tid="t4" type="DATE" value="2014-12-31" temporalFunction="false">gaur</TIMEX3> <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">okerrago</EVENT> dago: <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">mina</EVENT>, gehiegizko <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">listu-jariatzea</EVENT> eta <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">disfagia</EVENT> ditu.&#13;
+<EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">AZTERKETA</EVENT> FISIKOA&#13;
+<EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">Tentsio</EVENT> arteriala, 144/83; <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">bihotz-maiztasuna</EVENT>, 98 tau/min; <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">O2Sat</EVENT>,% 99.&#13;
+<EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">Kontziente</EVENT> dago, <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">orientatua</EVENT>, ongi <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">hidratatua</EVENT> eta <EVENT eid="e27" class="OCCURRENCE" comment="e3c:permanence=FINITE">perfusio</EVENT> ona du; <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">eupneiko</EVENT> dago.&#13;
+Burua eta lepoa: <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">otoskopia</EVENT> normala<EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">; orofaringea</EVENT>: eskuineko amigdala erdialdera <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">desplazatua</EVENT>, ahosabai biguna eta ubula edematizatua.&#13;
+Ez dago <EVENT eid="e32" class="OCCURRENCE" comment="e3c:permanence=FINITE">laringe-masarik</EVENT>, ahots-kordak ondo <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">mugitzen</EVENT> dira.&#13;
+Biriken <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">auskultazioa</EVENT>: <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">murmurio</EVENT> normala.&#13;
+<EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">Bihotz-auskultazioa</EVENT>: <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">erritmikoa</EVENT>; ez da <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">murmuriorik</EVENT> <EVENT eid="e39" class="REPORTING" comment="e3c:permanence=FINITE">entzuten</EVENT>.&#13;
+Sabelaldean ez da ezer <EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">patologikorik</EVENT> <EVENT eid="e41" class="REPORTING" comment="e3c:permanence=FINITE">atzematen</EVENT>.&#13;
+Gorputz-adarrak: ez du <EVENT eid="e42" class="REPORTING" comment="e3c:permanence=FINITE">edemarik</EVENT>; <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">pultsu</EVENT> periferikoak normalak dira.&#13;
+<EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">PROBA</EVENT> OSAGARRIAK&#13;
+<EVENT eid="e45" class="OCCURRENCE" comment="e3c:permanence=FINITE">ANALITIKA</EVENT>: <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">LEUKOZITOSI</EVENT> NEUTROFILIKOA.&#13;
+<EVENT eid="e47" class="OCCURRENCE" comment="e3c:permanence=FINITE">EBOLUZIOA</EVENT>&#13;
+Larrialdietako Zerbitzuan <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">anestesia</EVENT> lokalarekin aho bidezko abzesuaren <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">drainatze</EVENT> kirurgikoa egin diogu, eta zorne-kantitate handia <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">aterata</EVENT>, <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">mina</EVENT> <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">arindu</EVENT> egin zaio.&#13;
+Pazientea <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">ospitaleratu</EVENT> egin dugu zain barneko <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamendu</EVENT> antibiotikoa egiteko, eta ez du <EVENT eid="e55" class="OCCURRENCE" comment="e3c:permanence=FINITE">konplikaziorik</EVENT> izan <EVENT eid="e56" class="OCCURRENCE" comment="e3c:permanence=FINITE">eboluzioan</EVENT>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei55" eventID="e55" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei56" eventID="e56" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l4" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l4" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l5" eventInstanceID="ei3" relatedToEventInstance="ei1" relType="INCLUDES"/>
-  <TLINK lid="l6" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l6" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l7" eventInstanceID="ei4" relatedToEventInstance="ei3" relType="INCLUDES"/>
-  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
-  <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
-  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l12" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="SIMULTANEOUS"/>
-  <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei5" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l12" eventInstanceID="ei6" relatedToEventInstance="ei7" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l14" eventInstanceID="ei7" relatedToTime="t1" relType="INCLUDES"/>
   <TLINK lid="l15" timeID="t1" relatedToEventInstance="ei13" relType="INCLUDES"/>
-  <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l17" eventInstanceID="ei8" relatedToTime="t1" relType="INCLUDES"/>
-  <TLINK lid="l18" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l18" eventInstanceID="ei9" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l19" eventInstanceID="ei9" relatedToEventInstance="ei11" relType="BEGINS"/>
-  <TLINK lid="l20" eventInstanceID="ei10" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l20" eventInstanceID="ei10" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l21" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="BEGINS"/>
   <TLINK lid="l22" eventInstanceID="ei11" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l23" eventInstanceID="ei11" relatedToEventInstance="ei13" relType="BEFORE"/>
   <TLINK lid="l26" timeID="t2" relatedToEventInstance="ei11" relType="BEGINS"/>
   <TLINK lid="l27" timeID="t3" relatedToEventInstance="ei12" relType="INCLUDES"/>
   <TLINK lid="l28" timeID="t3" relatedToEventInstance="ei13" relType="ENDS"/>
-  <TLINK lid="l29" eventInstanceID="ei12" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l29" eventInstanceID="ei12" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l30" eventInstanceID="ei13" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l31" eventInstanceID="ei13" relatedToTime="t4" relType="BEFORE"/>
   <TLINK lid="l32" eventInstanceID="ei14" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l33" eventInstanceID="ei14" relatedToEventInstance="ei13" relType="INCLUDES"/>
   <TLINK lid="l34" eventInstanceID="ei15" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l35" eventInstanceID="ei15" relatedToTime="t4" relType="BEFORE"/>
-  <TLINK lid="l36" timeID="t4" relatedToEventInstance="ei16" relType="SIMULTANEOUS"/>
-  <TLINK lid="l37" timeID="t4" relatedToEventInstance="ei19" relType="SIMULTANEOUS"/>
-  <TLINK lid="l38" timeID="t4" relatedToEventInstance="ei18" relType="SIMULTANEOUS"/>
+  <TLINK lid="l36" timeID="t4" relatedToEventInstance="ei16" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l37" timeID="t4" relatedToEventInstance="ei19" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l38" timeID="t4" relatedToEventInstance="ei18" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l39" timeID="t4" relatedToEventInstance="ei20" relType="INCLUDES"/>
-  <TLINK lid="l40" timeID="t4" relatedToEventInstance="ei17" relType="SIMULTANEOUS"/>
+  <TLINK lid="l40" timeID="t4" relatedToEventInstance="ei17" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l41" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l42" eventInstanceID="ei17" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l43" eventInstanceID="ei18" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l44" eventInstanceID="ei19" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l42" eventInstanceID="ei17" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l43" eventInstanceID="ei18" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l44" eventInstanceID="ei19" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l45" eventInstanceID="ei20" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l46" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="INCLUDES"/>
   <TLINK lid="l47" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
@@ -146,10 +146,10 @@ Pazientea <EVENT eid="e53" class="OCCURRENCE">ospitaleratu</EVENT> egin dugu zai
   <TLINK lid="l63" eventInstanceID="ei29" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l64" eventInstanceID="ei29" relatedToEventInstance="ei30" relType="SIMULTANEOUS"/>
   <TLINK lid="l65" eventInstanceID="ei30" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l66" eventInstanceID="ei31" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l66" eventInstanceID="ei31" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l67" eventInstanceID="ei31" relatedToEventInstance="ei30" relType="INCLUDES"/>
-  <TLINK lid="l68" eventInstanceID="ei32" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l69" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="SIMULTANEOUS"/>
+  <TLINK lid="l68" eventInstanceID="ei32" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l69" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l70" eventInstanceID="ei33" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l71" eventInstanceID="ei33" relatedToEventInstance="ei29" relType="INCLUDES"/>
   <TLINK lid="l72" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="INCLUDES"/>
@@ -160,18 +160,18 @@ Pazientea <EVENT eid="e53" class="OCCURRENCE">ospitaleratu</EVENT> egin dugu zai
   <TLINK lid="l77" eventInstanceID="ei36" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l78" eventInstanceID="ei36" relatedToEventInstance="ei39" relType="INCLUDES"/>
   <TLINK lid="l79" eventInstanceID="ei36" relatedToEventInstance="ei41" relType="INCLUDES"/>
-  <TLINK lid="l80" eventInstanceID="ei36" relatedToEventInstance="ei38" relType="SIMULTANEOUS"/>
+  <TLINK lid="l80" eventInstanceID="ei36" relatedToEventInstance="ei38" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l81" eventInstanceID="ei37" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l82" eventInstanceID="ei37" relatedToEventInstance="ei36" relType="INCLUDES"/>
   <TLINK lid="l83" eventInstanceID="ei38" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l84" eventInstanceID="ei39" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l85" eventInstanceID="ei40" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l85" eventInstanceID="ei40" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l86" eventInstanceID="ei41" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l87" eventInstanceID="ei41" relatedToEventInstance="ei40" relType="SIMULTANEOUS"/>
-  <TLINK lid="l88" eventInstanceID="ei41" relatedToEventInstance="ei42" relType="SIMULTANEOUS"/>
-  <TLINK lid="l89" eventInstanceID="ei42" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l90" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="SIMULTANEOUS"/>
-  <TLINK lid="l91" eventInstanceID="ei42" relatedToEventInstance="ei44" relType="SIMULTANEOUS"/>
+  <TLINK lid="l87" eventInstanceID="ei41" relatedToEventInstance="ei40" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l88" eventInstanceID="ei41" relatedToEventInstance="ei42" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l89" eventInstanceID="ei42" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l90" eventInstanceID="ei42" relatedToEventInstance="ei43" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l91" eventInstanceID="ei42" relatedToEventInstance="ei44" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l92" eventInstanceID="ei43" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l93" eventInstanceID="ei44" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l94" eventInstanceID="ei44" relatedToEventInstance="ei45" relType="INCLUDES"/>
@@ -188,14 +188,14 @@ Pazientea <EVENT eid="e53" class="OCCURRENCE">ospitaleratu</EVENT> egin dugu zai
   <TLINK lid="l105" eventInstanceID="ei49" relatedToEventInstance="ei50" relType="INCLUDES"/>
   <TLINK lid="l106" eventInstanceID="ei49" relatedToEventInstance="ei56" relType="BEFORE"/>
   <TLINK lid="l107" eventInstanceID="ei50" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l108" eventInstanceID="ei51" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l108" eventInstanceID="ei51" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l109" eventInstanceID="ei51" relatedToEventInstance="ei52" relType="INCLUDES"/>
   <TLINK lid="l110" eventInstanceID="ei52" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l111" eventInstanceID="ei53" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l112" eventInstanceID="ei53" relatedToEventInstance="ei54" relType="BEFORE"/>
-  <TLINK lid="l113" eventInstanceID="ei54" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l114" eventInstanceID="ei55" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l115" eventInstanceID="ei56" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l113" eventInstanceID="ei54" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l114" eventInstanceID="ei55" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l115" eventInstanceID="ei56" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l116" eventInstanceID="ei56" relatedToEventInstance="ei53" relType="BEGINS"/>
   <TLINK lid="l117" eventInstanceID="ei56" relatedToEventInstance="ei55" relType="INCLUDES"/>
   <ALINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei9" relType="INITIATES"/>

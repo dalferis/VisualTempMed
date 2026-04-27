@@ -2,42 +2,42 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2019-10-24T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2019-10-24</TIMEX3>
-  <TEXT>Il s'agit d'un homme âgé de 50 ans, sans <EVENT eid="e1" class="OCCURRENCE">antécédents</EVENT> particuliers, <EVENT eid="e2" class="OCCURRENCE">admis</EVENT> pour <EVENT eid="e3" class="OCCURRENCE">don</EVENT> de rein en vue d'une <EVENT eid="e4" class="OCCURRENCE">transplantation</EVENT> rénale.
-L'<EVENT eid="e5" class="OCCURRENCE">examen</EVENT> clinique était sans <EVENT eid="e6" class="OCCURRENCE">particularité</EVENT>.
-Le <EVENT eid="e7" class="OCCURRENCE">bilan</EVENT> radiologique pré-greffe fait d'une <EVENT eid="e8" class="OCCURRENCE">tomodensitométrie</EVENT> (<EVENT eid="e9" class="OCCURRENCE">TDM</EVENT>) abdominale a <EVENT eid="e10" class="REPORTING">objectivé</EVENT> une VCI gauche dans sa portion sous rénale qui se <EVENT eid="e11" class="OCCURRENCE">termine</EVENT> à la hauteur de la veine rénale gauche, et se <EVENT eid="e12" class="OCCURRENCE">draine</EVENT> en <EVENT eid="e13" class="OCCURRENCE">formant</EVENT> un <EVENT eid="e14" class="OCCURRENCE">tronc</EVENT> commun avec celle-ci vers la portion pré-hépatique normale de la VCI située à droite, en <EVENT eid="e15" class="OCCURRENCE">croisant</EVENT> l'aorte abdominale en avant.
-Le <EVENT eid="e16" class="OCCURRENCE">bilan</EVENT> biologique était normal.
-Devant la bonne <EVENT eid="e17" class="OCCURRENCE">qualité</EVENT> du rein droit par rapport au gauche, et la <EVENT eid="e18" class="OCCURRENCE">présence</EVENT> d'une artère et veine uniques de longueur normale, l'<EVENT eid="e19" class="OCCURRENCE">indication</EVENT> du prélèvement rénal gauche a été <EVENT eid="e20" class="OCCURRENCE">retenue</EVENT>.
-L'<EVENT eid="e21" class="OCCURRENCE">exploration</EVENT> chirurgicale a <EVENT eid="e22" class="REPORTING">trouvé</EVENT> une VCI gauche sous rénale sans <EVENT eid="e23" class="OCCURRENCE">autres</EVENT> anomalies.
-Les <EVENT eid="e24" class="OCCURRENCE">suites</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true">post-opératoires</TIMEX3> étaient <EVENT eid="e25" class="OCCURRENCE">simples</EVENT> chez le donneur, avec une <EVENT eid="e26" class="OCCURRENCE">sortie</EVENT> à <TIMEX3 tid="t2" type="DATE" value="XXXX-XX-XX" temporalFunction="true">j3 post-opératoire</TIMEX3>.
+  <TEXT>Il s'agit d'un homme âgé de 50 ans, sans <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">antécédents</EVENT> particuliers, <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">admis</EVENT> pour <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">don</EVENT> de rein en vue d'une <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">transplantation</EVENT> rénale.
+L'<EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">examen</EVENT> clinique était sans <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">particularité</EVENT>.
+Le <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">bilan</EVENT> radiologique pré-greffe fait d'une <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">tomodensitométrie</EVENT> (<EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">TDM</EVENT>) abdominale a <EVENT eid="e10" class="REPORTING" comment="e3c:permanence=FINITE">objectivé</EVENT> une VCI gauche dans sa portion sous rénale qui se <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">termine</EVENT> à la hauteur de la veine rénale gauche, et se <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">draine</EVENT> en <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">formant</EVENT> un <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">tronc</EVENT> commun avec celle-ci vers la portion pré-hépatique normale de la VCI située à droite, en <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">croisant</EVENT> l'aorte abdominale en avant.
+Le <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">bilan</EVENT> biologique était normal.
+Devant la bonne <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">qualité</EVENT> du rein droit par rapport au gauche, et la <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">présence</EVENT> d'une artère et veine uniques de longueur normale, l'<EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">indication</EVENT> du prélèvement rénal gauche a été <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">retenue</EVENT>.
+L'<EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">exploration</EVENT> chirurgicale a <EVENT eid="e22" class="REPORTING" comment="e3c:permanence=FINITE">trouvé</EVENT> une VCI gauche sous rénale sans <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">autres</EVENT> anomalies.
+Les <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">suites</EVENT> <TIMEX3 tid="t1" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">post-opératoires</TIMEX3> étaient <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">simples</EVENT> chez le donneur, avec une <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">sortie</EVENT> à <TIMEX3 tid="t2" type="DATE" value="XXXX-XX-XX" temporalFunction="true">j3 post-opératoire</TIMEX3>.
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS"/>
+  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei5" relType="BEFORE"/>
   <TLINK lid="l5" eventInstanceID="ei2" relatedToEventInstance="ei4" relType="BEFORE"/>
@@ -47,7 +47,7 @@ Les <EVENT eid="e24" class="OCCURRENCE">suites</EVENT> <TIMEX3 tid="t1" type="DA
   <TLINK lid="l9" eventInstanceID="ei5" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToEventInstance="ei7" relType="BEFORE"/>
   <TLINK lid="l11" eventInstanceID="ei5" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
-  <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l14" eventInstanceID="ei7" relatedToEventInstance="ei8" relType="INCLUDES"/>
   <TLINK lid="l15" eventInstanceID="ei7" relatedToEventInstance="ei16" relType="BEFORE"/>
@@ -74,12 +74,12 @@ Les <EVENT eid="e24" class="OCCURRENCE">suites</EVENT> <TIMEX3 tid="t1" type="DA
   <TLINK lid="l36" eventInstanceID="ei19" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l37" eventInstanceID="ei20" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l38" eventInstanceID="ei20" relatedToEventInstance="ei21" relType="BEFORE"/>
-  <TLINK lid="l39" eventInstanceID="ei20" relatedToEventInstance="ei19" relType="SIMULTANEOUS"/>
+  <TLINK lid="l39" eventInstanceID="ei20" relatedToEventInstance="ei19" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l40" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l41" eventInstanceID="ei21" relatedToEventInstance="ei24" relType="BEFORE"/>
   <TLINK lid="l42" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l43" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l44" eventInstanceID="ei23" relatedToEventInstance="ei21" relType="SIMULTANEOUS"/>
+  <TLINK lid="l44" eventInstanceID="ei23" relatedToEventInstance="ei21" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l45" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l46" eventInstanceID="ei24" relatedToEventInstance="ei26" relType="INCLUDES"/>
   <TLINK lid="l47" eventInstanceID="ei24" relatedToTime="t1" relType="SIMULTANEOUS"/>

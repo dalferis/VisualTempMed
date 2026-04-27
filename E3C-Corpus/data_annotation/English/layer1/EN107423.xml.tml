@@ -2,41 +2,41 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2011-08-16T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2011-08-16</TIMEX3>
-  <TEXT>A 16-year-old Indian boy <EVENT eid="e1" class="OCCURRENCE">presented</EVENT> to our hospital with a <EVENT eid="e2" class="OCCURRENCE">history</EVENT> of a lump in the lower back region since birth. Initially, it was <EVENT eid="e3" class="OCCURRENCE">small</EVENT>, but its size <EVENT eid="e4" class="OCCURRENCE">increased</EVENT> gradually over time to a <EVENT eid="e5" class="OCCURRENCE">size</EVENT> of 15 cm × 15 cm at presentation. There were no other associated <EVENT eid="e6" class="OCCURRENCE">abnormalities</EVENT>. <EVENT eid="e7" class="OCCURRENCE">Investigations</EVENT> <EVENT eid="e8" class="REPORTING">revealed</EVENT> the lump to be a benign cystic <EVENT eid="e9" class="OCCURRENCE">teratoma</EVENT>. The patient underwent <EVENT eid="e10" class="OCCURRENCE">surgery</EVENT>, and the whole tumor, from its base to the vertebrae, was <EVENT eid="e11" class="OCCURRENCE">excised</EVENT>. <EVENT eid="e12" class="OCCURRENCE">Bisection</EVENT> of the tumor <EVENT eid="e13" class="REPORTING">revealed</EVENT> that it contained hair and pultaceous material consistent with a <EVENT eid="e14" class="REPORTING">teratoma</EVENT>, which was later <EVENT eid="e15" class="REPORTING">confirmed</EVENT> by histopathologic examination.
+  <TEXT>A 16-year-old Indian boy <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">presented</EVENT> to our hospital with a <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">history</EVENT> of a lump in the lower back region since birth. Initially, it was <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">small</EVENT>, but its size <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">increased</EVENT> gradually over time to a <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">size</EVENT> of 15 cm × 15 cm at presentation. There were no other associated <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">abnormalities</EVENT>. <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">Investigations</EVENT> <EVENT eid="e8" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> the lump to be a benign cystic <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">teratoma</EVENT>. The patient underwent <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">surgery</EVENT>, and the whole tumor, from its base to the vertebrae, was <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">excised</EVENT>. <EVENT eid="e12" class="OCCURRENCE" comment="e3c:permanence=FINITE">Bisection</EVENT> of the tumor <EVENT eid="e13" class="REPORTING" comment="e3c:permanence=FINITE">revealed</EVENT> that it contained hair and pultaceous material consistent with a <EVENT eid="e14" class="REPORTING" comment="e3c:permanence=FINITE">teratoma</EVENT>, which was later <EVENT eid="e15" class="REPORTING" comment="e3c:permanence=FINITE">confirmed</EVENT> by histopathologic examination.
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" modality="can" polarity="POS" comment="e3c:contextualModality=HEDGED"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei4" relType="SIMULTANEOUS"/>
+  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei4" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="SIMULTANEOUS"/>
-  <TLINK lid="l5" eventInstanceID="ei2" relType="SIMULTANEOUS"/>
+  <TLINK lid="l4" eventInstanceID="ei2" relatedToEventInstance="ei1" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l5" eventInstanceID="ei2" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l7" eventInstanceID="ei4" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="SIMULTANEOUS"/>
+  <TLINK lid="l8" eventInstanceID="ei4" relatedToEventInstance="ei6" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l9" eventInstanceID="ei4" relatedToEventInstance="ei3" relType="BEFORE"/>
   <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l11" eventInstanceID="ei6" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l12" eventInstanceID="ei6" relatedToEventInstance="ei9" relType="SIMULTANEOUS"/>
+  <TLINK lid="l12" eventInstanceID="ei6" relatedToEventInstance="ei9" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l14" eventInstanceID="ei8" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l15" eventInstanceID="ei8" relatedToEventInstance="ei7" relType="SIMULTANEOUS"/>
-  <TLINK lid="l16" eventInstanceID="ei8" relType="SIMULTANEOUS"/>
+  <TLINK lid="l15" eventInstanceID="ei8" relatedToEventInstance="ei7" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l17" eventInstanceID="ei9" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l18" eventInstanceID="ei9" relatedToEventInstance="ei8" relType="SIMULTANEOUS"/>
+  <TLINK lid="l18" eventInstanceID="ei9" relatedToEventInstance="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l19" eventInstanceID="ei10" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l20" eventInstanceID="ei10" relatedToEventInstance="ei11" relType="INCLUDES"/>
   <TLINK lid="l21" eventInstanceID="ei10" relatedToEventInstance="ei14" relType="BEFORE"/>
@@ -44,8 +44,8 @@
   <TLINK lid="l23" eventInstanceID="ei12" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l24" eventInstanceID="ei13" relatedToTime="t0" relType="INCLUDES"/>
   <TLINK lid="l25" eventInstanceID="ei14" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l26" eventInstanceID="ei14" relatedToEventInstance="ei15" relType="SIMULTANEOUS"/>
-  <TLINK lid="l27" eventInstanceID="ei14" relatedToEventInstance="ei13" relType="SIMULTANEOUS"/>
-  <TLINK lid="l28" eventInstanceID="ei14" relatedToEventInstance="ei12" relType="SIMULTANEOUS"/>
+  <TLINK lid="l26" eventInstanceID="ei14" relatedToEventInstance="ei15" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l27" eventInstanceID="ei14" relatedToEventInstance="ei13" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l28" eventInstanceID="ei14" relatedToEventInstance="ei12" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l29" eventInstanceID="ei15" relatedToTime="t0" relType="INCLUDES"/>
 </TimeML>

@@ -2,35 +2,35 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
-  <TEXT>Paciente varón de 67 años, sin <EVENT eid="e1" class="OCCURRENCE">antecedentes</EVENT> de interés, que <EVENT eid="e2" class="OCCURRENCE">acude</EVENT> a consulta de urología por primera vez, <EVENT eid="e3" class="OCCURRENCE">derivado</EVENT> por su médico de atención primaria, por <EVENT eid="e4" class="OCCURRENCE">síntomas</EVENT> de prostatismo. En el <EVENT eid="e5" class="OCCURRENCE">examen</EVENT> físico se <EVENT eid="e6" class="REPORTING">encuentra</EVENT> una próstata de <EVENT eid="e7" class="OCCURRENCE">consistencia</EVENT> adenomatosa y de <EVENT eid="e8" class="OCCURRENCE">tamaño</EVENT> aumentado (III/IV). En la <EVENT eid="e9" class="OCCURRENCE">ecografia</EVENT> transrectal se <EVENT eid="e10" class="REPORTING">observa</EVENT> un parénquima heterogéneo, con <EVENT eid="e11" class="OCCURRENCE">calcificaciones</EVENT> aisladas en lóbulo derecho, sin <EVENT eid="e12" class="REPORTING">objetivarse</EVENT> <EVENT eid="e13" class="OCCURRENCE">imágenes</EVENT> hipoecoicas y con un <EVENT eid="e14" class="OCCURRENCE">volumen</EVENT> prostático de 101,7 c.c. En los <EVENT eid="e15" class="OCCURRENCE">análisis</EVENT>, <EVENT eid="e16" class="OCCURRENCE">elevación</EVENT> de PSA (13,08 ng/ml.). Se <EVENT eid="e17" class="OCCURRENCE">indica</EVENT> realización de <EVENT eid="e18" class="OCCURRENCE">biopsia</EVENT> prostática transrectal.&#13;
-El resultado de la <EVENT eid="e19" class="OCCURRENCE">anatomía</EVENT> patológica fue informado como <EVENT eid="e20" class="OCCURRENCE">nevus</EVENT> azul prostático. Se describe un parénquima prostático con <EVENT eid="e21" class="OCCURRENCE">inflamación</EVENT> crónica y <EVENT eid="e22" class="OCCURRENCE">reacción</EVENT> granulomatosa de tipo cuerpo extraño, con presencia de <EVENT eid="e23" class="OCCURRENCE">gránulos</EVENT> intracitoplásmicos y <EVENT eid="e24" class="OCCURRENCE">melanocitos</EVENT> fusiformes dendríticos.. No hay <EVENT eid="e25" class="REPORTING">evidencia</EVENT> de <EVENT eid="e26" class="OCCURRENCE">malignidad</EVENT> en ninguna de las muestras.&#13;
+  <TEXT>Paciente varón de 67 años, sin <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">antecedentes</EVENT> de interés, que <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">acude</EVENT> a consulta de urología por primera vez, <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">derivado</EVENT> por su médico de atención primaria, por <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">síntomas</EVENT> de prostatismo. En el <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">examen</EVENT> físico se <EVENT eid="e6" class="REPORTING" comment="e3c:permanence=FINITE">encuentra</EVENT> una próstata de <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">consistencia</EVENT> adenomatosa y de <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">tamaño</EVENT> aumentado (III/IV). En la <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">ecografia</EVENT> transrectal se <EVENT eid="e10" class="REPORTING" comment="e3c:permanence=FINITE">observa</EVENT> un parénquima heterogéneo, con <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">calcificaciones</EVENT> aisladas en lóbulo derecho, sin <EVENT eid="e12" class="REPORTING" comment="e3c:permanence=FINITE">objetivarse</EVENT> <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">imágenes</EVENT> hipoecoicas y con un <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">volumen</EVENT> prostático de 101,7 c.c. En los <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">análisis</EVENT>, <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">elevación</EVENT> de PSA (13,08 ng/ml.). Se <EVENT eid="e17" class="OCCURRENCE" comment="e3c:permanence=FINITE">indica</EVENT> realización de <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">biopsia</EVENT> prostática transrectal.&#13;
+El resultado de la <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">anatomía</EVENT> patológica fue informado como <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">nevus</EVENT> azul prostático. Se describe un parénquima prostático con <EVENT eid="e21" class="OCCURRENCE" comment="e3c:permanence=FINITE">inflamación</EVENT> crónica y <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">reacción</EVENT> granulomatosa de tipo cuerpo extraño, con presencia de <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">gránulos</EVENT> intracitoplásmicos y <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">melanocitos</EVENT> fusiformes dendríticos.. No hay <EVENT eid="e25" class="REPORTING" comment="e3c:permanence=FINITE">evidencia</EVENT> de <EVENT eid="e26" class="OCCURRENCE" comment="e3c:permanence=FINITE">malignidad</EVENT> en ninguna de las muestras.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=NOVEL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
@@ -69,14 +69,14 @@ El resultado de la <EVENT eid="e19" class="OCCURRENCE">anatomía</EVENT> patoló
   <TLINK lid="l36" eventInstanceID="ei20" relatedToEventInstance="ei19" relType="INCLUDES"/>
   <TLINK lid="l37" eventInstanceID="ei21" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l38" eventInstanceID="ei21" relatedToEventInstance="ei23" relType="INCLUDES"/>
-  <TLINK lid="l39" eventInstanceID="ei21" relatedToEventInstance="ei25" relType="SIMULTANEOUS"/>
+  <TLINK lid="l39" eventInstanceID="ei21" relatedToEventInstance="ei25" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l40" eventInstanceID="ei21" relatedToEventInstance="ei24" relType="INCLUDES"/>
   <TLINK lid="l41" eventInstanceID="ei21" relatedToEventInstance="ei19" relType="INCLUDES"/>
-  <TLINK lid="l42" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS"/>
+  <TLINK lid="l42" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l43" eventInstanceID="ei22" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l44" eventInstanceID="ei23" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l45" eventInstanceID="ei24" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l46" eventInstanceID="ei25" relatedToTime="t0" relType="BEFORE"/>
-  <TLINK lid="l47" eventInstanceID="ei25" relatedToEventInstance="ei26" relType="SIMULTANEOUS"/>
+  <TLINK lid="l47" eventInstanceID="ei25" relatedToEventInstance="ei26" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l48" eventInstanceID="ei26" relatedToTime="t0" relType="BEFORE"/>
 </TimeML>

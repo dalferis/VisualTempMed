@@ -2,23 +2,23 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>CURATION_USER</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2020-04-08T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-04-08</TIMEX3>
-  <TEXT>We <EVENT eid="e1" class="OCCURRENCE">observed</EVENT> a 29 y.o. female proband with the episode of venous <EVENT eid="e2" class="OCCURRENCE">thrombosis</EVENT> at the age of 18 and family <EVENT eid="e3" class="STATE">history</EVENT> of <EVENT eid="e4" class="STATE">thrombosis</EVENT>. The antithrombin <EVENT eid="e5" class="OCCURRENCE">level</EVENT> in our patient was low, 44-48% (AT deficiency type I). A new genetic variant c.662G &gt; C (p.W221S) in the SERPINC1 gene was <EVENT eid="e6" class="REPORTING">detected</EVENT> in proband and affected father but was <EVENT eid="e7" class="OCCURRENCE">absent</EVENT> in healthy sister. We used in silico tools to <EVENT eid="e8" class="REPORTING">evaluate</EVENT> the possible impact of p.W221S variant on protein structure and function. In mutated SERPINC1 protein a new N-linked glycosylation site is <EVENT eid="e9" class="STATE">formed</EVENT>, however, it is <EVENT eid="e10" class="STATE">unclear</EVENT> if the glycosylation at 219-221 site is possible.&#13;
+  <TEXT>We <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">observed</EVENT> a 29 y.o. female proband with the episode of venous <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">thrombosis</EVENT> at the age of 18 and family <EVENT eid="e3" class="STATE" comment="e3c:permanence=PERMANENT">history</EVENT> of <EVENT eid="e4" class="STATE" comment="e3c:permanence=PERMANENT">thrombosis</EVENT>. The antithrombin <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">level</EVENT> in our patient was low, 44-48% (AT deficiency type I). A new genetic variant c.662G &gt; C (p.W221S) in the SERPINC1 gene was <EVENT eid="e6" class="REPORTING" comment="e3c:permanence=FINITE">detected</EVENT> in proband and affected father but was <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">absent</EVENT> in healthy sister. We used in silico tools to <EVENT eid="e8" class="REPORTING" comment="e3c:permanence=FINITE">evaluate</EVENT> the possible impact of p.W221S variant on protein structure and function. In mutated SERPINC1 protein a new N-linked glycosylation site is <EVENT eid="e9" class="STATE" comment="e3c:permanence=PERMANENT">formed</EVENT>, however, it is <EVENT eid="e10" class="STATE" comment="e3c:permanence=FINITE">unclear</EVENT> if the glycosylation at 219-221 site is possible.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL; e3c:contextualAspect=NOVEL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=GENERIC"/>
   <TLINK lid="l1" eventInstanceID="ei1" relatedToTime="t0" relType="INCLUDES"/>
-  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei3" relType="SIMULTANEOUS"/>
-  <TLINK lid="l3" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS"/>
-  <TLINK lid="l4" eventInstanceID="ei1" relatedToEventInstance="ei5" relType="SIMULTANEOUS"/>
-  <TLINK lid="l5" eventInstanceID="ei2" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l2" eventInstanceID="ei1" relatedToEventInstance="ei3" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l3" eventInstanceID="ei1" relatedToEventInstance="ei2" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l4" eventInstanceID="ei1" relatedToEventInstance="ei5" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l5" eventInstanceID="ei2" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="INCLUDES"/>
   <TLINK lid="l8" eventInstanceID="ei4" relatedToTime="t0" relType="BEFORE"/>
@@ -29,7 +29,7 @@
   <TLINK lid="l13" eventInstanceID="ei6" relatedToEventInstance="ei8" relType="BEFORE"/>
   <TLINK lid="l14" eventInstanceID="ei7" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l15" eventInstanceID="ei8" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l16" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="SIMULTANEOUS"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l17" eventInstanceID="ei9" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l18" eventInstanceID="ei10" relatedToTime="t0" relType="IS_INCLUDED"/>
 </TimeML>

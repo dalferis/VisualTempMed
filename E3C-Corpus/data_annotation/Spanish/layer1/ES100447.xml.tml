@@ -2,82 +2,82 @@
 <TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
   <DOCID>begona</DOCID>
   <TIMEX3 tid="t0" type="DATE" value="2018-12-01T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2018-12-01</TIMEX3>
-  <TEXT>Varón de 50 años al que se le realizó en <TIMEX3 tid="t1" type="DATE" value="2004-01" temporalFunction="false">enero de 2004</TIMEX3> una <EVENT eid="e1" class="OCCURRENCE">derivación</EVENT> biliopancreática de Scopinaro por <EVENT eid="e2" class="OCCURRENCE">obesidad</EVENT> mórbida. El paciente presenta una <EVENT eid="e3" class="OCCURRENCE">esteatosis</EVENT> hepática y un <EVENT eid="e4" class="OCCURRENCE">síndrome</EVENT> malabsortivo. Está en <EVENT eid="e5" class="OCCURRENCE">tratamiento</EVENT> con vitamina B12 por <EVENT eid="e6" class="OCCURRENCE">anemia</EVENT> crónica y con vitamina K por una <EVENT eid="e7" class="OCCURRENCE">actividad</EVENT> de protrombina disminuida.&#13;
-En <TIMEX3 tid="t2" type="DATE" value="2006-01" temporalFunction="false">enero de 2006</TIMEX3> se le realiza una <EVENT eid="e8" class="OCCURRENCE">pieloinfundibulonefrolitotomía</EVENT> con <EVENT eid="e9" class="OCCURRENCE">fístula</EVENT> urinaria <TIMEX3 tid="t3" type="DATE" value="X" temporalFunction="true">postoperatoria</TIMEX3>.&#13;
-En <TIMEX3 tid="t4" type="DATE" value="2006-01" temporalFunction="false">abril de 2006</TIMEX3> el paciente es <EVENT eid="e10" class="OCCURRENCE">remitido</EVENT> al servicio de oftalmología por <EVENT eid="e11" class="OCCURRENCE">ceguera</EVENT> nocturna de progresión en <TIMEX3 tid="t5" type="DURATION" value="P3M" temporalFunction="false">3 meses</TIMEX3>. El paciente además <EVENT eid="e12" class="REPORTING">refería</EVENT> <EVENT eid="e13" class="OCCURRENCE">sensación</EVENT> de cuerpo extraño y ojo rojo. A la <EVENT eid="e14" class="OCCURRENCE">exploración</EVENT> la <EVENT eid="e15" class="OCCURRENCE">agudeza</EVENT> visual era de la unidad en ambos ojos. El <EVENT eid="e16" class="OCCURRENCE">examen</EVENT> con lámpara de hendidura <EVENT eid="e17" class="REPORTING">mostraba</EVENT> un <EVENT eid="e18" class="OCCURRENCE">BUT</EVENT> muy disminuido, <EVENT eid="e19" class="OCCURRENCE">xerosis</EVENT> conjuntival y <EVENT eid="e20" class="OCCURRENCE">manchas</EVENT> de Bitot en ambos ojos. También se podía <EVENT eid="e21" class="REPORTING">observar</EVENT> observar un fino <EVENT eid="e22" class="OCCURRENCE">punteado</EVENT> epitelial conjuntivo corneal en la <EVENT eid="e23" class="OCCURRENCE">tinción</EVENT> con fluoresceína. En el <EVENT eid="e24" class="OCCURRENCE">test</EVENT> de Schirmer I bajo <EVENT eid="e25" class="OCCURRENCE">anestesia</EVENT> se <EVENT eid="e26" class="REPORTING">observaron</EVENT> valores mayores de 15 mm. Oftalmoscópicamente se <EVENT eid="e27" class="REPORTING">apreció</EVENT> un <EVENT eid="e28" class="OCCURRENCE">moteado</EVENT> blanquecino en media periferia sin <EVENT eid="e29" class="OCCURRENCE">afectación</EVENT> macular. El <EVENT eid="e30" class="OCCURRENCE">nivel</EVENT> plasmático de retinol era de 0,07 mg/l (nivel normal 0,30-0,8 mg/l).&#13;
+  <TEXT>Varón de 50 años al que se le realizó en <TIMEX3 tid="t1" type="DATE" value="2004-01" temporalFunction="false">enero de 2004</TIMEX3> una <EVENT eid="e1" class="OCCURRENCE" comment="e3c:permanence=FINITE">derivación</EVENT> biliopancreática de Scopinaro por <EVENT eid="e2" class="OCCURRENCE" comment="e3c:permanence=FINITE">obesidad</EVENT> mórbida. El paciente presenta una <EVENT eid="e3" class="OCCURRENCE" comment="e3c:permanence=FINITE">esteatosis</EVENT> hepática y un <EVENT eid="e4" class="OCCURRENCE" comment="e3c:permanence=FINITE">síndrome</EVENT> malabsortivo. Está en <EVENT eid="e5" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> con vitamina B12 por <EVENT eid="e6" class="OCCURRENCE" comment="e3c:permanence=FINITE">anemia</EVENT> crónica y con vitamina K por una <EVENT eid="e7" class="OCCURRENCE" comment="e3c:permanence=FINITE">actividad</EVENT> de protrombina disminuida.&#13;
+En <TIMEX3 tid="t2" type="DATE" value="2006-01" temporalFunction="false">enero de 2006</TIMEX3> se le realiza una <EVENT eid="e8" class="OCCURRENCE" comment="e3c:permanence=FINITE">pieloinfundibulonefrolitotomía</EVENT> con <EVENT eid="e9" class="OCCURRENCE" comment="e3c:permanence=FINITE">fístula</EVENT> urinaria <TIMEX3 tid="t3" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postoperatoria</TIMEX3>.&#13;
+En <TIMEX3 tid="t4" type="DATE" value="2006-01" temporalFunction="false">abril de 2006</TIMEX3> el paciente es <EVENT eid="e10" class="OCCURRENCE" comment="e3c:permanence=FINITE">remitido</EVENT> al servicio de oftalmología por <EVENT eid="e11" class="OCCURRENCE" comment="e3c:permanence=FINITE">ceguera</EVENT> nocturna de progresión en <TIMEX3 tid="t5" type="DURATION" value="P3M" temporalFunction="false">3 meses</TIMEX3>. El paciente además <EVENT eid="e12" class="REPORTING" comment="e3c:permanence=FINITE">refería</EVENT> <EVENT eid="e13" class="OCCURRENCE" comment="e3c:permanence=FINITE">sensación</EVENT> de cuerpo extraño y ojo rojo. A la <EVENT eid="e14" class="OCCURRENCE" comment="e3c:permanence=FINITE">exploración</EVENT> la <EVENT eid="e15" class="OCCURRENCE" comment="e3c:permanence=FINITE">agudeza</EVENT> visual era de la unidad en ambos ojos. El <EVENT eid="e16" class="OCCURRENCE" comment="e3c:permanence=FINITE">examen</EVENT> con lámpara de hendidura <EVENT eid="e17" class="REPORTING" comment="e3c:permanence=FINITE">mostraba</EVENT> un <EVENT eid="e18" class="OCCURRENCE" comment="e3c:permanence=FINITE">BUT</EVENT> muy disminuido, <EVENT eid="e19" class="OCCURRENCE" comment="e3c:permanence=FINITE">xerosis</EVENT> conjuntival y <EVENT eid="e20" class="OCCURRENCE" comment="e3c:permanence=FINITE">manchas</EVENT> de Bitot en ambos ojos. También se podía <EVENT eid="e21" class="REPORTING" comment="e3c:permanence=FINITE">observar</EVENT> observar un fino <EVENT eid="e22" class="OCCURRENCE" comment="e3c:permanence=FINITE">punteado</EVENT> epitelial conjuntivo corneal en la <EVENT eid="e23" class="OCCURRENCE" comment="e3c:permanence=FINITE">tinción</EVENT> con fluoresceína. En el <EVENT eid="e24" class="OCCURRENCE" comment="e3c:permanence=FINITE">test</EVENT> de Schirmer I bajo <EVENT eid="e25" class="OCCURRENCE" comment="e3c:permanence=FINITE">anestesia</EVENT> se <EVENT eid="e26" class="REPORTING" comment="e3c:permanence=FINITE">observaron</EVENT> valores mayores de 15 mm. Oftalmoscópicamente se <EVENT eid="e27" class="REPORTING" comment="e3c:permanence=FINITE">apreció</EVENT> un <EVENT eid="e28" class="OCCURRENCE" comment="e3c:permanence=FINITE">moteado</EVENT> blanquecino en media periferia sin <EVENT eid="e29" class="OCCURRENCE" comment="e3c:permanence=FINITE">afectación</EVENT> macular. El <EVENT eid="e30" class="OCCURRENCE" comment="e3c:permanence=FINITE">nivel</EVENT> plasmático de retinol era de 0,07 mg/l (nivel normal 0,30-0,8 mg/l).&#13;
 &#13;
-Ante la <EVENT eid="e31" class="OCCURRENCE">gravedad</EVENT> potencial del cuadro se <EVENT eid="e32" class="ASPECTUAL">comienzó</EVENT> un <EVENT eid="e33" class="OCCURRENCE">tratamiento</EVENT> oral con vitamina A y enzimas pancreáticos para <EVENT eid="e34" class="OCCURRENCE">favorecer</EVENT> su <EVENT eid="e35" class="OCCURRENCE">absorción</EVENT> a la <EVENT eid="e36" class="OCCURRENCE">espera</EVENT> de recibir <EVENT eid="e37" class="OCCURRENCE">tratamiento</EVENT> intramuscular, sin lograr apenas <EVENT eid="e38" class="OCCURRENCE">mejoría</EVENT>.&#13;
-Concomitantemente, debido a la <EVENT eid="e39" class="OCCURRENCE">nefrolitiasis</EVENT> complicada (<EVENT eid="e40" class="OCCURRENCE">absceso</EVENT> intrarrenal), al paciente se le realiza una <EVENT eid="e41" class="OCCURRENCE">nefrectomía</EVENT> con <EVENT eid="e42" class="OCCURRENCE">sangrado</EVENT> intenso, que requiere cinco <EVENT eid="e43" class="OCCURRENCE">concentrados</EVENT> de hematíes. Tras dicho <EVENT eid="e44" class="OCCURRENCE">proceso</EVENT> el paciente <EVENT eid="e45" class="REPORTING">refiere</EVENT> una ligera <EVENT eid="e46" class="OCCURRENCE">mejoría</EVENT> de su sintomatología, a pesar de haber <EVENT eid="e47" class="ASPECTUAL">suprimido</EVENT> <EVENT eid="e48" class="OCCURRENCE">tratamiento</EVENT> oral por el <EVENT eid="e49" class="OCCURRENCE">ayuno</EVENT> <TIMEX3 tid="t6" type="DATE" value="X" temporalFunction="true">postquirúrgico</TIMEX3>.&#13;
-Finalmente se le <EVENT eid="e50" class="OCCURRENCE">administraron</EVENT> 300.000 UI de vitamina A intramuscular consiguiendo una <EVENT eid="e51" class="OCCURRENCE">mejoría</EVENT> inmediata de los síntomas subjetivos, aunque las <EVENT eid="e52" class="OCCURRENCE">manifestaciones</EVENT> oftalmoscópicas <EVENT eid="e53" class="OCCURRENCE">tardaron</EVENT> <TIMEX3 tid="t7" type="DURATION" value="P3M" temporalFunction="false">tres meses</TIMEX3> en <EVENT eid="e54" class="OCCURRENCE">desaparecer</EVENT>.&#13;
+Ante la <EVENT eid="e31" class="OCCURRENCE" comment="e3c:permanence=FINITE">gravedad</EVENT> potencial del cuadro se <EVENT eid="e32" class="ASPECTUAL" comment="e3c:permanence=FINITE">comienzó</EVENT> un <EVENT eid="e33" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> oral con vitamina A y enzimas pancreáticos para <EVENT eid="e34" class="OCCURRENCE" comment="e3c:permanence=FINITE">favorecer</EVENT> su <EVENT eid="e35" class="OCCURRENCE" comment="e3c:permanence=FINITE">absorción</EVENT> a la <EVENT eid="e36" class="OCCURRENCE" comment="e3c:permanence=FINITE">espera</EVENT> de recibir <EVENT eid="e37" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> intramuscular, sin lograr apenas <EVENT eid="e38" class="OCCURRENCE" comment="e3c:permanence=FINITE">mejoría</EVENT>.&#13;
+Concomitantemente, debido a la <EVENT eid="e39" class="OCCURRENCE" comment="e3c:permanence=FINITE">nefrolitiasis</EVENT> complicada (<EVENT eid="e40" class="OCCURRENCE" comment="e3c:permanence=FINITE">absceso</EVENT> intrarrenal), al paciente se le realiza una <EVENT eid="e41" class="OCCURRENCE" comment="e3c:permanence=FINITE">nefrectomía</EVENT> con <EVENT eid="e42" class="OCCURRENCE" comment="e3c:permanence=FINITE">sangrado</EVENT> intenso, que requiere cinco <EVENT eid="e43" class="OCCURRENCE" comment="e3c:permanence=FINITE">concentrados</EVENT> de hematíes. Tras dicho <EVENT eid="e44" class="OCCURRENCE" comment="e3c:permanence=FINITE">proceso</EVENT> el paciente <EVENT eid="e45" class="REPORTING" comment="e3c:permanence=FINITE">refiere</EVENT> una ligera <EVENT eid="e46" class="OCCURRENCE" comment="e3c:permanence=FINITE">mejoría</EVENT> de su sintomatología, a pesar de haber <EVENT eid="e47" class="ASPECTUAL" comment="e3c:permanence=FINITE">suprimido</EVENT> <EVENT eid="e48" class="OCCURRENCE" comment="e3c:permanence=FINITE">tratamiento</EVENT> oral por el <EVENT eid="e49" class="OCCURRENCE" comment="e3c:permanence=FINITE">ayuno</EVENT> <TIMEX3 tid="t6" type="DATE" value="X" temporalFunction="true" comment="e3c:timex3Class=PREPOSTEXP; e3c:value=NO_VALUE">postquirúrgico</TIMEX3>.&#13;
+Finalmente se le <EVENT eid="e50" class="OCCURRENCE" comment="e3c:permanence=FINITE">administraron</EVENT> 300.000 UI de vitamina A intramuscular consiguiendo una <EVENT eid="e51" class="OCCURRENCE" comment="e3c:permanence=FINITE">mejoría</EVENT> inmediata de los síntomas subjetivos, aunque las <EVENT eid="e52" class="OCCURRENCE" comment="e3c:permanence=FINITE">manifestaciones</EVENT> oftalmoscópicas <EVENT eid="e53" class="OCCURRENCE" comment="e3c:permanence=FINITE">tardaron</EVENT> <TIMEX3 tid="t7" type="DURATION" value="P3M" temporalFunction="false">tres meses</TIMEX3> en <EVENT eid="e54" class="OCCURRENCE" comment="e3c:permanence=FINITE">desaparecer</EVENT>.&#13;
 </TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG"/>
-  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
-  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS"/>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei3" eventID="e3" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei4" eventID="e4" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei5" eventID="e5" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei6" eventID="e6" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei7" eventID="e7" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei8" eventID="e8" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei9" eventID="e9" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei10" eventID="e10" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei11" eventID="e11" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei12" eventID="e12" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei13" eventID="e13" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei14" eventID="e14" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei15" eventID="e15" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei16" eventID="e16" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei17" eventID="e17" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei18" eventID="e18" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei19" eventID="e19" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei20" eventID="e20" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei21" eventID="e21" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei22" eventID="e22" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei23" eventID="e23" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei24" eventID="e24" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei25" eventID="e25" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei26" eventID="e26" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei27" eventID="e27" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei28" eventID="e28" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei29" eventID="e29" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei30" eventID="e30" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei31" eventID="e31" tense="NONE" aspect="NONE" pos="OTHER" modality="would" polarity="POS" comment="e3c:contextualModality=HYPOTHETICAL-OTHER"/>
+  <MAKEINSTANCE eiid="ei32" eventID="e32" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei33" eventID="e33" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei34" eventID="e34" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei35" eventID="e35" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei36" eventID="e36" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei37" eventID="e37" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei38" eventID="e38" tense="NONE" aspect="NONE" pos="OTHER" polarity="NEG" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei39" eventID="e39" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei40" eventID="e40" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei41" eventID="e41" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei42" eventID="e42" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei43" eventID="e43" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei44" eventID="e44" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei45" eventID="e45" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei46" eventID="e46" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei47" eventID="e47" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei48" eventID="e48" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei49" eventID="e49" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei50" eventID="e50" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei51" eventID="e51" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei52" eventID="e52" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei53" eventID="e53" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
+  <MAKEINSTANCE eiid="ei54" eventID="e54" tense="NONE" aspect="NONE" pos="OTHER" polarity="POS" comment="e3c:contextualModality=ACTUAL"/>
   <TLINK lid="l1" timeID="t1" relatedToEventInstance="ei1" relType="INCLUDES"/>
   <TLINK lid="l2" timeID="t1" relatedToEventInstance="ei3" relType="BEFORE"/>
   <TLINK lid="l3" eventInstanceID="ei1" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l4" eventInstanceID="ei2" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l5" eventInstanceID="ei2" relatedToTime="t1" relType="INCLUDES"/>
-  <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="SIMULTANEOUS"/>
+  <TLINK lid="l6" eventInstanceID="ei3" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l7" eventInstanceID="ei3" relatedToEventInstance="ei4" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l8" eventInstanceID="ei3" relatedToEventInstance="ei5" relType="INCLUDES"/>
-  <TLINK lid="l9" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS"/>
-  <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l9" eventInstanceID="ei4" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
+  <TLINK lid="l10" eventInstanceID="ei5" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l11" eventInstanceID="ei5" relatedToTime="t2" relType="INCLUDES"/>
-  <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l12" eventInstanceID="ei6" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l13" eventInstanceID="ei6" relatedToEventInstance="ei5" relType="INCLUDES"/>
-  <TLINK lid="l14" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS"/>
+  <TLINK lid="l14" eventInstanceID="ei7" relatedToTime="t0" relType="SIMULTANEOUS" comment="e3c:docTimeRel=OVERLAP"/>
   <TLINK lid="l15" eventInstanceID="ei7" relatedToEventInstance="ei5" relType="INCLUDES"/>
   <TLINK lid="l16" timeID="t2" relatedToTime="t4" relType="BEFORE"/>
   <TLINK lid="l17" timeID="t2" relatedToEventInstance="ei8" relType="INCLUDES"/>
@@ -131,10 +131,10 @@ Finalmente se le <EVENT eid="e50" class="OCCURRENCE">administraron</EVENT> 300.0
   <TLINK lid="l65" eventInstanceID="ei32" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l67" eventInstanceID="ei33" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l68" eventInstanceID="ei33" relatedToEventInstance="ei32" relType="BEGINS"/>
-  <TLINK lid="l69" eventInstanceID="ei33" relatedToEventInstance="ei36" relType="SIMULTANEOUS"/>
-  <TLINK lid="l70" eventInstanceID="ei33" relatedToEventInstance="ei39" relType="SIMULTANEOUS"/>
-  <TLINK lid="l71" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="SIMULTANEOUS"/>
-  <TLINK lid="l72" eventInstanceID="ei33" relatedToEventInstance="ei35" relType="SIMULTANEOUS"/>
+  <TLINK lid="l69" eventInstanceID="ei33" relatedToEventInstance="ei36" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l70" eventInstanceID="ei33" relatedToEventInstance="ei39" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l71" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l72" eventInstanceID="ei33" relatedToEventInstance="ei35" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
   <TLINK lid="l73" eventInstanceID="ei33" relatedToEventInstance="ei38" relType="INCLUDES"/>
   <TLINK lid="l74" eventInstanceID="ei34" relatedToTime="t0" relType="BEFORE"/>
   <TLINK lid="l75" eventInstanceID="ei35" relatedToTime="t0" relType="BEFORE"/>
