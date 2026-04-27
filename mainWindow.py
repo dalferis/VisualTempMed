@@ -3,6 +3,7 @@ import graphView as gv
 import timelineView as tlv
 import textView as txv
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QSizePolicy
@@ -34,6 +35,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.stack)
         self.stack.setCurrentWidget(self.timelineView if self._initialPanel=="timeline" else self.graphView if self._initialPanel=="graph" else self.textView)
         self.createControlPanel()
+        self.toggleShowIds(self.chkbxShowId.isChecked())
 
     def createControlPanel(self):
         dock = QDockWidget("Control panel", self)
@@ -65,7 +67,7 @@ class MainWindow(QMainWindow):
         layoutCommon.addWidget(self.radioText, 0, 2)
         # - Checkbox for showing IDs
         self.chkbxShowId = QCheckBox("Show IDs")
-        self.chkbxShowId.setChecked(True)
+        self.chkbxShowId.setChecked(False)
         self.chkbxShowId.stateChanged.connect(self.toggleShowIds)
         layoutCommon.addWidget(self.chkbxShowId, 1, 0)
 
@@ -124,6 +126,14 @@ class MainWindow(QMainWindow):
         self.sliderEdgeThicknessText.setValue(2)
         layout.addWidget(self.sliderEdgeThicknessText)
         self.sliderEdgeThicknessText.valueChanged.connect(self.updateEdgeWidthText)
+        # - Slider for edge label background opacity
+        layout.addWidget(QLabel("Edge label opacity"))
+        self.sliderEdgeLabelOpacity = QSlider(Qt.Horizontal)
+        self.sliderEdgeLabelOpacity.setMinimum(0)
+        self.sliderEdgeLabelOpacity.setMaximum(255)
+        self.sliderEdgeLabelOpacity.setValue(220)
+        layout.addWidget(self.sliderEdgeLabelOpacity)
+        self.sliderEdgeLabelOpacity.valueChanged.connect(self.updateEdgeLabelOpacity)
         return widget
 
     def changeView(self, index):
@@ -143,6 +153,11 @@ class MainWindow(QMainWindow):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
+
+    def updateEdgeLabelOpacity(self, value):
+        for item in self.textScene.items():
+            if isinstance(item, txv.LaneEdgeItem):
+                item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
     
     def toggleShowIds(self, state):
         for item in self.graphScene.items():
