@@ -325,6 +325,10 @@ class TextScene(QGraphicsScene):
         x = self._left_margin
         y = self._top_margin
         line_idx = 0
+        # Drop trailing whitespace and CR/LF entities so they don't emit empty trailing lines
+        body = body.rstrip()
+        while body.endswith('&#13;') or body.endswith('&#10;'):
+            body = body[:-5].rstrip()
         pos = 0
         n = len(body)
 
@@ -333,6 +337,11 @@ class TextScene(QGraphicsScene):
 
             if ch.isspace():
                 pos += 1
+                continue
+
+            if body.startswith('&#13;', pos) or body.startswith('&#10;', pos):
+                x, y, line_idx = self.newLine(x, y, line_idx)
+                pos += 5
                 continue
 
             if ch == '<':
@@ -375,7 +384,7 @@ class TextScene(QGraphicsScene):
                 pos += 1
                 continue
 
-            word_match = re.match(r'[^\s<]+', body[pos:])
+            word_match = re.match(r'(?:(?!&#1[03];)[^\s<])+', body[pos:])
             if word_match:
                 x, y, line_idx = self.addWord(word_match.group(0), x, y, line_idx)
                 pos += word_match.end()
