@@ -3,11 +3,15 @@ import sceneItems as si
 import graphView as gv
 import timelineView as tlv
 import textView as txv
+from dataModel import DataModel
+from pytlex_core.data import Graph
+from pytlex_core.algorithms import TLEX, Partitioner
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QBrush, QColor
+from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
-    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QSizePolicy
+    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QSizePolicy,
+    QFileDialog, QMessageBox
 )
 
 class MainWindow(QMainWindow):
@@ -16,27 +20,96 @@ class MainWindow(QMainWindow):
     #_initialPanel = "text"
 
 
-    def __init__(self, model):
+    def __init__(self, model=None):
         super().__init__()
 
         self.setWindowTitle("Visualizador de líneas temporales en contexto médico")
         self.resize(1200, 800)
 
+        self.graphView = self.graphScene = None
+        self.timelineView = self.timelineScene = None
+        self.textView = self.textScene = None
+
+        self.stack = QStackedWidget()
+        self.setCentralWidget(self.stack)
+        self.createMenuBar()
+        self.createControlPanel()
+        self.statusBar().showMessage("No file loaded")
+        if model is not None:
+            self.loadModel(model)
+
+    def createMenuBar(self):
+        menuBar = self.menuBar()
+
+        fileMenu = menuBar.addMenu("&File")
+        openAction = QAction("&Open TimeML file...", self)
+        openAction.setShortcut("Ctrl+O")
+        openAction.triggered.connect(self.openTimeMlFile)
+        fileMenu.addAction(openAction)
+        fileMenu.addSeparator()
+        exitAction = QAction("E&xit", self)
+        exitAction.setShortcut("Ctrl+Q")
+        exitAction.triggered.connect(self.close)
+        fileMenu.addAction(exitAction)
+
+        helpMenu = menuBar.addMenu("&Help")
+        aboutAction = QAction("&About", self)
+        aboutAction.triggered.connect(self.showAbout)
+        helpMenu.addAction(aboutAction)
+
+    def openTimeMlFile(self):
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Open TimeML file",
+            "",
+            "TimeML files (*.tml);;All files (*)"
+        )
+        if not path:
+            return
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            graph = Graph.Graph(time_ml_string=content)
+            tlex = TLEX.TLEX(graph=graph)
+            model = DataModel(graph, tlex)
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not load file:\n{e}")
+            return
+        self.loadModel(model, path)
+
+    def loadModel(self, model, filepath=None):
+        currentIndex = self.stack.currentIndex()
+        if currentIndex < 0:
+            currentIndex = self.radiogroupView.checkedId()
+        for view in (self.graphView, self.timelineView, self.textView):
+            if view is None:
+                continue
+            self.stack.removeWidget(view)
+            view.deleteLater()
+        self.graphView = self.graphScene = None
+        self.timelineView = self.timelineScene = None
+        self.textView = self.textScene = None
+        # Reset pytlex_core's module-level SLink set; it leaks across files.
+        Partitioner.single_links.clear()
         self.graphView = gv.GraphView(model)
         self.graphScene = self.graphView.scene
         self.timelineView = tlv.TimelineView(model)
         self.timelineScene = self.timelineView.scene
         self.textView = txv.TextView(model)
         self.textScene = self.textView.scene
-
-        self.stack = QStackedWidget()
         self.stack.addWidget(self.graphView)
         self.stack.addWidget(self.timelineView)
         self.stack.addWidget(self.textView)
-        self.setCentralWidget(self.stack)
-        self.stack.setCurrentWidget(self.timelineView if self._initialPanel=="timeline" else self.graphView if self._initialPanel=="graph" else self.textView)
-        self.createControlPanel()
+        self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
+        self.statusBar().showMessage(filepath if filepath else "")
+
+    def showAbout(self):
+        QMessageBox.about(
+            self,
+            "About",
+            "Visualizador de líneas temporales en contexto médico\n\nPFG UNED 2025-2026"
+        )
 
     def createControlPanel(self):
         dock = QDockWidget("Control panel", self)
@@ -142,6 +215,8 @@ class MainWindow(QMainWindow):
         self.stackControl.setCurrentIndex(index)
 
     def updateEdgeWidth(self, value):
+        if self.graphScene is None:
+            return
         for item in self.graphScene.items():
             if isinstance(item, si.EdgeItem):
                 pen = item.pen()
@@ -149,6 +224,8 @@ class MainWindow(QMainWindow):
                 item.setPen(pen)
 
     def updateEdgeWidthText(self, value):
+        if self.textScene is None:
+            return
         for item in self.textScene.items():
             if isinstance(item, si.EdgeItem):
                 pen = item.pen()
@@ -156,25 +233,48 @@ class MainWindow(QMainWindow):
                 item.setPen(pen)
 
     def updateEdgeLabelOpacity(self, value):
+        if self.textScene is None:
+            return
         for item in self.textScene.items():
             if isinstance(item, txv.LaneEdgeItem):
                 item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
-    
+
     def toggleShowIds(self, state):
-        for item in self.graphScene.items():
-            if isinstance(item, si.NodeItem):
-                item.id_bg.setVisible(state)
-                item.id_text.setVisible(state)
-        for item in self.timelineScene.items():
-            if isinstance(item, si.NodeItem):
-                item.id_bg.setVisible(state)
-                item.id_text.setVisible(state)
-        for item in self.textScene.items():
-            if isinstance(item, si.NodeItem):
-                item.id_bg.setVisible(state)
-                item.id_text.setVisible(state)
+        for scene in (self.graphScene, self.timelineScene, self.textScene):
+            if scene is None:
+                continue
+            for item in scene.items():
+                if isinstance(item, si.NodeItem):
+                    item.id_bg.setVisible(state)
+                    item.id_text.setVisible(state)
 
     def toggleShowLaneIds(self, state):
+        if self.timelineScene is None:
+            return
         for item in self.timelineScene.items():
             if isinstance(item, tlv.TimeAxis):
                 item.label.setVisible(state)
+
+
+def run(filepath=None):
+    import sys
+    from PySide6.QtWidgets import QApplication
+
+    app = QApplication.instance() or QApplication(sys.argv)
+    model = None
+    if filepath is not None:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        graph = Graph.Graph(time_ml_string=content)
+        tlex = TLEX.TLEX(graph=graph)
+        model = DataModel(graph, tlex)
+    window = MainWindow()
+    if model is not None:
+        window.loadModel(model, filepath)
+    window.show()
+    app.exec()
+
+
+if __name__ == "__main__":
+    import sys
+    run(sys.argv[1] if len(sys.argv) > 1 else None)

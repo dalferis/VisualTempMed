@@ -1,7 +1,7 @@
 import validator
 import detector
 import converter
-import visualizer
+import mainWindow as mw
 import logging
 import os
 
@@ -116,8 +116,8 @@ def menuConvert():
 
 def menuVisualize():
     print("\n=== VISUALIZE ===")
-    path = browseFile(start_dir='.\\E3C-Corpus\\data_annotation\\Spanish\\layer1')
-    visualizer.visualize(path)
+    path = browseFile(start_dir='.\\pytlex_data\\TimeBankCorpus')
+    mw.run(path)
 
 
 def main():
