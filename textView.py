@@ -18,11 +18,14 @@ class TextView(QGraphicsView):
         self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
 
     def wheelEvent(self, event):
-        factor = 1.15
-        if event.angleDelta().y() > 0:
-            self.scale(factor, factor)
+        if event.modifiers() & Qt.ControlModifier:
+            factor = 1.15
+            if event.angleDelta().y() > 0:
+                self.scale(factor, factor)
+            else:
+                self.scale(1 / factor, 1 / factor)
         else:
-            self.scale(1 / factor, 1 / factor)
+            super().wheelEvent(event)
 
 
 class LaneEdgeItem(si.EdgeItem):
