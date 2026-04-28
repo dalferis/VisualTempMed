@@ -65,67 +65,61 @@ In the decline of <TIMEX3 tid="t7" type="DURATION" value="P2Y" temporalFunction=
   <TLINK lid="l18" eventInstanceID="ei8" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l19" eventInstanceID="ei9" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l20" eventInstanceID="ei9" relatedToEventInstance="ei10" relType="SIMULTANEOUS"/>
-  <TLINK lid="l21" eventInstanceID="ei9" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
-  <TLINK lid="l22" eventInstanceID="ei9" relType="SIMULTANEOUS"/>
-  <TLINK lid="l23" eventInstanceID="ei10" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l24" eventInstanceID="ei11" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l25" eventInstanceID="ei11" relatedToEventInstance="ei12" relType="INCLUDES"/>
-  <TLINK lid="l26" eventInstanceID="ei11" relatedToEventInstance="ei14" relType="INCLUDES"/>
-  <TLINK lid="l27" eventInstanceID="ei11" relatedToEventInstance="ei13" relType="INCLUDES"/>
-  <TLINK lid="l28" eventInstanceID="ei11" relatedToEventInstance="ei15" relType="INCLUDES"/>
-  <TLINK lid="l29" eventInstanceID="ei11" relatedToEventInstance="ei16" relType="BEFORE"/>
-  <TLINK lid="l30" eventInstanceID="ei12" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l31" eventInstanceID="ei13" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l32" eventInstanceID="ei14" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l33" eventInstanceID="ei15" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l34" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l35" eventInstanceID="ei16" relatedToEventInstance="ei19" relType="BEFORE"/>
-  <TLINK lid="l36" eventInstanceID="ei16" relatedToEventInstance="ei18" relType="INCLUDES"/>
-  <TLINK lid="l37" eventInstanceID="ei16" relatedToEventInstance="ei17" relType="INCLUDES"/>
-  <TLINK lid="l38" eventInstanceID="ei17" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l39" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l40" timeID="t2" relatedToEventInstance="ei19" relType="ENDS"/>
-  <TLINK lid="l41" eventInstanceID="ei19" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l42" eventInstanceID="ei19" relatedToEventInstance="ei21" relType="BEFORE"/>
-  <TLINK lid="l43" eventInstanceID="ei19" relType="INCLUDES"/>
-  <TLINK lid="l44" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="INCLUDES"/>
-  <TLINK lid="l45" eventInstanceID="ei20" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l46" timeID="t3" relatedToEventInstance="ei20" relType="SIMULTANEOUS"/>
-  <TLINK lid="l47" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l48" eventInstanceID="ei21" relatedToEventInstance="ei24" relType="BEFORE"/>
-  <TLINK lid="l49" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
-  <TLINK lid="l50" eventInstanceID="ei22" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l51" eventInstanceID="ei22" relatedToEventInstance="ei23" relType="INCLUDES"/>
-  <TLINK lid="l52" eventInstanceID="ei23" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l53" eventInstanceID="ei24" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l54" eventInstanceID="ei24" relatedToEventInstance="ei27" relType="BEFORE"/>
-  <TLINK lid="l55" eventInstanceID="ei24" relatedToEventInstance="ei25" relType="BEFORE"/>
-  <TLINK lid="l56" eventInstanceID="ei25" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l57" eventInstanceID="ei25" relatedToEventInstance="ei26" relType="BEFORE"/>
-  <TLINK lid="l58" eventInstanceID="ei26" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l59" timeID="t4" relatedToEventInstance="ei26" relType="SIMULTANEOUS"/>
-  <TLINK lid="l60" eventInstanceID="ei27" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l61" eventInstanceID="ei27" relatedToEventInstance="ei28" relType="BEFORE"/>
-  <TLINK lid="l62" timeID="t5" relatedToEventInstance="ei27" relType="SIMULTANEOUS"/>
-  <TLINK lid="l63" eventInstanceID="ei28" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l64" eventInstanceID="ei28" relatedToEventInstance="ei30" relType="BEFORE"/>
-  <TLINK lid="l65" eventInstanceID="ei28" relatedToEventInstance="ei29" relType="INCLUDES"/>
-  <TLINK lid="l66" timeID="t6" relatedToEventInstance="ei28" relType="SIMULTANEOUS"/>
-  <TLINK lid="l67" eventInstanceID="ei29" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l68" timeID="t7" relatedToEventInstance="ei32" relType="SIMULTANEOUS"/>
-  <TLINK lid="l69" timeID="t7" relatedToEventInstance="ei30" relType="SIMULTANEOUS"/>
-  <TLINK lid="l70" eventInstanceID="ei30" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l71" eventInstanceID="ei30" relatedToEventInstance="ei32" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
-  <TLINK lid="l72" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="INCLUDES"/>
-  <TLINK lid="l73" eventInstanceID="ei31" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l74" eventInstanceID="ei32" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l75" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="INCLUDES"/>
-  <TLINK lid="l76" eventInstanceID="ei33" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l77" eventInstanceID="ei33" relatedToEventInstance="ei35" relType="INCLUDES"/>
-  <TLINK lid="l78" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="INCLUDES"/>
-  <TLINK lid="l79" eventInstanceID="ei34" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l80" eventInstanceID="ei35" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l81" eventInstanceID="ei35" relType="INCLUDES"/>
-  <TLINK lid="l82" eventInstanceID="ei35" relType="INCLUDES"/>
-  <TLINK lid="l83" eventInstanceID="ei35" relType="INCLUDES"/>
+  <TLINK lid="l21" eventInstanceID="ei10" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l22" eventInstanceID="ei11" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l23" eventInstanceID="ei11" relatedToEventInstance="ei12" relType="INCLUDES"/>
+  <TLINK lid="l24" eventInstanceID="ei11" relatedToEventInstance="ei14" relType="INCLUDES"/>
+  <TLINK lid="l25" eventInstanceID="ei11" relatedToEventInstance="ei13" relType="INCLUDES"/>
+  <TLINK lid="l26" eventInstanceID="ei11" relatedToEventInstance="ei15" relType="INCLUDES"/>
+  <TLINK lid="l27" eventInstanceID="ei11" relatedToEventInstance="ei16" relType="BEFORE"/>
+  <TLINK lid="l28" eventInstanceID="ei12" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l29" eventInstanceID="ei13" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l30" eventInstanceID="ei14" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l31" eventInstanceID="ei15" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l32" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l33" eventInstanceID="ei16" relatedToEventInstance="ei19" relType="BEFORE"/>
+  <TLINK lid="l34" eventInstanceID="ei16" relatedToEventInstance="ei18" relType="INCLUDES"/>
+  <TLINK lid="l35" eventInstanceID="ei16" relatedToEventInstance="ei17" relType="INCLUDES"/>
+  <TLINK lid="l36" eventInstanceID="ei17" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l38" timeID="t2" relatedToEventInstance="ei19" relType="ENDS"/>
+  <TLINK lid="l39" eventInstanceID="ei19" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l40" eventInstanceID="ei19" relatedToEventInstance="ei21" relType="BEFORE"/>
+  <TLINK lid="l41" eventInstanceID="ei19" relatedToEventInstance="ei20" relType="INCLUDES"/>
+  <TLINK lid="l42" eventInstanceID="ei20" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l43" timeID="t3" relatedToEventInstance="ei20" relType="SIMULTANEOUS"/>
+  <TLINK lid="l44" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l45" eventInstanceID="ei21" relatedToEventInstance="ei24" relType="BEFORE"/>
+  <TLINK lid="l46" eventInstanceID="ei21" relatedToEventInstance="ei22" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l47" eventInstanceID="ei22" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l48" eventInstanceID="ei22" relatedToEventInstance="ei23" relType="INCLUDES"/>
+  <TLINK lid="l49" eventInstanceID="ei23" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l50" eventInstanceID="ei24" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l51" eventInstanceID="ei24" relatedToEventInstance="ei27" relType="BEFORE"/>
+  <TLINK lid="l52" eventInstanceID="ei24" relatedToEventInstance="ei25" relType="BEFORE"/>
+  <TLINK lid="l53" eventInstanceID="ei25" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l54" eventInstanceID="ei25" relatedToEventInstance="ei26" relType="BEFORE"/>
+  <TLINK lid="l55" eventInstanceID="ei26" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l56" timeID="t4" relatedToEventInstance="ei26" relType="SIMULTANEOUS"/>
+  <TLINK lid="l57" eventInstanceID="ei27" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l58" eventInstanceID="ei27" relatedToEventInstance="ei28" relType="BEFORE"/>
+  <TLINK lid="l59" timeID="t5" relatedToEventInstance="ei27" relType="SIMULTANEOUS"/>
+  <TLINK lid="l60" eventInstanceID="ei28" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l61" eventInstanceID="ei28" relatedToEventInstance="ei30" relType="BEFORE"/>
+  <TLINK lid="l62" eventInstanceID="ei28" relatedToEventInstance="ei29" relType="INCLUDES"/>
+  <TLINK lid="l63" timeID="t6" relatedToEventInstance="ei28" relType="SIMULTANEOUS"/>
+  <TLINK lid="l64" eventInstanceID="ei29" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l65" timeID="t7" relatedToEventInstance="ei32" relType="SIMULTANEOUS"/>
+  <TLINK lid="l66" timeID="t7" relatedToEventInstance="ei30" relType="SIMULTANEOUS"/>
+  <TLINK lid="l67" eventInstanceID="ei30" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l68" eventInstanceID="ei30" relatedToEventInstance="ei32" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
+  <TLINK lid="l69" eventInstanceID="ei30" relatedToEventInstance="ei31" relType="INCLUDES"/>
+  <TLINK lid="l70" eventInstanceID="ei31" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l71" eventInstanceID="ei32" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l72" eventInstanceID="ei32" relatedToEventInstance="ei33" relType="INCLUDES"/>
+  <TLINK lid="l73" eventInstanceID="ei33" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l74" eventInstanceID="ei33" relatedToEventInstance="ei35" relType="INCLUDES"/>
+  <TLINK lid="l75" eventInstanceID="ei33" relatedToEventInstance="ei34" relType="INCLUDES"/>
+  <TLINK lid="l76" eventInstanceID="ei34" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l77" eventInstanceID="ei35" relatedToTime="t0" relType="IS_INCLUDED"/>
 </TimeML>

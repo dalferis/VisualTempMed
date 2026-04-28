@@ -60,14 +60,13 @@
   <TLINK lid="l33" eventInstanceID="ei15" relatedToEventInstance="ei17" relType="INCLUDES"/>
   <TLINK lid="l34" eventInstanceID="ei16" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l35" eventInstanceID="ei17" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l36" eventInstanceID="ei17" relType="INCLUDES"/>
-  <TLINK lid="l37" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="BEFORE"/>
-  <TLINK lid="l38" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l39" eventInstanceID="ei18" relatedToEventInstance="ei21" relType="ENDS"/>
-  <TLINK lid="l40" eventInstanceID="ei18" relatedToEventInstance="ei19" relType="INCLUDES"/>
-  <TLINK lid="l41" eventInstanceID="ei19" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l42" timeID="t3" relatedToEventInstance="ei19" relType="BEGINS"/>
-  <TLINK lid="l43" timeID="t3" relatedToEventInstance="ei20" relType="ENDS"/>
-  <TLINK lid="l44" eventInstanceID="ei20" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l45" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l36" eventInstanceID="ei17" relatedToEventInstance="ei18" relType="BEFORE"/>
+  <TLINK lid="l37" eventInstanceID="ei18" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l38" eventInstanceID="ei18" relatedToEventInstance="ei21" relType="ENDS"/>
+  <TLINK lid="l39" eventInstanceID="ei18" relatedToEventInstance="ei19" relType="INCLUDES"/>
+  <TLINK lid="l40" eventInstanceID="ei19" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l41" timeID="t3" relatedToEventInstance="ei19" relType="BEGINS"/>
+  <TLINK lid="l42" timeID="t3" relatedToEventInstance="ei20" relType="ENDS"/>
+  <TLINK lid="l43" eventInstanceID="ei20" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l44" eventInstanceID="ei21" relatedToTime="t0" relType="IS_INCLUDED"/>
 </TimeML>

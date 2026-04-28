@@ -29,10 +29,8 @@
   <TLINK lid="l13" eventInstanceID="ei7" relatedToTime="t0" relType="IS_INCLUDED"/>
   <TLINK lid="l14" eventInstanceID="ei7" relatedToEventInstance="ei5" relType="BEFORE"/>
   <TLINK lid="l15" eventInstanceID="ei8" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l16" eventInstanceID="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
-  <TLINK lid="l17" eventInstanceID="ei8" relType="SIMULTANEOUS" comment="e3c:role=OVERLAP"/>
-  <TLINK lid="l18" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="BEFORE"/>
-  <TLINK lid="l19" eventInstanceID="ei9" relatedToTime="t0" relType="IS_INCLUDED"/>
-  <TLINK lid="l20" eventInstanceID="ei9" relatedToEventInstance="ei10" relType="BEFORE"/>
-  <TLINK lid="l21" eventInstanceID="ei10" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l16" eventInstanceID="ei8" relatedToEventInstance="ei9" relType="BEFORE"/>
+  <TLINK lid="l17" eventInstanceID="ei9" relatedToTime="t0" relType="IS_INCLUDED"/>
+  <TLINK lid="l18" eventInstanceID="ei9" relatedToEventInstance="ei10" relType="BEFORE"/>
+  <TLINK lid="l19" eventInstanceID="ei10" relatedToTime="t0" relType="IS_INCLUDED"/>
 </TimeML>

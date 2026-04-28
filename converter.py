@@ -105,10 +105,14 @@ def translateEvent(event, cas_text, cas_tail):
                 new_link["attrib"]["timeID"] = ""
             elif link.type.name == "webanno.custom.EVENTTLINKLink":
                 new_link["attrib"]["eventInstanceID"] = ""
+            else:
+                continue
             if link.target.type.name == "webanno.custom.TIMEX3":
                 new_link["attrib"]["relatedToTime"] = ""
             elif link.target.type.name == "webanno.custom.EVENT":
                 new_link["attrib"]["relatedToEventInstance"] = ""
+            else:
+                continue
             # role values
             if link.role == "BEFORE":
                 new_link["attrib"]["relType"] = "BEFORE"         # direct
