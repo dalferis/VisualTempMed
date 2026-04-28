@@ -3,7 +3,7 @@ import math
 from PySide6.QtWidgets import (
     QGraphicsRectItem, QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem
 )
-from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QFont
+from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QPainterPathStroker, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
 
 
@@ -86,6 +86,8 @@ class NodeItem(QGraphicsRectItem):
 
 
 class EdgeItem(QGraphicsPathItem):
+    _hit_width = 8
+
     def __init__(self, source, target, text="", text_color=Qt.black, link_color=Qt.black, curvature=0.0):
         super().__init__()
 
@@ -101,6 +103,11 @@ class EdgeItem(QGraphicsPathItem):
 
         self.label = QGraphicsTextItem(text, self)
         self.label.setDefaultTextColor(text_color)
+
+    def shape(self):
+        stroker = QPainterPathStroker()
+        stroker.setWidth(self._hit_width)
+        return stroker.createStroke(self.path())
 
     def itemChange(self, change, value):
         if change == QGraphicsItem.ItemSceneHasChanged:
