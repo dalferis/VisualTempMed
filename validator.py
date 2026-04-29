@@ -33,7 +33,7 @@ def validateFile(xmlFile: str, type: str) -> list:
     elif type == 'xmi':
         return validateXmi(xmlContent, 'XSD/XMI.xsd')
     elif type == 'tml':
-        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.xsd')
+        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
 
 def validate(xmlPath: str, type: str, report_file: str = "validation_report.txt"):
     NUMBER_OF_LINES_TO_PRINT = 10
