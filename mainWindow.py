@@ -34,6 +34,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.stack)
         self.createMenuBar()
         self.createControlPanel()
+        self.createAttributesPanel()
         self.statusBar().showMessage("No file loaded")
         if model is not None:
             self.loadModel(model)
@@ -58,12 +59,7 @@ class MainWindow(QMainWindow):
         helpMenu.addAction(aboutAction)
 
     def openTimeMlFile(self):
-        path, _ = QFileDialog.getOpenFileName(
-            self,
-            "Open TimeML file",
-            "",
-            "TimeML files (*.tml);;All files (*)"
-        )
+        path, _ = QFileDialog.getOpenFileName(self, "Open TimeML file", "", "TimeML files (*.tml);;All files (*)")
         if not path:
             return
         try:
@@ -77,6 +73,13 @@ class MainWindow(QMainWindow):
             return
         self.loadModel(model, path)
 
+    def showAbout(self):
+        QMessageBox.about(
+            self,
+            "About",
+            "Visualizador de líneas temporales en contexto médico\n\nPFG UNED 2025-2026"
+        )
+
     def loadModel(self, model, filepath=None):
         currentIndex = self.stack.currentIndex()
         if currentIndex < 0:
@@ -89,7 +92,7 @@ class MainWindow(QMainWindow):
         self.graphView = self.graphScene = None
         self.timelineView = self.timelineScene = None
         self.textView = self.textScene = None
-        # Reset pytlex_core's module-level SLink set; it leaks across files.
+        # Reset pytlex_core's module-level SLink set; it leaks across files:
         Partitioner.single_links.clear()
         self.graphView = gv.GraphView(model)
         self.graphScene = self.graphView.scene
@@ -103,13 +106,6 @@ class MainWindow(QMainWindow):
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
         self.statusBar().showMessage(filepath if filepath else "")
-
-    def showAbout(self):
-        QMessageBox.about(
-            self,
-            "About",
-            "Visualizador de líneas temporales en contexto médico\n\nPFG UNED 2025-2026"
-        )
 
     def createControlPanel(self):
         dock = QDockWidget("Control panel", self)
@@ -162,6 +158,19 @@ class MainWindow(QMainWindow):
         self.addDockWidget(Qt.LeftDockWidgetArea, dock)
         self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
 
+    def createAttributesPanel(self):
+        dock = QDockWidget("Properties", self)
+        dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
+
+        panel = QWidget()
+        layout = QVBoxLayout(panel)
+
+        # Properties
+        layout.addStretch()
+        dock.setWidget(panel)
+        self.addDockWidget(Qt.RightDockWidgetArea, dock)
+        self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+
     def createGraphControls(self):
         widget = QWidget()
         # Layout with graph controls:
@@ -177,15 +186,9 @@ class MainWindow(QMainWindow):
         return widget
 
     def createTimelineControls(self):
-        ####### TODO: Este control solo es un ejemplo
         widget = QWidget()
-        # Layout with timeline controls:
-        layout = QVBoxLayout(widget)
-        # - Checkbox for showing IDs
-        self.chkbxShowIdTimeline = QCheckBox("Show ID lanes")
-        self.chkbxShowIdTimeline.setChecked(True)
-        self.chkbxShowIdTimeline.stateChanged.connect(self.toggleShowLaneIds)
-        layout.addWidget(self.chkbxShowIdTimeline)
+        # Layout with timeline controls (empty for now):
+        QVBoxLayout(widget)
         return widget
 
     def createTextControls(self):
@@ -247,13 +250,6 @@ class MainWindow(QMainWindow):
                 if isinstance(item, si.NodeItem):
                     item.id_bg.setVisible(state)
                     item.id_text.setVisible(state)
-
-    def toggleShowLaneIds(self, state):
-        if self.timelineScene is None:
-            return
-        for item in self.timelineScene.items():
-            if isinstance(item, tlv.TimeAxis):
-                item.label.setVisible(state)
 
 
 def run(filepath=None):
