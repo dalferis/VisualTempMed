@@ -7,7 +7,7 @@ import os
 
 logging.basicConfig(level=logging.DEBUG)
 
-VALIDATION_TYPES = ['xml', 'xmi', 'tml-dtd', 'tml-xsd']
+VALIDATION_TYPES = ['xml', 'xmi', 'tml']
 
 def askDirectoryPath():
     """Asks for a directory, offering known corpus presets."""

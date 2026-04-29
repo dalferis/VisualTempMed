@@ -18,18 +18,6 @@ def validateXmi(filePath: str, xsdFilePath: str) -> list:
     else:
         return [False] + [str(e) for e in errors]
 
-def validateXmlDtd(xmlContent: str, dtdFilePath: str) -> list:
-    try:
-        parser = etree.XMLParser(dtd_validation=True)
-        dtd = etree.DTD(dtdFilePath)
-        xmlDoc = etree.fromstring(xmlContent.encode('utf-8'))
-        if dtd.validate(xmlDoc):
-            return [True, "XML valid against DTD"]
-        else:
-            return [False] + [str(e) for e in dtd.error_log]
-    except etree.XMLSyntaxError as e:
-        return [False, str(e)]
-
 def validateXmlXsd(xmlContent: str, xsdFilePath: str) -> list:
     schema = xmlschema.XMLSchema(xsdFilePath)
     errors = list(schema.iter_errors(xmlContent))
@@ -44,10 +32,8 @@ def validateFile(xmlFile: str, type: str) -> list:
         return validateXml(xmlContent)
     elif type == 'xmi':
         return validateXmi(xmlContent, 'XSD/XMI.xsd')
-    elif type == 'tml-dtd':
-        return validateXmlDtd(xmlContent, 'XSD/timeml_1.2.1.dtd')
-    elif type == 'tml-xsd':
-        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
+    elif type == 'tml':
+        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.xsd')
 
 def validate(xmlPath: str, type: str, report_file: str = "validation_report.txt"):
     NUMBER_OF_LINES_TO_PRINT = 10

@@ -11,8 +11,7 @@ class FileFormat(Enum):
 TYPE_FORMAT_MAP = {
     'xml':     {FileFormat.XML},
     'xmi':     {FileFormat.XMI, FileFormat.E3C},
-    'tml-dtd': {FileFormat.TML},
-    'tml-xsd': {FileFormat.TML},
+    'tml':     {FileFormat.TML},
 }
 
 def detectFormat(xmlfile: str) -> FileFormat:
