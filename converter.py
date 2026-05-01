@@ -428,7 +428,7 @@ def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml'
         out_f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         out_f.write(etree.tostring(tml, pretty_print=True, encoding="unicode"))
 
-    validation = validator.validateFile(output_path, 'tml')
+    validation = validator.validateFile(output_path)
     if validation[0]:
         return [True, output_path]
     else:

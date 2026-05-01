@@ -1,22 +1,7 @@
 import os
 import xmlschema
-from lxml import etree
-from detector import FileFormat, detectFormat, TYPE_FORMAT_MAP
+from detector import FileFormat, detectFormat
 
-def validateXml(xmlContent: str) -> list:
-    try:
-        etree.fromstring(xmlContent.encode('utf-8'))
-        return [True, "XML well-formed"]
-    except etree.XMLSyntaxError as e:
-        return [False, str(e)]
-
-def validateXmi(filePath: str, xsdFilePath: str) -> list:
-    schema = xmlschema.XMLSchema(xsdFilePath)
-    errors = list(schema.iter_errors(filePath))
-    if not errors:
-        return [True, "XMI valid against XSD"]
-    else:
-        return [False] + [str(e) for e in errors]
 
 def validateXmlXsd(xmlContent: str, xsdFilePath: str) -> list:
     schema = xmlschema.XMLSchema(xsdFilePath)
@@ -26,16 +11,13 @@ def validateXmlXsd(xmlContent: str, xsdFilePath: str) -> list:
     else:
         return [False] + [str(e) for e in errors]
 
-def validateFile(xmlFile: str, type: str) -> list:
-    xmlContent = open(xmlFile, 'r', encoding='utf-8').read()
-    if type == 'xml':
-        return validateXml(xmlContent)
-    elif type == 'xmi':
-        return validateXmi(xmlContent, 'XSD/XMI.xsd')
-    elif type == 'tml':
-        return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
 
-def validate(xmlPath: str, type: str, report_file: str = "validation_report.txt"):
+def validateFile(xmlFile: str) -> list:
+    xmlContent = open(xmlFile, 'r', encoding='utf-8').read()
+    return validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
+
+
+def validate(xmlPath: str, report_file: str = "validation_report.txt"):
     NUMBER_OF_LINES_TO_PRINT = 10
 
     def _reportResult(f, name, result):
@@ -50,7 +32,7 @@ def validate(xmlPath: str, type: str, report_file: str = "validation_report.txt"
 
     if os.path.isfile(xmlPath):
         with open(report_file, "w", encoding="utf-8") as f:
-            _reportResult(f, os.path.basename(xmlPath), validateFile(xmlPath, type))
+            _reportResult(f, os.path.basename(xmlPath), validateFile(xmlPath))
     elif os.path.isdir(xmlPath):
         with open(report_file, "w", encoding="utf-8") as f:
             for file in os.listdir(xmlPath):
@@ -58,10 +40,10 @@ def validate(xmlPath: str, type: str, report_file: str = "validation_report.txt"
                 if not os.path.isfile(filePath):
                     continue
                 detected = detectFormat(filePath)
-                if detected not in TYPE_FORMAT_MAP.get(type, set()):
+                if detected != FileFormat.TML:
                     print(f"Skipping {file} (format: {detected.name})")
                     continue
                 print(f"Validating {file}...")
-                _reportResult(f, file, validateFile(filePath, type))
+                _reportResult(f, file, validateFile(filePath))
     else:
         print(f"Error: '{xmlPath}' is not a valid file or directory")

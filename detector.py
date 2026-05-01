@@ -8,12 +8,6 @@ class FileFormat(Enum):
     TML = 4
     OTHER = 999
 
-TYPE_FORMAT_MAP = {
-    'xml':     {FileFormat.XML},
-    'xmi':     {FileFormat.XMI, FileFormat.E3C},
-    'tml':     {FileFormat.TML},
-}
-
 def detectFormat(xmlfile: str) -> FileFormat:
     is_xmi = False
     try:

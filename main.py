@@ -7,7 +7,6 @@ import os
 
 logging.basicConfig(level=logging.DEBUG)
 
-VALIDATION_TYPES = ['xml', 'xmi', 'tml']
 
 def askDirectoryPath():
     """Asks for a directory, offering known corpus presets."""
@@ -77,26 +76,12 @@ def askFileOrDirectory(directory_presets=False, start_dir='.'):
             print("  Invalid option.")
 
 
-def askValidationType():
-    """Asks the user to pick a validation type. Returns the selected type string."""
-    n = len(VALIDATION_TYPES)
-    print("\n  Validation type:")
-    for i, t in enumerate(VALIDATION_TYPES, 1):
-        print(f"    {i}. {t}")
-    while True:
-        choice = input(f"  Select [1-{n}]: ").strip()
-        if choice.isdigit() and 1 <= int(choice) <= n:
-            return VALIDATION_TYPES[int(choice) - 1]
-        print("  Invalid option.")
-
-
 def menuValidate():
     print("\n=== VALIDATE ===")
     kind, path = askFileOrDirectory(directory_presets=True, start_dir='.\\E3C-Corpus\\data_annotation\\Spanish\\layer1')
-    val_type = askValidationType()
 
     print(f"\nValidating: {path}")
-    validator.validate(path, val_type)
+    validator.validate(path)
     print("\nReport saved to validation_report.txt")
 
 
@@ -126,11 +111,11 @@ def main():
     print("╚════════════════════════════════╝")
 
     options = {
-        '1': ('Validate file/directory',  menuValidate),
-        '2': ('Detect format',            menuDetect),
-        '3': ('Convert file/directory',   menuConvert),
-        '4': ('Visualize file',           menuVisualize),
-        '0': ('Exit',                     None),
+        '1': ('Validate TimeML file/directory', menuValidate),
+        '2': ('Detect format', menuDetect),
+        '3': ('Convert E3C file/directory to TimeML', menuConvert),
+        '4': ('Visualize TimeML file', menuVisualize),
+        '0': ('Exit', None),
     }
 
     while True:
