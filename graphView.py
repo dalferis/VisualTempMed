@@ -4,7 +4,7 @@ from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene
 from PySide6.QtGui import QColor, QPainter
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 
 
 class GraphView(QGraphicsView):
@@ -26,6 +26,8 @@ class GraphView(QGraphicsView):
             super().wheelEvent(event)
 
 class GraphScene(QGraphicsScene):
+    nodeClicked = Signal(str)
+
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
 
@@ -46,6 +48,16 @@ class GraphScene(QGraphicsScene):
         super().addItem(item)
         if isinstance(item, si.NodeItem):
             self.nodes[item.node_id] = item
+
+    def mousePressEvent(self, event):
+        super().mousePressEvent(event)
+        for it in self.items(event.scenePos()):
+            owner = it
+            while owner is not None and not isinstance(owner, si.NodeItem):
+                owner = owner.parentItem()
+            if isinstance(owner, si.NodeItem):
+                self.nodeClicked.emit(owner.node_id)
+                return
 
     def isCreationTimeTimex3(self, timex3):
         return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"

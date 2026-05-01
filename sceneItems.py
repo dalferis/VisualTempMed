@@ -14,6 +14,9 @@ def decodeText(s):
 
 
 class NodeItem(QGraphicsRectItem):
+    EVENT_BRUSH = QBrush(Qt.lightGray)
+    TIMEX_BRUSH = QBrush(QColor(200, 230, 201))  # soft green
+
     def __init__(self, node_id, text=""):
         self.node_id = node_id
         self.edges = []
@@ -32,7 +35,8 @@ class NodeItem(QGraphicsRectItem):
 
         super().__init__(-width/2, -height/2, width, height)
 
-        self.setBrush(QBrush(Qt.lightGray))
+        is_timex = isinstance(node_id, str) and len(node_id) > 1 and node_id[0] == 't' and node_id[1:].isdigit()
+        self.setBrush(self.TIMEX_BRUSH if is_timex else self.EVENT_BRUSH)
         self.setPen(QPen(Qt.black, 2))
         self.setFlag(QGraphicsItem.ItemIsMovable)
         self.setFlag(QGraphicsItem.ItemSendsGeometryChanges)

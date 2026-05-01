@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsTextItem, QGraphicsItem, QGraphicsRectItem
 )
 from PySide6.QtGui import QColor, QFont, QPainter, QPainterPath, QPen, QBrush
-from PySide6.QtCore import Qt, QPointF
+from PySide6.QtCore import Qt, QPointF, Signal
 
 
 class TextView(QGraphicsView):
@@ -168,6 +168,8 @@ class LaneEdgeItem(si.EdgeItem):
 
 
 class TextScene(QGraphicsScene):
+    nodeClicked = Signal(str)
+
     _max_line_width = 1200
     _text_height = 26
     _gutter_height = 28
@@ -221,6 +223,7 @@ class TextScene(QGraphicsScene):
             for e in outgoing:
                 e.setHighlighted(True)
             self._highlighted_edges = outgoing
+            self.nodeClicked.emit(clicked.node_id)
 
     @staticmethod
     def _enclosingTarget(item):

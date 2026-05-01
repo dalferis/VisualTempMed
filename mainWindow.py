@@ -4,14 +4,15 @@ import graphView as gv
 import timelineView as tlv
 import textView as txv
 from dataModel import DataModel
-from pytlex_core.data import Graph
+from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.algorithms import TLEX, Partitioner
+from lxml import etree
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
-    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QSizePolicy,
-    QFileDialog, QMessageBox
+    QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
+    QSizePolicy, QFileDialog, QMessageBox
 )
 
 class MainWindow(QMainWindow):
@@ -29,6 +30,10 @@ class MainWindow(QMainWindow):
         self.graphView = self.graphScene = None
         self.timelineView = self.timelineScene = None
         self.textView = self.textScene = None
+        self._model = None
+        self._eventComments = {}
+        self._instanceComments = {}
+        self._timexComments = {}
 
         self.stack = QStackedWidget()
         self.setCentralWidget(self.stack)
@@ -94,17 +99,22 @@ class MainWindow(QMainWindow):
         self.textView = self.textScene = None
         # Reset pytlex_core's module-level SLink set; it leaks across files:
         Partitioner.single_links.clear()
+        self._model = model
+        self._extractComments(getattr(model.graph(), "time_ml_data", None) or "")
         self.graphView = gv.GraphView(model)
         self.graphScene = self.graphView.scene
         self.timelineView = tlv.TimelineView(model)
         self.timelineScene = self.timelineView.scene
         self.textView = txv.TextView(model)
         self.textScene = self.textView.scene
+        for scene in (self.graphScene, self.timelineScene, self.textScene):
+            scene.nodeClicked.connect(self.showNodeAttributes)
         self.stack.addWidget(self.graphView)
         self.stack.addWidget(self.timelineView)
         self.stack.addWidget(self.textView)
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
+        self.clearAttributes()
         self.statusBar().showMessage(filepath if filepath else "")
 
     def createControlPanel(self):
@@ -159,17 +169,119 @@ class MainWindow(QMainWindow):
         self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
 
     def createAttributesPanel(self):
-        dock = QDockWidget("Properties", self)
+        dock = QDockWidget("Attributes", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         panel = QWidget()
+        panel.setFixedWidth(260)
         layout = QVBoxLayout(panel)
-
-        # Properties
+        self.attributesTitle = QLabel("")
+        self.attributesTitle.setStyleSheet("font-weight: bold;")
+        layout.addWidget(self.attributesTitle)
+        self.attributesForm = QFormLayout()
+        self.attributesForm.setRowWrapPolicy(QFormLayout.WrapLongRows)
+        self.attributesForm.setFieldGrowthPolicy(QFormLayout.AllNonFixedFieldsGrow)
+        layout.addLayout(self.attributesForm)
         layout.addStretch()
         dock.setWidget(panel)
         self.addDockWidget(Qt.RightDockWidgetArea, dock)
-        self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+
+    def clearAttributes(self):
+        self.attributesTitle.setText("")
+        while self.attributesForm.rowCount() > 0:
+            self.attributesForm.removeRow(0)
+
+    def showNodeAttributes(self, node_id):
+        self.clearAttributes()
+        if self._model is None:
+            return
+        node = self._model.graph().nodes.get(node_id)
+        if node is None:
+            return
+        if isinstance(node, Instance.Instance):
+            event = self._model.graph().events.get(node.event)
+            event_comment = self._eventComments.get(node.event)
+            instance_comment = self._instanceComments.get(node.get_id_str())
+            attrs = [
+                ("eiid", node.get_id_str()),
+                ("eventID", node.event),
+                ("class", node.event_class),
+                ("stem", event.stem if event is not None else None),
+                ("tense", node.tense),
+                ("aspect", node.aspect),
+                ("pos", node.pos),
+                ("polarity", node.polarity),
+                ("modality", node.modality),
+                ("signal", node.signal),
+                ("cardinality", node.cardinality),
+            ]
+            if event_comment is not None:
+                attrs.append(("comment (event)", event_comment))
+            if instance_comment is not None:
+                attrs.append(("comment (instance)", instance_comment))
+            self.attributesTitle.setText(f"EVENT {node.get_id_str()}")
+        elif isinstance(node, TimeX.TimeX):
+            timex_comment = self._timexComments.get(node.get_id_str())
+            attrs = [
+                ("tid", node.get_id_str()),
+                ("type", node.type),
+                ("value", node.value),
+                ("phrase", node.phrase),
+                ("temporalFunction", node.temporalFunction),
+                ("functionInDocument", node.documentFunction),
+                ("mod", node.mod),
+                ("anchorID", node.anchorID),
+                ("beginPoint", node.beginPoint),
+                ("endPoint", node.endPoint),
+                ("quant", node.quant),
+                ("freq", node.freq),
+            ]
+            if timex_comment is not None:
+                attrs.append(("comment", timex_comment))
+            self.attributesTitle.setText(f"TIMEX3 {node.get_id_str()}")
+        else:
+            return
+        for key, value in attrs:
+            display = "" if value is None else str(value)
+            keyLabel = QLabel(f"{key}:")
+            keyLabel.setWordWrap(True)
+            valueLabel = QLabel(display)
+            valueLabel.setWordWrap(True)
+            self.attributesForm.addRow(keyLabel, valueLabel)
+
+    def _extractComments(self, tml):
+        """
+        Parses raw TimeML and populates per-element comment maps.
+        pytlex_core does not parse the @comment attribute, so we read it directly.
+        Keys use pytlex_core's node_id convention:
+          - EVENT     -> "e<n>"     (matches @eid value)
+          - TIMEX3    -> "t<n>"     (matches @tid value)
+          - MAKEINSTANCE -> "eiid<n>" (translated from @eiid="ei<n>")
+        """
+        self._eventComments = {}
+        self._instanceComments = {}
+        self._timexComments = {}
+        if not tml:
+            return
+        try:
+            root = etree.fromstring(tml.encode('utf-8'))
+        except etree.XMLSyntaxError:
+            return
+        for ev in root.iter('EVENT'):
+            c = ev.get('comment')
+            eid = ev.get('eid')
+            if c and eid:
+                self._eventComments[eid] = c
+        for tx in root.iter('TIMEX3'):
+            c = tx.get('comment')
+            tid = tx.get('tid')
+            if c and tid:
+                self._timexComments[tid] = c
+        for mi in root.iter('MAKEINSTANCE'):
+            c = mi.get('comment')
+            eiid = mi.get('eiid')
+            if c and eiid and eiid.startswith('ei'):
+                self._instanceComments[f"eiid{eiid[2:]}"] = c
 
     def createGraphControls(self):
         widget = QWidget()

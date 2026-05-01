@@ -4,8 +4,8 @@ from pytlex_core.data import Instance, TimeX
 from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsItem
 )
-from PySide6.QtGui import QPen, QPainter, QColor
-from PySide6.QtCore import Qt, QRectF
+from PySide6.QtGui import QPen, QPainter, QColor, QPainterPath
+from PySide6.QtCore import Qt, QRectF, Signal
 
 
 class TimelineView(QGraphicsView):
@@ -28,6 +28,8 @@ class TimelineView(QGraphicsView):
 
 
 class TimelineScene(QGraphicsScene):
+    nodeClicked = Signal(str)
+
     _minx = 0
     _miny = 0
     _maxx = 1000
@@ -49,11 +51,21 @@ class TimelineScene(QGraphicsScene):
         if isinstance(item, si.NodeItem):
             self.nodes[item.node_id] = item
 
+    def mousePressEvent(self, event):
+        super().mousePressEvent(event)
+        for it in self.items(event.scenePos()):
+            owner = it
+            while owner is not None and not isinstance(owner, si.NodeItem):
+                owner = owner.parentItem()
+            if isinstance(owner, si.NodeItem):
+                self.nodeClicked.emit(owner.node_id)
+                return
+
     def _nodeText(self, node):
         if isinstance(node, Instance.Instance):
             return si.decodeText(self._graph.events[node.event].stem)
         if isinstance(node, TimeX.TimeX):
-            return si.decodeText(node.value)
+            return si.decodeText(node.phrase)
         return ""
 
     def _addLane(self, partition, kind, max_width, y):
@@ -62,6 +74,7 @@ class TimelineScene(QGraphicsScene):
         self.addItem(lane)
         for node in partition.nodes.values():
             graphNode = si.NodeItem(node.get_id_str(), text=self._nodeText(node))
+            graphNode.setFlag(QGraphicsItem.ItemIsMovable, False)
             lane.addElement(graphNode)
         return y + lane.height() + self._lane_gap
 
@@ -100,6 +113,7 @@ class TimeAxis(QGraphicsItem):
         if kind != "main":
             self._pen.setStyle(Qt.DashLine)
         self.setZValue(-1)
+        self.setAcceptedMouseButtons(Qt.NoButton)
 
     def addElement(self, element):
         rect = element.rect() if hasattr(element, 'rect') else element.boundingRect()
@@ -121,6 +135,11 @@ class TimeAxis(QGraphicsItem):
         top = self._node_y_offset - 4
         h = (len(self._rows) - 1) * self._row_height - top + 4
         return QRectF(0, top, self._max_width, h)
+
+    def shape(self):
+        # Empty hit area: clicks within the bounding rect (other than on child
+        # NodeItems) must not target the TimeAxis itself.
+        return QPainterPath()
 
     def paint(self, painter, option, widget):
         painter.setPen(self._pen)
