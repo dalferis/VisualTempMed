@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT><TIMEX3 tid="t1" type="DATE" value="2026-05-01">May 1, 2026</TIMEX3> saw the <EVENT eid="e1" class="OCCURRENCE">treatment</EVENT></TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" pos="VERB"/>
+  <TLINK lid="l1" eventInstanceID="t1" relatedToEventInstance="ei1" relType="INCLUDES"/>
+</TimeML>
