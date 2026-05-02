@@ -18,12 +18,12 @@ class UnitTests(unittest.TestCase):
     """
 
     def testWellFormedXml(self):
-        with open(os.path.join(TEST_TML_DIR, "minimum_valid.tml"), 'r', encoding='utf-8') as f:
+        with open(os.path.join(TEST_TML_DIR, "pass", "minimum_valid.tml"), 'r', encoding='utf-8') as f:
             result = utils.validateXml(f.read())
         self.assertTrue(result[0], result)
 
     def testMinPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "minimum_valid.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "minimum_valid.tml"))
         self.assertTrue(result[0], result)
 
     """
@@ -33,16 +33,16 @@ class UnitTests(unittest.TestCase):
     """
 
     def testEventWithTwoMakeinstancesPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "event_with_two_makeinstances.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "event_with_two_makeinstances.tml"))
         self.assertTrue(result[0], result)
 
     def testEventWithoutMakeinstanceFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "event_no_makeinstance.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "event_no_makeinstance.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("EVENT 'e1' has no corresponding MAKEINSTANCE", result[1], result)
 
     def testMakeinstanceWithoutEventFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "makeinstance_no_event.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "makeinstance_no_event.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("event_id", result[1], result)
 
@@ -52,15 +52,15 @@ class UnitTests(unittest.TestCase):
     """
 
     def testNonSequentialEventsPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "non_sequential_events.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "non_sequential_events.tml"))
         self.assertTrue(result[0], result)
 
     def testNonSequentialMakeinstancesPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "non_sequential_makeinstances.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "non_sequential_makeinstances.tml"))
         self.assertTrue(result[0], result)
 
     def testNoTextTagFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "no_text_tag.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "no_text_tag.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("Tag 'TEXT' expected", result[1], result)
 
@@ -69,48 +69,48 @@ class UnitTests(unittest.TestCase):
     """
 
     def testTlinkEventEventPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_event.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "tlink_event_event.tml"))
         self.assertTrue(result[0], result)
 
     def testTlinkEventTimex3Passes(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_timex3.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "tlink_event_timex3.tml"))
         self.assertTrue(result[0], result)
 
     def testTlinkTimex3EventPasses(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_timex3_event.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "tlink_timex3_event.tml"))
         self.assertTrue(result[0], result)
 
     def testTlinkTimex3Timex3Passes(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_timex3_timex3.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "tlink_timex3_timex3.tml"))
         self.assertTrue(result[0], result)
 
     def testTlinkEventTimex3WrongSourceAttribFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_timex3_wrong_source_attrib.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_event_timex3_wrong_source_attrib.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("attribute timeID='ei1': value doesn't match any pattern", result[1], result)
 
     def testTlinkEventTimex3WrongTargetAttribFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_timex3_wrong_target_attrib.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_event_timex3_wrong_target_attrib.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("attribute relatedToEventInstance='t1': value doesn't match any pattern", result[1], result)
 
     def testTlinkTimex3EventWrongSourceAttribFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_timex3_event_wrong_source_attrib.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_timex3_event_wrong_source_attrib.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("attribute eventInstanceID='t1': value doesn't match any pattern", result[1], result)
 
     def testTlinkTimex3EventWrongTargetAttribFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_timex3_event_wrong_target_attrib.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_timex3_event_wrong_target_attrib.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("attribute relatedToTime='ei1': value doesn't match any pattern", result[1], result)
 
     def testTlinkEventEventWrongSourceValueFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_event_wrong_source_value.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_event_event_wrong_source_value.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("value ('ei3',) not found for XsdKey", result[1], result)
 
     def testTlinkEventEventWrongTargetValueFails(self):
-        result = validator.validateFile(os.path.join(TEST_TML_DIR, "tlink_event_event_wrong_target_value.tml"))
+        result = validator.validateFile(os.path.join(TEST_TML_DIR, "fail", "tlink_event_event_wrong_target_value.tml"))
         self.assertFalse(result[0], result)
         self.assertIn("value ('ei3',) not found for XsdKey", result[1], result)
 
