@@ -59,6 +59,9 @@ class MainWindow(QMainWindow):
         fileMenu.addAction(exitAction)
 
         helpMenu = menuBar.addMenu("&Help")
+        legendAction = QAction("&Legend", self)
+        legendAction.triggered.connect(self.showLegend)
+        helpMenu.addAction(legendAction)
         aboutAction = QAction("&About", self)
         aboutAction.triggered.connect(self.showAbout)
         helpMenu.addAction(aboutAction)
@@ -84,6 +87,53 @@ class MainWindow(QMainWindow):
             "About",
             "Visualizador de líneas temporales en contexto médico\n\nPFG UNED 2025-2026"
         )
+
+    def showLegend(self):
+        html = """
+        <h3 style="margin-top: 0;">Legend</h3>
+        <p><b>Nodes</b></p>
+        <table cellpadding="4" cellspacing="0">
+          <tr>
+            <td style="background-color: #c0c0c0; border: 1px solid black; min-width: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;EVENT (instance)</td>
+          </tr>
+          <tr>
+            <td style="background-color: #c8e6c9; border: 1px solid black; min-width: 40px;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;TIMEX3</td>
+          </tr>
+        </table>
+        <p><b>Edges</b></p>
+        <table cellpadding="4" cellspacing="0">
+          <tr>
+            <td><span style="color: black;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td>&nbsp;TLINK (temporal link)</td>
+          </tr>
+          <tr>
+            <td><span style="color: red;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td>&nbsp;SLINK (subordination link)</td>
+          </tr>
+          <tr>
+            <td><span style="color: blue;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td>&nbsp;ALINK (aspectual link)</td>
+          </tr>
+        </table>
+        <p><b>Timeline lanes</b></p>
+        <table cellpadding="4" cellspacing="0">
+          <tr>
+            <td><span style="color: black;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td>&nbsp;Main partition</td>
+          </tr>
+          <tr>
+            <td><span style="color: gray;">&#9476;&#9476;&#9476;&#9476;&#9476;</span></td>
+            <td>&nbsp;Subordinate partition</td>
+          </tr>
+        </table>
+        """
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Legend")
+        msg.setTextFormat(Qt.RichText)
+        msg.setText(html)
+        msg.exec()
 
     def loadModel(self, model, filepath=None):
         currentIndex = self.stack.currentIndex()
