@@ -40,7 +40,8 @@ class MainWindow(QMainWindow):
         self.createMenuBar()
         self.createControlPanel()
         self.createAttributesPanel()
-        self.statusBar().showMessage("No file loaded")
+        self.statusLabel = QLabel("No file loaded")
+        self.statusBar().addPermanentWidget(self.statusLabel, 1)
         if model is not None:
             self.loadModel(model)
 
@@ -165,7 +166,7 @@ class MainWindow(QMainWindow):
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
         self.clearAttributes()
-        self.statusBar().showMessage(filepath if filepath else "")
+        self.statusLabel.setText(filepath if filepath else "")
 
     def createControlPanel(self):
         dock = QDockWidget("Control panel", self)
