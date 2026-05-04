@@ -1,10 +1,11 @@
 ﻿from cassis import *
 from lxml import etree
+import io
 import json
 import os
 import re
 import validator
-from detector import FileFormat, detectFormat
+from detector import FileFormat, detectFormatFile
 from dateutil import parser
 from dateutil.parser import ParserError
 
@@ -410,29 +411,38 @@ def generateTimeML(cas):
 
     return root
 
-def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
+def convertContent(e3cContent: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
     with open(typesystemfile, 'rb') as f:
         typesystem = load_typesystem(f)
 
-    with open(e3cFile, 'rb') as f:
-        try:
-            cas = load_cas_from_xmi(f, typesystem=typesystem)
-        except etree.XMLSyntaxError as e:
-            return [False, f"Malformed XMI file: {e}"]
-        except Exception as e:
-            return [False, f"Error loading XMI: {e}"]
+    try:
+        cas = load_cas_from_xmi(io.BytesIO(e3cContent.encode('utf-8')), typesystem=typesystem)
+    except etree.XMLSyntaxError as e:
+        return [False, f"Malformed XMI file: {e}"]
+    except Exception as e:
+        return [False, f"Error loading XMI: {e}"]
 
     tml = generateTimeML(cas)
+    tml_content = '<?xml version="1.0" encoding="UTF-8"?>\n' + etree.tostring(tml, pretty_print=True, encoding="unicode")
+
+    validation = validator.validateContent(tml_content)
+    if validation[0]:
+        return [True, tml_content]
+    return [False] + validation[1:]
+
+
+def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
+    with open(e3cFile, 'r', encoding='utf-8') as f:
+        e3cContent = f.read()
+
+    result = convertContent(e3cContent, typesystemfile)
+    if not result[0]:
+        return result
+
     output_path = e3cFile + ".tml"
     with open(output_path, 'w', encoding='utf-8') as out_f:
-        out_f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        out_f.write(etree.tostring(tml, pretty_print=True, encoding="unicode"))
-
-    validation = validator.validateFile(output_path)
-    if validation[0]:
-        return [True, output_path]
-    else:
-        return [False] + validation[1:]
+        out_f.write(result[1])
+    return [True, output_path]
 
 def convert(xmlPath: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml', report_file: str = "conversion_report.txt"):
     NUMBER_OF_LINES_TO_PRINT = 10
@@ -460,7 +470,7 @@ def convert(xmlPath: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml', re
                 filePath = os.path.join(xmlPath, file)
                 if not os.path.isfile(filePath):
                     continue
-                detected = detectFormat(filePath)
+                detected = detectFormatFile(filePath)
                 if detected != FileFormat.E3C:
                     print(f"Skipping {file} (format: {detected.name})")
                     continue

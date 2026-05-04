@@ -1,7 +1,7 @@
 import os
 import xmlschema
 from lxml import etree
-from detector import FileFormat, detectFormat
+from detector import FileFormat, detectFormatFile
 
 
 def validateXmlXsd(xmlContent: str, xsdFilePath: str) -> list:
@@ -35,9 +35,7 @@ def tmlSpecValidation(xmlContent: str) -> list:
     return [False] + errors
 
 
-def validateFile(xmlFile: str) -> list:
-    with open(xmlFile, 'r', encoding='utf-8') as f:
-        xmlContent = f.read()
+def validateContent(xmlContent: str) -> list:
     xsd_result = validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
     spec_result = tmlSpecValidation(xmlContent)
     if xsd_result[0] and spec_result[0]:
@@ -48,6 +46,12 @@ def validateFile(xmlFile: str) -> list:
     if not spec_result[0]:
         errors += spec_result[1:]
     return [False] + errors
+
+
+def validateFile(xmlFile: str) -> list:
+    with open(xmlFile, 'r', encoding='utf-8') as f:
+        xmlContent = f.read()
+    return validateContent(xmlContent)
 
 
 def validate(xmlPath: str, report_file: str = "validation_report.txt"):
@@ -72,7 +76,7 @@ def validate(xmlPath: str, report_file: str = "validation_report.txt"):
                 filePath = os.path.join(xmlPath, file)
                 if not os.path.isfile(filePath):
                     continue
-                detected = detectFormat(filePath)
+                detected = detectFormatFile(filePath)
                 if detected != FileFormat.TML:
                     print(f"Skipping {file} (format: {detected.name})")
                     continue

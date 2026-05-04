@@ -1,4 +1,6 @@
 from tkinter import SE
+from detector import FileFormat, detectFormatContent
+from converter import convertContent
 import sceneItems as si
 import graphView as gv
 import timelineView as tlv
@@ -68,12 +70,22 @@ class MainWindow(QMainWindow):
         helpMenu.addAction(aboutAction)
 
     def openTimeMlFile(self):
-        path, _ = QFileDialog.getOpenFileName(self, "Open TimeML file", "", "TimeML files (*.tml);;All files (*)")
+        path, _ = QFileDialog.getOpenFileName(self, "Open TimeML or E3C file", "", "TimeML/E3C files (*.tml *.xml);;All files (*)")
         if not path:
             return
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 content = f.read()
+            fileFormat = detectFormatContent(content)
+            if fileFormat == FileFormat.E3C:
+                result = convertContent(content)
+                if not result[0]:
+                    QMessageBox.critical(self, "Error", "E3C -> TimeML conversion failed:\n" + "\n".join(str(e) for e in result[1:]))
+                    return
+                content = result[1]
+            elif fileFormat != FileFormat.TML:
+                QMessageBox.critical(self, "Error", "The selected file is not a TimeML or E3C file.")
+                return
             graph = Graph.Graph(time_ml_string=content)
             tlex = TLEX.TLEX(graph=graph)
             model = DataModel(graph, tlex)
@@ -296,7 +308,8 @@ class MainWindow(QMainWindow):
             display = "" if value is None else str(value)
             keyLabel = QLabel(f"{key}:")
             keyLabel.setWordWrap(True)
-            valueLabel = QLabel(display)
+            # Insert U+200B (zero-width space) between chars so QLabel can wrap mid-word when no space fits.
+            valueLabel = QLabel('\u200B'.join(display))
             valueLabel.setWordWrap(True)
             self.attributesForm.addRow(keyLabel, valueLabel)
 

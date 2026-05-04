@@ -88,7 +88,7 @@ def menuValidate():
 def menuDetect():
     print("\n=== DETECT FORMAT ===")
     path = browseFile()
-    fmt = detector.detectFormat(path)
+    fmt = detector.detectFormatFile(path)
     print(f"\nDetected format for '{path}': {fmt}")
 
 
