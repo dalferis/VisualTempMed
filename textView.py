@@ -5,8 +5,8 @@ from pytlex_core.data import Instance, TimeX
 from PySide6.QtWidgets import (
     QGraphicsView, QGraphicsScene, QGraphicsTextItem, QGraphicsItem, QGraphicsRectItem
 )
-from PySide6.QtGui import QColor, QFont, QPainter, QPainterPath, QPen, QBrush
-from PySide6.QtCore import Qt, QPointF, Signal
+from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter, QPainterPath, QPen, QBrush
+from PySide6.QtCore import Qt, QPointF, QRectF, Signal
 
 
 class TextView(QGraphicsView):
@@ -28,6 +28,36 @@ class TextView(QGraphicsView):
             super().wheelEvent(event)
 
 
+class DctBoxItem(QGraphicsItem):
+    _padding = 4
+    _bg_color = QColor(240, 240, 250)
+    _fg_color = Qt.darkBlue
+
+    def __init__(self, label, font):
+        super().__init__()
+        self._label = label
+        self._font = font
+        fm = QFontMetrics(font)
+        self._text_rect = fm.boundingRect(label)
+        self.setAcceptedMouseButtons(Qt.NoButton)
+        self.setZValue(20)
+
+    def boundingRect(self):
+        return QRectF(0, 0,
+                      self._text_rect.width() + 2 * self._padding,
+                      self._text_rect.height() + 2 * self._padding)
+
+    def paint(self, painter, option, widget):
+        painter.setBrush(QBrush(self._bg_color))
+        painter.setPen(QPen(self._fg_color, 1))
+        painter.drawRect(self.boundingRect())
+        painter.setPen(self._fg_color)
+        painter.setFont(self._font)
+        painter.drawText(self._padding - self._text_rect.left(),
+                         self._padding - self._text_rect.top(),
+                         self._label)
+
+
 class LaneEdgeItem(si.EdgeItem):
     """Edge with orthogonal routing through inter-line gutters and a left rail.
 
@@ -44,14 +74,12 @@ class LaneEdgeItem(si.EdgeItem):
     _highlight_z = 10
     _label_margin = 3
 
-    def __init__(self, source, target, scene_ref, plan,
-                 text="", text_color=Qt.black, link_color=Qt.black):
+    def __init__(self, source, target, scene_ref, plan, text="", text_color=Qt.black, link_color=Qt.black):
         self._scene_ref = scene_ref
         self._plan = plan
         self._link_color = link_color
         self._highlighted = False
-        super().__init__(source, target, text=text,
-                         text_color=text_color, link_color=link_color, curvature=0.0)
+        super().__init__(source, target, text=text, text_color=text_color, link_color=link_color, curvature=0.0)
         # Lift the whole edge above text and nodes (default zValue 0).
         self.setZValue(self._normal_z)
         # Translucent backplate behind the label, kept inside the edge so it
@@ -417,7 +445,7 @@ class TextScene(QGraphicsScene):
             plan = {
                 'source': src, 'target': tgt,
                 'text': link.rel_type,
-                'text_color': QColor(color).darker(150),
+                'text_color': QColor(145, 145, 0),
                 'link_color': color,
                 'src_line': src_line, 'tgt_line': tgt_line,
                 'src_cx': src_cx, 'tgt_cx': tgt_cx,
@@ -633,3 +661,18 @@ class TextScene(QGraphicsScene):
         body = self.extractTextBody(tml)
         self.layoutText(body, eid_to_node_id)
         self.drawEdges()
+        self._addDctBox()
+
+    def _addDctBox(self):
+        dct = next((n for n in self._graph.nodes.values() if self.isCreationTimeTimex3(n)), None)
+        if dct is None:
+            return
+        value = getattr(dct, "value", None) or "?"
+        phrase = getattr(dct, "phrase", None)
+        label = f"Document Creation Time: {value}"
+        if phrase and phrase != value:
+            label += f" ({phrase})"
+        item = DctBoxItem(label, self._font)
+        h = item.boundingRect().height()
+        item.setPos(self._left_rail_x, self._top_margin - self._gutter_height - h - 5)
+        self.addItem(item)

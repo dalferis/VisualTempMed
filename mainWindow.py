@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "About",
-            "Visualizador de líneas temporales en contexto médico\n\nPFG UNED 2025-2026"
+            "Visualizador de líneas temporales en contexto médico\n\nPFG Ingeniería Informática\n\nUniversidad Nacional de Educación a Distancia\n\n2026\n\nDavid Alvarez Feliciano"
         )
 
     def showLegend(self):
