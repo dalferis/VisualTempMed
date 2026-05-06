@@ -28,36 +28,6 @@ class TextView(QGraphicsView):
             super().wheelEvent(event)
 
 
-class DctBoxItem(QGraphicsItem):
-    _padding = 4
-    _bg_color = QColor(240, 240, 250)
-    _fg_color = Qt.darkBlue
-
-    def __init__(self, label, font):
-        super().__init__()
-        self._label = label
-        self._font = font
-        fm = QFontMetrics(font)
-        self._text_rect = fm.boundingRect(label)
-        self.setAcceptedMouseButtons(Qt.NoButton)
-        self.setZValue(20)
-
-    def boundingRect(self):
-        return QRectF(0, 0,
-                      self._text_rect.width() + 2 * self._padding,
-                      self._text_rect.height() + 2 * self._padding)
-
-    def paint(self, painter, option, widget):
-        painter.setBrush(QBrush(self._bg_color))
-        painter.setPen(QPen(self._fg_color, 1))
-        painter.drawRect(self.boundingRect())
-        painter.setPen(self._fg_color)
-        painter.setFont(self._font)
-        painter.drawText(self._padding - self._text_rect.left(),
-                         self._padding - self._text_rect.top(),
-                         self._label)
-
-
 class LaneEdgeItem(si.EdgeItem):
     """Edge with orthogonal routing through inter-line gutters and a left rail.
 
@@ -209,6 +179,10 @@ class TextScene(QGraphicsScene):
     _track_spacing = 5
     _gutter_padding = 5
 
+    _DCT_PADDING = 4
+    _DCT_BG = QColor(240, 240, 250)
+    _DCT_FG = Qt.darkBlue
+
     _EVENT_RE = re.compile(r'<EVENT\b([^>]*)>([\s\S]*?)</EVENT>', re.IGNORECASE)
     _TIMEX_RE = re.compile(r'<TIMEX3\b([^>]*)>([\s\S]*?)</TIMEX3>', re.IGNORECASE)
     _ANY_TAG_RE = re.compile(r'</?[A-Za-z][^>]*>')
@@ -231,6 +205,9 @@ class TextScene(QGraphicsScene):
         self._font = QFont()
         self._font.setPointSize(11)
         self._font.setBold(True)  # free text rendered in bold
+        self._dct_label = None
+        self._dct_text_rect = None
+        self._dct_rect = None
         self.createScene()
 
     def mousePressEvent(self, event):
@@ -661,9 +638,9 @@ class TextScene(QGraphicsScene):
         body = self.extractTextBody(tml)
         self.layoutText(body, eid_to_node_id)
         self.drawEdges()
-        self._addDctBox()
+        self._prepareDctOverlay()
 
-    def _addDctBox(self):
+    def _prepareDctOverlay(self):
         dct = next((n for n in self._graph.nodes.values() if self.isCreationTimeTimex3(n)), None)
         if dct is None:
             return
@@ -672,7 +649,30 @@ class TextScene(QGraphicsScene):
         label = f"Document Creation Time: {value}"
         if phrase and phrase != value:
             label += f" ({phrase})"
-        item = DctBoxItem(label, self._font)
-        h = item.boundingRect().height()
-        item.setPos(self._left_rail_x, self._top_margin - self._gutter_height - h - 5)
-        self.addItem(item)
+        fm = QFontMetrics(self._font)
+        text_rect = fm.boundingRect(label)
+        w = text_rect.width() + 2 * self._DCT_PADDING
+        h = text_rect.height() + 2 * self._DCT_PADDING
+        x = self._left_rail_x
+        y = self._top_margin - self._gutter_height - h - 5
+        self._dct_label = label
+        self._dct_text_rect = text_rect
+        self._dct_rect = QRectF(x, y, w, h)
+        # Drawn via drawForeground (not as a scene item), so we must extend
+        # sceneRect manually to keep the box reachable when scrolling.
+        self.setSceneRect(self.itemsBoundingRect().united(self._dct_rect).adjusted(-10, -10, 10, 10))
+
+    def drawForeground(self, painter, rect):
+        super().drawForeground(painter, rect)
+        if self._dct_rect is None or not rect.intersects(self._dct_rect):
+            return
+        painter.save()
+        painter.setBrush(QBrush(self._DCT_BG))
+        painter.setPen(QPen(self._DCT_FG, 1))
+        painter.drawRect(self._dct_rect)
+        painter.setPen(self._DCT_FG)
+        painter.setFont(self._font)
+        painter.drawText(self._dct_rect.x() + self._DCT_PADDING - self._dct_text_rect.left(),
+                         self._dct_rect.y() + self._DCT_PADDING - self._dct_text_rect.top(),
+                         self._dct_label)
+        painter.restore()
