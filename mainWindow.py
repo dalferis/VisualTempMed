@@ -39,9 +39,9 @@ class MainWindow(QMainWindow):
 
         self.stack = QStackedWidget()
         self.setCentralWidget(self.stack)
-        self.createMenuBar()
         self.createControlPanel()
         self.createAttributesPanel()
+        self.createMenuBar()
         self.statusLabel = QLabel("No file loaded")
         self.statusBar().addPermanentWidget(self.statusLabel, 1)
         if model is not None:
@@ -60,6 +60,14 @@ class MainWindow(QMainWindow):
         exitAction.setShortcut("Ctrl+Q")
         exitAction.triggered.connect(self.close)
         fileMenu.addAction(exitAction)
+
+        viewMenu = menuBar.addMenu("&View")
+        controlAction = self.controlDock.toggleViewAction()
+        controlAction.setText("&Control panel")
+        viewMenu.addAction(controlAction)
+        attributesAction = self.attributesDock.toggleViewAction()
+        attributesAction.setText("&Attributes panel")
+        viewMenu.addAction(attributesAction)
 
         helpMenu = menuBar.addMenu("&Help")
         legendAction = QAction("&Legend", self)
@@ -181,7 +189,7 @@ class MainWindow(QMainWindow):
         self.statusLabel.setText(filepath if filepath else "")
 
     def createControlPanel(self):
-        dock = QDockWidget("Control panel", self)
+        self.controlDock = dock = QDockWidget("Control panel", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         panel = QWidget()
@@ -232,7 +240,7 @@ class MainWindow(QMainWindow):
         self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
 
     def createAttributesPanel(self):
-        dock = QDockWidget("Attributes", self)
+        self.attributesDock = dock = QDockWidget("Attributes", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         panel = QWidget()
@@ -304,6 +312,7 @@ class MainWindow(QMainWindow):
             self.attributesTitle.setText(f"TIMEX3 {node.get_id_str()}")
         else:
             return
+        attrs.extend(self._dctTlinkAttrs(node_id))
         for key, value in attrs:
             display = "" if value is None else str(value)
             keyLabel = QLabel(f"{key}:")
@@ -312,6 +321,29 @@ class MainWindow(QMainWindow):
             valueLabel = QLabel('\u200B'.join(display))
             valueLabel.setWordWrap(True)
             self.attributesForm.addRow(keyLabel, valueLabel)
+
+    def _dctTlinkAttrs(self, node_id):
+        """Returns extra attribute rows for TLINKs that connect node_id with the
+        Document Creation Time. TLINKs to/from DCT are not drawn in textView
+        (would saturate the scene), so we surface them here instead.
+        """
+        graph = self._model.graph()
+        dct_id = next((nid for nid, n in graph.nodes.items()
+                       if isinstance(n, TimeX.TimeX)
+                       and getattr(n, "documentFunction", None)
+                       and n.documentFunction.upper() == "CREATION_TIME"),
+                      None)
+        if dct_id is None or node_id == dct_id:
+            return []
+        rows = []
+        for link in graph.links.values():
+            if link.link_tag != "TLINK":
+                continue
+            if link.start_node == node_id and link.related_to_node == dct_id:
+                rows.append(("-> DCT", link.rel_type))
+            elif link.related_to_node == node_id and link.start_node == dct_id:
+                rows.append(("<- DCT", link.rel_type))
+        return rows
 
     def _extractComments(self, tml):
         """
