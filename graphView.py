@@ -31,11 +31,10 @@ class GraphScene(QGraphicsScene):
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
 
-    # _window_width = 1024
-    # _window_height = 1024
     _max_columns = 15
     _horizontal_distance = 150
     _vertical_distance = 80
+    _partition_gap = 40  # extra vertical space between successive partitions
 
     def __init__(self, dataModel):
         super().__init__()
@@ -86,7 +85,9 @@ class GraphScene(QGraphicsScene):
                 self.addItem(graphNode)
                 graphNode.setPos(xpos, ypos)
                 count += 1
-            line += self._vertical_distance
+            if count > 0:
+                rows = (count - 1) // self._max_columns + 1
+                line += rows * self._vertical_distance + self._partition_gap
 
         for partition in partition_graph["subordination_graphs"]:
             count = 0
@@ -104,7 +105,9 @@ class GraphScene(QGraphicsScene):
                 self.addItem(graphNode)
                 graphNode.setPos(xpos, ypos)
                 count += 1
-            line += self._vertical_distance
+            if count > 0:
+                rows = (count - 1) // self._max_columns + 1
+                line += rows * self._vertical_distance + self._partition_gap
 
         linklist = [v for v in self._graph.links.values() if not self.isCreationTimeLink(v)] + [v for v in self._tlex.s_links if not self.isCreationTimeLink(v)]
         linklist.sort(key=lambda x: (x.start_node, x.related_to_node))
