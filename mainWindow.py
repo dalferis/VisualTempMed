@@ -129,7 +129,8 @@ class MainWindow(QMainWindow):
         </ul>
         <p><b>Inspecting an annotated text</b></p>
         <ul>
-          <li>Click a node to display its attributes in the right panel.</li>
+          <li>In any view, click a node to display its attributes in the right panel.</li>
+          <li>In the Graph view, nodes can be moved by dragging them with the mouse.</li>
           <li>In the Text view, clicking a node also highlights its outgoing edges.</li>
           <li>In the Text view, click an edge to highlight it; click empty space to clear.</li>
           <li>TLINKs to/from the Document Creation Time appear in the Attributes panel of the involved node, prefixed with <code>-&gt; DCT</code> or <code>&lt;- DCT</code>.</li>
@@ -197,6 +198,7 @@ class MainWindow(QMainWindow):
             <td>&nbsp;Subordinate partition</td>
           </tr>
         </table>
+        <p>"Main" timelines hold the "real-world" facts of the document.<br>"Subordinate" timelines hang off the "Main" timelines through SLINKs.</p>
         """
         msg = QMessageBox(self)
         msg.setWindowTitle("Legend")

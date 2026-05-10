@@ -2,8 +2,8 @@ import networkx as nx
 import sceneItems as si
 from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
-from PySide6.QtWidgets import QGraphicsView, QGraphicsScene
-from PySide6.QtGui import QColor, QPainter
+from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsTextItem
+from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter
 from PySide6.QtCore import Qt, Signal
 
 
@@ -35,6 +35,7 @@ class GraphScene(QGraphicsScene):
     _horizontal_distance = 150
     _vertical_distance = 80
     _partition_gap = 40  # extra vertical space between successive partitions
+    _partition_label_margin = 12  # horizontal gap between partition header and first node
 
     def __init__(self, dataModel):
         super().__init__()
@@ -64,50 +65,77 @@ class GraphScene(QGraphicsScene):
     def isCreationTimeLink(self, link):
         return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
 
+    def _headerFont(self):
+        font = QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        return font
+
+    def _drawPartitions(self, partitions, kind, line, use_phrase, graphModel, header_x):
+        displayed_idx = 0
+        for partition in partitions:
+            displayed_idx += 1
+
+            first_node = None
+            x_shift = 0  # horizontal offset so the first node's left edge sits at x=0
+            count = 0
+            for node in partition:
+                graphModel.add_node(node.get_id_str())
+                if isinstance(node, Instance.Instance):
+                    text = si.decodeText(self._graph.events[node.event].stem)
+                elif isinstance(node, TimeX.TimeX):
+                    text = si.decodeText(node.phrase if use_phrase else node.value)
+                else:
+                    text = ""
+                graphNode = si.NodeItem(node.get_id_str(), text=text)
+                self.addItem(graphNode)
+                if first_node is None:
+                    first_node = graphNode
+                    x_shift = graphNode.rect().width() / 2
+                xpos = x_shift + (count % self._max_columns) * self._horizontal_distance
+                ypos = line + (count // self._max_columns) * self._vertical_distance
+                graphNode.setPos(xpos, ypos)
+                count += 1
+
+            # Header left-aligned at a fixed x for the whole scene, vertically
+            # centered on the first row of nodes.
+            header = QGraphicsTextItem(f"{kind} #{displayed_idx}")
+            header.setFont(self._headerFont())
+            header.setDefaultTextColor(Qt.darkGray)
+            header.setAcceptedMouseButtons(Qt.NoButton)
+            self.addItem(header)
+            header_rect = header.boundingRect()
+            first_node_rect = first_node.rect().translated(first_node.pos())
+            header.setPos(
+                header_x,
+                first_node_rect.center().y() - header_rect.height() / 2,
+            )
+
+            rows = (count - 1) // self._max_columns + 1
+            line += rows * self._vertical_distance + self._partition_gap
+        return line
+
     def createScene(self):
         graphModel = nx.MultiDiGraph()
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
 
-        line = 0
-        for partition in partition_graph["main_graphs"]:
-            count = 0
-            for node in [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]:
-                xpos = (count % self._max_columns) * self._horizontal_distance
-                ypos = line + (count // self._max_columns) * self._vertical_distance
-                graphModel.add_node(node.get_id_str())
-                if isinstance(node, Instance.Instance):
-                    text = si.decodeText(self._graph.events[node.event].stem)
-                elif isinstance(node, TimeX.TimeX):
-                    text = si.decodeText(node.phrase)
-                else:
-                    text = ""
-                graphNode = si.NodeItem(node.get_id_str(), text=text)
-                self.addItem(graphNode)
-                graphNode.setPos(xpos, ypos)
-                count += 1
-            if count > 0:
-                rows = (count - 1) // self._max_columns + 1
-                line += rows * self._vertical_distance + self._partition_gap
+        def visible(partition):
+            return [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]
 
-        for partition in partition_graph["subordination_graphs"]:
-            count = 0
-            for node in [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]:
-                xpos = (count % self._max_columns) * self._horizontal_distance
-                ypos = line + (count // self._max_columns) * self._vertical_distance
-                graphModel.add_node(node.get_id_str())
-                if isinstance(node, Instance.Instance):
-                    text = si.decodeText(self._graph.events[node.event].stem)
-                elif isinstance(node, TimeX.TimeX):
-                    text = si.decodeText(node.value)
-                else:
-                    text = ""
-                graphNode = si.NodeItem(node.get_id_str(), text=text)
-                self.addItem(graphNode)
-                graphNode.setPos(xpos, ypos)
-                count += 1
-            if count > 0:
-                rows = (count - 1) // self._max_columns + 1
-                line += rows * self._vertical_distance + self._partition_gap
+        main_partitions = [v for v in (visible(p) for p in partition_graph["main_graphs"]) if v]
+        sub_partitions = [v for v in (visible(p) for p in partition_graph["subordination_graphs"]) if v]
+
+        fm = QFontMetrics(self._headerFont())
+        max_header_width = 0
+        if main_partitions:
+            max_header_width = max(max_header_width, fm.horizontalAdvance(f"Main #{len(main_partitions)}"))
+        if sub_partitions:
+            max_header_width = max(max_header_width, fm.horizontalAdvance(f"Subordinate #{len(sub_partitions)}"))
+        header_x = -max_header_width - self._partition_label_margin
+
+        line = 0
+        line = self._drawPartitions(main_partitions, "Main", line, use_phrase=True, graphModel=graphModel, header_x=header_x)
+        line = self._drawPartitions(sub_partitions, "Subordinate", line, use_phrase=False, graphModel=graphModel, header_x=header_x)
 
         linklist = [v for v in self._graph.links.values() if not self.isCreationTimeLink(v)] + [v for v in self._tlex.s_links if not self.isCreationTimeLink(v)]
         linklist.sort(key=lambda x: (x.start_node, x.related_to_node))
