@@ -70,6 +70,10 @@ class MainWindow(QMainWindow):
         viewMenu.addAction(attributesAction)
 
         helpMenu = menuBar.addMenu("&Help")
+        usageAction = QAction("&Usage", self)
+        usageAction.setShortcut("F1")
+        usageAction.triggered.connect(self.showUsage)
+        helpMenu.addAction(usageAction)
         legendAction = QAction("&Legend", self)
         legendAction.triggered.connect(self.showLegend)
         helpMenu.addAction(legendAction)
@@ -108,6 +112,50 @@ class MainWindow(QMainWindow):
             "About",
             "Visualizador de líneas temporales en contexto médico\n\nPFG Ingeniería Informática\n\nUniversidad Nacional de Educación a Distancia\n\n2026\n\nDavid Alvarez Feliciano"
         )
+
+    def showUsage(self):
+        html = """
+        <h3 style="margin-top: 0;">Usage</h3>
+        <p><b>Opening a file</b></p>
+        <ul>
+          <li><i>File &gt; Open TimeML file...</i> (Ctrl+O) loads a TimeML <code>.tml</code> or E3C <code>.xml</code> file.</li>
+          <li>E3C files are detected and converted to TimeML automatically.</li>
+        </ul>
+        <p><b>Choosing a view</b></p>
+        <ul>
+          <li><b>Graph</b>: nodes and links laid out as a graph.</li>
+          <li><b>Timeline</b>: nodes placed chronologically on lanes, one per partition.</li>
+          <li><b>Text</b>: source text with inline annotations and routed edges.</li>
+        </ul>
+        <p><b>Inspecting an annotated text</b></p>
+        <ul>
+          <li>Click a node to display its attributes in the right panel.</li>
+          <li>In the Text view, clicking a node also highlights its outgoing edges.</li>
+          <li>In the Text view, click an edge to highlight it; click empty space to clear.</li>
+          <li>TLINKs to/from the Document Creation Time appear in the Attributes panel of the involved node, prefixed with <code>-&gt; DCT</code> or <code>&lt;- DCT</code>.</li>
+        </ul>
+        <p><b>Navigation</b></p>
+        <ul>
+          <li>Zoom in / out: Ctrl + mouse wheel.</li>
+          <li>Vertical scroll: mouse wheel or vertical bar.</li>
+          <li>Horizontal scroll: horizontal bar.</li>
+        </ul>
+        <p><b>Control panel</b></p>
+        <ul>
+          <li><i>Show IDs</i>: toggles internal identifiers on nodes.</li>
+          <li><i>Edge thickness</i>: adjusts edge line width.</li>
+          <li><i>Edge label opacity</i> (Text view): background opacity of edge labels.</li>
+        </ul>
+        <p><b>View menu</b></p>
+        <ul>
+          <li>Toggle visibility of the Control and Attributes panels.</li>
+        </ul>
+        """
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Usage")
+        msg.setTextFormat(Qt.RichText)
+        msg.setText(html)
+        msg.exec()
 
     def showLegend(self):
         html = """
@@ -245,6 +293,9 @@ class MainWindow(QMainWindow):
 
         panel = QWidget()
         panel.setFixedWidth(260)
+        font = panel.font()
+        font.setPointSize(font.pointSize() + 2)
+        panel.setFont(font)
         layout = QVBoxLayout(panel)
         self.attributesTitle = QLabel("")
         self.attributesTitle.setStyleSheet("font-weight: bold;")
