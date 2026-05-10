@@ -251,11 +251,21 @@ class EdgeItem(QGraphicsPathItem):
                 label_pos += QPointF(nx * offset, ny * offset)
 
         else:
-            # Beeline
+            # Beeline - offset the label perpendicular to the segment so it
+            # doesn't overlap the edge line itself.
             label_pos = QPointF(
                 (start.x() + end.x()) / 2,
                 (start.y() + end.y()) / 2
             )
+            length = math.hypot(dx, dy)
+            if length != 0:
+                nx = -dy / length
+                ny = dx / length
+                # Prefer placing the label above the edge in screen coords.
+                if ny > 0:
+                    nx, ny = -nx, -ny
+                offset = 15
+                label_pos += QPointF(nx * offset, ny * offset)
 
         # Center text
         rect = self.label.boundingRect()
