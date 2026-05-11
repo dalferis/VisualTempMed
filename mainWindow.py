@@ -2,8 +2,7 @@ from tkinter import SE
 from detector import FileFormat, detectFormatContent
 from converter import convertContent
 import sceneItems as si
-import graphView as gv
-import timelineView as tlv
+import timeView as tv
 import textView as txv
 from dataModel import DataModel
 from pytlex_core.data import Graph, Instance, TimeX
@@ -18,8 +17,7 @@ from PySide6.QtWidgets import (
 )
 
 class MainWindow(QMainWindow):
-    _initialPanel = "graph"
-    #_initialPanel = "timeline"
+    _initialPanel = "time"
     #_initialPanel = "text"
 
 
@@ -29,8 +27,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Visualizador de líneas temporales en contexto médico")
         self.resize(1200, 800)
 
-        self.graphView = self.graphScene = None
-        self.timelineView = self.timelineScene = None
+        self.timeView = self.timeScene = None
         self.textView = self.textScene = None
         self._model = None
         self._eventComments = {}
@@ -123,14 +120,13 @@ class MainWindow(QMainWindow):
         </ul>
         <p><b>Choosing a view</b></p>
         <ul>
-          <li><b>Graph</b>: nodes and links laid out as a graph.</li>
-          <li><b>Timeline</b>: nodes placed chronologically on lanes, one per partition.</li>
+          <li><b>Time</b>: nodes and links laid out as a graph; events are ordered left-to-right chronologically and simultaneous events stack vertically.</li>
           <li><b>Text</b>: source text with inline annotations and routed edges.</li>
         </ul>
         <p><b>Inspecting an annotated text</b></p>
         <ul>
           <li>In any view, click a node to display its attributes in the right panel.</li>
-          <li>In the Graph view, nodes can be moved by dragging them with the mouse.</li>
+          <li>In the Time view, nodes can be moved by dragging them with the mouse.</li>
           <li>In the Text view, clicking a node also highlights its outgoing edges.</li>
           <li>In the Text view, click an edge to highlight it; click empty space to clear.</li>
           <li>TLINKs to/from the Document Creation Time appear in the Attributes panel of the involved node, prefixed with <code>-&gt; DCT</code> or <code>&lt;- DCT</code>.</li>
@@ -187,18 +183,8 @@ class MainWindow(QMainWindow):
             <td>&nbsp;ALINK (aspectual link)</td>
           </tr>
         </table>
-        <p><b>Timeline lanes</b></p>
-        <table cellpadding="4" cellspacing="0">
-          <tr>
-            <td><span style="color: black;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
-            <td>&nbsp;Main partition</td>
-          </tr>
-          <tr>
-            <td><span style="color: gray;">&#9476;&#9476;&#9476;&#9476;&#9476;</span></td>
-            <td>&nbsp;Subordinate partition</td>
-          </tr>
-        </table>
-        <p>"Main" timelines hold the "real-world" facts of the document.<br>"Subordinate" timelines hang off the "Main" timelines through SLINKs.</p>
+        <p><b>Partitions</b></p>
+        <p>"Main" partitions hold the "real-world" facts of the document.<br>"Subordinate" partitions hang off the "Main" partitions through SLINKs.</p>
         """
         msg = QMessageBox(self)
         msg.setWindowTitle("Legend")
@@ -210,28 +196,24 @@ class MainWindow(QMainWindow):
         currentIndex = self.stack.currentIndex()
         if currentIndex < 0:
             currentIndex = self.radiogroupView.checkedId()
-        for view in (self.graphView, self.timelineView, self.textView):
+        for view in (self.timeView, self.textView):
             if view is None:
                 continue
             self.stack.removeWidget(view)
             view.deleteLater()
-        self.graphView = self.graphScene = None
-        self.timelineView = self.timelineScene = None
+        self.timeView = self.timeScene = None
         self.textView = self.textScene = None
         # Reset pytlex_core's module-level SLink set; it leaks across files:
         Partitioner.single_links.clear()
         self._model = model
         self._extractComments(getattr(model.graph(), "time_ml_data", None) or "")
-        self.graphView = gv.GraphView(model)
-        self.graphScene = self.graphView.scene
-        self.timelineView = tlv.TimelineView(model)
-        self.timelineScene = self.timelineView.scene
+        self.timeView = tv.TimeView(model)
+        self.timeScene = self.timeView.scene
         self.textView = txv.TextView(model)
         self.textScene = self.textView.scene
-        for scene in (self.graphScene, self.timelineScene, self.textScene):
+        for scene in (self.timeScene, self.textScene):
             scene.nodeClicked.connect(self.showNodeAttributes)
-        self.stack.addWidget(self.graphView)
-        self.stack.addWidget(self.timelineView)
+        self.stack.addWidget(self.timeView)
         self.stack.addWidget(self.textView)
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
@@ -249,23 +231,18 @@ class MainWindow(QMainWindow):
         layoutCommon = QGridLayout()
         layout.addLayout(layoutCommon)
         # - Radio buttons for view selection
-        self.radioGraph = QRadioButton("Graph")
-        self.radioTimeline = QRadioButton("Timeline")
+        self.radioTime = QRadioButton("Time")
         self.radioText = QRadioButton("Text")
-        self.radioTimeline.setChecked(self._initialPanel=="timeline")
-        self.radioGraph.setChecked(self._initialPanel=="graph")
+        self.radioTime.setChecked(self._initialPanel=="time")
         self.radioText.setChecked(self._initialPanel=="text")
         self.radiogroupView = QButtonGroup(self)
-        self.radiogroupView.addButton(self.radioGraph)
-        self.radiogroupView.addButton(self.radioTimeline)
+        self.radiogroupView.addButton(self.radioTime)
         self.radiogroupView.addButton(self.radioText)
-        self.radiogroupView.setId(self.radioGraph, 0)
-        self.radiogroupView.setId(self.radioTimeline, 1)
-        self.radiogroupView.setId(self.radioText, 2)
+        self.radiogroupView.setId(self.radioTime, 0)
+        self.radiogroupView.setId(self.radioText, 1)
         self.radiogroupView.idClicked.connect(self.changeView)
-        layoutCommon.addWidget(self.radioGraph, 0, 0)
-        layoutCommon.addWidget(self.radioTimeline, 0, 1)
-        layoutCommon.addWidget(self.radioText, 0, 2)
+        layoutCommon.addWidget(self.radioTime, 0, 0)
+        layoutCommon.addWidget(self.radioText, 0, 1)
         # - Checkbox for showing IDs
         self.chkbxShowId = QCheckBox("Show IDs")
         self.chkbxShowId.setChecked(False)
@@ -274,13 +251,11 @@ class MainWindow(QMainWindow):
 
         # Layout with controls:
         self.stackControl = QStackedWidget()
-        graphControls = self.createGraphControls()
-        self.stackControl.addWidget(graphControls)
-        timelineControls = self.createTimelineControls()
-        self.stackControl.addWidget(timelineControls)
+        timeControls = self.createTimeControls()
+        self.stackControl.addWidget(timeControls)
         textControls = self.createTextControls()
         self.stackControl.addWidget(textControls)
-        self.stackControl.setCurrentWidget(timelineControls if self._initialPanel=="timeline" else graphControls if self._initialPanel=="graph" else textControls)
+        self.stackControl.setCurrentWidget(timeControls if self._initialPanel=="time" else textControls)
         layout.addWidget(self.stackControl)
 
         # Properties
@@ -432,9 +407,9 @@ class MainWindow(QMainWindow):
             if c and eiid and eiid.startswith('ei'):
                 self._instanceComments[f"eiid{eiid[2:]}"] = c
 
-    def createGraphControls(self):
+    def createTimeControls(self):
         widget = QWidget()
-        # Layout with graph controls:
+        # Layout with time view controls:
         layout = QVBoxLayout(widget)
         # - Slider for edge thickness
         layout.addWidget(QLabel("Edge thickness"))
@@ -444,12 +419,6 @@ class MainWindow(QMainWindow):
         self.sliderEdgeThickness.setValue(2)
         layout.addWidget(self.sliderEdgeThickness)
         self.sliderEdgeThickness.valueChanged.connect(self.updateEdgeWidth)
-        return widget
-
-    def createTimelineControls(self):
-        widget = QWidget()
-        # Layout with timeline controls (empty for now):
-        QVBoxLayout(widget)
         return widget
 
     def createTextControls(self):
@@ -479,9 +448,9 @@ class MainWindow(QMainWindow):
         self.stackControl.setCurrentIndex(index)
 
     def updateEdgeWidth(self, value):
-        if self.graphScene is None:
+        if self.timeScene is None:
             return
-        for item in self.graphScene.items():
+        for item in self.timeScene.items():
             if isinstance(item, si.EdgeItem):
                 pen = item.pen()
                 pen.setWidth(value)
@@ -504,7 +473,7 @@ class MainWindow(QMainWindow):
                 item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
 
     def toggleShowIds(self, state):
-        for scene in (self.graphScene, self.timelineScene, self.textScene):
+        for scene in (self.timeScene, self.textScene):
             if scene is None:
                 continue
             for item in scene.items():

@@ -9,9 +9,9 @@ from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter
 from PySide6.QtCore import Qt, Signal
 
 
-class GraphView(QGraphicsView):
+class TimeView(QGraphicsView):
     def __init__(self, model):
-        self.scene = GraphScene(model)
+        self.scene = TimeScene(model)
         super().__init__(self.scene)
         self.setRenderHint(QPainter.Antialiasing)
         self.setRenderHint(QPainter.TextAntialiasing)
@@ -27,7 +27,7 @@ class GraphView(QGraphicsView):
         else:
             super().wheelEvent(event)
 
-class GraphScene(QGraphicsScene):
+class TimeScene(QGraphicsScene):
     nodeClicked = Signal(str)
 
     _graph: Graph.Graph
