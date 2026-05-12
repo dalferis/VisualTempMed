@@ -5,7 +5,7 @@ from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.timeline.Timeline import find_timeline
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsTextItem
-from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter
+from PySide6.QtGui import QFont, QFontMetrics, QPainter
 from PySide6.QtCore import Qt, Signal
 
 
@@ -38,12 +38,22 @@ class TimeScene(QGraphicsScene):
     _vertical_distance = 80
     _partition_gap = 40  # extra vertical space between successive partitions
     _partition_label_margin = 12  # horizontal gap between partition header and first node
+    _track_spacing = 5
+    _gutter_padding = 5
+    _top_gutter_height = 40  # reserved space above the first row for edges
+    _rail_margin = 30  # horizontal gap between rightmost content and the rail
 
     def __init__(self, dataModel):
         super().__init__()
         self._graph = dataModel.graph()
         self._tlex = dataModel.tlex()
         self.nodes = {}
+        self._row_ys = []
+        self._y_to_line = {}
+        self._node_half_height = 15
+        self._rightmost_x = 0
+        self._rail_x = 100  # overridden in createScene once the rightmost node is known
+        self._highlighted_edges = []
         self.createScene()
 
     def addItem(self, item):
@@ -53,13 +63,71 @@ class TimeScene(QGraphicsScene):
 
     def mousePressEvent(self, event):
         super().mousePressEvent(event)
+        clicked = None
         for it in self.items(event.scenePos()):
-            owner = it
-            while owner is not None and not isinstance(owner, si.NodeItem):
-                owner = owner.parentItem()
-            if isinstance(owner, si.NodeItem):
-                self.nodeClicked.emit(owner.node_id)
-                return
+            owner = self._enclosingTarget(it)
+            if owner is not None:
+                clicked = owner
+                break
+        self._clearHighlights()
+        if isinstance(clicked, si.LaneEdgeItem):
+            clicked.setHighlighted(True)
+            self._highlighted_edges = [clicked]
+        elif isinstance(clicked, si.NodeItem):
+            outgoing = [e for e in self.items()
+                        if isinstance(e, si.LaneEdgeItem) and e.source is clicked]
+            for e in outgoing:
+                e.setHighlighted(True)
+            self._highlighted_edges = outgoing
+            self.nodeClicked.emit(clicked.node_id)
+
+    @staticmethod
+    def _enclosingTarget(item):
+        while item is not None:
+            if isinstance(item, (si.LaneEdgeItem, si.NodeItem)):
+                return item
+            item = item.parentItem()
+        return None
+
+    def _clearHighlights(self):
+        for e in self._highlighted_edges:
+            e.setHighlighted(False)
+        self._highlighted_edges = []
+
+    # ------- Geometry helpers (used by LaneEdgeItem / LaneEdgePlanner) -------
+
+    def _computeRowGeometry(self):
+        ys = sorted({round(n.pos().y(), 3) for n in self.nodes.values()})
+        self._row_ys = ys
+        self._y_to_line = {y: i for i, y in enumerate(ys)}
+        sample = next(iter(self.nodes.values()), None)
+        if sample is not None:
+            self._node_half_height = sample.rect().height() / 2
+        # Rightmost edge of any node, used to anchor the edge routing rail.
+        self._rightmost_x = max(
+            (n.pos().x() + n.rect().width() / 2 for n in self.nodes.values()),
+            default=0,
+        )
+
+    def lineOfNode(self, node_item):
+        y = round(node_item.pos().y(), 3)
+        idx = self._y_to_line.get(y)
+        if idx is not None:
+            return idx
+        # Fallback (e.g. after dragging): nearest row.
+        if not self._row_ys:
+            return 0
+        return min(range(len(self._row_ys)), key=lambda i: abs(self._row_ys[i] - y))
+
+    def gutterY(self, gutter_idx, track):
+        if gutter_idx == 0:
+            gutter_top = self._row_ys[0] - self._node_half_height - self._top_gutter_height
+        else:
+            gutter_top = self._row_ys[gutter_idx - 1] + self._node_half_height
+        return gutter_top + self._gutter_padding + (track + 0.5) * self._track_spacing
+
+    def railX(self, track):
+        return self._rail_x + (track + 0.5) * self._track_spacing
 
     def isCreationTimeTimex3(self, timex3):
         return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"
@@ -314,25 +382,16 @@ class TimeScene(QGraphicsScene):
 
         line = 0
         line = self._drawPartitions(main_partitions, "Main", line, use_phrase=True, graphModel=graphModel, header_x=header_x)
-        line = self._drawPartitions(sub_partitions, "Subordinate", line, use_phrase=False, graphModel=graphModel, header_x=header_x)
+        line = self._drawPartitions(sub_partitions, "Subordinate", line, use_phrase=True, graphModel=graphModel, header_x=header_x)
 
-        linklist = [v for v in self._graph.links.values() if not self.isCreationTimeLink(v)] + [v for v in self._tlex.s_links if not self.isCreationTimeLink(v)]
-        linklist.sort(key=lambda x: (x.start_node, x.related_to_node))
-        linklistlist = [[linklist[0]]]
-        for link in linklist[1:]:
-            if link.start_node == linklistlist[-1][-1].start_node and link.related_to_node == linklistlist[-1][-1].related_to_node:
-                linklistlist[-1].append(link)
-            else:
-                linklistlist.append([link])
+        if not self.nodes:
+            return
 
-        for llist in linklistlist:
-            nlinks = len(llist) // 2
-            for link in llist:
-                graphModel.add_edge(link.start_node, link.related_to_node)
-                start_node = self.nodes.get(link.start_node, None)
-                end_node = self.nodes.get(link.related_to_node, None)
-                if not start_node is None and not end_node is None:
-                    color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
-                    edgeitem = si.EdgeItem(start_node, end_node, text=link.rel_type, text_color = QColor(color).darker(150), link_color = color, curvature=0.2*nlinks)
-                    self.addItem(edgeitem)
-                    nlinks -= 1
+        # Edge routing setup: row geometry + rail position to the right of the
+        # rightmost node so cross_line edges don't pile up over the headers
+        # column on the left.
+        self._computeRowGeometry()
+        self._rail_x = self._rightmost_x + self._rail_margin
+        si.LaneEdgePlanner(self,
+                           track_spacing=self._track_spacing,
+                           gutter_padding=self._gutter_padding).drawEdges()
