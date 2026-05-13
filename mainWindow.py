@@ -97,6 +97,13 @@ class MainWindow(QMainWindow):
                 return
             graph = Graph.Graph(time_ml_string=content)
             tlex = TLEX.TLEX(graph=graph)
+            # Merge Connectivity_Increaser's suggested TLINKs into graph.links
+            # so downstream consumers (validator, JSON export, attribute panel)
+            # see them as first-class links. timeView still distinguishes them
+            # visually because the planner reads tlex.suggested_links separately
+            # and marks plan['suggested']=True (dashed pen).
+            for link in tlex.suggested_links or []:
+                graph.links.setdefault(link.get_id_str(), link)
             model = DataModel(graph, tlex)
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Could not load file:\n{e}")
@@ -493,6 +500,8 @@ def run(filepath=None):
             content = f.read()
         graph = Graph.Graph(time_ml_string=content)
         tlex = TLEX.TLEX(graph=graph)
+        for link in tlex.suggested_links or []:
+            graph.links.setdefault(link.get_id_str(), link)
         model = DataModel(graph, tlex)
     window = MainWindow()
     if model is not None:

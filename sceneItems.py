@@ -296,21 +296,33 @@ class LaneEdgeItem(EdgeItem):
         self._scene_ref = scene_ref
         self._plan = plan
         self._link_color = link_color
+        self._suggested = bool(plan.get('suggested', False))
         self._highlighted = False
         super().__init__(source, target, text=text, text_color=text_color, link_color=link_color, curvature=0.0)
         self.setZValue(self._normal_z)
+        self._applyPen()
         self._label_bg = QGraphicsRectItem(self)
         self._label_bg.setBrush(QBrush(QColor(255, 255, 255, 220)))
         self._label_bg.setPen(QPen(Qt.NoPen))
         self._label_bg.setZValue(-0.5)
         self.label.setZValue(0)
+        if self._suggested:
+            italic = self.label.font()
+            italic.setItalic(True)
+            self.label.setFont(italic)
+
+    def _applyPen(self):
+        width = self._highlight_width if self._highlighted else self._normal_width
+        pen = QPen(self._link_color, width)
+        if self._suggested:
+            pen.setStyle(Qt.DashLine)
+        self.setPen(pen)
 
     def setHighlighted(self, on):
         if self._highlighted == on:
             return
         self._highlighted = on
-        pen = QPen(self._link_color, self._highlight_width if on else self._normal_width)
-        self.setPen(pen)
+        self._applyPen()
         self.setZValue(self._highlight_z if on else self._normal_z)
         font = self.label.font()
         font.setBold(on)
@@ -449,11 +461,16 @@ class LaneEdgePlanner:
 
     def _buildEdgePlans(self):
         s = self.scene
-        candidate_links = [v for v in s._graph.links.values() if not s.isCreationTimeLink(v)]
-        candidate_links += [v for v in s._tlex.s_links if not s.isCreationTimeLink(v)]
+        annotated = [v for v in s._graph.links.values() if not s.isCreationTimeLink(v)]
+        annotated += [v for v in s._tlex.s_links if not s.isCreationTimeLink(v)]
+        # Suggested links from Connectivity_Increaser anchor each disconnected
+        # subgraph to the DCT, so by construction every endpoint touches the
+        # DCT. We deliberately keep them past the isCreationTimeLink filter.
+        suggested = getattr(s._tlex, 'suggested_links', None) or []
+        candidate_links = [(v, False) for v in annotated] + [(v, True) for v in suggested]
 
         plans = []
-        for link in candidate_links:
+        for link, is_suggested in candidate_links:
             src = s.nodes.get(link.start_node)
             tgt = s.nodes.get(link.related_to_node)
             if src is None or tgt is None:
@@ -470,6 +487,7 @@ class LaneEdgePlanner:
                 'link_color': color,
                 'src_line': src_line, 'tgt_line': tgt_line,
                 'src_cx': src_cx, 'tgt_cx': tgt_cx,
+                'suggested': is_suggested,
             }
             if src_line == tgt_line:
                 plan['mode'] = 'same_line'

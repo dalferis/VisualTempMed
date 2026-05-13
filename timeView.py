@@ -366,7 +366,10 @@ class TimeScene(QGraphicsScene):
         partition_graph = TLEX.Partitioner.partition_graph(self._graph)
 
         def visible_pair(partition):
-            nodes = [v for v in partition.nodes.values() if not self.isCreationTimeTimex3(v)]
+            # The DCT is kept in the visible nodes so suggested_links (which by
+            # construction anchor every disconnected timex to it) have a
+            # rendered endpoint to terminate on.
+            nodes = list(partition.nodes.values())
             return (partition, nodes) if nodes else None
 
         main_partitions = [p for p in (visible_pair(p) for p in partition_graph["main_graphs"]) if p]
