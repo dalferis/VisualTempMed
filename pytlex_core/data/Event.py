@@ -10,6 +10,7 @@ marked up, however.
 Written by: asing118
 Last Updated by: asing118
 """
+import re
 from dataclasses import dataclass, field
 
 
@@ -55,11 +56,17 @@ class Event:
             raise Exception("That is not a valid Event Class - " + self.event_class)
 
         if self.stem is not None:
-            if ">" in self.stem and "<" in self.stem:
-                front = self.stem.split(">")
-                back = front[1].split("<")
-                self.stem = back[0]
-            self.stem = self.stem.strip()
+            # NOTE (VisualTempoMed PFG patch): the original heuristic
+            #   front = stem.split(">"); back = front[1].split("<"); stem = back[0]
+            # crashed on EVENT contents with two or more nested tags lacking
+            # interleaved text (e.g. <NG><HEAD>peace</HEAD></NG> -> empty stem
+            # -> "Stem cannot be empty or all whitespace") and returned the
+            # wrong word when there was leading text (e.g.
+            # <NG>the<HEAD>peace</HEAD></NG> -> "the" instead of "peace").
+            # Replaced with a full tag strip + whitespace collapse so that the
+            # surface words inside any nested markup are preserved verbatim.
+            # Patch authored by Claude Code.
+            self.stem = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', self.stem)).strip()
             if len(self.stem) == 0:
                 raise Exception("Stem cannot be empty or all whitespace.")
 

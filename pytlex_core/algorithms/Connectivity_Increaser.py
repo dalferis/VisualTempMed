@@ -45,7 +45,7 @@ original code iterated the dict directly, yielding keys (strings). The
 str.tID lookups raised AttributeError that was silently swallowed below, so
 the function always returned False. Now we iterate values() when given a
 dict and fall back to plain iteration otherwise (preserves backwards-compat
-for callers passing a list/set of nodes).
+for callers passing a list/set of nodes). Patch authored by Claude Code.
 """
 def has_time_expressions(nodes):
     iterable = nodes.values() if isinstance(nodes, dict) else nodes
@@ -109,7 +109,8 @@ def try_suggest_link(disconnected_partitions, number_of_links):
 
 NOTE (VisualTempoMed PFG patch): same iteration fix as has_time_expressions
 above. partition.nodes is a dict; iterating gives keys, so node.documentFunction
-raised AttributeError and the function always returned None.
+raised AttributeError and the function always returned None. Patch authored
+by Claude Code.
 """
 def get_dct(partition_with_dct) -> TimeX:
     try:
@@ -131,7 +132,7 @@ def get_dct(partition_with_dct) -> TimeX:
 
 NOTE (VisualTempoMed PFG patch): same iteration fix as has_time_expressions
 above. partition.nodes is a dict; iterating gives keys, so the whole
-function silently returned an empty list.
+function silently returned an empty list. Patch authored by Claude Code.
 """
 def get_timexs(nodes: Any):
     timexs = []
