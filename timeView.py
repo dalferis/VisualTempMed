@@ -141,15 +141,17 @@ class TimeScene(QGraphicsScene):
         font.setBold(True)
         return font
 
-    # TLINK relation types interpreted as "the start_node happens before the related_to_node".
+    # TLINK relation types interpreted as "the start_node (A) happens before the related_to_node (B)".
     _A_BEFORE_B = {"BEFORE", "IBEFORE", "INCLUDES", "DURING_INV", "BEGINS", "ENDED_BY"}
-    # ...and the inverse: related_to_node happens before start_node.
+    # ...and the inverse: related_to_node (B) happens before start_node (A).
     _B_BEFORE_A = {"AFTER", "IAFTER", "IS_INCLUDED", "DURING", "ENDS", "BEGUN_BY"}
     # Relations that additionally force A and B to be consecutive in the layout
-    # (share a boundary), with A immediately before B.
-    _ADJACENT_A_FIRST = {"BEGINS", "ENDED_BY"}
+    # (share a boundary in point algebra), with A immediately before B.
+    # IBEFORE / IAFTER share a boundary head-to-tail (A+ = B- / A- = B+);
+    # BEGINS / BEGUN_BY / ENDS / ENDED_BY share a boundary side-by-side.
+    _ADJACENT_A_FIRST = {"BEGINS", "ENDED_BY", "IBEFORE"}
     # ...and the inverse: B immediately before A.
-    _ADJACENT_B_FIRST = {"BEGUN_BY", "ENDS"}
+    _ADJACENT_B_FIRST = {"BEGUN_BY", "ENDS", "IAFTER"}
 
     def _sortNodesChronologically(self, nodes):
         """Reorder nodes by temporal precedence derived from TLINKs.
@@ -158,15 +160,19 @@ class TimeScene(QGraphicsScene):
         AFTER/IAFTER/IS_INCLUDED/DURING/ENDS/BEGUN_BY pull the related_to_node earlier.
         SIMULTANEOUS/IDENTITY leave the relative order unconstrained.
 
-        BEGINS/BEGUN_BY/ENDS/ENDED_BY additionally cluster the two endpoints so
-        they end up adjacent in the timeline, in the order given by the relation.
+        BEGINS/BEGUN_BY/ENDS/ENDED_BY/IBEFORE/IAFTER additionally cluster the
+        two endpoints so they end up adjacent in the timeline, in the order
+        given by the relation. They all share a boundary in point algebra
+        (BEGINS/ENDS pin a side together; IBEFORE/IAFTER pin head-to-tail).
 
         The Document Creation Time is included as a hidden anchor so chains
         like A BEFORE DCT + DCT BEFORE B propagate to A < B even when the
         partition has no direct TLINKs between A and B.
 
-        Original order is used as a tie-breaker. On cycle detection (inconsistent
-        annotation) the original order is kept.
+        Original order is used as a tie-breaker. When the order graph contains
+        a cycle (inconsistent annotation in the corpus), only the nodes in the
+        offending strongly-connected component lose their derived order; the
+        rest of the graph keeps it (see _safeTopoSort).
         """
         visible_ids = [n.get_id_str() for n in nodes]
         visible_set = set(visible_ids)
@@ -236,10 +242,7 @@ class TimeScene(QGraphicsScene):
             for first, second in adjacency_pairs:
                 if first in member_set and second in member_set:
                     local_g.add_edge(first, second)
-            try:
-                local_orders[rep] = list(nx.lexicographical_topological_sort(local_g, key=lambda nid: order_index[nid]))
-            except nx.NetworkXUnfeasible:
-                local_orders[rep] = sorted(members, key=lambda nid: order_index[nid])
+            local_orders[rep] = self._safeTopoSort(local_g, order_index)
 
         # Build super-graph: one node per group, aggregate cross-group temporal edges.
         super_graph = nx.DiGraph()
@@ -250,15 +253,39 @@ class TimeScene(QGraphicsScene):
                 super_graph.add_edge(ru, rv)
 
         super_index = {rep: min(order_index[m] for m in members) for rep, members in groups.items()}
-        try:
-            super_ordered = list(nx.lexicographical_topological_sort(super_graph, key=lambda rep: super_index[rep]))
-        except nx.NetworkXUnfeasible:
-            super_ordered = sorted(groups.keys(), key=lambda rep: super_index[rep])
+        super_ordered = self._safeTopoSort(super_graph, super_index)
 
         final_order = []
         for rep in super_ordered:
             final_order.extend(local_orders[rep])
         return [id_to_node[nid] for nid in final_order if nid in visible_set]
+
+    @staticmethod
+    def _safeTopoSort(g, key):
+        """Topological sort that survives cycles via strongly-connected components.
+
+        When the graph has at least one cycle (typically caused by an
+        inconsistent corpus annotation, see ES100042.xml.tml with
+        t1-INCLUDES-ei7-INCLUDES-ei6-ENDS-t1), a normal toposort raises
+        NetworkXUnfeasible and drops every derived order. Here we instead
+        condense each strongly connected component into a single super-node,
+        toposort the resulting directed acyclic graph, and emit the members of
+        each strongly connected component in document order. Only nodes
+        actually trapped in a cycle lose their TLINK-derived position; the
+        rest of the graph keeps its ordering.
+        """
+        try:
+            return list(nx.lexicographical_topological_sort(g, key=lambda n: key[n]))
+        except nx.NetworkXUnfeasible:
+            sccs = list(nx.strongly_connected_components(g))
+            cond = nx.condensation(g, sccs)
+            cond_key = {n: min(key[m] for m in cond.nodes[n]['members']) for n in cond.nodes}
+            cond_order = list(nx.lexicographical_topological_sort(cond, key=lambda n: cond_key[n]))
+            result = []
+            for scc_idx in cond_order:
+                members = sorted(cond.nodes[scc_idx]['members'], key=lambda m: key[m])
+                result.extend(members)
+            return result
 
     def _computeStartTimepoints(self, partition):
         """Returns {node_id: start_timepoint_int} from TLEX's TCSP solver.
