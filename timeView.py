@@ -390,7 +390,14 @@ class TimeScene(QGraphicsScene):
 
     def createScene(self):
         graphModel = nx.MultiDiGraph()
-        partition_graph = TLEX.Partitioner.partition_graph(self._graph)
+        # Use the partitions already computed (and corrected) by TLEX.
+        # Calling Partitioner.partition_graph(self._graph) here would re-do
+        # the work and, more importantly, expose a bug in process_output:
+        # process_output assigns type="main_graph" whenever a partition is
+        # larger than its immediate predecessor in DFS order, regardless of
+        # the global max. TLEX.__post_init__ patches this by keeping only
+        # the truly largest partition as main and demoting the rest to
+        # subordinations, so we read from there directly.
 
         def visible_pair(partition):
             # The DCT is kept in the visible nodes so suggested_links (which by
@@ -399,8 +406,8 @@ class TimeScene(QGraphicsScene):
             nodes = list(partition.nodes.values())
             return (partition, nodes) if nodes else None
 
-        main_partitions = [p for p in (visible_pair(p) for p in partition_graph["main_graphs"]) if p]
-        sub_partitions = [p for p in (visible_pair(p) for p in partition_graph["subordination_graphs"]) if p]
+        main_partitions = [p for p in (visible_pair(p) for p in self._tlex.main_graphs) if p]
+        sub_partitions = [p for p in (visible_pair(p) for p in self._tlex.subordination_graphs) if p]
 
         fm = QFontMetrics(self._headerFont())
         max_header_width = 0
