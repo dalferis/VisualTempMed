@@ -41,6 +41,7 @@ class NodeItem(QGraphicsRectItem):
         self.setFlag(QGraphicsItem.ItemIsMovable)
         self.setFlag(QGraphicsItem.ItemSendsGeometryChanges)
         self.setFlag(QGraphicsItem.ItemIsSelectable)
+        self.setZValue(15)
 
         self.label.setParentItem(self)
         self.label.setPos(-text_rect.width()/2, -text_rect.height()/2)

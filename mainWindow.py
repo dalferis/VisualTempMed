@@ -148,7 +148,7 @@ class MainWindow(QMainWindow):
         <ul>
           <li><i>Show IDs</i>: toggles internal identifiers on nodes.</li>
           <li><i>Edge thickness</i>: adjusts edge line width.</li>
-          <li><i>Edge label opacity</i> (Text view): background opacity of edge labels.</li>
+          <li><i>Edge label opacity</i>: background opacity of edge labels.</li>
         </ul>
         <p><b>View menu</b></p>
         <ul>
@@ -426,6 +426,14 @@ class MainWindow(QMainWindow):
         self.sliderEdgeThickness.setValue(2)
         layout.addWidget(self.sliderEdgeThickness)
         self.sliderEdgeThickness.valueChanged.connect(self.updateEdgeWidth)
+        # - Slider for edge label background opacity
+        layout.addWidget(QLabel("Edge label opacity"))
+        self.sliderEdgeLabelOpacity = QSlider(Qt.Horizontal)
+        self.sliderEdgeLabelOpacity.setMinimum(0)
+        self.sliderEdgeLabelOpacity.setMaximum(255)
+        self.sliderEdgeLabelOpacity.setValue(220)
+        layout.addWidget(self.sliderEdgeLabelOpacity)
+        self.sliderEdgeLabelOpacity.valueChanged.connect(self.updateEdgeLabelOpacity)
         return widget
 
     def createTextControls(self):
@@ -442,12 +450,12 @@ class MainWindow(QMainWindow):
         self.sliderEdgeThicknessText.valueChanged.connect(self.updateEdgeWidthText)
         # - Slider for edge label background opacity
         layout.addWidget(QLabel("Edge label opacity"))
-        self.sliderEdgeLabelOpacity = QSlider(Qt.Horizontal)
-        self.sliderEdgeLabelOpacity.setMinimum(0)
-        self.sliderEdgeLabelOpacity.setMaximum(255)
-        self.sliderEdgeLabelOpacity.setValue(220)
-        layout.addWidget(self.sliderEdgeLabelOpacity)
-        self.sliderEdgeLabelOpacity.valueChanged.connect(self.updateEdgeLabelOpacity)
+        self.sliderEdgeLabelOpacityText = QSlider(Qt.Horizontal)
+        self.sliderEdgeLabelOpacityText.setMinimum(0)
+        self.sliderEdgeLabelOpacityText.setMaximum(255)
+        self.sliderEdgeLabelOpacityText.setValue(220)
+        layout.addWidget(self.sliderEdgeLabelOpacityText)
+        self.sliderEdgeLabelOpacityText.valueChanged.connect(self.updateEdgeLabelOpacityText)
         return widget
 
     def changeView(self, index):
@@ -473,10 +481,17 @@ class MainWindow(QMainWindow):
                 item.setPen(pen)
 
     def updateEdgeLabelOpacity(self, value):
+        if self.timeScene is None:
+            return
+        for item in self.timeScene.items():
+            if isinstance(item, si.LaneEdgeItem):
+                item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
+
+    def updateEdgeLabelOpacityText(self, value):
         if self.textScene is None:
             return
         for item in self.textScene.items():
-            if isinstance(item, txv.LaneEdgeItem):
+            if isinstance(item, si.LaneEdgeItem):
                 item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
 
     def toggleShowIds(self, state):
