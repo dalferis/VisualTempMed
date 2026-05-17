@@ -6,7 +6,7 @@ from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.timeline.Timeline import find_timeline
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsTextItem
 from PySide6.QtGui import QFont, QFontMetrics, QPainter
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import Qt, QRectF, Signal
 
 
 class TimeView(QGraphicsView):
@@ -54,6 +54,11 @@ class TimeScene(QGraphicsScene):
         self._rightmost_x = 0
         self._rail_x = 100  # overridden in createScene once the rightmost node is known
         self._highlighted_edges = []
+        # Partition headers ("Main", "Subordinate #N") drawn as overlays via
+        # drawForeground rather than as scene items, to avoid the same Qt
+        # quirk that made the DCT box vanish on click in textView (see
+        # TextScene._prepareDctOverlay). Each entry: (label, QRectF).
+        self._partition_headers = []
         self.createScene()
 
     def addItem(self, item):
@@ -373,20 +378,31 @@ class TimeScene(QGraphicsScene):
                 graphNode.setPos(xpos, ypos)
                 graphModel.add_node(node.get_id_str())
 
-        header = QGraphicsTextItem(f"{kind} #{displayed_idx}")
-        header.setFont(self._headerFont())
-        header.setDefaultTextColor(Qt.darkGray)
-        header.setAcceptedMouseButtons(Qt.NoButton)
-        self.addItem(header)
-        header_rect = header.boundingRect()
+        # Stash the partition header for drawForeground. We don't add it as a
+        # QGraphicsItem to the scene because clicking on a QGraphicsTextItem
+        # (even with Qt.NoButton) triggers a Qt repaint quirk that hides it.
+        label = kind if kind == "Main" else f"{kind} #{displayed_idx}"
+        fm = QFontMetrics(self._headerFont())
+        label_w = fm.horizontalAdvance(label)
+        label_h = fm.height()
         first_node_rect = first_node.rect().translated(first_node.pos())
-        header.setPos(
-            header_x,
-            first_node_rect.center().y() - header_rect.height() / 2,
-        )
+        label_y = first_node_rect.center().y() - label_h / 2
+        self._partition_headers.append((label, QRectF(header_x, label_y, label_w, label_h)))
 
         line += max_stack * self._vertical_distance + self._partition_gap
         return line
+
+    def drawForeground(self, painter, rect):
+        super().drawForeground(painter, rect)
+        if not self._partition_headers:
+            return
+        painter.save()
+        painter.setFont(self._headerFont())
+        painter.setPen(Qt.darkGray)
+        for label, bbox in self._partition_headers:
+            if rect.intersects(bbox):
+                painter.drawText(bbox, Qt.AlignLeft | Qt.AlignVCenter, label)
+        painter.restore()
 
     def _orderedPartitions(self):
         """Returns (mains, subs) preferring the partition containing the DCT
@@ -438,7 +454,7 @@ class TimeScene(QGraphicsScene):
         fm = QFontMetrics(self._headerFont())
         max_header_width = 0
         if main_partitions:
-            max_header_width = max(max_header_width, fm.horizontalAdvance(f"Main #{len(main_partitions)}"))
+            max_header_width = max(max_header_width, fm.horizontalAdvance(f"Main"))
         if sub_partitions:
             max_header_width = max(max_header_width, fm.horizontalAdvance(f"Subordinate #{len(sub_partitions)}"))
         header_x = -max_header_width - self._partition_label_margin
@@ -458,3 +474,11 @@ class TimeScene(QGraphicsScene):
         si.LaneEdgePlanner(self,
                            track_spacing=self._track_spacing,
                            gutter_padding=self._gutter_padding).drawEdges()
+
+        # Partition headers are drawn as overlays (not scene items), so we
+        # extend sceneRect manually to keep them scrollable.
+        if self._partition_headers:
+            bbox = self.itemsBoundingRect()
+            for _, hbox in self._partition_headers:
+                bbox = bbox.united(hbox)
+            self.setSceneRect(bbox.adjusted(-10, -10, 10, 10))
