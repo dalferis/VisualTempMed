@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
-  <DOCID>manuela</DOCID>
-  <TIMEX3 tid="t0" type="DATE" value="2020-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2020-12-31</TIMEX3>
-  <TEXT>Pz di 63 anni, in anamnesi adenocarcinoma colon G2 infiltrante con secondarismi epatici, in trattamento con chemioterapia neoadiuvante con 5-fluorouracile (mFOLFOX6) in corso 2^ ciclo, iniziato il giorno prima dell’accesso in ps. Il paziente giunge per dolore toracico tipico insorto dalla mattina a carattere episodico di breve durata (4 episodi), analoga sintomatologia durante il primo ciclo. All’ecg sopra ST in inferiore senza specularita’, 1^troponina 33 ng/dl; ecoscopia nella norma, al 2^ ecg a paziente asintomatico (dopo 3 ore) scomparsa del sopra ST in inferiore e comparsa in sede antero-laterale, si sospende il trattamento. Ricovera il paziente in UTIC e si effettua coronarografia (circolo coronarico indenne).&#13;
-</TEXT>
-</TimeML>

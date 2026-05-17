@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TimeML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="TimeML_1.2.1.xsd">
-  <DOCID>manuela</DOCID>
-  <TIMEX3 tid="t0" type="DATE" value="2019-12-31T00:00:00" functionInDocument="CREATION_TIME" temporalFunction="false">2019-12-31</TIMEX3>
-  <TEXT>Un maschio di 25 anni dopo una partita di calcetto si è presentato in PS per paralisi degli AAII. Gli ematochimici evidenziavano marcata ipokaliemia: &lt;1.5 Mmol/L; dopo esecuzione di supplementazione di potassio il pz veniva dimesso. Pochi giorni più tardi il pz si ripresentava in PS per una recidiva e veniva ricoverato. Veniva eseguito TSH con riscontro di tireotossicosi senza sintomi di ipertiroidismo: TSH &lt;0.005 mUI/L, FT4 44.9 ng/L. Veniva impostata terapia tireostatica e somministrato K+ con risposta clinica. Sono stati effettuati RMN, rachicentesi e dosaggio enzimi muscolari per ricerca di diagnosi differenziali. È stato proposto anche test genetico.&#13;
-</TEXT>
-</TimeML>
