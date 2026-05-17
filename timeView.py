@@ -388,6 +388,31 @@ class TimeScene(QGraphicsScene):
         line += max_stack * self._vertical_distance + self._partition_gap
         return line
 
+    def _orderedPartitions(self):
+        """Returns (mains, subs) preferring the partition containing the DCT
+        as main.
+
+        TLEX's heuristic "main = largest partition" can crown a partition of
+        subordinated / hypothetical / reported events as main when the
+        DCT-anchored real-world events happen to form a smaller partition.
+        Conceptually the paper's "main timeline" is the one anchored at the
+        DCT, so we override TLEX's choice here.
+
+        Falls back to TLEX's original ordering if there is no DCT in the
+        document, or if the DCT is already in a main partition (the common
+        case).
+        """
+        mains = list(self._tlex.main_graphs)
+        subs = list(self._tlex.subordination_graphs)
+        dct_id = next((nid for nid, n in self._graph.nodes.items()
+                       if self.isCreationTimeTimex3(n)), None)
+        if dct_id is None or any(dct_id in m.nodes for m in mains):
+            return mains, subs
+        for i, s in enumerate(subs):
+            if dct_id in s.nodes:
+                return [s], mains + subs[:i] + subs[i + 1:]
+        return mains, subs
+
     def createScene(self):
         graphModel = nx.MultiDiGraph()
         # Use the partitions already computed (and corrected) by TLEX.
@@ -406,8 +431,9 @@ class TimeScene(QGraphicsScene):
             nodes = list(partition.nodes.values())
             return (partition, nodes) if nodes else None
 
-        main_partitions = [p for p in (visible_pair(p) for p in self._tlex.main_graphs) if p]
-        sub_partitions = [p for p in (visible_pair(p) for p in self._tlex.subordination_graphs) if p]
+        mains, subs = self._orderedPartitions()
+        main_partitions = [p for p in (visible_pair(p) for p in mains) if p]
+        sub_partitions = [p for p in (visible_pair(p) for p in subs) if p]
 
         fm = QFontMetrics(self._headerFont())
         max_header_width = 0
