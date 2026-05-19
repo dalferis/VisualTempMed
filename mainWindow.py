@@ -178,20 +178,24 @@ class MainWindow(QMainWindow):
         <p><b>Edges</b></p>
         <table cellpadding="4" cellspacing="0">
           <tr>
-            <td><span style="color: black;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
-            <td>&nbsp;TLINK (temporal link)</td>
+            <td><span style="color: black; font-family: monospace; font-size: 14pt;">&#9472;&#9472;&#9472;&#9472;&#9472;</span></td>
+            <td>&nbsp;TLINK (annotated temporal link)</td>
           </tr>
           <tr>
-            <td><span style="color: red;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td><span style="color: black; font-family: monospace; font-size: 14pt;">&#8211;&nbsp;&#8211;&nbsp;&#8211;&nbsp;&#8211;</span></td>
+            <td>&nbsp;TLINK (suggested temporal link)</td>
+          </tr>
+          <tr>
+            <td><span style="color: red;   font-family: monospace; font-size: 14pt;">&#9472;&#9472;&#9472;&#9472;&#9472;</span></td>
             <td>&nbsp;SLINK (subordination link)</td>
           </tr>
           <tr>
-            <td><span style="color: blue;">&#9473;&#9473;&#9473;&#9473;&#9473;</span></td>
+            <td><span style="color: blue;  font-family: monospace; font-size: 14pt;">&#9472;&#9472;&#9472;&#9472;&#9472;</span></td>
             <td>&nbsp;ALINK (aspectual link)</td>
           </tr>
         </table>
         <p><b>Partitions</b></p>
-        <p>"Main" partitions hold the "real-world" facts of the document.<br>"Subordinate" partitions hang off the "Main" partitions through SLINKs.</p>
+        <p>"Main" partition holds the "real-world" facts of the document.<br>"Subordinate" partitions hang off the "Main" partitions through SLINKs.</p>
         """
         msg = QMessageBox(self)
         msg.setWindowTitle("Legend")
