@@ -58,6 +58,11 @@ class MainWindow(QMainWindow):
         exitAction.triggered.connect(self.close)
         fileMenu.addAction(exitAction)
 
+        convertMenu = menuBar.addMenu("&Convert")
+        convertAction = QAction("Convert &E3C file to TimeML...", self)
+        convertAction.triggered.connect(self.convertE3cFile)
+        convertMenu.addAction(convertAction)
+
         viewMenu = menuBar.addMenu("&View")
         controlAction = self.controlDock.toggleViewAction()
         controlAction.setText("&Control panel")
@@ -109,6 +114,37 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"Could not load file:\n{e}")
             return
         self.loadModel(model, path)
+
+    def convertE3cFile(self):
+        in_path, _ = QFileDialog.getOpenFileName(self, "Select E3C file to convert", "", "E3C files (*.xml);;All files (*)")
+        if not in_path:
+            return
+        try:
+            with open(in_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            fileFormat = detectFormatContent(content)
+            if fileFormat != FileFormat.E3C:
+                QMessageBox.critical(self, "Error", f"The selected file is not an E3C file (detected: {fileFormat.name}).")
+                return
+            result = convertContent(content)
+            if not result[0]:
+                QMessageBox.critical(self, "Error", "E3C -> TimeML conversion failed:\n" + "\n".join(str(e) for e in result[1:]))
+                return
+            tml_content = result[1]
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not convert file:\n{e}")
+            return
+        default_out = in_path + ".tml"
+        out_path, _ = QFileDialog.getSaveFileName(self, "Save TimeML file", default_out, "TimeML files (*.tml);;All files (*)")
+        if not out_path:
+            return
+        try:
+            with open(out_path, 'w', encoding='utf-8') as f:
+                f.write(tml_content)
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not write file:\n{e}")
+            return
+        QMessageBox.information(self, "Conversion complete", f"File converted successfully:\n{out_path}")
 
     def showAbout(self):
         QMessageBox.about(
