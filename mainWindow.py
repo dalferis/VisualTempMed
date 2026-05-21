@@ -316,9 +316,10 @@ class MainWindow(QMainWindow):
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         panel = QWidget()
-        panel.setFixedWidth(260)
+        panel.setMinimumWidth(180)
+        panel.resize(260, panel.height())
         font = panel.font()
-        font.setPointSize(font.pointSize() + 2)
+        font.setPointSize(font.pointSize() + 1)
         panel.setFont(font)
         layout = QVBoxLayout(panel)
         self.attributesTitle = QLabel("")
