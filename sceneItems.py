@@ -476,8 +476,12 @@ class LaneEdgePlanner:
 
     def _buildEdgePlans(self):
         s = self.scene
+        # NOTE: graph.links is restored after partitioning by TLEX, so it
+        # already contains every TLINK / SLINK / ALINK. Earlier the planner
+        # also merged in tlex.s_links, but that produced visible duplicates
+        # for every SLINK (drawn twice, perfectly overlapping). Keep
+        # graph.links as the single source of truth for annotated links.
         annotated = [v for v in s._graph.links.values() if not s.isCreationTimeLink(v)]
-        annotated += [v for v in s._tlex.s_links if not s.isCreationTimeLink(v)]
         # Suggested links from Connectivity_Increaser anchor each disconnected
         # subgraph to the DCT, so by construction every endpoint touches the
         # DCT. We deliberately keep them past the isCreationTimeLink filter.
