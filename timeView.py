@@ -29,6 +29,8 @@ class TimeView(QGraphicsView):
 
 class TimeScene(QGraphicsScene):
     nodeClicked = Signal(str)
+    edgeClicked = Signal(object)
+    selectionCleared = Signal()
 
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
@@ -78,13 +80,43 @@ class TimeScene(QGraphicsScene):
         if isinstance(clicked, si.LaneEdgeItem):
             clicked.setHighlighted(True)
             self._highlighted_edges = [clicked]
+            self.edgeClicked.emit(clicked.link)
         elif isinstance(clicked, si.NodeItem):
-            outgoing = [e for e in self.items()
-                        if isinstance(e, si.LaneEdgeItem) and e.source is clicked]
-            for e in outgoing:
-                e.setHighlighted(True)
-            self._highlighted_edges = outgoing
+            self._highlightNodeOutgoing(clicked)
             self.nodeClicked.emit(clicked.node_id)
+        else:
+            self.selectionCleared.emit()
+
+    def _highlightNodeOutgoing(self, node):
+        outgoing = [e for e in self.items()
+                    if isinstance(e, si.LaneEdgeItem) and e.source is node]
+        for e in outgoing:
+            e.setHighlighted(True)
+        self._highlighted_edges = outgoing
+
+    def selectNode(self, node_id):
+        """Apply the same highlight a click would, without emitting nodeClicked.
+        Used by MainWindow to carry the selection across view switches."""
+        self._clearHighlights()
+        self.clearSelection()
+        node = self.nodes.get(node_id) if node_id is not None else None
+        if node is not None:
+            node.setSelected(True)
+            self._highlightNodeOutgoing(node)
+
+    def selectEdge(self, link):
+        """Highlight the edge backed by the given Link object, without
+        emitting edgeClicked. Used by MainWindow to carry the selection
+        across view switches."""
+        self._clearHighlights()
+        self.clearSelection()
+        if link is None:
+            return
+        for it in self.items():
+            if isinstance(it, si.LaneEdgeItem) and it.link is link:
+                it.setHighlighted(True)
+                self._highlighted_edges = [it]
+                return
 
     @staticmethod
     def _enclosingTarget(item):

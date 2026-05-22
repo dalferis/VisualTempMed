@@ -8,13 +8,25 @@ from dataModel import DataModel
 from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.algorithms import TLEX, Partitioner
 from lxml import etree
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
     QSizePolicy, QFileDialog, QMessageBox
 )
+
+class _StableWidthPanel(QWidget):
+    """Widget that reports a fixed width as sizeHint so its parent
+    QDockWidget does not reflow when the inner layout's content changes.
+    Height still tracks the layout. The user can still resize the dock
+    manually via its border."""
+    def __init__(self, hint_width):
+        super().__init__()
+        self._hint_width = hint_width
+    def sizeHint(self):
+        return QSize(self._hint_width, super().sizeHint().height())
+
 
 class MainWindow(QMainWindow):
     _initialPanel = "time"
@@ -30,6 +42,8 @@ class MainWindow(QMainWindow):
         self.timeView = self.timeScene = None
         self.textView = self.textScene = None
         self._model = None
+        self._selectedNodeId = None
+        self._selectedLink = None
         self._eventComments = {}
         self._instanceComments = {}
         self._timexComments = {}
@@ -260,11 +274,14 @@ class MainWindow(QMainWindow):
         self.textScene = self.textView.scene
         for scene in (self.timeScene, self.textScene):
             scene.nodeClicked.connect(self.showNodeAttributes)
+            scene.edgeClicked.connect(self.onEdgeClicked)
+            scene.selectionCleared.connect(self.onSelectionCleared)
         self.stack.addWidget(self.timeView)
         self.stack.addWidget(self.textView)
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
         self.clearAttributes()
+        self._selectedLink = None
         self.statusLabel.setText(filepath if filepath else "")
 
     def createControlPanel(self):
@@ -315,9 +332,8 @@ class MainWindow(QMainWindow):
         self.attributesDock = dock = QDockWidget("Attributes", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
-        panel = QWidget()
-        panel.setMinimumWidth(180)
-        panel.resize(260, panel.height())
+        panel = _StableWidthPanel(260)
+        panel.setMinimumWidth(200)
         font = panel.font()
         font.setPointSize(font.pointSize() + 1)
         panel.setFont(font)
@@ -337,6 +353,15 @@ class MainWindow(QMainWindow):
         self.attributesTitle.setText("")
         while self.attributesForm.rowCount() > 0:
             self.attributesForm.removeRow(0)
+        self._selectedNodeId = None
+
+    def onEdgeClicked(self, link):
+        self.clearAttributes()
+        self._selectedLink = link
+
+    def onSelectionCleared(self):
+        self.clearAttributes()
+        self._selectedLink = None
 
     def showNodeAttributes(self, node_id):
         self.clearAttributes()
@@ -345,6 +370,8 @@ class MainWindow(QMainWindow):
         node = self._model.graph().nodes.get(node_id)
         if node is None:
             return
+        self._selectedNodeId = node_id
+        self._selectedLink = None
         if isinstance(node, Instance.Instance):
             event = self._model.graph().events.get(node.event)
             event_comment = self._eventComments.get(node.event)
@@ -502,6 +529,13 @@ class MainWindow(QMainWindow):
     def changeView(self, index):
         self.stack.setCurrentIndex(index)
         self.stackControl.setCurrentIndex(index)
+        active_scene = self.timeScene if index == 0 else self.textScene
+        if active_scene is None:
+            return
+        if self._selectedNodeId is not None:
+            active_scene.selectNode(self._selectedNodeId)
+        elif self._selectedLink is not None:
+            active_scene.selectEdge(self._selectedLink)
 
     def updateEdgeWidth(self, value):
         if self.timeScene is None:

@@ -1,7 +1,7 @@
 import html
 import math
 from PySide6.QtWidgets import (
-    QGraphicsRectItem, QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem
+    QGraphicsRectItem, QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem, QStyle
 )
 from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QPainterPathStroker, QFont
 from PySide6.QtCore import Qt, QPointF, QLineF
@@ -88,6 +88,19 @@ class NodeItem(QGraphicsRectItem):
             for edge in self.edges:
                 edge.updatePosition()
         return super().itemChange(change, value)
+
+    def paint(self, painter, option, widget=None):
+        # Replace Qt's default selection rendering (1-px dashed) with a
+        # thicker dashed border so the selected node stands out.
+        selected = bool(option.state & QStyle.State_Selected)
+        option.state &= ~QStyle.State_Selected
+        super().paint(painter, option, widget)
+        if selected:
+            painter.save()
+            painter.setPen(QPen(Qt.black, 3, Qt.DashLine))
+            painter.setBrush(Qt.NoBrush)
+            painter.drawRect(self.rect())
+            painter.restore()
 
 
 class EdgeItem(QGraphicsPathItem):
@@ -298,6 +311,7 @@ class LaneEdgeItem(EdgeItem):
         self._plan = plan
         self._link_color = link_color
         self._suggested = bool(plan.get('suggested', False))
+        self.link = plan.get('link')
         self._highlighted = False
         super().__init__(source, target, text=text, text_color=text_color, link_color=link_color, curvature=0.0)
         self.setZValue(self._normal_z)
@@ -489,6 +503,7 @@ class LaneEdgePlanner:
                 'src_line': src_line, 'tgt_line': tgt_line,
                 'src_cx': src_cx, 'tgt_cx': tgt_cx,
                 'suggested': is_suggested,
+                'link': link,
             }
             if src_line == tgt_line:
                 plan['mode'] = 'same_line'
