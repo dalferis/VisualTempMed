@@ -374,6 +374,20 @@ class LaneEdgeItem(EdgeItem):
         # Gutter falls inside the node rect — pick the nearer edge.
         return (top, 'top') if (lane_y - top) < (bottom - lane_y) else (bottom, 'bottom')
 
+    @staticmethod
+    def _biasX(node, rect, default_x, side):
+        """For nodes participating in a stacked-satellite stack, shift the
+        attach x toward the exposed shoulder so the endpoint is not
+        occluded by the neighbouring level. The stack staggers each
+        satellite to the right; the exposed strip is on the LEFT of the
+        bottom side and on the RIGHT of the top side."""
+        BIAS = 5
+        if side == 'bottom' and getattr(node, '_has_stacked_below', False):
+            return rect.left() + BIAS
+        if side == 'top' and getattr(node, '_has_stacked_above', False):
+            return rect.right() - BIAS
+        return default_x
+
     def updatePosition(self):
         scene = self._scene_ref
         plan = self._plan
@@ -391,8 +405,10 @@ class LaneEdgeItem(EdgeItem):
 
         if plan['mode'] in ('same_line', 'adjacent'):
             lane_y = scene.gutterY(plan['gutter'], plan.get('main_track', 0))
-            src_y, _ = self._attachY(src_rect, lane_y)
+            src_y, src_side = self._attachY(src_rect, lane_y)
             tgt_y, tgt_side = self._attachY(tgt_rect, lane_y)
+            src_x = self._biasX(self.source, src_rect, src_x, src_side)
+            tgt_x = self._biasX(self.target, tgt_rect, tgt_x, tgt_side)
 
             path.moveTo(src_x, src_y)
             path.lineTo(src_x, lane_y)
@@ -406,8 +422,10 @@ class LaneEdgeItem(EdgeItem):
             src_lane_y = scene.gutterY(plan['src_gutter'], plan.get('src_track', 0))
             tgt_lane_y = scene.gutterY(plan['tgt_gutter'], plan.get('tgt_track', 0))
             rail_x = scene.railX(plan.get('rail_track', 0))
-            src_y, _ = self._attachY(src_rect, src_lane_y)
+            src_y, src_side = self._attachY(src_rect, src_lane_y)
             tgt_y, tgt_side = self._attachY(tgt_rect, tgt_lane_y)
+            src_x = self._biasX(self.source, src_rect, src_x, src_side)
+            tgt_x = self._biasX(self.target, tgt_rect, tgt_x, tgt_side)
 
             path.moveTo(src_x, src_y)
             path.lineTo(src_x, src_lane_y)

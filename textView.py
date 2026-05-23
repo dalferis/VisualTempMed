@@ -68,6 +68,11 @@ class TextScene(QGraphicsScene):
         self._tlex = dataModel.tlex()
         self.nodes = {}
         self._lines = []
+        # Per-line extra height contributed by stacked MAKEINSTANCE satellites
+        # under a multi-instance EVENT. Lines with satellites push subsequent
+        # text rows further down so the edge gutter stays below the stack
+        # (otherwise satellites would occlude edges routed through the gutter).
+        self._line_extra_height = {}
         self._highlighted_edges = []
         self._font = QFont()
         self._font.setPointSize(11)
@@ -151,16 +156,21 @@ class TextScene(QGraphicsScene):
         if gutter_idx == 0:
             gutter_top = self._top_margin - self._gutter_height
         else:
-            gutter_top = self._top_margin + (gutter_idx - 1) * self.line_height + self._text_height
+            # Cumulative extras shift the gutter down by the total satellite
+            # height of every preceding line.
+            cum = sum(self._line_extra_height.get(i, 0) for i in range(gutter_idx))
+            gutter_top = (self._top_margin + (gutter_idx - 1) * self.line_height
+                          + self._text_height + cum)
         return gutter_top + self._gutter_padding + (track + 0.5) * self._track_spacing
 
     def railX(self, track):
         return self._rail_x + (track + 0.5) * self._track_spacing
 
     def lineOfNode(self, node_item):
-        cy = node_item.pos().y()
-        approx = (cy - self._top_margin - self._text_height / 2) / self.line_height
-        return max(0, int(round(approx)))
+        # When lines have variable height (because of stacked satellites)
+        # the cy/line_height formula no longer holds. Use the line index
+        # stamped on each node by addNodeInline / addStackedSatellite.
+        return getattr(node_item, '_line_idx', 0)
 
     # ------- Domain helpers -------
 
@@ -170,11 +180,17 @@ class TextScene(QGraphicsScene):
     def isCreationTimeLink(self, link):
         return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
 
-    def buildEventToNodeIdMap(self):
+    def buildEventToNodeIdsMap(self):
+        """Returns dict[eid, list[eiid]]. A single EVENT can have multiple
+        MAKEINSTANCE entries (different temporal/modal realizations of the
+        same predicate, e.g. e12 with both ei340 and ei354 in
+        APW19980213.1320.tml). All of them need NodeItems in the scene so
+        their edges are drawable; otherwise edges that target the
+        non-rendered instances silently disappear from textView."""
         mapping = {}
         for node in self._graph.nodes.values():
             if isinstance(node, Instance.Instance):
-                mapping[node.event] = node.get_id_str()
+                mapping.setdefault(node.event, []).append(node.get_id_str())
         return mapping
 
     def stripInnerTags(self, text):
@@ -190,13 +206,19 @@ class TextScene(QGraphicsScene):
         while len(self._lines) <= line_idx:
             self._lines.append([])
 
+    def _advanceY(self, y, line_idx):
+        """Y advance from one line to the next, accounting for any extra
+        height contributed by stacked satellites on the line we are
+        leaving behind."""
+        return y + self.line_height + self._line_extra_height.get(line_idx, 0)
+
     def addWord(self, word, x, y, line_idx):
         text_item = QGraphicsTextItem(si.decodeText(word))
         text_item.setFont(self._font)
         rect = text_item.boundingRect()
         if x + rect.width() > self._max_line_width and x > self._left_margin:
             x = self._left_margin
-            y += self.line_height
+            y = self._advanceY(y, line_idx)
             line_idx += 1
         text_item.setPos(x, y + (self._text_height - rect.height()) / 2)
         self.addItem(text_item)
@@ -212,9 +234,10 @@ class TextScene(QGraphicsScene):
         w = rect.width()
         if x + w > self._max_line_width and x > self._left_margin:
             x = self._left_margin
-            y += self.line_height
+            y = self._advanceY(y, line_idx)
             line_idx += 1
         node.setPos(x + w / 2, y + self._text_height / 2)
+        node._line_idx = line_idx
         self.addItem(node)
         self._ensureLine(line_idx)
         self._lines[line_idx].append(node)
@@ -222,14 +245,56 @@ class TextScene(QGraphicsScene):
         return x, y, line_idx
 
     def newLine(self, x, y, line_idx):
-        return self._left_margin, y + self.line_height, line_idx + 1
+        return self._left_margin, self._advanceY(y, line_idx), line_idx + 1
 
     def renderTextChunk(self, chunk, x, y, line_idx):
         for word in chunk.split():
             x, y, line_idx = self.addWord(word, x, y, line_idx)
         return x, y, line_idx
 
-    def layoutText(self, body, eid_to_node_id):
+    # Horizontal offset between consecutive levels of a stacked-satellite
+    # stack. Each satellite shifts right by this amount relative to its
+    # anchor, creating a staircase effect. The shifted layout leaves
+    # exposed "shoulders" on each level — bottom-left of every primary/
+    # mid-satellite, top-right of every satellite — where edge endpoints
+    # attach so they are never occluded by the neighbouring level.
+    STACK_STAGGER = 10
+
+    def addStackedSatellite(self, anchor, eiid, text, line_idx):
+        """Place a NodeItem just below `anchor` (flush vertically, shifted
+        right by STACK_STAGGER) to represent an additional MAKEINSTANCE of
+        the same EVENT. Same text as the primary so the stack reads as
+        one event with N instances; the eiid is conveyed through the id
+        badge (Show IDs) and the node_id, which is what the edge planner
+        looks up.
+
+        The satellite is appended to self._lines so that
+        _resizeGutterIfNeeded shifts it together with the rest of its
+        row when the gutter grows.
+
+        Returns the new node so the caller can chain further satellites
+        below it."""
+        node = si.NodeItem(eiid, text=text)
+        node.setFlag(QGraphicsItem.ItemIsMovable, False)
+        anchor_bottom = anchor.pos().y() + anchor.rect().height() / 2
+        node_h = node.rect().height()
+        node.setPos(anchor.pos().x() + self.STACK_STAGGER,
+                    anchor_bottom + node_h / 2)
+        node._line_idx = line_idx
+        # Flags consumed by LaneEdgeItem._biasX so the attach point lands
+        # on the exposed shoulder rather than under the neighbour.
+        node._has_stacked_above = True
+        anchor._has_stacked_below = True
+        # Push subsequent text rows down by this satellite's height so the
+        # edge gutter stays below the whole stack rather than overlapping it.
+        self._line_extra_height[line_idx] = (
+            self._line_extra_height.get(line_idx, 0) + node_h)
+        self.addItem(node)
+        self._ensureLine(line_idx)
+        self._lines[line_idx].append(node)
+        return node
+
+    def layoutText(self, body, eid_to_node_ids):
         x = self._left_margin
         y = self._top_margin
         line_idx = 0
@@ -257,8 +322,13 @@ class TextScene(QGraphicsScene):
                 if event_match:
                     eid_m = self._EID_RE.search(event_match.group(1))
                     inner = si.decodeText(self.stripInnerTags(event_match.group(2)).strip()) or "?"
-                    if eid_m and eid_m.group(1) in eid_to_node_id:
-                        x, y, line_idx = self.addNodeInline(eid_to_node_id[eid_m.group(1)], inner, x, y, line_idx)
+                    if eid_m and eid_m.group(1) in eid_to_node_ids:
+                        eiids = eid_to_node_ids[eid_m.group(1)]
+                        x, y, line_idx = self.addNodeInline(eiids[0], inner, x, y, line_idx)
+                        if len(eiids) > 1:
+                            anchor = self.nodes[eiids[0]]
+                            for extra_eiid in eiids[1:]:
+                                anchor = self.addStackedSatellite(anchor, extra_eiid, inner, line_idx)
                     else:
                         x, y, line_idx = self.renderTextChunk(inner, x, y, line_idx)
                     pos = event_match.end()
@@ -324,10 +394,10 @@ class TextScene(QGraphicsScene):
                 item.setPos(p.x(), p.y() + shift)
 
     def createScene(self):
-        eid_to_node_id = self.buildEventToNodeIdMap()
+        eid_to_node_ids = self.buildEventToNodeIdsMap()
         tml = getattr(self._graph, "time_ml_data", None) or ""
         body = self.extractTextBody(tml)
-        self.layoutText(body, eid_to_node_id)
+        self.layoutText(body, eid_to_node_ids)
         si.LaneEdgePlanner(self, track_spacing=self._track_spacing,
                            gutter_padding=self._gutter_padding).drawEdges()
         self._prepareDctOverlay()
