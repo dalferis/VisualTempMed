@@ -48,7 +48,26 @@ class TextScene(QGraphicsScene):
 
     _DCT_PADDING = 4
     _DCT_BG = QColor(240, 240, 250)
-    _DCT_FG = Qt.darkBlue
+
+    # Header boxes for TIMEX3s with a functionInDocument other than NONE
+    # (CREATION_TIME, PUBLICATION_TIME, ...). Each function gets its own colour.
+    _DOC_FUNCTION_TITLES = {
+        "CREATION_TIME": "Document Creation Time",
+        "PUBLICATION_TIME": "Publication Time",
+        "MODIFICATION_TIME": "Modification Time",
+        "RELEASE_TIME": "Release Time",
+        "RECEPTION_TIME": "Reception Time",
+        "EXPIRATION_TIME": "Expiration Time",
+    }
+    _DOC_FUNCTION_COLORS = {
+        "CREATION_TIME": QColor(0, 0, 139),        # dark blue
+        "PUBLICATION_TIME": QColor(0, 110, 0),     # dark green
+        "MODIFICATION_TIME": QColor(139, 0, 139),  # dark magenta
+        "RELEASE_TIME": QColor(180, 95, 0),        # dark orange
+        "RECEPTION_TIME": QColor(0, 130, 130),     # dark cyan
+        "EXPIRATION_TIME": QColor(150, 0, 0),      # dark red
+    }
+    _DOC_FUNCTION_DEFAULT_COLOR = QColor(60, 60, 60)
 
     _EVENT_RE = re.compile(r'<EVENT\b([^>]*)>([\s\S]*?)</EVENT>', re.IGNORECASE)
     _TIMEX_RE = re.compile(r'<TIMEX3\b([^>]*)>([\s\S]*?)</TIMEX3>', re.IGNORECASE)
@@ -77,9 +96,8 @@ class TextScene(QGraphicsScene):
         self._font = QFont()
         self._font.setPointSize(11)
         self._font.setBold(True)  # free text rendered in bold
-        self._dct_label = None
-        self._dct_text_rect = None
-        self._dct_rect = None
+        # Header overlay boxes: list of (QRectF, label, text_rect, QColor).
+        self._doc_function_boxes = []
         self.createScene()
 
     def mousePressEvent(self, event):
@@ -176,6 +194,14 @@ class TextScene(QGraphicsScene):
 
     def isCreationTimeTimex3(self, timex3):
         return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"
+
+    def isDocumentFunctionTimex3(self, timex3):
+        """True for any TIMEX3 acting as a document reference time
+        (functionInDocument other than NONE): CREATION_TIME,
+        PUBLICATION_TIME, etc. These are shown in the header overlay."""
+        if not isinstance(timex3, TimeX.TimeX) or not getattr(timex3, "documentFunction", None):
+            return False
+        return timex3.documentFunction.upper() != "NONE"
 
     def isCreationTimeLink(self, link):
         return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
@@ -342,7 +368,7 @@ class TextScene(QGraphicsScene):
                     if tid_m:
                         tid = tid_m.group(1)
                         timex_node = self._graph.nodes.get(tid)
-                        if timex_node is not None and not self.isCreationTimeTimex3(timex_node):
+                        if timex_node is not None and not self.isDocumentFunctionTimex3(timex_node):
                             x, y, line_idx = self.addNodeInline(tid, inner, x, y, line_idx)
                             placed = True
                     if not placed:
@@ -400,41 +426,63 @@ class TextScene(QGraphicsScene):
         self.layoutText(body, eid_to_node_ids)
         si.LaneEdgePlanner(self, track_spacing=self._track_spacing,
                            gutter_padding=self._gutter_padding).drawEdges()
-        self._prepareDctOverlay()
+        self._prepareDocFunctionOverlay()
 
-    def _prepareDctOverlay(self):
-        dct = next((n for n in self._graph.nodes.values() if self.isCreationTimeTimex3(n)), None)
-        if dct is None:
+    def _docFunctionTitle(self, function):
+        return self._DOC_FUNCTION_TITLES.get(function, function.replace("_", " ").title())
+
+    def _prepareDocFunctionOverlay(self):
+        """Builds the header boxes for every TIMEX3 with a functionInDocument
+        other than NONE, stacked above the text, each in its function's colour."""
+        self._doc_function_boxes = []
+        timexes = [n for n in self._graph.nodes.values() if self.isDocumentFunctionTimex3(n)]
+        if not timexes:
             return
-        value = getattr(dct, "value", None) or "?"
-        phrase = getattr(dct, "phrase", None)
-        label = f"Document Creation Time: {value}"
-        if phrase and phrase != value:
-            label += f" ({phrase})"
+        # Stable order: creation time first, then by tid.
+        timexes.sort(key=lambda n: (0 if self.isCreationTimeTimex3(n) else 1,
+                                     getattr(n, "tID", 0)))
         fm = QFontMetrics(self._font)
-        text_rect = fm.boundingRect(label)
-        w = text_rect.width() + 2 * self._DCT_PADDING
-        h = text_rect.height() + 2 * self._DCT_PADDING
-        x = self._left_margin
-        y = self._top_margin - self._gutter_height - h - 5
-        self._dct_label = label
-        self._dct_text_rect = text_rect
-        self._dct_rect = QRectF(x, y, w, h)
-        # Drawn via drawForeground (not as a scene item), so we must extend
-        # sceneRect manually to keep the box reachable when scrolling.
-        self.setSceneRect(self.itemsBoundingRect().united(self._dct_rect).adjusted(-10, -10, 10, 10))
+        h = fm.height() + 2 * self._DCT_PADDING
+        gap = 4
+        # The lowest box sits just above the text; the rest stack upward.
+        base_top = self._top_margin - self._gutter_height - h - 5
+        n = len(timexes)
+        boxes = []
+        for i, tx in enumerate(timexes):
+            function = tx.documentFunction.upper()
+            value = getattr(tx, "value", None) or "?"
+            phrase = getattr(tx, "phrase", None)
+            label = f"{self._docFunctionTitle(function)}: {value}"
+            if phrase and phrase != value:
+                label += f" ({phrase})"
+            text_rect = fm.boundingRect(label)
+            w = text_rect.width() + 2 * self._DCT_PADDING
+            y = base_top - (n - 1 - i) * (h + gap)
+            rect = QRectF(self._left_margin, y, w, h)
+            color = self._DOC_FUNCTION_COLORS.get(function, self._DOC_FUNCTION_DEFAULT_COLOR)
+            boxes.append((rect, label, text_rect, color))
+        self._doc_function_boxes = boxes
+        # Drawn via drawForeground (not scene items), so extend sceneRect to
+        # keep the boxes reachable when scrolling.
+        united = self.itemsBoundingRect()
+        for rect, *_ in boxes:
+            united = united.united(rect)
+        self.setSceneRect(united.adjusted(-10, -10, 10, 10))
 
     def drawForeground(self, painter, rect):
         super().drawForeground(painter, rect)
-        if self._dct_rect is None or not rect.intersects(self._dct_rect):
+        if not self._doc_function_boxes:
             return
         painter.save()
-        painter.setBrush(QBrush(self._DCT_BG))
-        painter.setPen(QPen(self._DCT_FG, 1))
-        painter.drawRect(self._dct_rect)
-        painter.setPen(self._DCT_FG)
         painter.setFont(self._font)
-        painter.drawText(self._dct_rect.x() + self._DCT_PADDING - self._dct_text_rect.left(),
-                         self._dct_rect.y() + self._DCT_PADDING - self._dct_text_rect.top(),
-                         self._dct_label)
+        for box_rect, label, text_rect, color in self._doc_function_boxes:
+            if not rect.intersects(box_rect):
+                continue
+            painter.setBrush(QBrush(self._DCT_BG))
+            painter.setPen(QPen(color, 1))
+            painter.drawRect(box_rect)
+            painter.setPen(color)
+            painter.drawText(box_rect.x() + self._DCT_PADDING - text_rect.left(),
+                             box_rect.y() + self._DCT_PADDING - text_rect.top(),
+                             label)
         painter.restore()
