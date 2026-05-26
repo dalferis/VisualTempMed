@@ -54,6 +54,7 @@ class MainWindow(QMainWindow):
         self.createAttributesPanel()
         self.createMenuBar()
         self.statusLabel = QLabel("No file loaded")
+        self.statusLabel.setTextInteractionFlags(Qt.TextSelectableByMouse)
         self.statusBar().addPermanentWidget(self.statusLabel, 1)
         if model is not None:
             self.loadModel(model)
