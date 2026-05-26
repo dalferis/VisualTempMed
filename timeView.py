@@ -1,3 +1,4 @@
+import math
 from collections import defaultdict
 import networkx as nx
 import sceneItems as si
@@ -5,7 +6,7 @@ from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.timeline.Timeline import find_timeline
 from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsTextItem
-from PySide6.QtGui import QFont, QFontMetrics, QPainter
+from PySide6.QtGui import QFont, QFontMetrics, QPainter, QColor, QPainterPath
 from PySide6.QtCore import Qt, QRectF, Signal
 
 
@@ -36,8 +37,9 @@ class TimeScene(QGraphicsScene):
     _tlex: TLEX.TLEX
 
     _max_columns = 15
-    _horizontal_distance = 150
-    _vertical_distance = 80
+    _horizontal_distance = 210
+    _vertical_distance = 110
+    _x_origin = 130  # fixed x of the first column, shared by all partitions
     _partition_gap = 40  # extra vertical space between successive partitions
     _partition_label_margin = 12  # horizontal gap between partition header and first node
     _track_spacing = 5
@@ -59,7 +61,7 @@ class TimeScene(QGraphicsScene):
         # Partition headers ("Main", "Subordinate #N") drawn as overlays via
         # drawForeground rather than as scene items, to avoid the same Qt
         # quirk that made the DCT box vanish on click in textView (see
-        # TextScene._prepareDctOverlay). Each entry: (label, QRectF).
+        # TextScene._prepareDocFunctionOverlay). Each entry: (label, QRectF).
         self._partition_headers = []
         self.createScene()
 
@@ -175,6 +177,20 @@ class TimeScene(QGraphicsScene):
     def _headerFont(self):
         font = QFont()
         font.setPointSize(11)
+        font.setBold(True)
+        return font
+
+    def _nodeText(self, node, use_phrase):
+        if isinstance(node, Instance.Instance):
+            return si.decodeText(self._graph.events[node.event].stem)
+        if isinstance(node, TimeX.TimeX):
+            return si.decodeText(node.phrase if use_phrase else node.value)
+        return ""
+
+    def _nodeLabelFont(self):
+        # Matches sceneItems.NodeItem's label font, for width measurement.
+        font = QFont()
+        font.setPointSize(10)
         font.setBold(True)
         return font
 
@@ -389,23 +405,21 @@ class TimeScene(QGraphicsScene):
             col.sort(key=lambda n: doc_index[n.get_id_str()])
 
         first_node = None
-        x_shift = 0
         max_stack = max(len(col) for col in columns)
 
         for col_idx, col in enumerate(columns):
             for row_idx, node in enumerate(col):
-                if isinstance(node, Instance.Instance):
-                    text = si.decodeText(self._graph.events[node.event].stem)
-                elif isinstance(node, TimeX.TimeX):
-                    text = si.decodeText(node.phrase if use_phrase else node.value)
-                else:
-                    text = ""
+                text = self._nodeText(node, use_phrase)
                 graphNode = si.NodeItem(node.get_id_str(), text=text)
                 self.addItem(graphNode)
                 if first_node is None:
                     first_node = graphNode
-                    x_shift = graphNode.rect().width() / 2
-                xpos = x_shift + col_idx * self._horizontal_distance
+                # Columns share a fixed x origin across every partition (node
+                # centres aligned) so the edge router's inter-column channels
+                # land in clean gaps. A per-partition x_shift would offset the
+                # columns slightly between partitions, making a wide node in one
+                # partition stick into another partition's routing channel.
+                xpos = self._x_origin + col_idx * self._horizontal_distance
                 ypos = line + row_idx * self._vertical_distance
                 graphNode.setPos(xpos, ypos)
                 graphModel.add_node(node.get_id_str())
@@ -491,6 +505,19 @@ class TimeScene(QGraphicsScene):
             max_header_width = max(max_header_width, fm.horizontalAdvance(f"Subordinate #{len(sub_partitions)}"))
         header_x = -max_header_width - self._partition_label_margin
 
+        # Widen the column pitch if any node label is wider than the default,
+        # so the edge router always has a clean inter-column channel (a node
+        # wider than the pitch would overlap the next column and leave no gap).
+        probe = QGraphicsTextItem()
+        probe.setFont(self._nodeLabelFont())
+        max_node_w = 0
+        for _, vis_nodes in main_partitions + sub_partitions:
+            for node in vis_nodes:
+                probe.setPlainText(self._nodeText(node, True))
+                max_node_w = max(max_node_w, probe.boundingRect().width() - 2)
+        self._horizontal_distance = max(type(self)._horizontal_distance,
+                                        int(max_node_w) + 50)
+
         line = 0
         line = self._drawPartitions(main_partitions, "Main", line, use_phrase=True, graphModel=graphModel, header_x=header_x)
         line = self._drawPartitions(sub_partitions, "Subordinate", line, use_phrase=True, graphModel=graphModel, header_x=header_x)
@@ -498,14 +525,11 @@ class TimeScene(QGraphicsScene):
         if not self.nodes:
             return
 
-        # Edge routing setup: row geometry + rail position to the right of the
-        # rightmost node so cross_line edges don't pile up over the headers
-        # column on the left.
+        # Edge routing: grid router that uses the inter-column / inter-row
+        # channels of this view's fixed grid, instead of the single right-hand
+        # rail used by textView's LaneEdgePlanner.
         self._computeRowGeometry()
-        self._rail_x = self._rightmost_x + self._rail_margin
-        si.LaneEdgePlanner(self,
-                           track_spacing=self._track_spacing,
-                           gutter_padding=self._gutter_padding).drawEdges()
+        GridEdgePlanner(self, track_spacing=self._track_spacing).drawEdges()
 
         # Partition headers are drawn as overlays (not scene items), so we
         # extend sceneRect manually to keep them scrollable.
@@ -514,3 +538,373 @@ class TimeScene(QGraphicsScene):
             for _, hbox in self._partition_headers:
                 bbox = bbox.united(hbox)
             self.setSceneRect(bbox.adjusted(-10, -10, 10, 10))
+
+
+def _assignTracks(intervals):
+    """Greedy interval-graph colouring. ``intervals`` is a list of
+    (start, end) pairs; returns (tracks, count) where ``tracks`` is a list
+    parallel to the input giving each interval a track index such that
+    overlapping intervals get distinct tracks."""
+    order = sorted(range(len(intervals)), key=lambda i: intervals[i][0])
+    track_end = []  # track_end[t] = current right end of track t
+    tracks = [0] * len(intervals)
+    for i in order:
+        start, end = intervals[i]
+        for t in range(len(track_end)):
+            if track_end[t] <= start:
+                track_end[t] = end
+                tracks[i] = t
+                break
+        else:
+            tracks[i] = len(track_end)
+            track_end.append(end)
+    return tracks, len(track_end)
+
+
+def _cluster(values, tol):
+    """Groups near-equal values into clusters whose members are within ``tol``
+    of their neighbours. Returns (centers, idx_of) where ``centers`` is the
+    per-cluster mean and ``idx_of`` maps each input value to its cluster index.
+
+    Needed because each partition lays its columns from its own x_shift, so the
+    "same" logical column lands at slightly different x in different partitions.
+    Treating every distinct x as its own column would put routing channels (the
+    midpoints between columns) right on top of nodes."""
+    vals = sorted(set(values))
+    clusters = [[vals[0]]]
+    for v in vals[1:]:
+        if v - clusters[-1][-1] <= tol:
+            clusters[-1].append(v)
+        else:
+            clusters.append([v])
+    centers = [sum(c) / len(c) for c in clusters]
+    idx_of = {}
+    for ci, c in enumerate(clusters):
+        for v in c:
+            idx_of[v] = ci
+    return centers, idx_of
+
+
+class GridEdgeItem(si.LaneEdgeItem):
+    """Orthogonal edge routed through the grid channels of the time view.
+
+    The time view lays nodes on a fixed grid (columns by start timepoint,
+    rows by simultaneity). Instead of sending every edge to a single
+    right-hand rail (LaneEdgeItem's behaviour, kept for textView), this
+    routes each edge locally. Two shapes, chosen by GridEdgePlanner:
+
+    - 'straight': source and target share a column and the column is clear
+      between them -> a single vertical segment, entering both nodes
+      perpendicular to their top/bottom edges. No detour, no turn.
+
+    - 'channel': exit the source vertically with a short perpendicular stub,
+      jog into the inter-column channel nearest the source, run along it
+      (vertically) to the target's row band, turn into the inter-row channel
+      beside the target (horizontally), and enter the target vertically.
+
+    GridEdgePlanner precomputes ``vx`` (inter-column run) and ``hy`` (inter-row
+    run) with per-channel track offsets baked in. Endpoints are recomputed here
+    from live node positions so dragging still works.
+    """
+
+    _stub = 10       # length of the perpendicular exit stub
+    _jog_step = 5    # extra depth per edge so sibling exit jogs don't overlap
+
+    def updatePosition(self):
+        plan = self._plan
+        src, tgt = self.source, self.target
+        s_rect = src.rect().translated(src.pos())
+        t_rect = tgt.rect().translated(tgt.pos())
+        # Attach points are spread along each node's horizontal edge (by
+        # GridEdgePlanner) so endpoints sharing a side don't overlap.
+        sx = s_rect.left() + plan.get('src_frac', 0.5) * s_rect.width()
+        tx = t_rect.left() + plan.get('tgt_frac', 0.5) * t_rect.width()
+        sy = src.pos().y()
+        ty = tgt.pos().y()
+        path = QPainterPath()
+
+        if plan.get('mode') == 'straight':
+            down = ty >= sy
+            sy_exit = s_rect.bottom() if down else s_rect.top()
+            ty_entry = t_rect.top() if down else t_rect.bottom()
+            path.moveTo(sx, sy_exit)
+            if abs(tx - sx) < 1.0:
+                path.lineTo(tx, ty_entry)
+            else:
+                midy = (sy_exit + ty_entry) / 2
+                path.lineTo(sx, midy)
+                path.lineTo(tx, midy)
+                path.lineTo(tx, ty_entry)
+            self._drawArrow(path, tx, ty_entry, math.pi / 2 if down else -math.pi / 2)
+            self.setPath(path)
+            self._placeLabel((sx + tx) / 2, (sy_exit + ty_entry) / 2)
+            return
+
+        vx = plan['vx']
+        hy = plan['hy']
+        # Stagger the exit-jog depth by rank so edges leaving the same node
+        # side don't run their horizontal jog at the same y (which overlaps).
+        depth = self._stub + plan.get('src_jog', 0) * self._jog_step
+        if hy >= sy:
+            sy_exit = s_rect.bottom()
+            stub_y = min(sy_exit + depth, hy)
+        else:
+            sy_exit = s_rect.top()
+            stub_y = max(sy_exit - depth, hy)
+        if hy <= ty:
+            ty_entry = t_rect.top()
+            arrow_angle = math.pi / 2
+        else:
+            ty_entry = t_rect.bottom()
+            arrow_angle = -math.pi / 2
+
+        path.moveTo(sx, sy_exit)
+        path.lineTo(sx, stub_y)       # perpendicular exit stub
+        path.lineTo(vx, stub_y)       # jog into the inter-column channel
+        path.lineTo(vx, hy)           # run down/up the inter-column channel
+        path.lineTo(tx, hy)           # turn, run along the inter-row channel
+        path.lineTo(tx, ty_entry)     # perpendicular entry into the target
+        self._drawArrow(path, tx, ty_entry, arrow_angle)
+        self.setPath(path)
+        self._placeLabel(vx, (stub_y + hy) / 2)
+
+    def _placeLabel(self, cx, cy):
+        rect = self.label.boundingRect()
+        lx = cx + self._label_margin
+        ly = cy - rect.height() / 2
+        self.label.setPos(lx, ly)
+        if getattr(self, '_label_bg', None) is not None:
+            m = self._label_margin
+            self._label_bg.setRect(lx - m, ly - m,
+                                   rect.width() + 2 * m, rect.height() + 2 * m)
+
+
+class GridEdgePlanner:
+    """Builds grid-routed edges for the time view.
+
+    Columns and rows are derived by clustering node x/y positions (see
+    _cluster). Inter-column channels run vertically, centred between adjacent
+    column clusters; inter-row channels run horizontally, centred between
+    adjacent row clusters. For each edge it picks the inter-column channel
+    adjacent to the source (toward the target) and the inter-row channel
+    adjacent to the target (toward the source), then assigns per-channel tracks
+    so parallel edges in the same channel don't overlap. Same-column edges with
+    a clear path skip channels entirely and run straight.
+    """
+
+    def __init__(self, scene, track_spacing=6):
+        self.scene = scene
+        self.track_spacing = track_spacing
+
+    def drawEdges(self):
+        s = self.scene
+        nodes = list(s.nodes.values())
+        if not nodes:
+            return
+        node_xs = [round(n.pos().x(), 3) for n in nodes]
+        node_ys = [round(n.pos().y(), 3) for n in nodes]
+        H = s._horizontal_distance
+        V = s._vertical_distance
+        col_centers, col_of = _cluster(node_xs, H * 0.5)
+        row_centers, row_of = _cluster(node_ys, V * 0.45)
+
+        # Actual outer node edges per cluster, so a channel sits in the real
+        # empty gap. Using cluster-centre +/- max-half-width is wrong because
+        # the centre is the mean of member x's (which differ per partition by
+        # x_shift), so a node at the cluster's far edge can stick out past it.
+        col_right, col_left = {}, {}
+        row_bottom, row_top = {}, {}
+        for n in nodes:
+            r = n.rect().translated(n.pos())
+            ci = col_of[round(n.pos().x(), 3)]
+            ri = row_of[round(n.pos().y(), 3)]
+            col_right[ci] = max(col_right.get(ci, -1e18), r.right())
+            col_left[ci] = min(col_left.get(ci, 1e18), r.left())
+            row_bottom[ri] = max(row_bottom.get(ri, -1e18), r.bottom())
+            row_top[ri] = min(row_top.get(ri, 1e18), r.top())
+
+        MARGIN = 5
+
+        def _vbounds(left):
+            # Empty span between the rightmost node edge of cluster `left` and
+            # the leftmost node edge of cluster left+1.
+            return col_right[left] + MARGIN, col_left[left + 1] - MARGIN
+
+        def _hbounds(top):
+            return row_bottom[top] + MARGIN, row_top[top + 1] - MARGIN
+
+        def vchan_x(left):
+            # Centre of the actual empty gap (not the midpoint of column
+            # centres), so a wide node on one side doesn't get crossed.
+            if left < 0:
+                return col_centers[0] - H / 2
+            if left >= len(col_centers) - 1:
+                return col_centers[-1] + H / 2
+            lo, hi = _vbounds(left)
+            if hi <= lo:
+                return (col_centers[left] + col_centers[left + 1]) / 2
+            return (lo + hi) / 2
+
+        def hchan_y(top):
+            if top < 0:
+                return row_centers[0] - V / 2
+            if top >= len(row_centers) - 1:
+                return row_centers[-1] + V / 2
+            lo, hi = _hbounds(top)
+            if hi <= lo:
+                return (row_centers[top] + row_centers[top + 1]) / 2
+            return (lo + hi) / 2
+
+        def vgap(left):
+            if 0 <= left < len(col_centers) - 1:
+                lo, hi = _vbounds(left)
+                return max(8.0, hi - lo)
+            return H * 0.6
+
+        def hgap(top):
+            if 0 <= top < len(row_centers) - 1:
+                lo, hi = _hbounds(top)
+                return max(8.0, hi - lo)
+            return V * 0.6
+
+        def vertical_clear(x, ya, yb, src, tgt):
+            lo, hi = min(ya, yb), max(ya, yb)
+            for n in nodes:
+                if n is src or n is tgt:
+                    continue
+                r = n.rect().translated(n.pos())
+                if r.left() - 2 <= x <= r.right() + 2 and r.bottom() > lo + 1 and r.top() < hi - 1:
+                    return False
+            return True
+
+        annotated = [v for v in s._graph.links.values() if not s.isCreationTimeLink(v)]
+        suggested = getattr(s._tlex, 'suggested_links', None) or []
+        candidates = [(v, False) for v in annotated] + [(v, True) for v in suggested]
+
+        routes = []
+        for link, is_suggested in candidates:
+            src = s.nodes.get(link.start_node)
+            tgt = s.nodes.get(link.related_to_node)
+            if src is None or tgt is None or src is tgt:
+                continue
+            sx = round(src.pos().x(), 3)
+            sy = round(src.pos().y(), 3)
+            tx = round(tgt.pos().x(), 3)
+            ty = round(tgt.pos().y(), 3)
+            cs, ct = col_of[sx], col_of[tx]
+            color = (Qt.black if link.link_tag == "TLINK"
+                     else Qt.red if link.link_tag == "SLINK" else Qt.blue)
+            route = {
+                'link': link, 'src': src, 'tgt': tgt, 'suggested': is_suggested,
+                'sx': sx, 'sy': sy, 'tx': tx, 'ty': ty,
+                'color': color, 'text': link.rel_type, 'mode': 'channel',
+            }
+
+            s_rect = src.rect().translated(src.pos())
+            t_rect = tgt.rect().translated(tgt.pos())
+            down = ty >= sy
+            y_from = s_rect.bottom() if down else s_rect.top()
+            y_to = t_rect.top() if down else t_rect.bottom()
+            if cs == ct and vertical_clear(sx, y_from, y_to, src, tgt):
+                route['mode'] = 'straight'
+            else:
+                # Inter-column channel: adjacent to the source, toward target.
+                if ct > cs:
+                    v_left = cs
+                elif ct < cs:
+                    v_left = cs - 1
+                else:
+                    v_left = cs if cs < len(col_centers) - 1 else cs - 1
+                rs, rt = row_of[sy], row_of[ty]
+                # Inter-row channel: adjacent to the target, toward the source.
+                if rs < rt:
+                    h_top = rt - 1
+                elif rs > rt:
+                    h_top = rt
+                else:
+                    h_top = rt - 1 if rt > 0 else rt
+                route['v_left'] = v_left
+                route['vx_base'] = vchan_x(v_left)
+                route['h_top'] = h_top
+                route['hy_base'] = hchan_y(h_top)
+            routes.append(route)
+
+        channel_routes = [r for r in routes if r['mode'] == 'channel']
+        self._allocate(channel_routes, key='v_left', base='vx_base', final='vx',
+                       span=lambda r: (min(r['sy'], r['hy_base']), max(r['sy'], r['hy_base'])),
+                       gap_of=vgap)
+        self._allocate(channel_routes, key='h_top', base='hy_base', final='hy',
+                       span=lambda r: (min(r['vx'], r['tx']), max(r['vx'], r['tx'])),
+                       gap_of=hgap)
+
+        self._spreadAttachments(routes)
+
+        for r in routes:
+            plan = {'link': r['link'], 'suggested': r['suggested'], 'mode': r['mode'],
+                    'src_frac': r['src_frac'], 'tgt_frac': r['tgt_frac']}
+            if r['mode'] == 'channel':
+                plan['vx'] = r['vx']
+                plan['hy'] = r['hy']
+                plan['src_jog'] = r.get('src_jog', 0)
+            edge = GridEdgeItem(r['src'], r['tgt'], scene_ref=s, plan=plan,
+                                text=r['text'], text_color=QColor(145, 145, 0),
+                                link_color=r['color'])
+            s.addItem(edge)
+
+    @staticmethod
+    def _endpoint(route, which):
+        """Returns (node, side, lead_x) for the src/tgt endpoint of a route.
+        ``side`` is 'top'/'bottom'; ``lead_x`` is the x the edge heads toward
+        (src) or comes from (tgt), used to order attachments and reduce
+        crossings near the node."""
+        if route['mode'] == 'straight':
+            down = route['ty'] >= route['sy']
+            if which == 'src':
+                return route['src'], ('bottom' if down else 'top'), route['tx']
+            return route['tgt'], ('top' if down else 'bottom'), route['sx']
+        hy, vx = route['hy'], route['vx']
+        if which == 'src':
+            return route['src'], ('bottom' if hy >= route['sy'] else 'top'), vx
+        return route['tgt'], ('top' if hy <= route['ty'] else 'bottom'), vx
+
+    def _spreadAttachments(self, routes):
+        """Distribute edge endpoints across each node's top/bottom edge so they
+        don't overlap. Within a (node, side) group, endpoints are ordered by
+        the x they lead to/from and placed left-to-right at fractions
+        1/(n+1) .. n/(n+1) of the node width (a single endpoint stays centred,
+        keeping straight edges vertical)."""
+        groups = defaultdict(list)
+        for r in routes:
+            for which in ('src', 'tgt'):
+                node, side, lead = self._endpoint(r, which)
+                groups[(id(node), side)].append((lead, r['link'].get_id_str(), r, which))
+        for items in groups.values():
+            items.sort(key=lambda t: (t[0], t[1]))
+            n = len(items)
+            jog = 0
+            for i, (_, _, r, which) in enumerate(items):
+                r[which + '_frac'] = (i + 1) / (n + 1)
+                # Channel edges leaving this side get a staggered jog depth so
+                # their short horizontal exit jogs don't land on the same y.
+                if which == 'src' and r['mode'] == 'channel':
+                    r['src_jog'] = jog
+                    jog += 1
+
+    def _allocate(self, routes, key, base, final, span, gap_of):
+        """Assign tracks within each channel (grouped by ``key``) and bake the
+        track offset into an absolute coordinate stored under ``final``. Tracks
+        are centred on the channel's base coordinate, but the spacing is reduced
+        when needed so the whole bundle fits inside the channel's empty gap
+        (``gap_of(key)``) rather than spilling over the neighbouring nodes."""
+        groups = defaultdict(list)
+        for r in routes:
+            groups[r[key]].append(r)
+        for gkey, group in groups.items():
+            intervals = [span(r) for r in group]
+            tracks, count = _assignTracks(intervals)
+            spacing = self.track_spacing
+            if count > 1:
+                spacing = min(spacing, gap_of(gkey) / (count - 1))
+            for r, t in zip(group, tracks):
+                offset = (t - (count - 1) / 2) * spacing
+                r[final] = r[base] + offset
