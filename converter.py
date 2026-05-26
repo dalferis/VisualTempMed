@@ -162,7 +162,7 @@ _VALID_TIME_SUFFIX = re.compile(r'^(\d{2}(:\d{2}(:\d{2})?)?|MO|MI|AF|EV|NI|DT)$'
 def _normalizeTimex3Value(timex3):
     # None or no_value -> unknown
     if not hasattr(timex3, "value") or timex3.value is None or timex3.value.lower() == "no_value":
-        return "X"
+        return "XXXX"
     result = timex3.value
     # Duplicated unit suffix without P prefix: nDD -> P1D, nHH -> PTnH
     m = re.match(r'^\d+([YMWDHS])\1$', result)
@@ -221,7 +221,7 @@ def _normalizeTimex3Value(timex3):
         # Unknown duration without unit: PXX -> PXD
         if result == "PXX":
             result = "PXD"
-    return result if result else "X"
+    return result if result else "XXXX"
 
 def translateTimex3(timex3, cas_text, cas_tail):
     new_timex3 = {
