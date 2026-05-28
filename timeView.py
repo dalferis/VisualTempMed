@@ -792,12 +792,13 @@ class GridEdgePlanner:
             tx = round(tgt.pos().x(), 3)
             ty = round(tgt.pos().y(), 3)
             cs, ct = col_of[sx], col_of[tx]
-            color = (Qt.black if link.link_tag == "TLINK"
-                     else Qt.red if link.link_tag == "SLINK" else Qt.blue)
+            date_inferred = getattr(link, '_date_inferred', False)
             route = {
                 'link': link, 'src': src, 'tgt': tgt, 'suggested': is_suggested,
+                'date_inferred': date_inferred,
                 'sx': sx, 'sy': sy, 'tx': tx, 'ty': ty,
-                'color': color, 'text': link.rel_type, 'mode': 'channel',
+                'color': si.linkColor(link, date_inferred), 'text': link.rel_type,
+                'mode': 'channel',
             }
 
             s_rect = src.rect().translated(src.pos())
@@ -841,6 +842,7 @@ class GridEdgePlanner:
 
         for r in routes:
             plan = {'link': r['link'], 'suggested': r['suggested'], 'mode': r['mode'],
+                    'date_inferred': r['date_inferred'],
                     'src_frac': r['src_frac'], 'tgt_frac': r['tgt_frac']}
             if r['mode'] == 'channel':
                 plan['vx'] = r['vx']

@@ -1,6 +1,8 @@
 from tkinter import SE
 from detector import FileFormat, detectFormatContent
 from converter import convertContent
+import validator
+import dateLinks
 import sceneItems as si
 import timeView as tv
 import textView as txv
@@ -13,7 +15,7 @@ from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
-    QSizePolicy, QFileDialog, QMessageBox
+    QSizePolicy, QFileDialog, QMessageBox, QTextEdit, QDialog, QDialogButtonBox
 )
 
 class _StableWidthPanel(QWidget):
@@ -44,6 +46,8 @@ class MainWindow(QMainWindow):
         self._model = None
         self._selectedNodeId = None
         self._selectedLink = None
+        self._currentPath = None
+        self._inferDateOrder = True   # infer chronological order from TIMEX3 dates
         self._eventComments = {}
         self._instanceComments = {}
         self._timexComments = {}
@@ -73,10 +77,20 @@ class MainWindow(QMainWindow):
         exitAction.triggered.connect(self.close)
         fileMenu.addAction(exitAction)
 
-        convertMenu = menuBar.addMenu("&Convert")
-        convertAction = QAction("Convert &E3C file to TimeML...", self)
+        convertMenu = menuBar.addMenu("&Tools")
+        convertAction = QAction("Convert &E3C file to TimeML", self)
         convertAction.triggered.connect(self.convertE3cFile)
         convertMenu.addAction(convertAction)
+        validateAction = QAction("&Validate TimeML file", self)
+        validateAction.triggered.connect(self.validateTimeMlFile)
+        convertMenu.addAction(validateAction)
+
+        optionsMenu = menuBar.addMenu("&Options")
+        self.dateOrderAction = QAction("Infer order from TIMEX3 &dates", self)
+        self.dateOrderAction.setCheckable(True)
+        self.dateOrderAction.setChecked(self._inferDateOrder)
+        self.dateOrderAction.toggled.connect(self.toggleDateOrder)
+        optionsMenu.addAction(self.dateOrderAction)
 
         viewMenu = menuBar.addMenu("&View")
         controlAction = self.controlDock.toggleViewAction()
@@ -102,6 +116,12 @@ class MainWindow(QMainWindow):
         path, _ = QFileDialog.getOpenFileName(self, "Open TimeML or E3C file", "", "TimeML/E3C files (*.tml *.xml);;All files (*)")
         if not path:
             return
+        self._loadPath(path)
+
+    def _loadPath(self, path):
+        """Reads/converts a TimeML or E3C file, builds the model (optionally
+        adding date-inferred ordering links), and loads it. Used by Open... and
+        by the Options toggle to re-render the current file."""
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -115,20 +135,32 @@ class MainWindow(QMainWindow):
             elif fileFormat != FileFormat.TML:
                 QMessageBox.critical(self, "Error", "The selected file is not a TimeML or E3C file.")
                 return
-            graph = Graph.Graph(time_ml_string=content)
-            tlex = TLEX.TLEX(graph=graph)
-            # Merge Connectivity_Increaser's suggested TLINKs into graph.links
-            # so downstream consumers (validator, JSON export, attribute panel)
-            # see them as first-class links. timeView still distinguishes them
-            # visually because the planner reads tlex.suggested_links separately
-            # and marks plan['suggested']=True (dashed pen).
-            for link in tlex.suggested_links or []:
-                graph.links.setdefault(link.get_id_str(), link)
-            model = DataModel(graph, tlex)
+            model = self._buildModel(content)
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Could not load file:\n{e}")
             return
+        self._currentPath = path
         self.loadModel(model, path)
+
+    def _buildModel(self, content):
+        graph = Graph.Graph(time_ml_string=content)
+        # Optionally infer chronological ordering links from TIMEX3 dates and
+        # add them BEFORE partitioning, so TLEX merges partitions they connect.
+        if self._inferDateOrder:
+            for link in dateLinks.infer_date_links(graph):
+                graph.links[link.get_id_str()] = link
+        # Reset pytlex_core's module-level SLink set (it leaks across calls,
+        # and infer_date_links built a throwaway TLEX above).
+        Partitioner.single_links.clear()
+        tlex = TLEX.TLEX(graph=graph)
+        # Merge Connectivity_Increaser's suggested TLINKs into graph.links
+        # so downstream consumers (validator, JSON export, attribute panel)
+        # see them as first-class links. timeView still distinguishes them
+        # visually because the planner reads tlex.suggested_links separately
+        # and marks plan['suggested']=True (dashed pen).
+        for link in tlex.suggested_links or []:
+            graph.links.setdefault(link.get_id_str(), link)
+        return DataModel(graph, tlex)
 
     def convertE3cFile(self):
         in_path, _ = QFileDialog.getOpenFileName(self, "Select E3C file to convert", "", "E3C files (*.xml);;All files (*)")
@@ -160,6 +192,50 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"Could not write file:\n{e}")
             return
         QMessageBox.information(self, "Conversion complete", f"File converted successfully:\n{out_path}")
+
+    def validateTimeMlFile(self):
+        path, _ = QFileDialog.getOpenFileName(self, "Select TimeML file to validate", "", "TimeML files (*.tml);;All files (*)")
+        if not path:
+            return
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            result = validator.validateContent(content)
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not validate file:\n{e}")
+            return
+        if result[0]:
+            msg = QMessageBox(self)
+            msg.setWindowTitle("Validation")
+            msg.setIcon(QMessageBox.Information)
+            msg.setText(f"The file \"{path}\" is valid TimeML (XSD and TimeML spec).")
+            msg.exec()
+        else:
+            # A plain resizable dialog (not QMessageBox, which re-applies a
+            # fixed size and ignores the resize grip) so the error list can be
+            # enlarged by dragging the window edges.
+            self._showValidationErrors(path, "\n".join(str(e) for e in result[1:]))
+
+    def _showValidationErrors(self, path, errors):
+        dlg = QDialog(self)
+        dlg.setWindowTitle("Validation")
+        dlg.resize(680, 440)
+        layout = QVBoxLayout(dlg)
+        layout.addWidget(QLabel(f"The file \"{path}\" is NOT valid TimeML:"))
+        edit = QTextEdit()
+        edit.setReadOnly(True)
+        edit.setLineWrapMode(QTextEdit.NoWrap)
+        edit.setPlainText(errors)
+        layout.addWidget(edit)
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok)
+        buttons.accepted.connect(dlg.accept)
+        layout.addWidget(buttons)
+        dlg.exec()
+
+    def toggleDateOrder(self, checked):
+        self._inferDateOrder = checked
+        if self._currentPath:
+            self._loadPath(self._currentPath)
 
     def showAbout(self):
         QMessageBox.about(
@@ -235,6 +311,10 @@ class MainWindow(QMainWindow):
           <tr>
             <td><span style="color: black; font-family: monospace; font-size: 14pt;">&#8211;&nbsp;&#8211;&nbsp;&#8211;&nbsp;&#8211;</span></td>
             <td>&nbsp;TLINK (suggested temporal link)</td>
+          </tr>
+          <tr>
+            <td><span style="color: #960096; font-family: monospace; font-size: 14pt;">&#8211;&#183;&#8211;&#183;&#8211;&#183;&#8211;&#183;</span></td>
+            <td>&nbsp;TLINK (inferred from TIMEX3 dates)</td>
           </tr>
           <tr>
             <td><span style="color: red;   font-family: monospace; font-size: 14pt;">&#9472;&#9472;&#9472;&#9472;&#9472;</span></td>
@@ -443,6 +523,8 @@ class MainWindow(QMainWindow):
         for link in graph.links.values():
             if link.link_tag != "TLINK":
                 continue
+            if getattr(link, "_date_inferred", False):
+                continue   # synthetic ordering link, not an annotated relation
             if link.start_node == node_id and link.related_to_node == dct_id:
                 rows.append(("-> DCT", link.rel_type))
             elif link.related_to_node == node_id and link.start_node == dct_id:
@@ -585,18 +667,9 @@ def run(filepath=None):
     from PySide6.QtWidgets import QApplication
 
     app = QApplication.instance() or QApplication(sys.argv)
-    model = None
-    if filepath is not None:
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
-        graph = Graph.Graph(time_ml_string=content)
-        tlex = TLEX.TLEX(graph=graph)
-        for link in tlex.suggested_links or []:
-            graph.links.setdefault(link.get_id_str(), link)
-        model = DataModel(graph, tlex)
     window = MainWindow()
-    if model is not None:
-        window.loadModel(model, filepath)
+    if filepath is not None:
+        window._loadPath(filepath)
     window.show()
     app.exec()
 

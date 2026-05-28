@@ -13,6 +13,22 @@ def decodeText(s):
     return html.unescape(s)
 
 
+# Edge colour for date-inferred ordering links (dash-dot pen), distinct from
+# annotated TLINK (black) / SLINK (red) / ALINK (blue) and from the dashed
+# Connectivity_Increaser suggestions.
+DATE_INFERRED_COLOR = QColor(150, 0, 150)   # purple
+
+
+def linkColor(link, date_inferred=False):
+    if date_inferred:
+        return DATE_INFERRED_COLOR
+    if link.link_tag == "SLINK":
+        return Qt.red
+    if link.link_tag == "ALINK":
+        return Qt.blue
+    return Qt.black
+
+
 class NodeItem(QGraphicsRectItem):
     EVENT_BRUSH = QBrush(Qt.lightGray)
     TIMEX_BRUSH = QBrush(QColor(200, 230, 201))  # soft green
@@ -311,6 +327,7 @@ class LaneEdgeItem(EdgeItem):
         self._plan = plan
         self._link_color = link_color
         self._suggested = bool(plan.get('suggested', False))
+        self._date_inferred = bool(plan.get('date_inferred', False))
         self.link = plan.get('link')
         self._highlighted = False
         super().__init__(source, target, text=text, text_color=text_color, link_color=link_color, curvature=0.0)
@@ -331,6 +348,8 @@ class LaneEdgeItem(EdgeItem):
         pen = QPen(self._link_color, width)
         if self._suggested:
             pen.setStyle(Qt.DashLine)
+        elif self._date_inferred:
+            pen.setStyle(Qt.DashDotLine)
         self.setPen(pen)
 
     def setHighlighted(self, on):
@@ -512,7 +531,7 @@ class LaneEdgePlanner:
             tgt = s.nodes.get(link.related_to_node)
             if src is None or tgt is None:
                 continue
-            color = Qt.black if link.link_tag == "TLINK" else Qt.red if link.link_tag == "SLINK" else Qt.blue
+            date_inferred = getattr(link, '_date_inferred', False)
             src_line = s.lineOfNode(src)
             tgt_line = s.lineOfNode(tgt)
             src_cx = src.pos().x()
@@ -521,10 +540,11 @@ class LaneEdgePlanner:
                 'source': src, 'target': tgt,
                 'text': link.rel_type,
                 'text_color': QColor(145, 145, 0),
-                'link_color': color,
+                'link_color': linkColor(link, date_inferred),
                 'src_line': src_line, 'tgt_line': tgt_line,
                 'src_cx': src_cx, 'tgt_cx': tgt_cx,
                 'suggested': is_suggested,
+                'date_inferred': date_inferred,
                 'link': link,
             }
             if src_line == tgt_line:
