@@ -1,11 +1,8 @@
 ﻿from cassis import *
 from lxml import etree
 import io
-import json
-import os
 import re
 import validator
-from detector import FileFormat, detectFormatFile
 from dateutil import parser
 from dateutil.parser import ParserError
 
@@ -443,42 +440,3 @@ def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml'
     with open(output_path, 'w', encoding='utf-8') as out_f:
         out_f.write(result[1])
     return [True, output_path]
-
-def convert(xmlPath: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml', report_file: str = "conversion_report.txt"):
-    NUMBER_OF_LINES_TO_PRINT = 10
-
-    def _reportResult(f, name, result):
-        valid = result[0]
-        lines = result[1:]
-        message = f"{name}: {'converted' if valid else f'{len(lines)} errors'}\n"
-        print(message)
-        f.write(message)
-        if not valid:
-            print("\n".join([f"   - {chr(10).join(str(e).splitlines()[:NUMBER_OF_LINES_TO_PRINT])}" for e in lines]) + "\n")
-            f.write("\n".join([f"   - {e}" for e in lines]) + "\n")
-
-    if os.path.isfile(xmlPath):
-        with open(report_file, "w", encoding="utf-8") as f:
-            try:
-                result = convertFile(xmlPath, typesystemfile)
-            except Exception as e:
-                result = [False, str(e)]
-            _reportResult(f, os.path.basename(xmlPath), result)
-    elif os.path.isdir(xmlPath):
-        with open(report_file, "w", encoding="utf-8") as f:
-            for file in os.listdir(xmlPath):
-                filePath = os.path.join(xmlPath, file)
-                if not os.path.isfile(filePath):
-                    continue
-                detected = detectFormatFile(filePath)
-                if detected != FileFormat.E3C:
-                    print(f"Skipping {file} (format: {detected.name})")
-                    continue
-                print(f"Converting {file}...")
-                try:
-                    result = convertFile(filePath, typesystemfile)
-                except Exception as e:
-                    result = [False, str(e)]
-                _reportResult(f, file, result)
-    else:
-        print(f"Error: '{xmlPath}' is not a valid file or directory")
