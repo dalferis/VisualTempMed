@@ -123,9 +123,9 @@ def translateEvent(event, cas_text, cas_tail):
             elif link.role == "CONTAINS":
                 new_link["attrib"]["relType"] = "INCLUDES"       # equivalent
             elif link.role == "BEGINS-ON":
-                new_link["attrib"]["relType"] = "BEGINS"         # equivalent
+                new_link["attrib"]["relType"] = "IAFTER"         # equivalent
             elif link.role == "ENDS-ON":
-                new_link["attrib"]["relType"] = "ENDS"           # equivalent
+                new_link["attrib"]["relType"] = "IBEFORE"        # equivalent
             elif link.role == "SIMULTANEOUS":
                 new_link["attrib"]["relType"] = "SIMULTANEOUS"   # direct
 
@@ -303,9 +303,9 @@ def translateTimex3(timex3, cas_text, cas_tail):
             elif link.role == "CONTAINS":
                 new_link["attrib"]["relType"] = "INCLUDES"       # equivalent
             elif link.role == "ENDS-ON":
-                new_link["attrib"]["relType"] = "ENDS"           # equivalent
+                new_link["attrib"]["relType"] = "IBEFORE"        # equivalent
             elif link.role == "BEGINS-ON":
-                new_link["attrib"]["relType"] = "BEGINS"         # equivalent
+                new_link["attrib"]["relType"] = "IAFTER"         # equivalent
 
             links.append(new_link)
 
