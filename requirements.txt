@@ -4,3 +4,4 @@ xmlschema>=4.2,<5
 python-dateutil>=2.9,<3
 PySide6>=6.8,<7
 z3-solver>=4.15,<5
+networkx>=3.4,<4

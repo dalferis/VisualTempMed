@@ -1,4 +1,3 @@
-from tkinter import SE
 from detector import FileFormat, detectFormatContent
 from converter import convertContent
 import validator
