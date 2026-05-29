@@ -408,7 +408,7 @@ def generateTimeML(cas):
 
     return root
 
-def convertContent(e3cContent: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
+def convertContent(e3cContent: str, typesystemfile: str = 'E3C-Corpus/TypeSystem.xml') -> list:
     with open(typesystemfile, 'rb') as f:
         typesystem = load_typesystem(f)
 
@@ -428,7 +428,7 @@ def convertContent(e3cContent: str, typesystemfile: str = 'E3C-Corpus\\TypeSyste
     return [False] + validation[1:]
 
 
-def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus\\TypeSystem.xml') -> list:
+def convertFile(e3cFile: str, typesystemfile: str = 'E3C-Corpus/TypeSystem.xml') -> list:
     with open(e3cFile, 'r', encoding='utf-8') as f:
         e3cContent = f.read()
 
