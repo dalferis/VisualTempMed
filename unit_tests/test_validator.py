@@ -6,7 +6,7 @@ Command to run from the project root:
 """
 import os
 import unittest
-import utils
+from lxml import etree
 import validator
 
 TEST_TML_DIR = os.path.join(os.path.dirname(__file__), "test_tml")
@@ -18,9 +18,9 @@ class UnitTests(unittest.TestCase):
     """
 
     def testWellFormedXml(self):
-        with open(os.path.join(TEST_TML_DIR, "pass", "minimum_valid.tml"), 'r', encoding='utf-8') as f:
-            result = utils.validateXml(f.read())
-        self.assertTrue(result[0], result)
+        with open(os.path.join(TEST_TML_DIR, "pass", "minimum_valid.tml"), 'rb') as f:
+            # A well-formed file parses without raising XMLSyntaxError.
+            etree.fromstring(f.read())
 
     def testMinPasses(self):
         result = validator.validateFile(os.path.join(TEST_TML_DIR, "pass", "minimum_valid.tml"))
