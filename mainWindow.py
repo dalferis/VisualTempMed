@@ -14,7 +14,8 @@ from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
-    QSizePolicy, QFileDialog, QMessageBox, QTextEdit, QDialog, QDialogButtonBox
+    QSizePolicy, QFileDialog, QMessageBox, QTextEdit, QDialog, QDialogButtonBox,
+    QPushButton
 )
 
 class _StableWidthPanel(QWidget):
@@ -266,13 +267,14 @@ class MainWindow(QMainWindow):
         </ul>
         <p><b>Navigation</b></p>
         <ul>
-          <li>Zoom in / out: Ctrl + mouse wheel.</li>
+          <li>Zoom in / out: Ctrl + mouse wheel, or use the <i>Zoom in</i> / <i>Zoom out</i> / <i>Reset zoom</i> buttons in the Control panel.</li>
           <li>Vertical scroll: mouse wheel or vertical bar.</li>
           <li>Horizontal scroll: horizontal bar.</li>
         </ul>
         <p><b>Control panel</b></p>
         <ul>
           <li><i>Show IDs</i>: toggles internal identifiers on nodes.</li>
+          <li><i>Zoom in</i> / <i>Zoom out</i> / <i>Reset zoom</i>: zoom controls for the active view.</li>
           <li><i>Edge thickness</i>: adjusts edge line width.</li>
           <li><i>Edge label opacity</i>: background opacity of edge labels.</li>
         </ul>
@@ -392,6 +394,16 @@ class MainWindow(QMainWindow):
         self.chkbxShowId.setChecked(False)
         self.chkbxShowId.stateChanged.connect(self.toggleShowIds)
         layoutCommon.addWidget(self.chkbxShowId, 1, 0)
+        # - Zoom buttons (work on the active view; same factor as Ctrl + wheel)
+        self.btnZoomOut = QPushButton("Zoom out")
+        self.btnZoomOut.clicked.connect(self.zoomOut)
+        layoutCommon.addWidget(self.btnZoomOut, 2, 0)
+        self.btnZoomIn = QPushButton("Zoom in")
+        self.btnZoomIn.clicked.connect(self.zoomIn)
+        layoutCommon.addWidget(self.btnZoomIn, 2, 1)
+        self.btnZoomReset = QPushButton("Reset zoom")
+        self.btnZoomReset.clicked.connect(self.resetZoom)
+        layoutCommon.addWidget(self.btnZoomReset, 3, 0, 1, 2)
 
         # Layout with controls:
         self.stackControl = QStackedWidget()
@@ -607,6 +619,24 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.sliderEdgeLabelOpacityText)
         self.sliderEdgeLabelOpacityText.valueChanged.connect(self.updateEdgeLabelOpacityText)
         return widget
+
+    def zoomIn(self):
+        view = self.stack.currentWidget()
+        if view is None:
+            return
+        view.scale(1.15, 1.15)
+
+    def zoomOut(self):
+        view = self.stack.currentWidget()
+        if view is None:
+            return
+        view.scale(1 / 1.15, 1 / 1.15)
+
+    def resetZoom(self):
+        view = self.stack.currentWidget()
+        if view is None:
+            return
+        view.resetTransform()
 
     def changeView(self, index):
         self.stack.setCurrentIndex(index)
