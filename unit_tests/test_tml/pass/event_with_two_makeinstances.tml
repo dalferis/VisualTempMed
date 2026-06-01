@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT><EVENT eid="e1" class="OCCURRENCE">treatment</EVENT></TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" pos="VERB"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e1" tense="PRESENT" aspect="NONE" pos="VERB"/>
+</TimeML>

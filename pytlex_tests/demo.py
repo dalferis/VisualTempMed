@@ -1,4 +1,5 @@
-from pytlex_core.data import Graph
+from pytlex_core.data import Event, Graph, Instance, TimeX, Signal, Link
+from pytlex_core.algorithms import TLEX, TimeMLParser
 from timeit import default_timer as timer
 
 
@@ -17,8 +18,8 @@ if __name__ == '__main__':
     print("\nLet's build a couple graphs:")
     start = timer()
 
-    wsj_0006 = Graph.Graph(filepath=r"../pytlex_data/TimeBankCorpus/wsj_0006.tml")
-    wsj_0026 = Graph.Graph(filepath=r"../pytlex_data/TimeBankCorpus/wsj_0026.tml")
+    wsj_0006 = Graph.Graph(filepath=r"pytlex_data/TimeBankCorpus/wsj_0006.tml")
+    wsj_0026 = Graph.Graph(filepath=r"pytlex_data/TimeBankCorpus/wsj_0026.tml")
 
     print("wsj_0006 = {}".format(wsj_0006))
     print("wsj_0026 = {}".format(wsj_0026))
@@ -86,28 +87,29 @@ if __name__ == '__main__':
     
     
     print("WSJ_0006.tml parsed nodes:\n")
-    for node in wsj_0006.nodes:
+    for node in wsj_0006.nodes.values():
         print("{}, ".format(node.get_id_str()), end="")
     print("\b\b\n\n")
 
     print("\nWSJ_0006.tml parsed links:\n")
-    for link in wsj_0006.links:
-        print("{} -> {}({}) -> {}".format(link.start_node.get_id_str(), link.rel_type, link.link_tag, link.related_to_node.get_id_str()))
+    for link in wsj_0006.links.values():
+        print("{} -> {}({}) -> {}".format(link.start_node, link.rel_type, link.link_tag, link.related_to_node))
 
     cls()
     print("Let's explore the partitioner...")
     cls()
     print("WSJ_0006.tml main partition nodes:\n")
-    for node in wsj_0006.main_graphs[0].nodes:
+    wsj_0006_partition_graph = TLEX.Partitioner.partition_graph(wsj_0006)
+    for node in wsj_0006_partition_graph["main_graphs"][0].nodes.values():
         print(node.get_id_str(), end=", ")
     print("\b\b\n\n")
 
     print("\nWSJ006.tml subordinate partition nodes:\n")
     count = 1
-    for partition in wsj_0006.subordination_graphs:
+    for partition in wsj_0006_partition_graph["subordination_graphs"]:
         print("partition {}: ".format(count), end="")
         count += 1
-        for node in partition.nodes:
+        for node in partition.nodes.values():
             print(node.get_id_str(), end=", ")
         print("\b\b")
 
@@ -116,10 +118,11 @@ if __name__ == '__main__':
     print("Let's take a look at the indeterminacy detector's report...")
     cls()
 
-    print("Indeterminacy score: {}%".format(round(wsj_0006.indeterminacy_score*100, 2)))
-    print("Indeterminant Sections: {}".format(sorted(wsj_0006.indeterminant_sections)))
+    tlex_wsj_0006 = TLEX.TLEX(graph=wsj_0006)
+    print("Indeterminacy score: {}%".format(round(tlex_wsj_0006.indeterminacy_score*100, 2)))
+    print("Indeterminant Sections: {}".format(sorted(tlex_wsj_0006.indeterminant_sections)))
     print("Indeterminant Time points: ", end="")
-    for tp in sorted(wsj_0006.indeterminant_time_points):
+    for tp in sorted(tlex_wsj_0006.indeterminant_time_points):
         print(tp, end=", ")
     print("\b\b")
     cls()
@@ -127,12 +130,12 @@ if __name__ == '__main__':
     print("Now, let's look at the culmination of TLEX, the extracted timelines...")
     cls()
 
-    print("wsj_0006 Main Timeline: \n\t{}\n\n".format(wsj_0006.timeline))
+    print("wsj_0006 Main Timeline: \n\t{}\n\n".format(tlex_wsj_0006.timeline))
 
-    count = 0
-    for timeline in wsj_0006.subordinate_timelines():
-        print("Subordinate Timeline {}:\n\t{}".format(count, timeline))
-        count += 1
+    # count = 0
+    # for timeline in wsj_0006.subordinate_timelines():
+    #     print("Subordinate Timeline {}:\n\t{}".format(count, timeline))
+    #     count += 1
         
     cls()
     print("  _______ _                 _                           __                                      _   _ \n\

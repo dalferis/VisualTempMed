@@ -39,9 +39,17 @@ def connect_partitions(output_as_dict, number_of_links) -> Link:
 @:arg set of nodes in a partition
 @:returns true if one of the nodes is a valid time expression (and if it doesnt include a
 4-digit year value for a DATE type), false otherwise
+
+NOTE (VisualTempoMed PFG patch): partition.nodes is a dict {id: node}; the
+original code iterated the dict directly, yielding keys (strings). The
+str.tID lookups raised AttributeError that was silently swallowed below, so
+the function always returned False. Now we iterate values() when given a
+dict and fall back to plain iteration otherwise (preserves backwards-compat
+for callers passing a list/set of nodes). Patch authored by Claude Code.
 """
 def has_time_expressions(nodes):
-    for node in nodes:
+    iterable = nodes.values() if isinstance(nodes, dict) else nodes
+    for node in iterable:
         try:
             # The ID of a valid time expression must be a positive integer
             # And it must have a value to analyze
@@ -98,10 +106,17 @@ def try_suggest_link(disconnected_partitions, number_of_links):
 """
 @:arg the partition that contains the dct
 @:returns the DCT
+
+NOTE (VisualTempoMed PFG patch): same iteration fix as has_time_expressions
+above. partition.nodes is a dict; iterating gives keys, so node.documentFunction
+raised AttributeError and the function always returned None. Patch authored
+by Claude Code.
 """
 def get_dct(partition_with_dct) -> TimeX:
     try:
-        for node in partition_with_dct.nodes:
+        nodes = partition_with_dct.nodes
+        iterable = nodes.values() if isinstance(nodes, dict) else nodes
+        for node in iterable:
             try:
                 #a DCT is a node that contains "CREATION_TIME" or "PUBLICATION_TIME" as their function value
                 if node.documentFunction == "CREATION_TIME" or  node.documentFunction == "PUBLICATION_TIME":
@@ -114,10 +129,15 @@ def get_dct(partition_with_dct) -> TimeX:
 """
 @:arg a set of nodes
 @:returns valid time expressions that fulfill a number of conditions
+
+NOTE (VisualTempoMed PFG patch): same iteration fix as has_time_expressions
+above. partition.nodes is a dict; iterating gives keys, so the whole
+function silently returned an empty list. Patch authored by Claude Code.
 """
 def get_timexs(nodes: Any):
     timexs = []
-    for node in nodes:
+    iterable = nodes.values() if isinstance(nodes, dict) else nodes
+    for node in iterable:
         try:
             if isinstance(node.tID,int) and (node.tID >= 0) and (node.value is not None) :
                 if node.type == "DATE" and len(node.value)<4 :
