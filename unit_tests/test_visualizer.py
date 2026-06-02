@@ -178,10 +178,13 @@ class VisualizerTests(unittest.TestCase):
         _, text_scene = buildScenes(TML_WITH_DCT)
         self.assertEqual(len(text_scene._doc_function_boxes), 1)
 
-    def testDctNotDrawnAsInlineNode(self):
-        # The CREATION_TIME TIMEX3 is shown in the overlay, not as a node.
-        time_scene, text_scene = buildScenes(TML_WITH_DCT)
-        self.assertNotIn("t0", text_scene.nodes)
+    def testDctDrawnAsInlineNodeWhenInBody(self):
+        # A CREATION_TIME TIMEX3 that appears in the text body is rendered
+        # as an inline node (in addition to the header overlay). This is the
+        # case for E3C documents where the annotators marked an in-body
+        # TIMEX3 as DOCTIME (e.g. EN100022, EN100024, EN100466).
+        _, text_scene = buildScenes(TML_WITH_DCT)
+        self.assertIn("t0", text_scene.nodes)
 
     def testMultipleDocFunctionsInHeader(self):
         # CREATION_TIME and PUBLICATION_TIME both get a header box, in

@@ -368,7 +368,7 @@ class TextScene(QGraphicsScene):
                     if tid_m:
                         tid = tid_m.group(1)
                         timex_node = self._graph.nodes.get(tid)
-                        if timex_node is not None and not self.isDocumentFunctionTimex3(timex_node):
+                        if timex_node is not None:
                             x, y, line_idx = self.addNodeInline(tid, inner, x, y, line_idx)
                             placed = True
                     if not placed:
