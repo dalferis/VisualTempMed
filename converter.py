@@ -67,7 +67,7 @@ def translateEvent(event, cas_text, cas_tail):
         elif event["contextualModality"] == "HYPOTHETICAL-OTHER":
             new_event["instance"]["attrib"]["modality"] = "would" # approximate
         elif event["contextualModality"] == "HEDGED":
-            new_event["instance"]["attrib"]["modality"] = "can"   # approximate
+            new_event["instance"]["attrib"]["modality"] = "may"   # approximate (canonical hedge in clinical English)
         elif event["contextualModality"] == "GENERIC":
             if new_event["attrib"].get("class") == "OCCURRENCE":
                 new_event["attrib"]["class"] = "STATE"            # approximate
