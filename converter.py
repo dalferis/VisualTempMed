@@ -243,7 +243,11 @@ def translateTimex3(timex3, cas_text, cas_tail):
         elif timex3.timex3Class == "SET":
             new_timex3["attrib"]["type"] = "SET"               # direct
         elif timex3.timex3Class == "PREPOSTEXP":
-            new_timex3["attrib"]["type"] = "DATE"              # approximate
+            # PREPOSTEXP denotes a region of time adjacent to an event (pre-/post-/intra-),
+            # not a calendar point. DURATION reflects the interval nature; PXD is the
+            # minimal valid placeholder per the Duration regex (XSD/TimeML_1.2.3.xsd).
+            new_timex3["attrib"]["type"] = "DURATION"          # weak approximation
+            new_timex3["attrib"]["value"] = "PXD"
             _addE3cComment(new_timex3["attrib"], "timex3Class", "PREPOSTEXP")
     # value loss
     if hasattr(timex3, "value") and timex3.value is not None and timex3.value.lower() == "no_value":
