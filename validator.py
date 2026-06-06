@@ -34,7 +34,7 @@ def tmlSpecValidation(xmlContent: str) -> list:
 
 
 def validateContent(xmlContent: str) -> list:
-    xsd_result = validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.3.xsd')
+    xsd_result = validateXmlXsd(xmlContent, 'XSD/TimeML_1.2.4.xsd')
     spec_result = tmlSpecValidation(xmlContent)
     if xsd_result[0] and spec_result[0]:
         return [True, "Valid against XSD and TimeML spec"]

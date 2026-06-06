@@ -245,7 +245,7 @@ def translateTimex3(timex3, cas_text, cas_tail):
         elif timex3.timex3Class == "PREPOSTEXP":
             # PREPOSTEXP denotes a region of time adjacent to an event (pre-/post-/intra-),
             # not a calendar point. DURATION reflects the interval nature; PXD is the
-            # minimal valid placeholder per the Duration regex (XSD/TimeML_1.2.3.xsd).
+            # minimal valid placeholder per the Duration regex (XSD/TimeML_1.2.4.xsd).
             new_timex3["attrib"]["type"] = "DURATION"          # weak approximation
             new_timex3["attrib"]["value"] = "PXD"
             _addE3cComment(new_timex3["attrib"], "timex3Class", "PREPOSTEXP")
@@ -370,7 +370,7 @@ def generateTimeML(cas):
     # TML namespace and schema declaration
     etree.register_namespace("xsi", "http://www.w3.org/2001/XMLSchema-instance")
     root = etree.Element("TimeML")
-    root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.1.xsd")
+    root.set("{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", "TimeML_1.2.4.xsd")
 
     # TML header information
     cas_metadata = cas.select("de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData") + cas.select("webanno.custom.METADATA")
@@ -379,11 +379,12 @@ def generateTimeML(cas):
         if hasattr(meta, "documentId"):
             etree.SubElement(root, "DOCID").text = meta.documentId
         if hasattr(meta, "docTime") and not dct_generated:
+            dct_elem = etree.SubElement(root, "DCT")
             try:
                 dct_parsed = parser.parse(meta.docTime)
-                etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
+                etree.SubElement(dct_elem, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": dct_parsed.isoformat(), "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
             except (ParserError, ValueError):
-                etree.SubElement(root, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
+                etree.SubElement(dct_elem, "TIMEX3", attrib={"tid": "t0", "type": "DATE", "value": "NO_VALUE", "functionInDocument": "CREATION_TIME", "temporalFunction": "false"}).text = meta.docTime
             dct_generated = True
 
     # TML elements

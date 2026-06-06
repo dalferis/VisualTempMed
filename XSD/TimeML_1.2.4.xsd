@@ -127,6 +127,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:element name="DOCID" type="xs:string"/>
+	<xs:element name="DCT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TIMEX3"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	<xs:element name="TEXT">
 		<xs:complexType mixed="true">
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -140,7 +147,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="DOCID" minOccurs="0"/>
-				<xs:element ref="TIMEX3" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DCT" minOccurs="0"/>
 				<xs:element ref="TEXT"/>
 				<xs:element ref="MAKEINSTANCE" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="TLINK" minOccurs="0" maxOccurs="unbounded"/>
