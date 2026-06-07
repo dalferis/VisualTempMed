@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT>He <EVENT eid="e1" class="REPORTING" stem="say">said</EVENT> it would <EVENT eid="e2" class="OCCURRENCE" stem="rain">rain</EVENT>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" polarity="POS" pos="VERB"/>
+  <SLINK lid="l1" relType="EVIDENTIAL" eventInstanceID="ei1" subordinatedEventInstance="ei2"/>
+</TimeML>

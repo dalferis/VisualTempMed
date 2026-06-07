@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT><TIMEX3 tid="t1" type="DATE" value="1998-01-10" temporalFunction="false" functionInDocument="NONE">Jan 10</TIMEX3> and <TIMEX3 tid="t2" type="DATE" value="1998-01-11" temporalFunction="false" functionInDocument="NONE">Jan 11</TIMEX3>.</TEXT>
+  <TLINK lid="l1" timeID="t2" relatedToTime="t1" relType="BEFORE"/>
+</TimeML>

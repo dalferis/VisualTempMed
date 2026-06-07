@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT>The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT> was before the <EVENT eid="e2" class="OCCURRENCE" stem="operate">surgery</EVENT>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
+  <TLINK lid="l1" relType="BEFORE" eventInstanceID="ei1" relatedToEventInstance="ei2"/>
+</TimeML>

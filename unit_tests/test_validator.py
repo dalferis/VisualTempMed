@@ -9,7 +9,7 @@ import unittest
 from lxml import etree
 import validator
 
-TEST_TML_DIR = os.path.join(os.path.dirname(__file__), "test_tml")
+TEST_TML_DIR = os.path.join(os.path.dirname(__file__), "test_validator_tml")
 
 
 class UnitTests(unittest.TestCase):

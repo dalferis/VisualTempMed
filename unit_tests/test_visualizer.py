@@ -1,7 +1,7 @@
 """
 Unit tests for the visualizer (timeView / textView / sceneItems).
 
-These build a real TimeScene and TextScene from a TML string, exercising
+These build a real TimeScene and TextScene from a TML file, exercising
 the same pipeline as mainWindow.openTimeMlFile (Graph -> TLEX -> merge
 suggested links -> DataModel -> scene). Qt runs on the offscreen platform
 so no window is shown.
@@ -34,66 +34,12 @@ import textView as txv
 import sceneItems as si
 
 
-# --------------------------------------------------------------------------
-# TML fixtures (inline so each case sits next to its assertions). Every
-# MAKEINSTANCE carries polarity/pos/tense/aspect because pytlex's parser
-# requires them (unlike the validator, which tolerates omissions).
-# --------------------------------------------------------------------------
+TEST_TML_DIR = os.path.join(os.path.dirname(__file__), "test_visualizer_tml")
 
-# EVENT e1 has two instances; each instance is anchored to a different date.
-TML_TWO_INSTANCES = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TEXT>He <EVENT eid="e1" class="OCCURRENCE" stem="leave">left</EVENT> on <TIMEX3 tid="t1" type="DATE" value="1998-01-05" temporalFunction="false" functionInDocument="NONE">Monday</TIMEX3> and <TIMEX3 tid="t2" type="DATE" value="1998-01-06" temporalFunction="false" functionInDocument="NONE">Tuesday</TIMEX3>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
-  <TLINK lid="l1" relType="IS_INCLUDED" eventInstanceID="ei1" relatedToTime="t1"/>
-  <TLINK lid="l2" relType="IS_INCLUDED" eventInstanceID="ei2" relatedToTime="t2"/>
-</TimeML>"""
 
-# Two events, one TLINK between them, no Document Creation Time.
-TML_NO_DCT = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TEXT>The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT> was before the <EVENT eid="e2" class="OCCURRENCE" stem="operate">surgery</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
-  <TLINK lid="l1" relType="BEFORE" eventInstanceID="ei1" relatedToEventInstance="ei2"/>
-</TimeML>"""
-
-# Same as above plus a CREATION_TIME TIMEX3.
-TML_WITH_DCT = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TEXT><TIMEX3 tid="t0" type="DATE" value="1998-01-01" temporalFunction="false" functionInDocument="CREATION_TIME">Jan 1 1998</TIMEX3> The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
-</TimeML>"""
-
-# A document whose reference times are a PUBLICATION_TIME and a CREATION_TIME
-# (no creation-time-only assumption): both belong in the header overlay.
-TML_DOC_FUNCTIONS = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TIMEX3 tid="t0" type="DATE" value="1989-11-01" temporalFunction="false" functionInDocument="CREATION_TIME">Nov 1</TIMEX3>
-  <TIMEX3 tid="t1" type="DATE" value="1989-11-02" temporalFunction="false" functionInDocument="PUBLICATION_TIME">Nov 2</TIMEX3>
-  <TEXT>The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
-</TimeML>"""
-
-# Only a PUBLICATION_TIME, no creation time (e.g. wsj_0150).
-TML_PUBLICATION_ONLY = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TIMEX3 tid="t0" type="DATE" value="1989-11-02" temporalFunction="false" functionInDocument="PUBLICATION_TIME">11/02/89</TIMEX3>
-  <TEXT>The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
-</TimeML>"""
-
-# An SLINK between two events. After partitioning, TLEX restores graph.links
-# (so the SLINK is in graph.links) AND keeps it in tlex.s_links; the planner
-# must not draw it twice.
-TML_SLINK = """<?xml version="1.0" encoding="UTF-8"?>
-<TimeML>
-  <TEXT>He <EVENT eid="e1" class="REPORTING" stem="say">said</EVENT> it would <EVENT eid="e2" class="OCCURRENCE" stem="rain">rain</EVENT>.</TEXT>
-  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
-  <MAKEINSTANCE eiid="ei2" eventID="e2" tense="NONE" aspect="NONE" polarity="POS" pos="VERB"/>
-  <SLINK lid="l1" relType="EVIDENTIAL" eventInstanceID="ei1" subordinatedEventInstance="ei2"/>
-</TimeML>"""
+def readTml(name):
+    with open(os.path.join(TEST_TML_DIR, name), encoding="utf-8") as f:
+        return f.read()
 
 
 def buildScenes(tml):
@@ -129,17 +75,17 @@ class VisualizerTests(unittest.TestCase):
     # ---- EVENT with two MAKEINSTANCEs -----------------------------------
 
     def testTwoInstancesAreSeparateNodesInTimeView(self):
-        time_scene, _ = buildScenes(TML_TWO_INSTANCES)
+        time_scene, _ = buildScenes(readTml("two_instances.tml"))
         self.assertIn("eiid1", time_scene.nodes)
         self.assertIn("eiid2", time_scene.nodes)
 
     def testTwoInstancesAreSeparateNodesInTextView(self):
-        _, text_scene = buildScenes(TML_TWO_INSTANCES)
+        _, text_scene = buildScenes(readTml("two_instances.tml"))
         self.assertIn("eiid1", text_scene.nodes)
         self.assertIn("eiid2", text_scene.nodes)
 
     def testTwoInstancesStackInTextView(self):
-        _, text_scene = buildScenes(TML_TWO_INSTANCES)
+        _, text_scene = buildScenes(readTml("two_instances.tml"))
         primary = text_scene.nodes["eiid1"]
         satellite = text_scene.nodes["eiid2"]
         # The primary keeps its text position; the satellite is stacked below.
@@ -154,7 +100,7 @@ class VisualizerTests(unittest.TestCase):
     def testLinkTargetsCorrectInstanceInTextView(self):
         # l1 anchors ei1->t1, l2 anchors ei2->t2; each edge must reach the
         # right instance even though both share the EVENT text "left".
-        _, text_scene = buildScenes(TML_TWO_INSTANCES)
+        _, text_scene = buildScenes(readTml("two_instances.tml"))
         self.assertEqual(len(edgesBetween(text_scene, "eiid1", "t1")), 1)
         self.assertEqual(len(edgesBetween(text_scene, "eiid2", "t2")), 1)
         # The wrong pairings must NOT exist.
@@ -164,18 +110,18 @@ class VisualizerTests(unittest.TestCase):
     # ---- Document Creation Time -----------------------------------------
 
     def testNoDctHasNoOverlay(self):
-        _, text_scene = buildScenes(TML_NO_DCT)
+        _, text_scene = buildScenes(readTml("no_dct.tml"))
         self.assertEqual(text_scene._doc_function_boxes, [])
 
     def testNoDctScenesStillBuild(self):
-        time_scene, text_scene = buildScenes(TML_NO_DCT)
+        time_scene, text_scene = buildScenes(readTml("no_dct.tml"))
         self.assertIn("eiid1", time_scene.nodes)
         self.assertIn("eiid2", time_scene.nodes)
         self.assertIn("eiid1", text_scene.nodes)
         self.assertIn("eiid2", text_scene.nodes)
 
     def testDctProducesOverlay(self):
-        _, text_scene = buildScenes(TML_WITH_DCT)
+        _, text_scene = buildScenes(readTml("with_dct.tml"))
         self.assertEqual(len(text_scene._doc_function_boxes), 1)
 
     def testDctDrawnAsInlineNodeWhenInBody(self):
@@ -183,13 +129,13 @@ class VisualizerTests(unittest.TestCase):
         # as an inline node (in addition to the header overlay). This is the
         # case for E3C documents where the annotators marked an in-body
         # TIMEX3 as DOCTIME (e.g. EN100022, EN100024, EN100466).
-        _, text_scene = buildScenes(TML_WITH_DCT)
+        _, text_scene = buildScenes(readTml("with_dct.tml"))
         self.assertIn("t0", text_scene.nodes)
 
     def testMultipleDocFunctionsInHeader(self):
         # CREATION_TIME and PUBLICATION_TIME both get a header box, in
         # distinct colours, creation time first.
-        _, text_scene = buildScenes(TML_DOC_FUNCTIONS)
+        _, text_scene = buildScenes(readTml("doc_functions.tml"))
         boxes = text_scene._doc_function_boxes
         self.assertEqual(len(boxes), 2)
         labels = [b[1] for b in boxes]
@@ -201,7 +147,7 @@ class VisualizerTests(unittest.TestCase):
     def testPublicationOnlyProducesOverlay(self):
         # A document with only a PUBLICATION_TIME (no creation time) still
         # shows a header box (previously it showed nothing).
-        _, text_scene = buildScenes(TML_PUBLICATION_ONLY)
+        _, text_scene = buildScenes(readTml("publication_only.tml"))
         self.assertEqual(len(text_scene._doc_function_boxes), 1)
         self.assertIn("Publication Time", text_scene._doc_function_boxes[0][1])
         self.assertNotIn("t0", text_scene.nodes)
@@ -209,13 +155,13 @@ class VisualizerTests(unittest.TestCase):
     # ---- Two events linked to each other --------------------------------
 
     def testTwoLinkedEventsSingleEdgeTimeView(self):
-        time_scene, _ = buildScenes(TML_NO_DCT)
+        time_scene, _ = buildScenes(readTml("no_dct.tml"))
         edges = edgesBetween(time_scene, "eiid1", "eiid2")
         self.assertEqual(len(edges), 1)
         self.assertEqual(edges[0].link.rel_type, "BEFORE")
 
     def testTwoLinkedEventsSingleEdgeTextView(self):
-        _, text_scene = buildScenes(TML_NO_DCT)
+        _, text_scene = buildScenes(readTml("no_dct.tml"))
         edges = edgesBetween(text_scene, "eiid1", "eiid2")
         self.assertEqual(len(edges), 1)
         self.assertEqual(edges[0].link.rel_type, "BEFORE")
@@ -223,12 +169,12 @@ class VisualizerTests(unittest.TestCase):
     # ---- Link not duplicated --------------------------------------------
 
     def testSlinkDrawnOnceTimeView(self):
-        time_scene, _ = buildScenes(TML_SLINK)
+        time_scene, _ = buildScenes(readTml("slink.tml"))
         slinks = [e for e in edgesOf(time_scene) if e.link.link_tag == "SLINK"]
         self.assertEqual(len(slinks), 1, [e.link.get_id_str() for e in slinks])
 
     def testSlinkDrawnOnceTextView(self):
-        _, text_scene = buildScenes(TML_SLINK)
+        _, text_scene = buildScenes(readTml("slink.tml"))
         slinks = [e for e in edgesOf(text_scene) if e.link.link_tag == "SLINK"]
         self.assertEqual(len(slinks), 1, [e.link.get_id_str() for e in slinks])
 

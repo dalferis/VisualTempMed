@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TIMEX3 tid="t0" type="DATE" value="1989-11-02" temporalFunction="false" functionInDocument="PUBLICATION_TIME">11/02/89</TIMEX3>
+  <TEXT>The <EVENT eid="e1" class="OCCURRENCE" stem="admit">admission</EVENT>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="NOUN"/>
+</TimeML>

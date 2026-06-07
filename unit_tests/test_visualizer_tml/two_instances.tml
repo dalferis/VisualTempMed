@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeML>
+  <TEXT>He <EVENT eid="e1" class="OCCURRENCE" stem="leave">left</EVENT> on <TIMEX3 tid="t1" type="DATE" value="1998-01-05" temporalFunction="false" functionInDocument="NONE">Monday</TIMEX3> and <TIMEX3 tid="t2" type="DATE" value="1998-01-06" temporalFunction="false" functionInDocument="NONE">Tuesday</TIMEX3>.</TEXT>
+  <MAKEINSTANCE eiid="ei1" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
+  <MAKEINSTANCE eiid="ei2" eventID="e1" tense="PAST" aspect="NONE" polarity="POS" pos="VERB"/>
+  <TLINK lid="l1" relType="IS_INCLUDED" eventInstanceID="ei1" relatedToTime="t1"/>
+  <TLINK lid="l2" relType="IS_INCLUDED" eventInstanceID="ei2" relatedToTime="t2"/>
+</TimeML>
