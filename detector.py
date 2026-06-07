@@ -8,6 +8,14 @@ class FileFormat(Enum):
     TML = 4
     OTHER = 999
 
+_E3C_SIGNATURES = (
+    'webanno.custom',          # tagset and type references (with dots)
+    'webanno/custom.ecore',    # namespace URI form (with slashes)
+    'de.tudarmstadt.ukp.dkpro',  # DKPro type references
+    'de/tudarmstadt/ukp/dkpro',  # DKPro namespace URI form
+)
+
+
 def detectFormatContent(xmlContent: str) -> FileFormat:
     is_xmi = False
     for line in xmlContent.splitlines():
@@ -15,7 +23,7 @@ def detectFormatContent(xmlContent: str) -> FileFormat:
             return FileFormat.TML
         if not is_xmi and ('xmi:XMI' in line or 'xmlns:xmi' in line):
             is_xmi = True
-        if is_xmi and ('webanno.custom' in line or 'de.tudarmstadt.ukp.dkpro' in line):
+        if is_xmi and any(sig in line for sig in _E3C_SIGNATURES):
             return FileFormat.E3C
 
     if is_xmi:
