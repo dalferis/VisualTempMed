@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:custom="http:///webanno/custom.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="On 2020-01-01 at 10:00 for P5D each year twice post-op."/>
+    <custom:METADATA xmi:id="2" sofa="1" begin="0" end="0" docTime="2020-01-15" docName="timex3_test"/>
+    <custom:TIMEX3 xmi:id="3" sofa="1" begin="3" end="13" functionInDocument="NONE" timex3Class="DATE" value="2020-01-01" timexLink="9 10"/>
+    <custom:TIMEX3 xmi:id="4" sofa="1" begin="17" end="22" functionInDocument="NONE" timex3Class="TIME" value="2020-01-01T10:00" timexLink="11"/>
+    <custom:TIMEX3 xmi:id="5" sofa="1" begin="27" end="30" functionInDocument="NONE" timex3Class="DURATION" value="P5D" timexLink="12 13"/>
+    <custom:TIMEX3 xmi:id="6" sofa="1" begin="31" end="40" functionInDocument="NONE" timex3Class="SET" value="P1Y"/>
+    <custom:TIMEX3 xmi:id="7" sofa="1" begin="41" end="46" functionInDocument="NONE" timex3Class="QUANTIFIER" value="P1D"/>
+    <custom:TIMEX3 xmi:id="8" sofa="1" begin="47" end="54" functionInDocument="NONE" timex3Class="PREPOSTEXP" value="NO_VALUE"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="9" role="BEFORE" target="4"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="10" role="CONTAINS" target="5"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="11" role="OVERLAP" target="6"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="12" role="BEGINS-ON" target="7"/>
+    <custom:TIMEX3TimexLinkLink xmi:id="13" role="ENDS-ON" target="8"/>
+    <cas:View sofa="1" members="2 3 4 5 6 7 8 9 10 11 12 13"/>
+</xmi:XMI>

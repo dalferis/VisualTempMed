@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:custom="http:///webanno/custom.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="Patient admitted. Surgery begins. Doctor reported."/>
+    <custom:METADATA xmi:id="2" sofa="1" begin="0" end="0" docTime="2020-01-15" docName="events_test"/>
+    <custom:EVENT xmi:id="3" sofa="1" begin="8" end="16" TLINK="6" contextualAspect="N/A" contextualModality="HEDGED" docTimeRel="BEFORE" eventType="N/A" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="4" sofa="1" begin="26" end="32" TLINK="7" ALINK="8 9 10 11" contextualAspect="N/A" contextualModality="ACTUAL" docTimeRel="OVERLAP" eventType="ASPECTUAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENT xmi:id="5" sofa="1" begin="41" end="49" contextualAspect="N/A" contextualModality="ACTUAL" docTimeRel="AFTER" eventType="EVIDENTIAL" permanence="FINITE" polarity="POS"/>
+    <custom:EVENTTLINKLink xmi:id="6" role="BEGINS-ON" target="4"/>
+    <custom:EVENTTLINKLink xmi:id="7" role="ENDS-ON" target="5"/>
+    <custom:EVENTALINKLink xmi:id="8" role="INITIATES" target="3"/>
+    <custom:EVENTALINKLink xmi:id="9" role="CONTINUES" target="5"/>
+    <custom:EVENTALINKLink xmi:id="10" role="REINITIATES" target="3"/>
+    <custom:EVENTALINKLink xmi:id="11" role="TERMINATES" target="5"/>
+    <cas:View sofa="1" members="2 3 4 5 6 7 8 9 10 11"/>
+</xmi:XMI>
