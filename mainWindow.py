@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
     def __init__(self, model=None):
         super().__init__()
 
-        self.setWindowTitle("Visualizador de líneas temporales en contexto médico")
+        self.setWindowTitle("Medical Timeline Visualizer")
         self.resize(1200, 800)
 
         self.timeView = self.timeScene = None
