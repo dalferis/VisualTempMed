@@ -405,9 +405,12 @@ class MainWindow(QMainWindow):
 
         # Layout with controls:
         self.stackControl = QStackedWidget()
-        timeControls = self._createTimeControls()
+        # Lazy scene getters: the scenes are recreated on every file load
+        # (loadModel reassigns self.timeScene / self.textScene), so the
+        # controls cannot capture a scene reference at creation time.
+        timeControls = self._createEdgeControls(lambda: self.timeScene)
         self.stackControl.addWidget(timeControls)
-        textControls = self._createTextControls()
+        textControls = self._createEdgeControls(lambda: self.textScene)
         self.stackControl.addWidget(textControls)
         self.stackControl.setCurrentWidget(timeControls if self._initialPanel=="time" else textControls)
         layout.addWidget(self.stackControl)
@@ -574,48 +577,33 @@ class MainWindow(QMainWindow):
             if c and eiid and eiid.startswith('ei'):
                 self._instanceComments[f"eiid{eiid[2:]}"] = c
 
-    def _createTimeControls(self):
-        widget = QWidget()
-        # Layout with time view controls:
-        layout = QVBoxLayout(widget)
-        # - Slider for edge thickness
-        layout.addWidget(QLabel("Edge thickness"))
-        self.sliderEdgeThickness = QSlider(Qt.Horizontal)
-        self.sliderEdgeThickness.setMinimum(1)
-        self.sliderEdgeThickness.setMaximum(10)
-        self.sliderEdgeThickness.setValue(2)
-        layout.addWidget(self.sliderEdgeThickness)
-        self.sliderEdgeThickness.valueChanged.connect(self.updateEdgeWidth)
-        # - Slider for edge label background opacity
-        layout.addWidget(QLabel("Edge label opacity"))
-        self.sliderEdgeLabelOpacity = QSlider(Qt.Horizontal)
-        self.sliderEdgeLabelOpacity.setMinimum(0)
-        self.sliderEdgeLabelOpacity.setMaximum(255)
-        self.sliderEdgeLabelOpacity.setValue(220)
-        layout.addWidget(self.sliderEdgeLabelOpacity)
-        self.sliderEdgeLabelOpacity.valueChanged.connect(self.updateEdgeLabelOpacity)
-        return widget
+    def _createEdgeControls(self, scene_getter):
+        """Build the per-scene control widget (edge thickness + label opacity).
 
-    def _createTextControls(self):
+        ``scene_getter`` is a zero-arg callable returning the target scene at
+        signal-firing time -- needed because loadModel reassigns the scene
+        attributes on every file load.
+        """
         widget = QWidget()
-        # Layout with text controls:
         layout = QVBoxLayout(widget)
         # - Slider for edge thickness
         layout.addWidget(QLabel("Edge thickness"))
-        self.sliderEdgeThicknessText = QSlider(Qt.Horizontal)
-        self.sliderEdgeThicknessText.setMinimum(1)
-        self.sliderEdgeThicknessText.setMaximum(10)
-        self.sliderEdgeThicknessText.setValue(2)
-        layout.addWidget(self.sliderEdgeThicknessText)
-        self.sliderEdgeThicknessText.valueChanged.connect(self.updateEdgeWidthText)
+        thickness_slider = QSlider(Qt.Horizontal)
+        thickness_slider.setMinimum(1)
+        thickness_slider.setMaximum(10)
+        thickness_slider.setValue(2)
+        layout.addWidget(thickness_slider)
+        thickness_slider.valueChanged.connect(
+            lambda v: self._updateEdgeWidth(scene_getter(), v))
         # - Slider for edge label background opacity
         layout.addWidget(QLabel("Edge label opacity"))
-        self.sliderEdgeLabelOpacityText = QSlider(Qt.Horizontal)
-        self.sliderEdgeLabelOpacityText.setMinimum(0)
-        self.sliderEdgeLabelOpacityText.setMaximum(255)
-        self.sliderEdgeLabelOpacityText.setValue(220)
-        layout.addWidget(self.sliderEdgeLabelOpacityText)
-        self.sliderEdgeLabelOpacityText.valueChanged.connect(self.updateEdgeLabelOpacityText)
+        opacity_slider = QSlider(Qt.Horizontal)
+        opacity_slider.setMinimum(0)
+        opacity_slider.setMaximum(255)
+        opacity_slider.setValue(220)
+        layout.addWidget(opacity_slider)
+        opacity_slider.valueChanged.connect(
+            lambda v: self._updateEdgeLabelOpacity(scene_getter(), v))
         return widget
 
     def zoomIn(self):
@@ -647,35 +635,19 @@ class MainWindow(QMainWindow):
         elif self._selectedLink is not None:
             active_scene.selectEdge(self._selectedLink)
 
-    def updateEdgeWidth(self, value):
-        if self.timeScene is None:
+    def _updateEdgeWidth(self, scene, value):
+        if scene is None:
             return
-        for item in self.timeScene.items():
+        for item in scene.items():
             if isinstance(item, si.EdgeItem):
                 pen = item.pen()
                 pen.setWidth(value)
                 item.setPen(pen)
 
-    def updateEdgeWidthText(self, value):
-        if self.textScene is None:
+    def _updateEdgeLabelOpacity(self, scene, value):
+        if scene is None:
             return
-        for item in self.textScene.items():
-            if isinstance(item, si.EdgeItem):
-                pen = item.pen()
-                pen.setWidth(value)
-                item.setPen(pen)
-
-    def updateEdgeLabelOpacity(self, value):
-        if self.timeScene is None:
-            return
-        for item in self.timeScene.items():
-            if isinstance(item, si.LaneEdgeItem):
-                item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
-
-    def updateEdgeLabelOpacityText(self, value):
-        if self.textScene is None:
-            return
-        for item in self.textScene.items():
+        for item in scene.items():
             if isinstance(item, si.LaneEdgeItem):
                 item._label_bg.setBrush(QBrush(QColor(255, 255, 255, value)))
 

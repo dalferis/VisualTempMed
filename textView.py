@@ -2,10 +2,10 @@ import re
 import sceneItems as si
 from pytlex_core.data import Instance, TimeX
 from PySide6.QtWidgets import (
-    QGraphicsView, QGraphicsScene, QGraphicsTextItem, QGraphicsItem
+    QGraphicsView, QGraphicsTextItem, QGraphicsItem
 )
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter, QPen, QBrush
-from PySide6.QtCore import Qt, QRectF, Signal
+from PySide6.QtCore import Qt, QRectF
 
 
 class TextView(QGraphicsView):
@@ -27,11 +27,7 @@ class TextView(QGraphicsView):
             super().wheelEvent(event)
 
 
-class TextScene(QGraphicsScene):
-    nodeClicked = Signal(str)
-    edgeClicked = Signal(object)
-    selectionCleared = Signal()
-
+class TextScene(si.SelectableScene):
     _max_line_width = 1200
     _text_height = 26
     _gutter_height = 28
@@ -79,91 +75,19 @@ class TextScene(QGraphicsScene):
         return self._text_height + self._gutter_height
 
     def __init__(self, dataModel):
-        super().__init__()
-        self._graph = dataModel.graph()
-        self._tlex = dataModel.tlex()
-        self.nodes = {}
+        super().__init__(dataModel)
         self._lines = []
         # Per-line extra height contributed by stacked MAKEINSTANCE satellites
         # under a multi-instance EVENT. Lines with satellites push subsequent
         # text rows further down so the edge gutter stays below the stack
         # (otherwise satellites would occlude edges routed through the gutter).
         self._line_extra_height = {}
-        self._highlighted_edges = []
         self._font = QFont()
         self._font.setPointSize(11)
         self._font.setBold(True)  # free text rendered in bold
         # Header overlay boxes: list of (QRectF, label, text_rect, QColor).
         self._doc_function_boxes = []
         self._createScene()
-
-    def mousePressEvent(self, event):
-        super().mousePressEvent(event)
-        clicked = None
-        for it in self.items(event.scenePos()):
-            owner = self._enclosingTarget(it)
-            if owner is not None:
-                clicked = owner
-                break
-        self._clearHighlights()
-        if isinstance(clicked, si.LaneEdgeItem):
-            clicked.setHighlighted(True)
-            self._highlighted_edges = [clicked]
-            self.edgeClicked.emit(clicked.link)
-        elif isinstance(clicked, si.NodeItem):
-            self._highlightNodeOutgoing(clicked)
-            self.nodeClicked.emit(clicked.node_id)
-        else:
-            self.selectionCleared.emit()
-
-    def _highlightNodeOutgoing(self, node):
-        outgoing = [e for e in self.items()
-                    if isinstance(e, si.LaneEdgeItem) and e.source is node]
-        for e in outgoing:
-            e.setHighlighted(True)
-        self._highlighted_edges = outgoing
-
-    def selectNode(self, node_id):
-        """Apply the same highlight a click would, without emitting nodeClicked.
-        Used by MainWindow to carry the selection across view switches."""
-        self._clearHighlights()
-        self.clearSelection()
-        node = self.nodes.get(node_id) if node_id is not None else None
-        if node is not None:
-            node.setSelected(True)
-            self._highlightNodeOutgoing(node)
-
-    def selectEdge(self, link):
-        """Highlight the edge backed by the given Link object, without
-        emitting edgeClicked. Used by MainWindow to carry the selection
-        across view switches."""
-        self._clearHighlights()
-        self.clearSelection()
-        if link is None:
-            return
-        for it in self.items():
-            if isinstance(it, si.LaneEdgeItem) and it.link is link:
-                it.setHighlighted(True)
-                self._highlighted_edges = [it]
-                return
-
-    @staticmethod
-    def _enclosingTarget(item):
-        while item is not None:
-            if isinstance(item, (si.LaneEdgeItem, si.NodeItem)):
-                return item
-            item = item.parentItem()
-        return None
-
-    def _clearHighlights(self):
-        for e in self._highlighted_edges:
-            e.setHighlighted(False)
-        self._highlighted_edges = []
-
-    def addItem(self, item):
-        super().addItem(item)
-        if isinstance(item, si.NodeItem):
-            self.nodes[item.node_id] = item
 
     # ------- Geometry helpers (used by LaneEdgeItem and LaneEdgePlanner) -------
 

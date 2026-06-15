@@ -5,9 +5,9 @@ import sceneItems as si
 from pytlex_core.algorithms import TLEX
 from pytlex_core.data import Graph, Instance, TimeX
 from pytlex_core.timeline.Timeline import find_timeline
-from PySide6.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsTextItem
+from PySide6.QtWidgets import QGraphicsView, QGraphicsTextItem
 from PySide6.QtGui import QFont, QFontMetrics, QPainter, QColor, QPainterPath
-from PySide6.QtCore import Qt, QRectF, Signal
+from PySide6.QtCore import Qt, QRectF
 
 
 class TimeView(QGraphicsView):
@@ -28,11 +28,7 @@ class TimeView(QGraphicsView):
         else:
             super().wheelEvent(event)
 
-class TimeScene(QGraphicsScene):
-    nodeClicked = Signal(str)
-    edgeClicked = Signal(object)
-    selectionCleared = Signal()
-
+class TimeScene(si.SelectableScene):
     _graph: Graph.Graph
     _tlex: TLEX.TLEX
 
@@ -47,90 +43,18 @@ class TimeScene(QGraphicsScene):
     _top_gutter_height = 40  # reserved space above the first row for edges
 
     def __init__(self, dataModel):
-        super().__init__()
-        self._graph = dataModel.graph()
-        self._tlex = dataModel.tlex()
-        self.nodes = {}
+        super().__init__(dataModel)
         self._row_ys = []
         self._y_to_line = {}
         self._node_half_height = 15
         self._rightmost_x = 0
-        self._rail_x = 100  # overridden in createScene once the rightmost node is known
-        self._highlighted_edges = []
+        self._rail_x = 100  # overridden in _createScene once the rightmost node is known
         # Partition headers ("Main", "Subordinate #N") drawn as overlays via
         # drawForeground rather than as scene items, to avoid the same Qt
         # quirk that made the DCT box vanish on click in textView (see
         # TextScene._prepareDocFunctionOverlay). Each entry: (label, QRectF).
         self._partition_headers = []
         self._createScene()
-
-    def addItem(self, item):
-        super().addItem(item)
-        if isinstance(item, si.NodeItem):
-            self.nodes[item.node_id] = item
-
-    def mousePressEvent(self, event):
-        super().mousePressEvent(event)
-        clicked = None
-        for it in self.items(event.scenePos()):
-            owner = self._enclosingTarget(it)
-            if owner is not None:
-                clicked = owner
-                break
-        self._clearHighlights()
-        if isinstance(clicked, si.LaneEdgeItem):
-            clicked.setHighlighted(True)
-            self._highlighted_edges = [clicked]
-            self.edgeClicked.emit(clicked.link)
-        elif isinstance(clicked, si.NodeItem):
-            self._highlightNodeOutgoing(clicked)
-            self.nodeClicked.emit(clicked.node_id)
-        else:
-            self.selectionCleared.emit()
-
-    def _highlightNodeOutgoing(self, node):
-        outgoing = [e for e in self.items()
-                    if isinstance(e, si.LaneEdgeItem) and e.source is node]
-        for e in outgoing:
-            e.setHighlighted(True)
-        self._highlighted_edges = outgoing
-
-    def selectNode(self, node_id):
-        """Apply the same highlight a click would, without emitting nodeClicked.
-        Used by MainWindow to carry the selection across view switches."""
-        self._clearHighlights()
-        self.clearSelection()
-        node = self.nodes.get(node_id) if node_id is not None else None
-        if node is not None:
-            node.setSelected(True)
-            self._highlightNodeOutgoing(node)
-
-    def selectEdge(self, link):
-        """Highlight the edge backed by the given Link object, without
-        emitting edgeClicked. Used by MainWindow to carry the selection
-        across view switches."""
-        self._clearHighlights()
-        self.clearSelection()
-        if link is None:
-            return
-        for it in self.items():
-            if isinstance(it, si.LaneEdgeItem) and it.link is link:
-                it.setHighlighted(True)
-                self._highlighted_edges = [it]
-                return
-
-    @staticmethod
-    def _enclosingTarget(item):
-        while item is not None:
-            if isinstance(item, (si.LaneEdgeItem, si.NodeItem)):
-                return item
-            item = item.parentItem()
-        return None
-
-    def _clearHighlights(self):
-        for e in self._highlighted_edges:
-            e.setHighlighted(False)
-        self._highlighted_edges = []
 
     # ------- Geometry helpers (used by LaneEdgeItem / LaneEdgePlanner) -------
 
