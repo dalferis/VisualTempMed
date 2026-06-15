@@ -319,7 +319,14 @@ class LaneEdgeItem(EdgeItem):
     _normal_width = 2
     _highlight_width = 4
     _normal_z = 5
-    _highlight_z = 10
+    # Must exceed NodeItem.setZValue (currently 15). The label and label_bg
+    # are children of the edge and therefore stack with the edge in the
+    # scene's global Z order, no matter what their own Z is. With a value
+    # below NodeItem's Z the highlighted label only jumps above other
+    # labels, but stays hidden under any node it overlaps -- which in
+    # textView is unfixable from the user side, because nodes are not
+    # movable there.
+    _highlight_z = 20
     _label_margin = 3
 
     def __init__(self, source, target, scene_ref, plan, text="", text_color=Qt.black, link_color=Qt.black):
