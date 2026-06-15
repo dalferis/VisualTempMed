@@ -75,7 +75,7 @@ class TextScene(QGraphicsScene):
     _LINE_BREAK_TAGS = {'</s>', '</turn>', '</p>', '</section>', '</br>', '<br>', '<br/>'}
 
     @property
-    def line_height(self):
+    def _line_height(self):
         return self._text_height + self._gutter_height
 
     def __init__(self, dataModel):
@@ -95,7 +95,7 @@ class TextScene(QGraphicsScene):
         self._font.setBold(True)  # free text rendered in bold
         # Header overlay boxes: list of (QRectF, label, text_rect, QColor).
         self._doc_function_boxes = []
-        self.createScene()
+        self._createScene()
 
     def mousePressEvent(self, event):
         super().mousePressEvent(event)
@@ -165,7 +165,7 @@ class TextScene(QGraphicsScene):
         if isinstance(item, si.NodeItem):
             self.nodes[item.node_id] = item
 
-    # ------- Geometry helpers (used by LaneEdgeItem) -------
+    # ------- Geometry helpers (used by LaneEdgeItem and LaneEdgePlanner) -------
 
     def gutterY(self, gutter_idx, track):
         if gutter_idx == 0:
@@ -174,7 +174,7 @@ class TextScene(QGraphicsScene):
             # Cumulative extras shift the gutter down by the total satellite
             # height of every preceding line.
             cum = sum(self._line_extra_height.get(i, 0) for i in range(gutter_idx))
-            gutter_top = (self._top_margin + (gutter_idx - 1) * self.line_height
+            gutter_top = (self._top_margin + (gutter_idx - 1) * self._line_height
                           + self._text_height + cum)
         return gutter_top + self._gutter_padding + (track + 0.5) * self._track_spacing
 
@@ -189,10 +189,10 @@ class TextScene(QGraphicsScene):
 
     # ------- Domain helpers -------
 
-    def isCreationTimeTimex3(self, timex3):
+    def _isCreationTimeTimex3(self, timex3):
         return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"
 
-    def isDocumentFunctionTimex3(self, timex3):
+    def _isDocumentFunctionTimex3(self, timex3):
         """True for any TIMEX3 acting as a document reference time
         (functionInDocument other than NONE): CREATION_TIME,
         PUBLICATION_TIME, etc. These are shown in the header overlay."""
@@ -201,9 +201,9 @@ class TextScene(QGraphicsScene):
         return timex3.documentFunction.upper() != "NONE"
 
     def isCreationTimeLink(self, link):
-        return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
+        return self._isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self._isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
 
-    def buildEventToNodeIdsMap(self):
+    def _buildEventToNodeIdsMap(self):
         """Returns dict[eid, list[eiid]]. A single EVENT can have multiple
         MAKEINSTANCE entries (different temporal/modal realizations of the
         same predicate, e.g. e12 with both ei340 and ei354 in
@@ -216,10 +216,10 @@ class TextScene(QGraphicsScene):
                 mapping.setdefault(node.event, []).append(node.get_id_str())
         return mapping
 
-    def stripInnerTags(self, text):
+    def _stripInnerTags(self, text):
         return self._INNER_TAG_RE.sub('', text)
 
-    def extractTextBody(self, tml):
+    def _extractTextBody(self, tml):
         match = re.search(r'<TEXT\b[^>]*>([\s\S]*?)</TEXT>', tml, re.IGNORECASE)
         return match.group(1) if match else tml
 
@@ -233,9 +233,9 @@ class TextScene(QGraphicsScene):
         """Y advance from one line to the next, accounting for any extra
         height contributed by stacked satellites on the line we are
         leaving behind."""
-        return y + self.line_height + self._line_extra_height.get(line_idx, 0)
+        return y + self._line_height + self._line_extra_height.get(line_idx, 0)
 
-    def addWord(self, word, x, y, line_idx):
+    def _addWord(self, word, x, y, line_idx):
         text_item = QGraphicsTextItem(si.decodeText(word))
         text_item.setFont(self._font)
         rect = text_item.boundingRect()
@@ -250,7 +250,7 @@ class TextScene(QGraphicsScene):
         x += rect.width() + self._word_spacing
         return x, y, line_idx
 
-    def addNodeInline(self, node_id, text, x, y, line_idx):
+    def _addNodeInline(self, node_id, text, x, y, line_idx):
         node = si.NodeItem(node_id, text=text)
         node.setFlag(QGraphicsItem.ItemIsMovable, False)
         rect = node.boundingRect()
@@ -267,12 +267,12 @@ class TextScene(QGraphicsScene):
         x += w + self._word_spacing
         return x, y, line_idx
 
-    def newLine(self, x, y, line_idx):
+    def _newLine(self, x, y, line_idx):
         return self._left_margin, self._advanceY(y, line_idx), line_idx + 1
 
-    def renderTextChunk(self, chunk, x, y, line_idx):
+    def _renderTextChunk(self, chunk, x, y, line_idx):
         for word in chunk.split():
-            x, y, line_idx = self.addWord(word, x, y, line_idx)
+            x, y, line_idx = self._addWord(word, x, y, line_idx)
         return x, y, line_idx
 
     # Horizontal offset between consecutive levels of a stacked-satellite
@@ -281,9 +281,9 @@ class TextScene(QGraphicsScene):
     # exposed "shoulders" on each level — bottom-left of every primary/
     # mid-satellite, top-right of every satellite — where edge endpoints
     # attach so they are never occluded by the neighbouring level.
-    STACK_STAGGER = 10
+    _STACK_STAGGER = 10
 
-    def addStackedSatellite(self, anchor, eiid, text, line_idx):
+    def _addStackedSatellite(self, anchor, eiid, text, line_idx):
         """Place a NodeItem just below `anchor` (flush vertically, shifted
         right by STACK_STAGGER) to represent an additional MAKEINSTANCE of
         the same EVENT. Same text as the primary so the stack reads as
@@ -301,7 +301,7 @@ class TextScene(QGraphicsScene):
         node.setFlag(QGraphicsItem.ItemIsMovable, False)
         anchor_bottom = anchor.pos().y() + anchor.rect().height() / 2
         node_h = node.rect().height()
-        node.setPos(anchor.pos().x() + self.STACK_STAGGER,
+        node.setPos(anchor.pos().x() + self._STACK_STAGGER,
                     anchor_bottom + node_h / 2)
         node._line_idx = line_idx
         # Flags consumed by LaneEdgeItem._biasX so the attach point lands
@@ -317,7 +317,7 @@ class TextScene(QGraphicsScene):
         self._lines[line_idx].append(node)
         return node
 
-    def layoutText(self, body, eid_to_node_ids):
+    def _layoutText(self, body, eid_to_node_ids):
         x = self._left_margin
         y = self._top_margin
         line_idx = 0
@@ -336,7 +336,7 @@ class TextScene(QGraphicsScene):
                 continue
 
             if body.startswith('&#13;', pos) or body.startswith('&#10;', pos):
-                x, y, line_idx = self.newLine(x, y, line_idx)
+                x, y, line_idx = self._newLine(x, y, line_idx)
                 pos += 5
                 continue
 
@@ -344,32 +344,32 @@ class TextScene(QGraphicsScene):
                 event_match = self._EVENT_RE.match(body, pos)
                 if event_match:
                     eid_m = self._EID_RE.search(event_match.group(1))
-                    inner = si.decodeText(self.stripInnerTags(event_match.group(2)).strip()) or "?"
+                    inner = si.decodeText(self._stripInnerTags(event_match.group(2)).strip()) or "?"
                     if eid_m and eid_m.group(1) in eid_to_node_ids:
                         eiids = eid_to_node_ids[eid_m.group(1)]
-                        x, y, line_idx = self.addNodeInline(eiids[0], inner, x, y, line_idx)
+                        x, y, line_idx = self._addNodeInline(eiids[0], inner, x, y, line_idx)
                         if len(eiids) > 1:
                             anchor = self.nodes[eiids[0]]
                             for extra_eiid in eiids[1:]:
-                                anchor = self.addStackedSatellite(anchor, extra_eiid, inner, line_idx)
+                                anchor = self._addStackedSatellite(anchor, extra_eiid, inner, line_idx)
                     else:
-                        x, y, line_idx = self.renderTextChunk(inner, x, y, line_idx)
+                        x, y, line_idx = self._renderTextChunk(inner, x, y, line_idx)
                     pos = event_match.end()
                     continue
 
                 timex_match = self._TIMEX_RE.match(body, pos)
                 if timex_match:
                     tid_m = self._TID_RE.search(timex_match.group(1))
-                    inner = si.decodeText(self.stripInnerTags(timex_match.group(2)).strip()) or "?"
+                    inner = si.decodeText(self._stripInnerTags(timex_match.group(2)).strip()) or "?"
                     placed = False
                     if tid_m:
                         tid = tid_m.group(1)
                         timex_node = self._graph.nodes.get(tid)
                         if timex_node is not None:
-                            x, y, line_idx = self.addNodeInline(tid, inner, x, y, line_idx)
+                            x, y, line_idx = self._addNodeInline(tid, inner, x, y, line_idx)
                             placed = True
                     if not placed:
-                        x, y, line_idx = self.renderTextChunk(inner, x, y, line_idx)
+                        x, y, line_idx = self._renderTextChunk(inner, x, y, line_idx)
                     pos = timex_match.end()
                     continue
 
@@ -377,17 +377,17 @@ class TextScene(QGraphicsScene):
                 if tag_match:
                     tag_compact = re.sub(r'\s+', '', tag_match.group(0).lower().strip())
                     if tag_compact in self._LINE_BREAK_TAGS:
-                        x, y, line_idx = self.newLine(x, y, line_idx)
+                        x, y, line_idx = self._newLine(x, y, line_idx)
                     pos = tag_match.end()
                     continue
 
-                x, y, line_idx = self.addWord('<', x, y, line_idx)
+                x, y, line_idx = self._addWord('<', x, y, line_idx)
                 pos += 1
                 continue
 
             word_match = re.match(r'(?:(?!&#1[03];)[^\s<])+', body[pos:])
             if word_match:
-                x, y, line_idx = self.addWord(word_match.group(0), x, y, line_idx)
+                x, y, line_idx = self._addWord(word_match.group(0), x, y, line_idx)
                 pos += word_match.end()
             else:
                 pos += 1
@@ -401,9 +401,9 @@ class TextScene(QGraphicsScene):
         needed_height = needed * self._track_spacing + 2 * self._gutter_padding
         if needed_height <= self._gutter_height:
             return
-        old_line_height = self.line_height
+        old_line_height = self._line_height
         self._gutter_height = needed_height
-        new_line_height = self.line_height
+        new_line_height = self._line_height
         if new_line_height == old_line_height:
             return
         for line_idx, items in enumerate(self._lines):
@@ -416,11 +416,11 @@ class TextScene(QGraphicsScene):
                 p = item.pos()
                 item.setPos(p.x(), p.y() + shift)
 
-    def createScene(self):
-        eid_to_node_ids = self.buildEventToNodeIdsMap()
+    def _createScene(self):
+        eid_to_node_ids = self._buildEventToNodeIdsMap()
         tml = getattr(self._graph, "time_ml_data", None) or ""
-        body = self.extractTextBody(tml)
-        self.layoutText(body, eid_to_node_ids)
+        body = self._extractTextBody(tml)
+        self._layoutText(body, eid_to_node_ids)
         si.LaneEdgePlanner(self).drawEdges()
         self._prepareDocFunctionOverlay()
 
@@ -431,11 +431,11 @@ class TextScene(QGraphicsScene):
         """Builds the header boxes for every TIMEX3 with a functionInDocument
         other than NONE, stacked above the text, each in its function's colour."""
         self._doc_function_boxes = []
-        timexes = [n for n in self._graph.nodes.values() if self.isDocumentFunctionTimex3(n)]
+        timexes = [n for n in self._graph.nodes.values() if self._isDocumentFunctionTimex3(n)]
         if not timexes:
             return
         # Stable order: creation time first, then by tid.
-        timexes.sort(key=lambda n: (0 if self.isCreationTimeTimex3(n) else 1,
+        timexes.sort(key=lambda n: (0 if self._isCreationTimeTimex3(n) else 1,
                                      getattr(n, "tID", 0)))
         fm = QFontMetrics(self._font)
         h = fm.height() + 2 * self._DCT_PADDING

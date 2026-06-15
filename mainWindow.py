@@ -52,16 +52,16 @@ class MainWindow(QMainWindow):
 
         self.stack = QStackedWidget()
         self.setCentralWidget(self.stack)
-        self.createControlPanel()
-        self.createAttributesPanel()
-        self.createMenuBar()
+        self._createControlPanel()
+        self._createAttributesPanel()
+        self._createMenuBar()
         self.statusLabel = QLabel("No file loaded")
         self.statusLabel.setTextInteractionFlags(Qt.TextSelectableByMouse)
         self.statusBar().addPermanentWidget(self.statusLabel, 1)
         if model is not None:
             self.loadModel(model)
 
-    def createMenuBar(self):
+    def _createMenuBar(self):
         menuBar = self.menuBar()
 
         fileMenu = menuBar.addMenu("&File")
@@ -360,11 +360,11 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(self.textView)
         self.stack.setCurrentIndex(currentIndex)
         self.toggleShowIds(self.chkbxShowId.isChecked())
-        self.clearAttributes()
+        self._clearAttributes()
         self._selectedLink = None
         self.statusLabel.setText(filepath if filepath else "")
 
-    def createControlPanel(self):
+    def _createControlPanel(self):
         self.controlDock = dock = QDockWidget("Control panel", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
@@ -405,9 +405,9 @@ class MainWindow(QMainWindow):
 
         # Layout with controls:
         self.stackControl = QStackedWidget()
-        timeControls = self.createTimeControls()
+        timeControls = self._createTimeControls()
         self.stackControl.addWidget(timeControls)
-        textControls = self.createTextControls()
+        textControls = self._createTextControls()
         self.stackControl.addWidget(textControls)
         self.stackControl.setCurrentWidget(timeControls if self._initialPanel=="time" else textControls)
         layout.addWidget(self.stackControl)
@@ -418,7 +418,7 @@ class MainWindow(QMainWindow):
         self.addDockWidget(Qt.LeftDockWidgetArea, dock)
         self.stackControl.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
 
-    def createAttributesPanel(self):
+    def _createAttributesPanel(self):
         self.attributesDock = dock = QDockWidget("Attributes", self)
         dock.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
@@ -439,22 +439,22 @@ class MainWindow(QMainWindow):
         dock.setWidget(panel)
         self.addDockWidget(Qt.RightDockWidgetArea, dock)
 
-    def clearAttributes(self):
+    def _clearAttributes(self):
         self.attributesTitle.setText("")
         while self.attributesForm.rowCount() > 0:
             self.attributesForm.removeRow(0)
         self._selectedNodeId = None
 
     def onEdgeClicked(self, link):
-        self.clearAttributes()
+        self._clearAttributes()
         self._selectedLink = link
 
     def onSelectionCleared(self):
-        self.clearAttributes()
+        self._clearAttributes()
         self._selectedLink = None
 
     def showNodeAttributes(self, node_id):
-        self.clearAttributes()
+        self._clearAttributes()
         if self._model is None:
             return
         node = self._model.graph().nodes.get(node_id)
@@ -574,7 +574,7 @@ class MainWindow(QMainWindow):
             if c and eiid and eiid.startswith('ei'):
                 self._instanceComments[f"eiid{eiid[2:]}"] = c
 
-    def createTimeControls(self):
+    def _createTimeControls(self):
         widget = QWidget()
         # Layout with time view controls:
         layout = QVBoxLayout(widget)
@@ -596,7 +596,7 @@ class MainWindow(QMainWindow):
         self.sliderEdgeLabelOpacity.valueChanged.connect(self.updateEdgeLabelOpacity)
         return widget
 
-    def createTextControls(self):
+    def _createTextControls(self):
         widget = QWidget()
         # Layout with text controls:
         layout = QVBoxLayout(widget)

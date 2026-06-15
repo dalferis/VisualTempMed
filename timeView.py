@@ -62,7 +62,7 @@ class TimeScene(QGraphicsScene):
         # quirk that made the DCT box vanish on click in textView (see
         # TextScene._prepareDocFunctionOverlay). Each entry: (label, QRectF).
         self._partition_headers = []
-        self.createScene()
+        self._createScene()
 
     def addItem(self, item):
         super().addItem(item)
@@ -167,11 +167,11 @@ class TimeScene(QGraphicsScene):
     def railX(self, track):
         return self._rail_x + (track + 0.5) * self._track_spacing
 
-    def isCreationTimeTimex3(self, timex3):
+    def _isCreationTimeTimex3(self, timex3):
         return isinstance(timex3, TimeX.TimeX) and hasattr(timex3, "documentFunction") and timex3.documentFunction.upper() == "CREATION_TIME"
 
     def isCreationTimeLink(self, link):
-        return self.isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self.isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
+        return self._isCreationTimeTimex3(self._graph.nodes[link.start_node]) or self._isCreationTimeTimex3(self._graph.nodes[link.related_to_node])
 
     def _headerFont(self):
         font = QFont()
@@ -230,7 +230,7 @@ class TimeScene(QGraphicsScene):
         visible_set = set(visible_ids)
         id_to_node = {n.get_id_str(): n for n in nodes}
         anchor_ids = {n.get_id_str() for n in self._graph.nodes.values()
-                      if self.isCreationTimeTimex3(n)}
+                      if self._isCreationTimeTimex3(n)}
         relevant_ids = visible_set | anchor_ids
 
         order_graph = nx.DiGraph()
@@ -466,7 +466,7 @@ class TimeScene(QGraphicsScene):
         mains = list(self._tlex.main_graphs)
         subs = list(self._tlex.subordination_graphs)
         dct_id = next((nid for nid, n in self._graph.nodes.items()
-                       if self.isCreationTimeTimex3(n)), None)
+                       if self._isCreationTimeTimex3(n)), None)
         if dct_id is None or any(dct_id in m.nodes for m in mains):
             return mains, subs
         for i, s in enumerate(subs):
@@ -474,7 +474,7 @@ class TimeScene(QGraphicsScene):
                 return [s], mains + subs[:i] + subs[i + 1:]
         return mains, subs
 
-    def createScene(self):
+    def _createScene(self):
         graphModel = nx.MultiDiGraph()
         # Use the partitions already computed (and corrected) by TLEX.
         # Calling Partitioner.partition_graph(self._graph) here would re-do

@@ -62,9 +62,9 @@ class NodeItem(QGraphicsRectItem):
         self.label.setParentItem(self)
         self.label.setPos(-text_rect.width()/2, -text_rect.height()/2)
 
-        self.createIdBadge()
+        self._createIdBadge()
 
-    def createIdBadge(self):
+    def _createIdBadge(self):
         padding = -2
 
         self.id_text = QGraphicsTextItem(str(self.node_id), self)
