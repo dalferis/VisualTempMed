@@ -12,7 +12,7 @@ from lxml import etree
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QAction, QBrush, QColor
 from PySide6.QtWidgets import (
-    QMainWindow, QDockWidget, QWidget, QVBoxLayout, QHBoxLayout, QStackedWidget,
+    QMainWindow, QDockWidget, QWidget, QVBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
     QSizePolicy, QFileDialog, QMessageBox, QTextEdit, QDialog, QDialogButtonBox,
     QPushButton
@@ -32,8 +32,6 @@ class _StableWidthPanel(QWidget):
 
 class MainWindow(QMainWindow):
     _initialPanel = "time"
-    #_initialPanel = "text"
-
 
     def __init__(self, model=None):
         super().__init__()

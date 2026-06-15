@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QGraphicsRectItem, QGraphicsPathItem, QGraphicsTextItem, QGraphicsItem, QStyle
 )
 from PySide6.QtGui import QColor, QPen, QBrush, QPainterPath, QPainterPathStroker, QFont
-from PySide6.QtCore import Qt, QPointF, QLineF
+from PySide6.QtCore import Qt, QPointF
 
 
 def decodeText(s):
@@ -120,14 +120,22 @@ class NodeItem(QGraphicsRectItem):
 
 
 class EdgeItem(QGraphicsPathItem):
+    """Common base for routed edges. Stores source/target, registers itself
+    with both nodes (so the edge re-routes when a node is dragged) and
+    triggers updatePosition() when added to a scene. Concrete routing lives
+    in subclasses (LaneEdgeItem for textView, GridEdgeItem for timeView).
+
+    Kept as a separate base so mainWindow can match either subclass with
+    isinstance(item, EdgeItem) when applying the edge-thickness slider.
+    """
+
     _hit_width = 8
 
-    def __init__(self, source, target, text="", text_color=Qt.black, link_color=Qt.black, curvature=0.0):
+    def __init__(self, source, target, text="", text_color=Qt.black, link_color=Qt.black):
         super().__init__()
 
         self.source = source
         self.target = target
-        self.curvature = curvature
 
         self.setPen(QPen(link_color, 2))
         self.setZValue(-1)
@@ -147,161 +155,6 @@ class EdgeItem(QGraphicsPathItem):
         if change == QGraphicsItem.ItemSceneHasChanged:
             self.updatePosition()
         return super().itemChange(change, value)
-
-    def intersectLineWithRect(self, center_from, center_to, rect, item_pos):
-        line = QLineF(center_from, center_to)
-        r = rect.translated(item_pos)
-
-        edges = [
-            QLineF(r.topLeft(), r.topRight()),
-            QLineF(r.topRight(), r.bottomRight()),
-            QLineF(r.bottomRight(), r.bottomLeft()),
-            QLineF(r.bottomLeft(), r.topLeft())
-        ]
-
-        for edge in edges:
-            intersection_type, point = line.intersects(edge)
-            if intersection_type == QLineF.BoundedIntersection:
-                return point
-
-        return center_from
-
-    def hasObstacleBetween(self, start, end):
-        scene = self.scene()
-        if not scene:
-            return False
-
-        line = QLineF(start, end)
-
-        for item in scene.items():
-
-            if not isinstance(item, NodeItem):
-                continue
-
-            if item is self.source or item is self.target:
-                continue
-
-            rect = item.rect().translated(item.pos())
-
-            edges = [
-                QLineF(rect.topLeft(), rect.topRight()),
-                QLineF(rect.topRight(), rect.bottomRight()),
-                QLineF(rect.bottomRight(), rect.bottomLeft()),
-                QLineF(rect.bottomLeft(), rect.topLeft())
-            ]
-
-            for edge in edges:
-                intersection_type, _ = line.intersects(edge)
-                if intersection_type == QLineF.BoundedIntersection:
-                    return True
-
-        return False
-
-    def updatePosition(self):
-        rect1 = self.source.rect()
-        rect2 = self.target.rect()
-
-        center1 = self.source.pos() + rect1.center()
-        center2 = self.target.pos() + rect2.center()
-
-        start = self.intersectLineWithRect(
-            center1, center2, rect1, self.source.pos()
-        )
-
-        end = self.intersectLineWithRect(
-            center2, center1, rect2, self.target.pos()
-        )
-
-        dx = end.x() - start.x()
-        dy = end.y() - start.y()
-        base_angle = math.atan2(dy, dx)
-
-        path = QPainterPath()
-        path.moveTo(start)
-
-        ctrl = None
-        if self.curvature != 0:
-            curvature = self.curvature
-        elif self.hasObstacleBetween(start, end):
-            curvature = 0.25
-        else:
-            curvature = 0.0
-
-        if curvature != 0:
-            ctrl = QPointF(
-                (start.x() + end.x()) / 2 - dy * curvature,
-                (start.y() + end.y()) / 2 + dx * curvature
-            )
-            path.quadTo(ctrl, end)
-            tx = end.x() - ctrl.x()
-            ty = end.y() - ctrl.y()
-            angle = math.atan2(ty, tx)
-        else:
-            path.lineTo(end)
-            angle = base_angle
-
-        # Arrow
-        arrow_size = 12
-        arrow_p1 = end - QPointF(
-            arrow_size * math.cos(angle - math.pi / 6),
-            arrow_size * math.sin(angle - math.pi / 6)
-        )
-        arrow_p2 = end - QPointF(
-            arrow_size * math.cos(angle + math.pi / 6),
-            arrow_size * math.sin(angle + math.pi / 6)
-        )
-
-        path.moveTo(end)
-        path.lineTo(arrow_p1)
-        path.moveTo(end)
-        path.lineTo(arrow_p2)
-        self.setPath(path)
-
-        # Label
-        if curvature != 0 and ctrl is not None:
-            t = 0.5
-
-            # Real point on the curve (quadratic Bézier)
-            x = (1 - t)**2 * start.x() + 2 * (1 - t) * t * ctrl.x() + t**2 * end.x()
-            y = (1 - t)**2 * start.y() + 2 * (1 - t) * t * ctrl.y() + t**2 * end.y()
-
-            label_pos = QPointF(x, y)
-
-            # Real tangent of the curve
-            tx = 2*(1 - t)*(ctrl.x() - start.x()) + 2*t*(end.x() - ctrl.x())
-            ty = 2*(1 - t)*(ctrl.y() - start.y()) + 2*t*(end.y() - ctrl.y())
-
-            length = math.hypot(tx, ty)
-
-            if length != 0:
-                nx = -ty / length
-                ny = tx / length
-
-                offset = 15
-                label_pos += QPointF(nx * offset, ny * offset)
-
-        else:
-            # Beeline - offset the label perpendicular to the segment so it
-            # doesn't overlap the edge line itself.
-            label_pos = QPointF(
-                (start.x() + end.x()) / 2,
-                (start.y() + end.y()) / 2
-            )
-            length = math.hypot(dx, dy)
-            if length != 0:
-                nx = -dy / length
-                ny = dx / length
-                # Prefer placing the label above the edge in screen coords.
-                if ny > 0:
-                    nx, ny = -nx, -ny
-                offset = 15
-                label_pos += QPointF(nx * offset, ny * offset)
-
-        # Center text
-        rect = self.label.boundingRect()
-        label_pos -= QPointF(rect.width() / 2, rect.height() / 2)
-
-        self.label.setPos(label_pos)
 
 
 class LaneEdgeItem(EdgeItem):
@@ -337,7 +190,7 @@ class LaneEdgeItem(EdgeItem):
         self._date_inferred = bool(plan.get('date_inferred', False))
         self.link = plan.get('link')
         self._highlighted = False
-        super().__init__(source, target, text=text, text_color=text_color, link_color=link_color, curvature=0.0)
+        super().__init__(source, target, text=text, text_color=text_color, link_color=link_color)
         self.setZValue(self._normal_z)
         self._applyPen()
         self._label_bg = QGraphicsRectItem(self)
@@ -493,10 +346,8 @@ class LaneEdgePlanner:
         the scene to accommodate dense gutters; called only if defined).
     """
 
-    def __init__(self, scene, track_spacing=5, gutter_padding=5):
+    def __init__(self, scene):
         self.scene = scene
-        self.track_spacing = track_spacing
-        self.gutter_padding = gutter_padding
 
     def drawEdges(self):
         plans = self._buildEdgePlans()

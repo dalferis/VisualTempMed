@@ -45,7 +45,6 @@ class TimeScene(QGraphicsScene):
     _track_spacing = 5
     _gutter_padding = 5
     _top_gutter_height = 40  # reserved space above the first row for edges
-    _rail_margin = 30  # horizontal gap between rightmost content and the rail
 
     def __init__(self, dataModel):
         super().__init__()

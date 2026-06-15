@@ -27,9 +27,6 @@ class TextView(QGraphicsView):
             super().wheelEvent(event)
 
 
-LaneEdgeItem = si.LaneEdgeItem  # re-export for backwards compatibility
-
-
 class TextScene(QGraphicsScene):
     nodeClicked = Signal(str)
     edgeClicked = Signal(object)
@@ -109,7 +106,7 @@ class TextScene(QGraphicsScene):
                 clicked = owner
                 break
         self._clearHighlights()
-        if isinstance(clicked, LaneEdgeItem):
+        if isinstance(clicked, si.LaneEdgeItem):
             clicked.setHighlighted(True)
             self._highlighted_edges = [clicked]
             self.edgeClicked.emit(clicked.link)
@@ -121,7 +118,7 @@ class TextScene(QGraphicsScene):
 
     def _highlightNodeOutgoing(self, node):
         outgoing = [e for e in self.items()
-                    if isinstance(e, LaneEdgeItem) and e.source is node]
+                    if isinstance(e, si.LaneEdgeItem) and e.source is node]
         for e in outgoing:
             e.setHighlighted(True)
         self._highlighted_edges = outgoing
@@ -145,7 +142,7 @@ class TextScene(QGraphicsScene):
         if link is None:
             return
         for it in self.items():
-            if isinstance(it, LaneEdgeItem) and it.link is link:
+            if isinstance(it, si.LaneEdgeItem) and it.link is link:
                 it.setHighlighted(True)
                 self._highlighted_edges = [it]
                 return
@@ -153,7 +150,7 @@ class TextScene(QGraphicsScene):
     @staticmethod
     def _enclosingTarget(item):
         while item is not None:
-            if isinstance(item, (LaneEdgeItem, si.NodeItem)):
+            if isinstance(item, (si.LaneEdgeItem, si.NodeItem)):
                 return item
             item = item.parentItem()
         return None
@@ -424,8 +421,7 @@ class TextScene(QGraphicsScene):
         tml = getattr(self._graph, "time_ml_data", None) or ""
         body = self.extractTextBody(tml)
         self.layoutText(body, eid_to_node_ids)
-        si.LaneEdgePlanner(self, track_spacing=self._track_spacing,
-                           gutter_padding=self._gutter_padding).drawEdges()
+        si.LaneEdgePlanner(self).drawEdges()
         self._prepareDocFunctionOverlay()
 
     def _docFunctionTitle(self, function):

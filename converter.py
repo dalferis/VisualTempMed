@@ -1,4 +1,4 @@
-﻿from cassis import *
+﻿from cassis import load_typesystem, load_cas_from_xmi
 from lxml import etree
 import io
 import re
