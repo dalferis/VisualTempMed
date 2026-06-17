@@ -15,7 +15,7 @@ from PySide6.QtWidgets import (
     QMainWindow, QDockWidget, QWidget, QVBoxLayout, QStackedWidget,
     QLabel, QCheckBox, QSlider, QRadioButton, QButtonGroup, QGridLayout, QFormLayout,
     QSizePolicy, QFileDialog, QMessageBox, QTextEdit, QDialog, QDialogButtonBox,
-    QPushButton
+    QPushButton, QProgressDialog, QApplication
 )
 
 class _StableWidthPanel(QWidget):
@@ -120,36 +120,64 @@ class MainWindow(QMainWindow):
         """Reads/converts a TimeML or E3C file, builds the model (optionally
         adding date-inferred ordering links), and loads it. Used by Open... and
         by the Options toggle to re-render the current file."""
+        progress = QProgressDialog("Reading file...", "", 0, 100, self)
+        progress.setCancelButton(None)
+        progress.setWindowTitle("Loading")
+        progress.setWindowModality(Qt.WindowModal)
+        progress.setMinimumDuration(200)
+        progress.setAutoClose(False)
+        progress.setAutoReset(False)
         try:
+            self._stepProgress(progress, 5, "Reading file...")
             with open(path, 'r', encoding='utf-8') as f:
                 content = f.read()
+            self._stepProgress(progress, 10, "Detecting format...")
             fileFormat = detectFormatContent(content)
             if fileFormat == FileFormat.E3C:
+                self._stepProgress(progress, 15, "Converting E3C to TimeML...")
                 result = convertContent(content)
                 if not result[0]:
+                    progress.close()
                     QMessageBox.critical(self, "Error", "E3C -> TimeML conversion failed:\n" + "\n".join(str(e) for e in result[1:]))
                     return
                 content = result[1]
             elif fileFormat != FileFormat.TML:
+                progress.close()
                 QMessageBox.critical(self, "Error", "The selected file is not a TimeML or E3C file.")
                 return
-            model = self._buildModel(content)
+            model = self._buildModel(content, progress)
+            self._stepProgress(progress, 80, "Rendering views...")
         except Exception as e:
+            progress.close()
             QMessageBox.critical(self, "Error", f"Could not load file:\n{e}")
             return
         self._currentPath = path
         self.loadModel(model, path)
+        self._stepProgress(progress, 100, "Done")
+        progress.close()
 
-    def _buildModel(self, content):
+    @staticmethod
+    def _stepProgress(progress, value, message):
+        progress.setLabelText(message)
+        progress.setValue(value)
+        QApplication.processEvents()
+
+    def _buildModel(self, content, progress=None):
+        if progress is not None:
+            self._stepProgress(progress, 25, "Parsing TimeML...")
         graph = Graph.Graph(time_ml_string=content)
         # Optionally infer chronological ordering links from TIMEX3 dates and
         # add them BEFORE partitioning, so TLEX merges partitions they connect.
         if self._inferDateOrder:
+            if progress is not None:
+                self._stepProgress(progress, 40, "Inferring date links...")
             for link in dateLinks.infer_date_links(graph):
                 graph.links[link.get_id_str()] = link
         # Reset pytlex_core's module-level SLink set (it leaks across calls,
         # and infer_date_links built a throwaway TLEX above).
         Partitioner.single_links.clear()
+        if progress is not None:
+            self._stepProgress(progress, 55, "Computing temporal links...")
         tlex = TLEX.TLEX(graph=graph)
         # Merge Connectivity_Increaser's suggested TLINKs into graph.links
         # so downstream consumers (validator, JSON export, attribute panel)
